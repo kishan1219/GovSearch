@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'GovSearch';
+    src:  url('../fonts/GovSearch.eot?mfeehl');
+    src:  url('../fonts/GovSearch.eot?mfeehl#iefix') format('embedded-opentype'),
+      url('../fonts/GovSearch.ttf?mfeehl') format('truetype'),
+      url('../fonts/GovSearch.woff?mfeehl') format('woff'),
+      url('../fonts/GovSearch.svg?mfeehl#GovSearch') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'GovSearch' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-plus2:before {
+    content: "\e921";
+  }
+  .icon-minus2:before {
+    content: "\e922";
+  }
+  .icon-web:before {
+    content: "\e900";
+  }
+  .icon-vendors:before {
+    content: "\e901";
+  }
+  .icon-userlocation:before {
+    content: "\e902";
+  }
+  .icon-userinfo:before {
+    content: "\e903";
+  }
+  .icon-straightmore:before {
+    content: "\e904";
+  }
+  .icon-straight:before {
+    content: "\e905";
+  }
+  .icon-star:before {
+    content: "\e906";
+  }
+  .icon-soliddownpolygonsvg:before {
+    content: "\e907";
+  }
+  .icon-search:before {
+    content: "\e908";
+  }
+  .icon-rightlayer:before {
+    content: "\e909";
+  }
+  .icon-rightarrow:before {
+    content: "\e90a";
+  }
+  .icon-refresh:before {
+    content: "\e90b";
+  }
+  .icon-pluscircle:before {
+    content: "\e90c";
+  }
+  .icon-plus:before {
+    content: "\e90d";
+  }
+  .icon-phone:before {
+    content: "\e90e";
+  }
+  .icon-office:before {
+    content: "\e90f";
+  }
+  .icon-notification:before {
+    content: "\e910";
+  }
+  .icon-multipleuser:before {
+    content: "\e911";
+  }
+  .icon-more:before {
+    content: "\e912";
+  }
+  .icon-minuscircle:before {
+    content: "\e913";
+  }
+  .icon-minus:before {
+    content: "\e914";
+  }
+  .icon-menu:before {
+    content: "\e915";
+  }
+  .icon-locations:before {
+    content: "\e916";
+  }
+  .icon-linkedin:before {
+    content: "\e917";
+  }
+  .icon-leftarrow:before {
+    content: "\e918";
+  }
+  .icon-hierarchy:before {
+    content: "\e919";
+  }
+  .icon-fullscreen:before {
+    content: "\e91a";
+  }
+  .icon-exportButton:before {
+    content: "\e91b";
+  }
+  .icon-equal:before {
+    content: "\e91c";
+  }
+  .icon-envelope:before {
+    content: "\e91d";
+  }
+  .icon-downpolygon:before {
+    content: "\e91e";
+  }
+  .icon-close:before {
+    content: "\e91f";
+  }
+  .icon-burger:before {
+    content: "\e920";
+  }
+  
