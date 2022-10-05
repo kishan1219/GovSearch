@@ -3,13 +3,13 @@ import './App.scss';
 import {
   Routes,
   Route,
-  useNavigate,
+
 } from "react-router-dom";
 
 import { routes } from './routes'
 
 function App() {
-  const navigate = useNavigate();
+  
   const getComponent = (component) => {
     return React.createElement(component, {});
   }
