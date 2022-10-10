@@ -1,0 +1,46 @@
+const ICONTYPES = {
+    close: {iconClass: 'icon-close', iconTitle: 'close'},
+    notification: {iconClass: 'icon-notification', iconTitle: 'notification'},
+    menu: {iconClass: 'icon-menu', iconTitle: 'menu'},
+    fullscreen: {iconClass: 'icon-fullscreen', iconTitle: 'fullscreen'},
+    rightlayer: {iconClass: 'icon-rightlayer', iconTitle: 'rightlayer'},
+    soliddownpolygon: {iconClass: 'icon-soliddownpolygonsvg', iconTitle: 'soliddownpolygon'},
+    star: {iconClass: 'icon-star', iconTitle: 'star'},
+    plus: {iconClass: 'icon-plus', iconTitle: 'plus'},
+    office: {iconClass: 'icon-office', iconTitle: 'office'},
+    multipleuser: {iconClass: 'icon-multipleuser', iconTitle: 'multipleuser'},
+    more: {iconClass: 'icon-more', iconTitle: 'more'},
+    equal: {iconClass: 'icon-equal', iconTitle: 'equal'},
+    vendors: {iconClass: 'icon-vendors', iconTitle: 'vendors'},
+    envelope: {iconClass: 'icon-envelope', iconTitle: 'envelope'},
+    downpolygon: {iconClass: 'icon-downpolygon', iconTitle: 'downpolygon'},
+    pluscircle: {iconClass: 'icon-pluscircle', iconTitle: 'pluscircle'},
+    locations: {iconClass: 'icon-locations', iconTitle: 'locations'},
+    userlocation: {iconClass: 'icon-userlocation', iconTitle: 'userlocation'},
+    straight: {iconClass: 'icon-straight', iconTitle: 'straight'},
+    linkedIn: {iconClass: 'icon-linkedin', iconTitle: 'linkedIn'},
+    phone: {iconClass: 'icon-phone', iconTitle: 'phone'}, 
+    ExportButton: {iconClass: 'icon-exportButton', iconTitle: 'ExportButton'},
+    web: {iconClass: 'icon-web', iconTitle: 'web'},
+    userinfo: {iconClass: 'icon-userinfo', iconTitle: 'userinfo'},
+    straightmore: {iconClass: 'icon-straightmore', iconTitle: 'straightmore'},
+    search: {iconClass: 'icon-search', iconTitle: 'search'},
+    rightarrow: {iconClass: 'icon-rightarrow', iconTitle: 'rightarrow'},
+    leftarrow: {iconClass: 'icon-leftarrow', iconTitle: 'leftarrow'},
+    hierarchy: {iconClass: 'icon-hierarchy', iconTitle: 'hierarchy'},
+    minuscircle: {iconClass: 'icon-minuscircle', iconTitle: 'minuscircle'},
+    minus: {iconClass: 'icon-minus', iconTitle: 'minus'},
+    refresh: {iconClass: 'icon-refresh', iconTitle: 'refresh'},
+    burger: {iconClass: 'icon-burger', iconTitle: 'burger'},  
+    plus2: {iconClass: 'icon-plus2', iconTitle: 'add'},  
+    minus2: {iconClass: 'icon-minus2', iconTitle: 'minus'},  
+  }
+
+  const ICONSIZE = {
+    LARGE: 'icon_large',
+    MEDIUM: 'icon_medium',
+    SMALL: 'icon_small',
+  }
+  
+  export { ICONTYPES, ICONSIZE }
+  

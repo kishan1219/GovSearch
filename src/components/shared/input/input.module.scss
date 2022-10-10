@@ -1,0 +1,73 @@
+@import "../../../assets/scss/variables.scss";
+.input {
+  background: $white;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  padding: 11px 20px;
+  color: $black;
+  font-size: $font-xl;
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    color: $white02;
+  }
+  &:focus{
+    outline: none;
+  }
+  &:disabled {
+    color: $lightGray01;
+    cursor: not-allowed;
+  }
+}
+textarea{
+  font-family: 'Poppins', sans-serif;
+}
+
+.border{
+  border: 1px solid $lightGray01;
+  padding: 7px 20px;
+  font-size: $font-xxxl;
+  line-height: 36px;
+  color: $black;
+  &::placeholder {
+    color: $lightGray01;
+  }
+}
+
+.blackPlaceholder {
+  border: 1px solid $lightGray01;
+  padding: 7px 20px;
+  font-size: $font-xxxl;
+  line-height: 36px;
+  color: $black;
+  
+  &::placeholder {
+    color: $black;
+  }
+}
+
+.grey{
+  background-color: $white03;
+  padding: 13px 54px 16px 16px;
+  font-weight: 400;
+  font-size: $font-mlg;
+  line-height: 27px;
+  color: $black;
+  &::placeholder {
+    color: $black;
+  }
+}
+.darkGray {
+  background-color:$gray07;
+  padding: 13px 54px 16px 16px;
+  font-weight: 400;
+  font-size: $font-mlg;
+  line-height: 27px;
+  color: $black;
+
+  &::placeholder {
+    color: $black;
+  }
+}
