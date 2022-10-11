@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from './checkbox.module.scss'
+import Text from '../text'
 const CheckBox = ({
     onChange,
     labelClass,
@@ -28,8 +29,8 @@ const CheckBox = ({
             value={value}
             disabled={disabled}
           />
-          {/* <Text className={styles.checkmark} />
-          <Text className={`${styles.nameWrapper} ${[customClass]} ${styles[color]}`}>{labelName}</Text> */}
+          <Text className={styles.checkmark} />
+          <Text className={`${styles.nameWrapper} ${[customClass]} ${styles[color]}`}>{labelName}</Text>
         </label>
       </div>
     )
