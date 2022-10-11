@@ -1,7 +1,7 @@
 import React from 'react'
 import { CheckBox, Icon, Input, Button, } from '../../components/shared/index'
 import styles from './styleguide.module.scss'
-const Styleguide = ({ }) => {
+const Styleguide = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.checboxMain}>
