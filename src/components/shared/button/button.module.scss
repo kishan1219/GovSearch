@@ -1,0 +1,67 @@
+@import "../../../assets/scss/variables.scss";
+
+.button {
+    color: $textWhite;
+    border-radius: 12px;
+    font-size: $font-xxl;
+    height: 48px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    // Size
+
+    &.sm {
+        max-width: 100%;
+        min-width: 87px;
+        font-size: $font-xxl;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+
+    &.md {
+        max-width: 100%;
+        min-width: 131px;
+        font-size: $font-mlg;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+    &.lg {
+        max-width: 100%;
+        min-width: 323px;
+        font-size: $font-big;
+        border-radius: 8px;
+        font-weight: 600;
+    }
+
+
+
+    // variant
+
+
+    &.solidPrimary {
+        color: $white;
+        background: $primary;
+    }
+
+    &.solidSecondary {
+        color: $white;
+        background: $primary05;
+    }
+
+    &.disaled {
+        color: $white;
+        background: $gray;
+    }
+
+    &.default {
+        color: $white;
+        background: $primary03;
+    }
+
+
+}
