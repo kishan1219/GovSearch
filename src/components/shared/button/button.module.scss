@@ -28,6 +28,21 @@
         border-radius: 12px;
         font-weight: 700;
     }
+    &.sm02 {
+        max-width: 100%;
+        min-width: 107px;
+        font-size: $font-xxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+
+    &.sm03 {
+        max-width: 100%;
+        min-width: 111px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
 
     &.md {
         max-width: 100%;
@@ -45,6 +60,15 @@
         border-radius: 12px;
         font-weight: 700;
     }
+    &.md02{
+        max-width: 100%;
+        min-width: 225px;
+        max-height: 56px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    
 
     &.lg {
         max-width: 100%;
@@ -60,6 +84,13 @@
         border-radius: 12px;
         font-weight: 700;
     }
+    &.lg02{
+        max-width: 100%;
+        min-width: 408px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
 
 
 
@@ -67,7 +98,7 @@
 
 
     &.solidPrimary {
-      color: $white;
+        color: $white;
         background: $primary;
     }
 
@@ -79,6 +110,10 @@
     &.disaled {
         color: $white;
         background: $gray;
+    }
+    &.dangerPrimary{
+        color:$white;
+        background:$red;
     }
 
     &.default {
