@@ -1,4 +1,5 @@
 @import '../../../assets//scss/variables.scss';
+@import '../../../assets//scss/mixins.scss';
 
 .h1 {
   font-size: 32px;
@@ -29,7 +30,25 @@
   font-size: 15px;
   line-height: 17px;
 }
+.poppins {
+  font-family: 'poppins', 'sans-serif';
+}
+.roboto {
+  font-family: 'roboto','sans-serif'
+}
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  line-height: 23px;
+  letter-spacing: 0.015em;
+  -webkit-letter-spacing: 0;
+  @include textStyling;
+}
 
 
 

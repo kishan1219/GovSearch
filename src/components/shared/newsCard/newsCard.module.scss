@@ -5,6 +5,7 @@
     width: 100%;
     max-width: 476px;
     background:$white01;
+    
     .newsCardMain {
         display: flex;
         .cardImage {
@@ -13,6 +14,7 @@
         }
         .textPrimary {
             max-width: 197px;
+            line-height: 28px;
         }
     }
     .textSecond {

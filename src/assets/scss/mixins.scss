@@ -65,17 +65,16 @@
     &.underline {
       text-decoration: underline;
     }
+  
   }
   
 @mixin fonts-poppins {
     font-family: 'poppins', 'sans-serif';
     font-style: normal;
-    font-weight: 400;
 }
 
 @mixin roboto {
-    font-family: 'roboto';
-    font-weight: 600;
+    font-family: 'roboto','sans-serif';
     font-style: normal;
 }
 @mixin flex {

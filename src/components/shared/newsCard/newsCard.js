@@ -4,22 +4,26 @@ import Styles from './newsCard.module.scss'
 import Image from '../image'
 import Text from '../text'
 const NewsCard = ({
-className
+src,
+textFirst,
+textSecond,
 }) => {
   return (
     <div className={Styles.wrapper}>
     <div className={Styles.newsCardMain}>
-        <Image className={Styles.cardImage} src='images/newsCardImage.png' alt='image' />
-        <Text className={Styles.textPrimary} strong='strong6' family='roboto' >FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command</Text>
+        <Image className={Styles.cardImage} src={src} alt='image' />
+        <Text family='roboto' color={"black"} variant={"xxxlText"} className={Styles.textPrimary} strong='strong6' >{textFirst}</Text>
     </div>
-    <Text className={Styles.textSecond} family='poppins'>He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ...</Text>
+    <Text color={"black"} variant={"smText"} className={Styles.textSecond} >{textSecond}</Text>
       
     </div>
   )
 }
 
 NewsCard.propTypes = {
-className:propTypes.string,
+src:propTypes.string,
+textFirst:propTypes.string,
+textSecond:propTypes.string,
 }
 
 export default NewsCard
