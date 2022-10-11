@@ -23,6 +23,9 @@ const Styleguide = () => {
                 <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
                 <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
                 <Button btnClass={Styles.checboxMain} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
+                <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
+                <Button size={"md02"} variant={"dangerPrimary"}>Demo</Button>
+                <Button btnClass={Styles.checboxMain} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
             </div>
 
         </div>

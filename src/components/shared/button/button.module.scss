@@ -28,6 +28,13 @@
         border-radius: 12px;
         font-weight: 700;
     }
+    &.sm02 {
+        max-width: 100%;
+        min-width: 111px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
 
     &.md {
         max-width: 100%;
@@ -42,6 +49,14 @@
         min-width: 136px;
         max-height: 40px;
         font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.md02{
+        max-width: 100%;
+        min-width: 225px;
+        max-height: 56px;
+        font-size: $font-xxxl;
         border-radius: 12px;
         font-weight: 700;
     }
@@ -79,6 +94,10 @@
     &.disaled {
         color: $white;
         background: $gray;
+    }
+    &.dangerPrimary{
+        color:$white;
+       background:$red;
     }
 
     &.default {
