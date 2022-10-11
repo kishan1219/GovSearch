@@ -1,11 +1,15 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import styles from './newsCard.module.scss'
+import Styles from './newsCard.module.scss'
+import Image from '../image'
 const NewsCard = ({
 className
 }) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={Styles.wrapper}>
+    <div>
+        <Image src='images/newsCardImage.png' alt='image' />
+    </div>
       
     </div>
   )

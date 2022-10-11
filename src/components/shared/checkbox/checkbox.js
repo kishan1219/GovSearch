@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './checkbox.module.scss'
+import Styles from './checkbox.module.scss'
 import Text from '../text'
 const CheckBox = ({
     onChange,
@@ -18,9 +18,9 @@ const CheckBox = ({
     id
   }) => {
     return (
-      <div className={`${styles.checkboxWrapper} ${className}`}>
-        <label className={`${styles.checkedSection} ${styles[variant]} ${labelClass}
-         ${labelName === undefined ? styles.displayBlock : ""}`}>
+      <div className={`${Styles.checkboxWrapper} ${className}`}>
+        <label className={`${Styles.checkedSection} ${Styles[variant]} ${labelClass}
+         ${labelName === undefined ? Styles.displayBlock : ""}`}>
           <input
             checked={defaultChecked}
             type="checkbox"
@@ -31,8 +31,8 @@ const CheckBox = ({
             disabled={disabled}
             id={id}
           />
-          <Text htmlFor={id} className={styles.checkmark} />
-          <Text htmlFor={id} className={`${styles.nameWrapper} ${[customClass]} ${styles[color]}`}>{labelName}</Text>
+          <Text htmlFor={id} className={Styles.checkmark} />
+          <Text htmlFor={id} className={`${Styles.nameWrapper} ${[customClass]} ${Styles[color]}`}>{labelName}</Text>
         </label>
       </div>
     )
