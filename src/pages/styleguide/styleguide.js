@@ -34,7 +34,6 @@ const Styleguide = () => {
              <Heading headingType={"h4"} >Heading Demo</Heading>
              <Heading headingType={"h5"} >Heading Demo</Heading>
              <Heading headingType={"h6"} >Heading Demo</Heading>
-
             </div>
         </div>
     )
