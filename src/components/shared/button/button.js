@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Button.module.scss';
+import styles from '../button/button.module.scss';
 import { BUTTONACTION } from './constant';
 
 const Button = ({

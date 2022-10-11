@@ -1,7 +1,7 @@
 @import "../../../assets/scss/variables.scss";
 
 .button {
-    color: $textWhite;
+    color: $white;
     border-radius: 12px;
     font-size: $font-xxl;
     height: 48px;
@@ -19,23 +19,31 @@
         min-width: 87px;
         font-size: $font-xxl;
         border-radius: 12px;
-        font-weight: 600;
+        font-weight: 700;
+    }
+    &.sm01 {
+        max-width: 100%;
+        min-width: 97px;
+        font-size: $font-xxl;
+        border-radius: 12px;
+        font-weight: 700;
     }
 
     &.md {
         max-width: 100%;
         min-width: 131px;
+        max-height: 40px;
         font-size: $font-mlg;
-        border-radius: 8px;
-        font-weight: 600;
+        border-radius: 12px;
+        font-weight: 700;
     }
 
     &.lg {
         max-width: 100%;
-        min-width: 323px;
-        font-size: $font-big;
-        border-radius: 8px;
-        font-weight: 600;
+        min-width: 344px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
     }
 
 
@@ -44,7 +52,7 @@
 
 
     &.solidPrimary {
-        color: $white;
+      color: $white;
         background: $primary;
     }
 
