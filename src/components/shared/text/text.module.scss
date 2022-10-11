@@ -1,0 +1,122 @@
+@import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/variables.scss";
+.xxsText {
+    font-size: $font-xxs;
+    line-height: 10px;
+    @include textStyling;
+}
+.xsText {
+    font-size: $font-xs;
+    line-height: 12px;
+    @include textStyling;
+}
+
+.smText {
+    font-size: $font-sm;
+    line-height: 14px;
+    @include textStyling;
+}
+.smText01 {
+    font-size: $font-md;
+    @include textStyling;
+}
+.msmText {
+    font-size: $font-msm;
+    line-height: 16px;
+    @include textStyling;
+}
+.mdText {
+    font-size: $font-md;
+    line-height: 12px;
+    @include textStyling;
+}
+.lgText {
+    font-size: $font-lg;
+    line-height: 18px;
+    @include textStyling;
+}
+.xlText {
+    font-size: $font-xl;
+    line-height: 20px;
+    @include textStyling;
+}
+.xxlText {
+    font-size: $font-xxl;
+    line-height: 22px;
+    @include textStyling;
+}
+.xxxlText {
+    font-size: $font-xxxl;
+    line-height: 24px;
+    font-weight: 600;
+    @include textStyling;
+}
+.xx1Text {
+    font-size: $font-xx1;
+    line-height: 26px;
+    @include textStyling;
+}
+.xx2Text {
+    font-size: $font-xx2;
+    line-height: 27px;
+    @include textStyling;
+}
+.xx3Text {
+    font-size: $font-xx3;
+    line-height: 28px;
+    @include textStyling;
+}
+
+.xx4Text {
+    font-size: $font-xx4;
+    line-height: 32px;
+    @include textStyling;
+}
+.xx5Text {
+    font-size: $font-xx5;
+    line-height: 34px;
+    @include textStyling;
+}
+.xx6Text {
+    font-size: $font-xx6;
+    line-height: 34px;
+    @include textStyling;
+}
+.xx7Text {
+    font-size: $font-xx7;
+    line-height: 34px;
+    @include textStyling;
+}
+.xx8Text {
+    font-size: $font-xx8;
+    line-height: 34px;
+    @include textStyling;
+}
+.xx9Text {
+    font-size: $font-xx9;
+    line-height: 28px;
+    @include textStyling;
+}
+.bigText {
+    font-size: $font-big;
+    line-height: 34px;
+    @include textStyling;
+}
+.big01Text {
+    font-size: $font-big01;
+    line-height: 44px;
+    @include textStyling;
+}
+.big03Text {
+    font-size: $font-big03;
+    line-height: 44px;
+    @include textStyling;
+}
+.big72Text {
+    font-size: $font-big72;
+    line-height: 10px;
+    @include textStyling;
+}
+.raleway {
+    font-family: 'raleway','sans-serif';
+}
