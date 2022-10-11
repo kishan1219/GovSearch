@@ -1,20 +1,19 @@
 import React from 'react'
-import './search.module.scss';
+import Styles from './search.module.scss';
+
 import {
   Input,
   Icon
 } from "../index";
 import propTypes from 'prop-types'
 
-
-import { useState } from 'react';
-export default function Search({ type, placeholder,onClick,className }) {
+export default function Search({ type, placeholder,onClick,inputclassName,iconclassName,size,iconColor }) {
   return (
-    <div className=' search'>
+    <div className={Styles.search}>
       
-      <Input className={className}placeholder={placeholder} />
-      <div className='rightIcon'><Icon type={type} onClick={onClick} />
-      </div>
+      <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}  />
+       <div className={Styles.rightIcon}><Icon  type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.iconMain} ${iconclassName}`}/></div>
+      
 
     </div >
 

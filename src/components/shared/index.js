@@ -4,6 +4,7 @@ import Text from "./text";
 import Image from "./image";
 import Layout from "../common/layout/layout";
 import CheckBox from "./checkbox/checkbox";
+import NewsCard from "./newsCard/newsCard";
 import Button from "./button/button";
 
 export{
@@ -13,5 +14,6 @@ export{
     Image,
     Layout,
     CheckBox,
-    Button
+    NewsCard,
+    Button,
 }
