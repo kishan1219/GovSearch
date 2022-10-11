@@ -1,11 +1,29 @@
 @import '../../assets/scss/variables.scss';
+
 .wrapper {
-    margin: 30px 30px 30px 30px;
-    background-color: $white04;
-    .checboxMain{
-        padding:10px 0px 10px 66px;
+    width: 100%;
+    min-height: 100vh;
+
+    .inputMain {
+        margin-top: 30px;
+        max-width: 600px;
+        display: grid;
     }
-    .btnMain{
-        padding:10px 0px;
+
+    .checboxMain {
+        margin-top: 30px;
     }
+
+    .buttonMain {
+        max-width: 1400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0px;
+        flex-wrap: wrap;
+    }
+
+   
+
+    
 }
