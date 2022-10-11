@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox, Icon, Input, Button, NewsCard, } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
     return (
@@ -26,9 +26,14 @@ const Styleguide = () => {
                 <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
                 <Button size={"md02"} variant={"dangerPrimary"}>Demo</Button>
                 <Button btnClass={Styles.checboxMain} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
+                <Button btnClass={Styles.checboxMain} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
+                <Button size={"sm02"} variant={"dangerPrimary"}>Demo</Button>
             </div>
             <NewsCard />
 
+            <div>
+             <Heading headingType={"h1"} > Heading Demo</Heading>
+            </div>
         </div>
     )
 }

@@ -5,7 +5,7 @@
     width: 100%;
     max-width: 476px;
     .newsCardMain {
-        @include flex;
+        display: flex;
     }
     .textSecond {
         max-width: 472px;
