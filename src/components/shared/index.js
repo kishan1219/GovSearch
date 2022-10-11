@@ -5,6 +5,7 @@ import Image from "./image";
 import Layout from "../common/layout/layout";
 import CheckBox from "./checkbox/checkbox";
 import Button from "./button/button";
+import Heading from "./heading/heading";
 
 export{
     Icon,
@@ -13,5 +14,6 @@ export{
     Image,
     Layout,
     CheckBox,
-    Button
+    Button,
+    Heading,
 }
