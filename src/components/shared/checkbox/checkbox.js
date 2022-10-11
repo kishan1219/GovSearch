@@ -14,7 +14,8 @@ const CheckBox = ({
     variant,
     customClass,
     className,
-    color
+    color,
+    id
   }) => {
     return (
       <div className={`${styles.checkboxWrapper} ${className}`}>
@@ -28,9 +29,10 @@ const CheckBox = ({
             name={checkBoxName}
             value={value}
             disabled={disabled}
+            id={id}
           />
-          <Text className={styles.checkmark} />
-          <Text className={`${styles.nameWrapper} ${[customClass]} ${styles[color]}`}>{labelName}</Text>
+          <Text htmlFor={id} className={styles.checkmark} />
+          <Text htmlFor={id} className={`${styles.nameWrapper} ${[customClass]} ${styles[color]}`}>{labelName}</Text>
         </label>
       </div>
     )
