@@ -7,6 +7,7 @@ import styles from './styleguide.module.scss'
 const Styleguide = ({ }) => {
     return (
         <div className={styles.wrapper}>
+            <h1>components:</h1>
             <div className={styles.checboxMain}>
                 <CheckBox labelName={"dfndfg"} />
             </div>
@@ -15,8 +16,9 @@ const Styleguide = ({ }) => {
             </div>
             <Icon type="pluscircle" color={"black"}/>
             <div>
+            <div className={styles.btnMain}>
                 <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
-                <Button size={"lg"} variant={"disaled"}> Demo</Button>
+                <Button size={"lg"} variant={"disaled"}>      Demo</Button>
                 <Button size={"lg"} variant={"solidPrimary"}> Demo</Button>
                 <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
                 <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
@@ -26,6 +28,7 @@ const Styleguide = ({ }) => {
                 <Text className={styles.text} variant={"xxlText"} color={"red"} strong={"strong7"}>hello</Text>
             </div>
 
+        </div>
         </div>
     )
 }
