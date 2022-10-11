@@ -15,8 +15,8 @@ export{
     Image,
     Layout,
     CheckBox,
-    Button,
-    Heading,
     NewsCard,
     Button,
+    Heading,
+
 }
