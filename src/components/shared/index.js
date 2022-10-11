@@ -5,6 +5,8 @@ import Image from "./image";
 import Layout from "../common/layout/layout";
 import CheckBox from "./checkbox/checkbox";
 import NewsCard from "./newsCard/newsCard";
+import Button from "./button/button";
+
 export{
     Icon,
     Input,
@@ -13,5 +15,5 @@ export{
     Layout,
     CheckBox,
     NewsCard,
-
+    Button,
 }

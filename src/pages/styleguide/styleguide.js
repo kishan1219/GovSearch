@@ -1,11 +1,11 @@
 import React from 'react'
-import { CheckBox, Icon, Input } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, } from '../../components/shared/index'
 import styles from './styleguide.module.scss'
 const Styleguide = ({ }) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.checboxMain}>
-                <CheckBox checked="checked" labelName={"This is a checkbox"} />
+                <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
             </div>
             <div className={styles.checboxMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />
@@ -16,6 +16,14 @@ const Styleguide = ({ }) => {
                 <Input placeholder="Input Box" variant="grey" />
             </div>
 
+            <div className={styles.buttonMain}>
+                <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
+                <Button size={"lg"} variant={"disaled"}> Demo</Button>
+                <Button size={"lg"} variant={"solidPrimary"}> Demo</Button>
+                <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
+                <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
+                <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
+            </div>
 
         </div>
     )
