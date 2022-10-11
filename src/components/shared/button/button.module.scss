@@ -37,11 +37,26 @@
         border-radius: 12px;
         font-weight: 700;
     }
+    &.md01 {
+        max-width: 100%;
+        min-width: 136px;
+        max-height: 40px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+    }
 
     &.lg {
         max-width: 100%;
         min-width: 344px;
         font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.lg01{
+        max-width: 100%;
+        min-width: 372px;
+        font-size: $font-xxxl;
         border-radius: 12px;
         font-weight: 700;
     }

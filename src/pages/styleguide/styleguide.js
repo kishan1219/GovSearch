@@ -6,12 +6,14 @@ const Styleguide = ({ }) => {
         <div className={styles.wrapper}>
             <div className={styles.checboxMain}>
                 <CheckBox labelName={"dfndfg"} />
-                <Button size={"lg"} variant={"solidPrimary"}> Civilian </Button>
-                <Button size={"lg"} variant={"disaled"}> Defense</Button>
-                <Button size={"lg"} variant={"solidPrimary"}> State & Local </Button>
-                <Button size={"sm01"} variant={"solidSecondary"}>Search</Button>
-                <Button size={"md"} variant={"solidSecondary"}>Search</Button>
-               
+            </div>
+            <div>
+                <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
+                <Button size={"lg"} variant={"disaled"}> Demo</Button>
+                <Button size={"lg"} variant={"solidPrimary"}> Demo</Button>
+                <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
+                <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
+                <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
             </div>
 
         </div>
