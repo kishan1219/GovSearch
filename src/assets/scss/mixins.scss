@@ -1,0 +1,69 @@
+@mixin textStyling {
+    &.strong3 {
+      font-weight: 300;
+    }
+    &.strong4 {
+      font-weight: 400;
+    }
+    &.strong5 {
+      font-weight: 500;
+    }
+    &.strong6 {
+      font-weight: 600;
+    }
+    &.strong7 {
+      font-weight: 700;
+    }
+    &.primary {
+      color: $primary;
+    }
+    &.primary03 {
+      color: $primary03;
+    }
+    &.primary04 {
+      color: $primary04;
+    }
+    &.secondary {
+      color: $secondary;
+    }
+    &.black {
+      color: $black;
+    }
+    &.white {
+      color: $white;
+    }
+    &.white03 {
+      color: $white03;
+    }
+    &.red {
+      color: $red;
+    }
+    &.gray {
+      color: $gray;
+    }
+    &.gray01 {
+      color: $gray01;
+    }
+    &.gray02 {
+      color: $gray02;
+    }
+    &.darkGray {
+      color: $darkGray;
+    }
+    &.lightGray01 {
+      color: $lightGray01;
+    }
+    &.lightGray{
+      color:$darkGray;
+    }
+    &.upperCase {
+      text-transform: uppercase;
+    }
+    &.lineThrough {
+      text-decoration: line-through;
+    }
+    &.underline {
+      text-decoration: underline;
+    }
+  }
+  

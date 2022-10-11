@@ -1,5 +1,5 @@
 import React from 'react'
-import './search.scss';
+import './search.module.scss';
 import {
   Input,
   Icon
