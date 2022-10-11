@@ -1,0 +1,22 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins.scss';
+
+.wrapper {
+    width: 100%;
+    max-width: 476px;
+    background:$white01;
+    .newsCardMain {
+        display: flex;
+        .cardImage {
+            max-width: 250px;
+            margin-right: 24px;
+        }
+        .textPrimary {
+            max-width: 197px;
+        }
+    }
+    .textSecond {
+        max-width: 472px;
+        margin-top: 34px;
+    }
+}

@@ -2,15 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { HEADINGTYPES } from './constant'
 import styles from './heading.module.scss'
-/**
- * Render Heading
- * @param {string} headingType
- * @param {string} children
- * @param {string} color
- * @param {string} lineThrough
- * @param {string} fontWeight
- * @param {string} className
- */
 
 const renderHeading = ({
   headingType,
