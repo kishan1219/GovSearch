@@ -4,4 +4,10 @@
 .wrapper {
     width: 100%;
     max-width: 476px;
+    .newsCardMain {
+        @include flex;
+    }
+    .textSecond {
+        max-width: 472px;
+    }
 }
