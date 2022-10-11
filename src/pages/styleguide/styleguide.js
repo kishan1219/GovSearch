@@ -5,7 +5,7 @@ const Styleguide = ({ }) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.checboxMain}>
-                <CheckBox labelName={"dfndfg"} />
+                <CheckBox checked="checked" labelName={"This is a checkbox"} />
             </div>
 
         </div>
