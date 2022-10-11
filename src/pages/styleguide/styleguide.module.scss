@@ -1,4 +1,11 @@
 @import '../../assets/scss/variables.scss';
 .wrapper {
     margin: 30px 30px 30px 30px;
+    background-color: $white04;
+    .checboxMain{
+        padding:10px 0px 10px 66px;
+    }
+    .btnMain{
+        padding:10px 0px;
+    }
 }
