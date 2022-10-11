@@ -18,11 +18,11 @@ const Styleguide = ({ }) => {
 
             <div className={styles.buttonMain}>
                 <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
-                <Button size={"lg"} variant={"disaled"}> Demo</Button>
+                <Button size={"lg"} variant={"disaled"}>      Demo</Button>
                 <Button size={"lg"} variant={"solidPrimary"}> Demo</Button>
                 <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
                 <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
-                <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
+                <Button btnClass={styles.checboxMain} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
             </div>
 
         </div>
