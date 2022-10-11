@@ -26,9 +26,12 @@ const Styleguide = () => {
                 <Button size={"md02"} variant={"dangerPrimary"}>Demo</Button>
                 <Button btnClass={styles.checboxMain} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
                 <Button size={"sm02"} variant={"dangerPrimary"}>Demo</Button>
+<<<<<<< HEAD
             </div>
             <div>
              <Heading headingType={"h1"} > Heading Demo</Heading>
+=======
+>>>>>>> 47275ffeaddd5bd03007ed51da7156f50f4c8d65
             </div>
         </div>
     )
