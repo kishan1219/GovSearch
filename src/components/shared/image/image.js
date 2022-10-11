@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Image = ({className,src,alt,height,width,onClick,htmlFor}) => {
+const Image = ({className,src,alt,height,width,onClick}) => {
   return (
 
-      <img className={className} htmlFor={htmlFor} src={src} alt={alt} height={height} width={width} onClick= {onClick} />
+      <img className={className} src={src} alt={alt} height={height} width={width} onClick= {onClick} />
 
   )
 }

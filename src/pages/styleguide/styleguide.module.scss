@@ -1,4 +1,15 @@
 @import '../../assets/scss/variables.scss';
 .wrapper {
-    margin: 30px 30px 30px 30px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 30px;
+    .inputMain {
+    margin-top: 30px;
+    max-width: 450px;
+    display: grid;
+    }
+
+    .checboxMain {
+    margin-top: 30px;
+    }
 }
