@@ -1,5 +1,6 @@
 @import '../../assets/scss/variables.scss';
-
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/styles.scss';
 .wrapper {
     width: 100%;
     min-height: 100vh;
@@ -9,6 +10,25 @@ background: $white01;
     margin-top: 30px;
 }
     
+    background: $white01;
+
+    .mt30 {
+        margin-top: 30px;
+    }
+
+    .search {
+        margin-top: 30px;
+        position: relative;
+
+        .searchBox {
+        
+
+            .icoClass {
+                position: absolute;
+
+            }
+        }
+    }
 
     .iconMain {
         padding: 10px 0px 10px 66px;
@@ -37,5 +57,13 @@ background: $white01;
 
     .newsCard {
         margin: 30px 20px;
+    }
+
+    .modalMain {
+        @include flexJustifyEvenly;
+
+        .searchBox {
+            max-width: 450px;
+        }
     }
 }
