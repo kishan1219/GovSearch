@@ -30,10 +30,11 @@ const Styleguide = () => {
                 <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
                 <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
                 <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
-                <Button size={"md02"} variant={"dangerPrimary"}>Demo</Button>
+                <Button size={"md03"} variant={"dangerPrimary"}>Demo</Button>
                 <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
                 <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
                 <Button size={"sm02"} variant={"dangerPrimary"}>Demo</Button>
+                <Button size={"md02"} variant={"transparent"}>Advanced</Button>
             </div>
             <div>
                 <Text className={styles.text} variant={"xxlText"} color={"red"} strong={"strong7"}>hello</Text>
