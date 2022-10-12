@@ -32,10 +32,13 @@ const Modal = ({
     children,
 }) => {
     return (
-        <div className={`${Styles.container} ${size} ${variant} ${className}`}>
-            <div className={`${Styles.bodyContainer} ${bodyClass}`}>
-                <ModalHeader headShow={headShow} iconHandler={iconHandler} handler={handler} isIcon={isIcon} modalHeading={modalHeading} />
-                <ModalBody className={`${Styles.bodyMain} ${bodyVariant}`} >{children}</ModalBody>
+        <div className={Styles.modalOverlay} >
+            <div className={`${Styles.container} ${size} ${variant} ${className}`}>
+                <div className={`${Styles.bodyContainer} ${bodyClass}`}>
+                    <ModalHeader headShow={headShow} iconHandler={iconHandler} handler={handler} isIcon={isIcon} modalHeading={modalHeading} />
+                    <ModalBody className={`${Styles.bodyMain} ${bodyVariant}`} >{children}</ModalBody>
+                </div>
+
             </div>
         </div>
     )

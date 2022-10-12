@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
 import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, Modal } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
+    const [openModal, setOpenModal] = useState(false);
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
@@ -61,23 +62,11 @@ const Styleguide = () => {
                 <Table />
             </div>
             <div className={Styles.modalMain}>
-                <Modal isIcon={true} headShow={true} modalHeading={"sign in"} >
-                    <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
-                </Modal>
-                <Modal headShow={false} isIcon={false} modalHeading={"sign in"} >
-                    <div className={Styles.mt30}>
-                        <Heading headingType={"h1"} >Heading Demo</Heading>
-                    </div>
-                    <div className={Styles.mt30}>
-                        <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
-                    </div>
-                    <div className={Styles.mt30}>
-                        <CheckBox checked="checked" labelName={"This is a checkbox"} />
-                    </div>
-                    <div className={Styles.buttonMain}>
-                        <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
-                    </div>
-                </Modal>
+                <Button btnHandler={() => setOpenModal(true)} btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>show Modal</Button>
+                {openModal &&
+                    <Modal iconHandler={() => setOpenModal(false)} isIcon={true} headShow={true} modalHeading={"sign in"} >
+                        <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                    </Modal>}
             </div>
         </div>
 
