@@ -60,8 +60,8 @@ const Styleguide = () => {
             <div>
                 <Table/>
             </div>
-            <div className={styles.searchbar}>
-                <SearchBar inputclassName={styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
+            <div className={Styles.searchbar}>
+                <SearchBar inputclassName={Styles.s} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
             </div>
         </div>
         
