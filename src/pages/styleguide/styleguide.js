@@ -1,7 +1,5 @@
 import React from 'react'
-
 import Search from '../../components/shared/search/search'
-import styles from './styleguide.module.scss'
 import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table} from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
@@ -10,8 +8,8 @@ const Styleguide = () => {
             <div className={Styles.checboxMain}>
                 <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
             </div>
-            <div className={styles.search}>
-                <Search inputclassName={styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
+            <div className={Styles.search}>
+                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
             </div>
             <div className={Styles.iconMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />
@@ -37,7 +35,7 @@ const Styleguide = () => {
                 <Button size={"md02"} variant={"transparent"}>Advanced</Button>
             </div>
             <div>
-                <Text className={styles.text} variant={"xxlText"} color={"red"} strong={"strong7"}>hello</Text>
+                <Text className={Styles.text} variant={"xxlText"} color={"red"} strong={"strong7"}>hello</Text>
             </div>
 
             <div>
