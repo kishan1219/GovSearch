@@ -4,10 +4,21 @@
 .wrapper {
     width: 100%;
     max-width: 476px;
+    background:$white01;
+    
     .newsCardMain {
         display: flex;
+        .cardImage {
+            max-width: 250px;
+            margin-right: 24px;
+        }
+        .textPrimary {
+            max-width: 197px;
+            line-height: 28px;
+        }
     }
     .textSecond {
         max-width: 472px;
+        margin-top: 34px;
     }
 }

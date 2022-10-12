@@ -8,6 +8,7 @@ import NewsCard from "./newsCard/newsCard";
 import Button from "./button/button";
 import Heading from "./heading/heading";
 import Table from "./table";
+import Card from "./card/card";
 export{
     Icon,
     Input,
@@ -18,6 +19,9 @@ export{
     NewsCard,
     Button,
     Heading,
-    Table
+    Table,
+    Card,
+    
+
 
 }

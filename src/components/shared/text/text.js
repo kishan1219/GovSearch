@@ -42,7 +42,7 @@ Text.defaultProps = {
   className: '',
   color: 'primary',
   children: '',
-  family:'',
+  family:'poppins',
   strong:'strong4'
 }
 // PropTypes Validation

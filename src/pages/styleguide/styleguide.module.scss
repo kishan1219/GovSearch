@@ -3,6 +3,28 @@
 .wrapper {
     width: 100%;
     min-height: 100vh;
+    padding-top: 30px;
+background: $white01;
+.mt30 {
+    margin-top: 30px;
+}
+    .search {
+        position: relative;
+
+        .searchBox {
+            max-width: 500px;
+            width: 100%;
+
+            .icoClass {
+                position: absolute;
+
+            }
+        }
+    }
+
+    .iconMain {
+        padding: 10px 0px 10px 66px;
+    }
 
     .inputMain {
         margin-top: 30px;
@@ -11,8 +33,10 @@
     }
 
     .checboxMain {
-        margin-top: 30px;
+        padding: 10px 0px 10px 66px;
     }
+
+
 
     .buttonMain {
         max-width: 1400px;
@@ -23,7 +47,7 @@
         flex-wrap: wrap;
     }
 
-   
-
-    
+    .newsCard {
+        margin: 30px 20px;
+    }
 }
