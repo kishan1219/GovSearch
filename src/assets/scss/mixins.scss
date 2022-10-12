@@ -1,0 +1,74 @@
+@import "./breakpoints.scss";
+@import "./variables.scss";
+
+@mixin fonts-poppins {
+    font-family: 'poppins', 'sans-serif';
+    font-style: normal;
+    font-weight: 400;
+}
+
+@mixin roboto {
+    font-family: 'roboto';
+    font-weight: 600;
+    font-style: normal;
+}
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexJustifyCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexJustifyBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexJustifyAround {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin flexEvenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@mixin flexJustifyEvenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@mixin ScrollBar {
+  .scrollBar {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 10px;
+       @include sm{
+         width: 10px;
+         height: 8px;
+       }
+    }
+    &::-webkit-scrollbar-track {
+      background: $white03;
+      border-radius: 8px;
+        @include sm {
+          width: 6px;
+        }
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $primary;
+      border-radius: 10px;
+      border: 1px solid $white03;
+    }
+  }
+}

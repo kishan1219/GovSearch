@@ -1,0 +1,125 @@
+@import "../../../assets/scss/variables.scss";
+
+.button {
+    color: $white;
+    border-radius: 12px;
+    font-size: $font-xxl;
+    height: 48px;
+    font-weight: 600;
+    font-family: 'Poppins';
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    // Size
+
+    &.sm {
+        max-width: 100%;
+        min-width: 87px;
+        font-size: $font-xxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.sm01 {
+        max-width: 100%;
+        min-width: 97px;
+        font-size: $font-xxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.sm02 {
+        max-width: 100%;
+        min-width: 107px;
+        font-size: $font-xxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+
+    &.sm03 {
+        max-width: 100%;
+        min-width: 111px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+
+    &.md {
+        max-width: 100%;
+        min-width: 131px;
+        max-height: 40px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.md01 {
+        max-width: 100%;
+        min-width: 136px;
+        max-height: 40px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.md02{
+        max-width: 100%;
+        min-width: 225px;
+        max-height: 56px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    
+
+    &.lg {
+        max-width: 100%;
+        min-width: 344px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.lg01{
+        max-width: 100%;
+        min-width: 372px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+    &.lg02{
+        max-width: 100%;
+        min-width: 408px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 700;
+    }
+
+
+
+    // variant
+
+
+    &.solidPrimary {
+        color: $white;
+        background: $primary;
+    }
+
+    &.solidSecondary {
+        color: $white;
+        background: $primary05;
+    }
+
+    &.disaled {
+        color: $white;
+        background: $gray;
+    }
+    &.dangerPrimary{
+        color:$white;
+        background:$red;
+    }
+
+    &.default {
+        color: $white;
+        background: $primary03;
+    }
+
+
+}

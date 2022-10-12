@@ -1,0 +1,197 @@
+@import '../../../assets/scss/variables.scss';
+
+.checkboxWrapper {
+    display: block;
+
+    .checkedSection {
+        position: relative;
+        padding-left: 20px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        line-height: 100%;
+
+        &.displayBlock {
+            display: block;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        input:checked~.checkmark {
+            background-color: $primary;
+            border: 1px solid $primary;
+        }
+
+        input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            background-color: transparent;
+            border: 1px solid $gray;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 5px;
+                top: 2px;
+                width: 5px;
+                height: 9px;
+                border: solid $white;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+        .nameWrapper {
+            font-weight: 400;
+            font-size: $font-lg;
+            line-height: 100%;
+            color: $gray;
+            padding-left: 7px;
+        }   
+
+        &.gray {
+            .checkmark {
+                border: 1px solid $gray;
+            }
+
+            input:checked~.checkmark {
+                background-color: transparent;
+                border: 1px solid $gray;
+            }
+
+            .checkmark {
+                &:after {
+                    border: solid $gray;
+                    border-width: 0 2px 2px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+
+            .nameWrapper {
+                font-size: $font-xs;
+                line-height: 15px;
+                color: $gray;
+                font-weight: 500;
+            }
+        }
+
+        &.primary {
+            .checkmark {
+                border: 1px solid $gray;
+            }
+
+            input:checked~.checkmark {
+                background-color: transparent;
+                border: 1px solid $primary;
+            }
+
+            .checkmark {
+                &:after {
+                    border: solid $primary;
+                    border-width: 0 2px 2px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+
+            .nameWrapper {
+                font-size: $font-sm;
+                line-height: 16px;
+                color: $gray;
+                font-weight: normal;
+            }
+        }
+
+        &.grayFill {
+            .checkmark {
+                border: 1px solid $gray;
+            }
+
+            input:checked~.checkmark {
+                   background-color: $white03;
+                   border: 1px solid $gray;
+            }
+
+            .checkmark {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 1px;
+                    top: 1px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 3px;
+                    background: $gray05;
+                    border-width: 0 2px 2px 0;
+                    transform: inherit;
+                }
+            }
+
+            .nameWrapper {
+                font-size: $font-sm;
+                line-height: 16px;
+                color: $gray;
+                font-weight: normal;
+            }
+        }
+
+        &.hidden {
+            padding: 0;
+            .checkmark {
+                border: 0;
+                display: none;
+            }
+
+            input:checked~.checkmark {
+                border: 0px;
+            }
+
+            .checkmark {
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    left: 0px;
+                    top: 0px;
+                    width: 0px;
+                    height: 0px;
+                    border-radius: 0px;
+                    border-width: 0;
+                    transform: inherit;
+                }
+            }
+            .nameWrapper {
+                font-size: $font-sm;
+                line-height: 16px;
+                color: $gray;
+                font-weight: normal;
+                padding: 0;
+            }
+        }
+    }
+}

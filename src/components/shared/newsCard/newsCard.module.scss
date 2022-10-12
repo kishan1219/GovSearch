@@ -1,0 +1,13 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins.scss';
+
+.wrapper {
+    width: 100%;
+    max-width: 476px;
+    .newsCardMain {
+        display: flex;
+    }
+    .textSecond {
+        max-width: 472px;
+    }
+}

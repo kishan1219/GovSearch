@@ -1,0 +1,29 @@
+@import '../../assets/scss/variables.scss';
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+
+    .inputMain {
+        margin-top: 30px;
+        max-width: 600px;
+        display: grid;
+    }
+
+    .checboxMain {
+        margin-top: 30px;
+    }
+
+    .buttonMain {
+        max-width: 1400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 0px;
+        flex-wrap: wrap;
+    }
+
+   
+
+    
+}
