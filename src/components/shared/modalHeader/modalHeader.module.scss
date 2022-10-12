@@ -3,7 +3,14 @@
 
 .container {
     width: 100%;
+    position: relative;
     .closeIcon {
-        text-align: right;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+    }
+    .headClass {
+        padding-top: 30px;
+        text-align: center;
     }
 }

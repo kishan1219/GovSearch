@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table} from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, Modal } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
     return (
@@ -9,7 +9,7 @@ const Styleguide = () => {
                 <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
             </div>
             <div className={Styles.search}>
-                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
+                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
             </div>
             <div className={Styles.iconMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />
@@ -46,20 +46,25 @@ const Styleguide = () => {
                 <Heading headingType={"h5"} >Heading Demo</Heading>
                 <Heading headingType={"h6"} >Heading Demo</Heading>
             </div>
-           
-            
+
+
             <div className={Styles.cardMain}>
                 <Card children={"example card"} />
             </div>
             <div className={Styles.newsCard}>
-            <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
             </div>
 
             <div>
-                <Table/>
+                <Table />
+            </div>
+            <div className={Styles.mt30}>
+                <Modal modalHeading={"sign in"} >
+                    <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                </Modal>
             </div>
         </div>
-        
+
     )
 }
 

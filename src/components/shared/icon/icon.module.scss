@@ -1,5 +1,7 @@
 @import "../../../assets/scss/variables.scss";
-
+i {
+  cursor: pointer;
+}
 .primary {
   color: $primary;
 }

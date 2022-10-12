@@ -9,6 +9,9 @@ import Button from "./button/button";
 import Heading from "./heading/heading";
 import Table from "./table";
 import Card from "./card/card";
+import ModalHeader from "./modalHeader/modalHeader";
+import ModalBody from "./modalBody";
+import Modal from "./modal/modal";
 export{
     Icon,
     Input,
@@ -21,7 +24,8 @@ export{
     Heading,
     Table,
     Card,
-    
-
+    ModalHeader,
+    ModalBody,
+    Modal,
 
 }
