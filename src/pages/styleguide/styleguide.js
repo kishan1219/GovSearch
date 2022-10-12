@@ -4,6 +4,8 @@ import Search from '../../components/shared/search/search'
 import styles from './styleguide.module.scss'
 import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table} from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
+import SearchBar from '../../components/common/searchbar/searchbar'
+
 const Styleguide = () => {
     return (
         <div className={Styles.wrapper}>
@@ -40,6 +42,7 @@ const Styleguide = () => {
             </div>
 
             <div>
+            <Heading headingType={"h0"} >Heading Demo</Heading>
                 <Heading headingType={"h1"} >Heading Demo</Heading>
                 <Heading headingType={"h2"} >Heading Demo</Heading>
                 <Heading headingType={"h3"} >Heading Demo</Heading>
@@ -58,6 +61,9 @@ const Styleguide = () => {
 
             <div>
                 <Table/>
+            </div>
+            <div className={styles.searchbar}>
+                <SearchBar inputclassName={styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
             </div>
         </div>
         

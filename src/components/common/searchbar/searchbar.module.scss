@@ -1,7 +1,7 @@
 @import '../../../assets/scss/variables.scss';
 .search{
     display: flex;
-    
+   gap: 25px; 
    
     .inputMain{
     
@@ -10,12 +10,14 @@
         align-items: center;
         background-color: $white;
        position: relative;
+       max-width: 290px;
+       width: 100%;
        
     }
     .rightIcon{
         position: absolute;
         left: 280px;
-        top: 10px;
+       padding-top: 8px;
         
         cursor: pointer;
     }
