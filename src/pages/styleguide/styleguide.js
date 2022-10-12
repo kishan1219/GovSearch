@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, Modal } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table,ListGroup,ListItem, Modal} from '../../components/shared/index'
+
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -55,7 +56,10 @@ const Styleguide = () => {
                 <Card children={"example card"} />
             </div>
             <div className={Styles.newsCard}>
-                <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+            <NewsCard src='images/newsCardImage.png' 
+            textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} 
+            textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                
             </div>
 
             <div>
@@ -68,10 +72,17 @@ const Styleguide = () => {
                         <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
                     </Modal>}
             </div>
+
+            <div className={Styles.List}>
+            <ListGroup >
+              <ListItem children={"List"}/>
+              <ListItem children={"List"}/>
+              <ListItem children={"List"}/>
+              <ListItem children={"List"}/>
+            </ListGroup>
+          </div>
         </div>
 
     )
 }
-
-
 export default Styleguide
