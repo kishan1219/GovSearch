@@ -2,6 +2,8 @@
 .search{
     display: flex;
    gap: 25px; 
+   align-items: center;
+ 
    
     .inputMain{
     
@@ -19,6 +21,11 @@
         left: 280px;
        padding-top: 8px;
         
+        cursor: pointer;
+    }
+    .textAdv{
+        text-decoration-line: underline;
+        color: $gray;
         cursor: pointer;
     }
 }

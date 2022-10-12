@@ -1,22 +1,44 @@
 @import '../../../assets/scss/variables.scss';
+.head{
+    .headingo{
+        max-width: 546px;
+       margin-left: 120px;
+    }
 .search{
     display: flex;
-    
-   
+    gap: 25px;
+   margin-top: 17px;
+   margin-bottom: 33px;
+ position: relative;
+ .selectBtn{
+    background: $primary04;
+    max-width: 120px;
+    width: 100%;
+    color: $white;
+    border-radius: 12px;
+    font-family: 'Poppins';
+font-weight: 600;
+font-size: 16px;
+ }
     .inputMain{
-    
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
+   max-width: 575px;
+    width: 100%;
+    height: 52px;
+    border-radius: 12px;
+    padding: 0px 12px 0px 12px;
         background-color: $white;
-       position: relative;
+    
        
     }
     .rightIcon{
         position: absolute;
-        left: 280px;
-        top: 10px;
-        
+        left: 690px;
+      padding-top: 10px;
         cursor: pointer;
     }
+}
+.btnSearch{
+ position: absolute;
+ left: 120px;
+}
 }

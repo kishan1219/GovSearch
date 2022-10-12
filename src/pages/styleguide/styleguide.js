@@ -3,15 +3,22 @@ import Search from '../../components/shared/search/search'
 import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table} from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar/searchbar'
-
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 const Styleguide = () => {
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+      setAge(event.target.value);
+    };
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
             </div>
             <div className={Styles.search}>
-                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
+                <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
             </div>
             <div className={Styles.iconMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />
@@ -26,6 +33,7 @@ const Styleguide = () => {
                 <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
                 <Button size={"lg"} variant={"disaled"}>      Demo</Button>
                 <Button size={"lg"} variant={"solidPrimary"}> Demo</Button>
+                <Button size={"md04"} variant={"solidPrimary"}> Demo</Button>
                 <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
                 <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
                 <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
@@ -62,8 +70,26 @@ const Styleguide = () => {
                 <Table/>
             </div>
             <div className={Styles.searchbar}>
-                <SearchBar inputclassName={Styles.s} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
+                <SearchBar inputclassName={Styles.s} placeholder={"Search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
             </div>
+       
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Age"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+        </Select>
+        <Menu >
+            <MenuItem >Profile</MenuItem>
+            <MenuItem >My account</MenuItem>
+            <MenuItem >Logout</MenuItem>
+          </Menu>
+     
         </div>
         
     )

@@ -4,7 +4,8 @@ import Styles from './searchbar.module.scss';
 import {
   Input,
   Icon,
-  Button
+  Button,
+  Text
 } from "../../shared/index";
 import propTypes from 'prop-types'
 
@@ -15,6 +16,7 @@ export default function SearchBar({ type, placeholder,onClick,inputclassName,ico
       <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}  />
        <div className={Styles.rightIcon}><Icon  type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.iconMain} ${iconclassName}`}/></div>
        <Button size={"md"} variant={"solidSecondary"}>Search</Button>
+       <Text className={Styles.textAdv} variant={"smText"} color={"gray"} strong={"strong4"}>Advanced</Text>
 
     </div >
 
