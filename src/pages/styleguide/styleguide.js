@@ -1,15 +1,18 @@
 import React from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table,ListGroup,ListItem} from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table,ListGroup,ListItem, Modal} from '../../components/shared/index'
+
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
-                <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
+                <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
+                <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
+                <CheckBox checked="checked" labelName="gray" variant="grayFill" className={Styles.mb20} />
             </div>
             <div className={Styles.search}>
-                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
+                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
             </div>
             <div className={Styles.iconMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />
@@ -46,8 +49,8 @@ const Styleguide = () => {
                 <Heading headingType={"h5"} >Heading Demo</Heading>
                 <Heading headingType={"h6"} >Heading Demo</Heading>
             </div>
-           
-            
+
+
             <div className={Styles.cardMain}>
                 <Card children={"example card"} />
             </div>
@@ -55,10 +58,30 @@ const Styleguide = () => {
             <NewsCard src='images/newsCardImage.png' 
             textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} 
             textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                
             </div>
 
             <div>
-                <Table/>
+                <Table />
+            </div>
+            <div className={Styles.modalMain}>
+                <Modal isIcon={true} headShow={true} modalHeading={"sign in"} >
+                    <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                </Modal>
+                <Modal headShow={false} isIcon={false} modalHeading={"sign in"} >
+                    <div className={Styles.mt30}>
+                        <Heading headingType={"h1"} >Heading Demo</Heading>
+                    </div>
+                    <div className={Styles.mt30}>
+                        <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
+                    </div>
+                    <div className={Styles.mt30}>
+                        <CheckBox checked="checked" labelName={"This is a checkbox"} />
+                    </div>
+                    <div className={Styles.buttonMain}>
+                        <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
+                    </div>
+                </Modal>
             </div>
 
             <div className={Styles.List}>
@@ -70,7 +93,7 @@ const Styleguide = () => {
             </ListGroup>
           </div>
         </div>
-        
+
     )
 }
 export default Styleguide

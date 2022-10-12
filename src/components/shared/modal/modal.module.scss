@@ -1,0 +1,10 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins.scss';
+
+.container {
+    width: 100%;
+    max-width: 504px;
+    background: $white;
+    box-shadow: $shadow02;
+    border-radius: 10px;
+}

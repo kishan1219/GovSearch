@@ -1,14 +1,18 @@
 @import '../../assets/scss/variables.scss';
-
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/styles.scss';
 .wrapper {
     width: 100%;
     min-height: 100vh;
     padding-top: 30px;
-background: $white01;
-.mt30 {
-    margin-top: 30px;
-}
+    background: $white01;
+
+    .mt30 {
+        margin-top: 30px;
+    }
+
     .search {
+        margin-top: 30px;
         position: relative;
 
         .searchBox {
@@ -49,5 +53,13 @@ background: $white01;
 
     .newsCard {
         margin: 30px 20px;
+    }
+
+    .modalMain {
+        @include flexJustifyEvenly;
+
+        .searchBox {
+            max-width: 450px;
+        }
     }
 }

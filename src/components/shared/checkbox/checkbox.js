@@ -5,7 +5,7 @@ import Text from '../text'
 const CheckBox = ({
     onChange,
     labelClass,
-    defaultChecked,
+    checked,
     reference,
     checkBoxName,
     labelName,
@@ -22,7 +22,7 @@ const CheckBox = ({
         <label className={`${Styles.checkedSection} ${Styles[variant]} ${labelClass}
          ${labelName === undefined ? Styles.displayBlock : ""}`}>
           <input
-            checked={defaultChecked}
+           defaultChecked ={checked}
             type="checkbox"
             onChange={onChange}
             reference={reference}

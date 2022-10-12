@@ -11,6 +11,9 @@ import Table from "./table";
 import Card from "./card/card";
 import ListGroup from "./list-group";
 import ListItem from "./list-item/list-item";
+import ModalHeader from "./modalHeader/modalHeader";
+import ModalBody from "./modalBody";
+import Modal from "./modal/modal";
 export{
     Icon,
     Input,
@@ -24,10 +27,9 @@ export{
     Table,
     Card,
     ListGroup,
-    ListItem
-    
-    
-    
-
+    ListItem,
+    ModalHeader,
+    ModalBody,
+    Modal,
 
 }
