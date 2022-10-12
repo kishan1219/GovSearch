@@ -58,9 +58,23 @@ const Styleguide = () => {
             <div>
                 <Table />
             </div>
-            <div className={Styles.mt30}>
+            <div className={Styles.modalMain}>
                 <Modal modalHeading={"sign in"} >
                     <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                </Modal>
+                <Modal headShow={false} isIcon={false} modalHeading={"sign in"} >
+                    <div className={Styles.mt30}>
+                        <Heading headingType={"h1"} >Heading Demo</Heading>
+                    </div>
+                    <div className={Styles.mt30}>
+                        <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
+                    </div>
+                    <div className={Styles.mt30}>
+                        <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
+                    </div>
+                    <div className={Styles.buttonMain}>
+                        <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
+                    </div>
                 </Modal>
             </div>
         </div>

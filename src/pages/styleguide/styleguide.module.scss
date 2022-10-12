@@ -1,4 +1,5 @@
 @import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
 
 .wrapper {
     width: 100%;
@@ -49,5 +50,11 @@ background: $white01;
 
     .newsCard {
         margin: 30px 20px;
+    }
+    .modalMain {
+        @include flexJustifyEvenly;
+        .searchBox {
+            max-width: 450px;
+        }
     }
 }
