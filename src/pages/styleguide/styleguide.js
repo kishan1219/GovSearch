@@ -6,7 +6,9 @@ const Styleguide = () => {
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
-                <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
+                <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
+                <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
+                <CheckBox checked="checked" labelName="gray" variant="grayFill" className={Styles.mb20} />
             </div>
             <div className={Styles.search}>
                 <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
@@ -59,7 +61,7 @@ const Styleguide = () => {
                 <Table />
             </div>
             <div className={Styles.modalMain}>
-                <Modal modalHeading={"sign in"} >
+                <Modal isIcon={true} headShow={true} modalHeading={"sign in"} >
                     <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
                 </Modal>
                 <Modal headShow={false} isIcon={false} modalHeading={"sign in"} >
@@ -70,7 +72,7 @@ const Styleguide = () => {
                         <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
                     </div>
                     <div className={Styles.mt30}>
-                        <CheckBox defaultChecked="checked" labelName={"This is a checkbox"} />
+                        <CheckBox checked="checked" labelName={"This is a checkbox"} />
                     </div>
                     <div className={Styles.buttonMain}>
                         <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>

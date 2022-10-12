@@ -36,8 +36,8 @@ const ModalHeader = ({
     )
 }
 ModalHeader.defaultProps = {
-    headShow: true,
-    isIcon: true,
+    headShow: '',
+    isIcon: '',
 }
 ModalHeader.propTypes = {
     modalHeading: PropTypes.string,
