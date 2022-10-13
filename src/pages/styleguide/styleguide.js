@@ -1,14 +1,71 @@
-
-
 import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, Modal } from '../../components/shared/index'
-import SearchBar from '../../components/common/searchbar/searchbar'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem,LatestDeatils, Modal, Layout } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
+import SearchBar from'../../components/common/searchbar'
+import BarChart from '../../components/shared/barchart/barchart'
+
 const Styleguide = () => {
-    const [openModal, setOpenModal] = useState(false);
+    
+    const views = [
+        {
+          id: 1,
+          img: 'assets/images/armySeal.png',
+          positionFirst: "Department of the Army",
+          name: "",
+          number: "7",
+          positionSecond: "Department of Defense",
+          place: "Arlington, VA",
+        },
+        {
+            id: 2,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },
+          {
+            id: 3,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },   
+          {
+            id: 4,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },
+          {
+            id: 5,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },
+          {
+            id: 6,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },    
+      ];
+      const [openModal, setOpenModal] = useState(false);
     return (
-        <div className={Styles.wrapper}>
+        <Layout className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -67,6 +124,19 @@ const Styleguide = () => {
             <div>
                 <Table />
             </div>
+            <div className={`${Styles.colMd4} ${Styles.pLr12}  `}>
+            <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
+            {views.map((item) => (
+            <LatestDeatils latestImage={item.img}
+              name={item.name}
+              postion={item.positionFirst}
+              latestHeadingNumber={item.number}
+              latestHeadingSecond={item.positionSecond}
+              latestHeadingThird={item.place}            
+            />
+          ))}
+            </div>
+            </div>
             <div className={Styles.modalMain}>
                 <Button btnHandler={() => setOpenModal(true)} btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>show Modal</Button>
                 {openModal &&
@@ -84,9 +154,13 @@ const Styleguide = () => {
                 </ListGroup>
             </div>
             <div className={Styles.searchbar}>
-                 <SearchBar inputclassName={Styles.s} placeholder={"Search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"}/>
-           </div>
-        </div>
+                <SearchBar inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
+            </div>
+
+            <div className={Styles.chart} style={{ width: 300 }}>
+                <BarChart/>
+            </div>
+        </Layout>
 
     )
 }

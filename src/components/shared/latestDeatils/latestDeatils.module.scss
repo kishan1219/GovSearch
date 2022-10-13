@@ -1,0 +1,76 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/styles.scss";
+@import "../../../assets/scss/breakpoints.scss";
+@import "../../../assets/scss/mixins.scss";
+
+
+.row{   
+  display: flex;
+  // flex-wrap: wrap;    
+}
+.col{
+  flex-basis: fit-content;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.colMd3{
+  flex: 0 0 25%;
+}
+.colMd4{
+  flex: 0 0 33.333333%;
+}
+.colMd6{
+  flex: 0 0 50%;
+  @include xmd {    
+  margin-bottom: 20px;
+  }
+  @include sm{
+    flex: 0 0 50%;
+    span{
+      font-size: 11px;
+    }
+  }
+}
+.colMd9{
+  flex: 0 0 75%;
+}
+.colMd12{
+  flex: 0 0 100%;
+}
+.pR30{
+  padding-right: 30px;
+}
+.viewImg{
+  max-width: 50px;
+  width: 100%;
+  margin-right: 14px;
+  @include sm{
+    max-width: 35px;
+    width: 100%;
+    margin-right: 10px;
+  }
+  .detailsImage{
+    max-width: 50px;
+    width: 100%;
+  }
+}
+
+@include xlg{
+  .mB8{
+    margin-bottom: 4px;
+  }
+}
+@include xxmd {
+  .lineHeight0{
+    line-height: 0px;
+  }    
+  .mb20{
+    margin-bottom: 10px;
+  }
+  .mB8{
+    margin-bottom: unset;
+  }
+  .pR30{
+    padding-right: unset;
+  }
+}
