@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem,LatestDeatils, Modal, Layout } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils, Modal, Layout } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from'../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -9,13 +9,13 @@ const Styleguide = () => {
     
     const views = [
         {
-          id: 1,
-          img: 'assets/images/armySeal.png',
-          positionFirst: "Department of the Army",
-          name: "",
-          number: "7",
-          positionSecond: "Department of Defense",
-          place: "Arlington, VA",
+            id: 1,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
         },
         {
             id: 2,
@@ -25,8 +25,8 @@ const Styleguide = () => {
             number: "7",
             positionSecond: "Department of Defense",
             place: "Arlington, VA",
-          },
-          {
+        },
+        {
             id: 3,
             img: 'assets/images/armySeal.png',
             positionFirst: "Department of the Army",
@@ -34,8 +34,8 @@ const Styleguide = () => {
             number: "7",
             positionSecond: "Department of Defense",
             place: "Arlington, VA",
-          },   
-          {
+        },
+        {
             id: 4,
             img: 'assets/images/armySeal.png',
             positionFirst: "Department of the Army",
@@ -43,8 +43,8 @@ const Styleguide = () => {
             number: "7",
             positionSecond: "Department of Defense",
             place: "Arlington, VA",
-          },
-          {
+        },
+        {
             id: 5,
             img: 'assets/images/armySeal.png',
             positionFirst: "Department of the Army",
@@ -52,8 +52,8 @@ const Styleguide = () => {
             number: "7",
             positionSecond: "Department of Defense",
             place: "Arlington, VA",
-          },
-          {
+        },
+        {
             id: 6,
             img: 'assets/images/armySeal.png',
             positionFirst: "Department of the Army",
@@ -61,9 +61,9 @@ const Styleguide = () => {
             number: "7",
             positionSecond: "Department of Defense",
             place: "Arlington, VA",
-          },    
-      ];
-      const [openModal, setOpenModal] = useState(false);
+        },
+    ];
+    const [openModal, setOpenModal] = useState(false);
     return (
         <Layout className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
@@ -111,9 +111,9 @@ const Styleguide = () => {
             </div>
 
 
-            <div className={Styles.cardMain}>
-                <Card children={"example card"} />
-            </div>
+
+
+
             <div className={Styles.newsCard}>
                 <NewsCard src='images/newsCardImage.png'
                     textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
@@ -125,17 +125,17 @@ const Styleguide = () => {
                 <Table />
             </div>
             <div className={`${Styles.colMd4} ${Styles.pLr12}  `}>
-            <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
-            {views.map((item) => (
-            <LatestDeatils latestImage={item.img}
-              name={item.name}
-              postion={item.positionFirst}
-              latestHeadingNumber={item.number}
-              latestHeadingSecond={item.positionSecond}
-              latestHeadingThird={item.place}            
-            />
-          ))}
-            </div>
+                <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
+                    {views.map((item) => (
+                        <LatestDeatils latestImage={item.img}
+                            name={item.name}
+                            postion={item.positionFirst}
+                            latestHeadingNumber={item.number}
+                            latestHeadingSecond={item.positionSecond}
+                            latestHeadingThird={item.place}
+                        />
+                    ))}
+                </div>
             </div>
             <div className={Styles.modalMain}>
                 <Button btnHandler={() => setOpenModal(true)} btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>show Modal</Button>
@@ -160,6 +160,48 @@ const Styleguide = () => {
             <div className={Styles.chart} style={{ width: 300 }}>
                 <BarChart/>
             </div>
+
+            <div className={Styles.logInmainBox}> 
+                <div className={Styles.logInBox}>
+                    <Card >
+                        <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Sign in</Heading>
+                        <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
+                            Enter your email address to sign in.</Text>
+                        <div className={Styles.inputMain} >
+                            <Input className={Styles.mt30} placeholder="Enter Your Email" variant="border" />
+                        </div>
+                        <div className={Styles.btnMain} >
+                            <Button size={"lg02"} variant={"disaled"}>Continue</Button>
+                        </div>
+                        <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Sign in?</Text>
+                    </Card>
+                </div>
+
+
+                <div className={Styles.logInBox}>
+                    <Card >
+                        <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Password</Heading>
+                        <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
+                            Enter your password to continue.</Text>
+                        <div className={Styles.inputMain} >
+                            <Input className={Styles.mt30} placeholder="test@technomile.com" variant="border" />
+                            <Input className={Styles.mt30} type="password" variant="border" />
+
+                        </div>
+                        <div className={Styles.forgotText}>
+                            <Text variant={"smText"} color={"black"} strong={"strong4"}>forgot password?</Text>
+                        </div>
+                        <div className={Styles.btnMain} >
+                            <Button size={"lg02"} variant={"solidPrimary"}>Continue</Button>
+                        </div>
+                        <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Login?</Text>
+
+                    </Card>
+                </div>
+            </div>
+
+
+
         </Layout>
 
     )
