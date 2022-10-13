@@ -3,11 +3,12 @@
 @import '../../../assets/scss/mixins.scss';
 
 .container {
+    position: fixed;
     width: 100%;
+    box-sizing: border-box;
     min-height: 100vh;
-    position: absolute;
-    top: 100px;
-
+    z-index: 1;
+    padding-top: 100px;
     .menu {
         display: grid;
         padding: 15px 0px;
@@ -32,7 +33,6 @@
     }
 
     .sidebarMain {
-        position: fixed;
         padding: 22px 20px 34px 48px;
         width: 100%;
         max-width: 428px;
