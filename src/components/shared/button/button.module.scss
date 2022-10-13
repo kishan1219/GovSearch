@@ -84,7 +84,14 @@
 
     }
 
-
+    &.md04 {
+        max-width: 100%;
+        min-width: 323px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+        height:68px;
+    }
     &.lg {
         max-width: 100%;
         min-width: 344px;

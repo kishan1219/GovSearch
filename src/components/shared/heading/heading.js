@@ -20,6 +20,9 @@ const renderHeading = ({
 
 
   switch (headingType) {
+    case 'h0': {
+      return <h0  onClick={onClick} className={`${styles[headingType]} ${[className]} ${fontColor} ${textVariant} ${strikeThrough} ${fontFamily} `}>{children}</h0>
+    }
     case 'h1': {
       return <h1  onClick={onClick} className={`${styles[headingType]} ${[className]} ${fontColor} ${textVariant} ${strikeThrough} ${fontFamily} `}>{children}</h1>
     }
