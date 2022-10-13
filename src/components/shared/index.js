@@ -9,7 +9,7 @@ import Button from "./button/button";
 import Heading from "./heading/heading";
 import Table from "./table";
 import Card from "./card/card";
-import  LatestDeatils  from "./latestDeatils";
+import LatestDeatils from "./latestDeatils";
 import ListGroup from "./list-group";
 import ListItem from "./list-item/list-item";
 import ModalHeader from "./modalHeader/modalHeader";
@@ -17,6 +17,8 @@ import ModalBody from "./modalBody";
 import Modal from "./modal/modal";
 import Sidebar from "./sidebar/sidebar";
 import Search from "./search/search";
+import Barchart from "./barchart";
+
 export {
   Icon,
   Input,
@@ -31,10 +33,11 @@ export {
   Card,
   LatestDeatils,
   ListGroup,
-    ListItem,
-    ModalHeader,
-    ModalBody,
-    Modal,
-    Sidebar,
-    Search,
+  ListItem,
+  ModalHeader,
+  ModalBody,
+  Modal,
+  Sidebar,
+  Search,
+  Barchart
 };

@@ -13,6 +13,7 @@
 .op5 {
   opacity: 0.5;
 }
+
 .imgFluid {
   max-width: 100%;
 }
@@ -160,12 +161,18 @@ html {
 .blackLink {
   color: $black;
 }
+
 .underline {
   text-decoration: underline;
 }
+
 // text transform
 .capitalize {
   text-transform: capitalize !important;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 // padding classes
@@ -194,8 +201,20 @@ html {
   margin-left: auto;
 }
 
+.mT27 {
+  margin-top: 27px;
+}
+.mT30 {
+  margin-top: 30px;
+}
 .mT34 {
   margin-top: 34px;
+}
+.mT35 {
+  margin-top: 35px;
+}
+.mT44 {
+  margin-top: 44px;
 }
 
 .mxAuto {
@@ -243,6 +262,9 @@ html {
   margin-top: 10px;
 }
 
+.mt20 {
+  margin-top: 20px;
+}
 .mt22 {
   margin-top: 22px;
 }
@@ -258,6 +280,7 @@ html {
 .mt30 {
   margin-top: 30px;
 }
+
 .mt50 {
   margin-top: 50px;
 }

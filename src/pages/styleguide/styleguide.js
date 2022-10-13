@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, Modal, LatestDeatils } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils,  Layout } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
-import SearchBar from '../../components/common/searchbar/searchbar'
+import SearchBar from'../../components/common/searchbar'
+import BarChart from '../../components/shared/barchart/barchart'
+
 const Styleguide = () => {
+    
     const views = [
         {
             id: 1,
@@ -60,20 +63,16 @@ const Styleguide = () => {
             place: "Arlington, VA",
         },
     ];
-    const [openModal, setOpenModal] = useState(false);
+    // const [openModal, setOpenModal] = useState(false);
     return (
-        <div className={Styles.wrapper}>
-            {openModal &&
-                <Modal iconHandler={() => setOpenModal(false)} isIcon={true} headShow={true} modalHeading={"sign in"} >
-                    <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
-                </Modal>}
+        <Layout className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="grayFill" className={Styles.mb20} />
             </div>
             <div className={Styles.search}>
-                <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
+                <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
             </div>
             <div className={Styles.iconMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />
@@ -110,11 +109,6 @@ const Styleguide = () => {
                 <Heading headingType={"h5"} >Heading Demo</Heading>
                 <Heading headingType={"h6"} >Heading Demo</Heading>
             </div>
-
-
-            <div className={Styles.cardMain}>
-                <Card children={"example card"} />
-            </div>
             <div className={Styles.newsCard}>
                 <NewsCard src='images/newsCardImage.png'
                     textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
@@ -138,11 +132,6 @@ const Styleguide = () => {
                     ))}
                 </div>
             </div>
-            <div className={Styles.modalMain}>
-                <Button btnHandler={() => setOpenModal(true)} btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>show Modal</Button>
-
-            </div>
-
             <div className={Styles.List}>
                 <ListGroup >
                     <ListItem children={"List"} />
@@ -154,7 +143,47 @@ const Styleguide = () => {
             <div className={Styles.searchbar}>
                 <SearchBar inputclassName={Styles.s} placeholder={"Search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
             </div>
-        </div>
+
+            <div className={Styles.chart} style={{ width: 300 }}>
+                <BarChart/>
+            </div>
+            <div className={Styles.logInmainBox}> 
+                <div className={Styles.logInBox}>
+                    <Card >
+                        <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Sign in</Heading>
+                        <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
+                            Enter your email address to sign in.</Text>
+                        <div className={Styles.inputMain} >
+                            <Input className={Styles.mt30} placeholder="Enter Your Email" variant="border" />
+                        </div>
+                        <div className={Styles.btnMain} >
+                            <Button size={"lg02"} variant={"disaled"}>Continue</Button>
+                        </div>
+                        <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Sign in?</Text>
+                    </Card>
+                </div>
+                <div className={Styles.logInBox}>
+                    <Card >
+                        <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Password</Heading>
+                        <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
+                            Enter your password to continue.</Text>
+                        <div className={Styles.inputMain} >
+                            <Input className={Styles.mt30} placeholder="test@technomile.com" variant="border" />
+                            <Input className={Styles.mt30} type="password" variant="border" />
+
+                        </div>
+                        <div className={Styles.forgotText}>
+                            <Text variant={"smText"} color={"black"} strong={"strong4"}>forgot password?</Text>
+                        </div>
+                        <div className={Styles.btnMain} >
+                            <Button size={"lg02"} variant={"solidPrimary"}>Continue</Button>
+                        </div>
+                        <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Login?</Text>
+
+                    </Card>
+                </div>
+            </div>
+        </Layout>
 
     )
 }
