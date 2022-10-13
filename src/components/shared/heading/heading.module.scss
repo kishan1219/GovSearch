@@ -1,6 +1,9 @@
 @import '../../../assets//scss/variables.scss';
 @import '../../../assets//scss/mixins.scss';
-
+.h0{
+  font-size: 100px;
+  line-height: 120px;
+}
 .h1 {
   font-size: 32px;
   line-height: 40px;
@@ -30,6 +33,7 @@
   font-size: 15px;
   line-height: 17px;
 }
+
 .poppins {
   font-family: 'poppins', 'sans-serif';
 }
@@ -37,6 +41,7 @@
   font-family: 'roboto','sans-serif'
 }
 
+.h0,
 .h1,
 .h2,
 .h3,

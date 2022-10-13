@@ -1,9 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, Modal, Layout } from '../../components/shared/index'
-
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem,LatestDeatils, Modal, Layout } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
+
 const Styleguide = () => {
+    const views = [
+        {
+          id: 1,
+          img: 'assets/images/armySeal.png',
+          positionFirst: "Department of the Army",
+          name: "",
+          number: "7",
+          positionSecond: "Department of Defense",
+          place: "Arlington, VA",
+        },
+        {
+            id: 2,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },
+          {
+            id: 3,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },   
+          {
+            id: 4,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },
+          {
+            id: 5,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },
+          {
+            id: 6,
+            img: 'assets/images/armySeal.png',
+            positionFirst: "Department of the Army",
+            name: "",
+            number: "7",
+            positionSecond: "Department of Defense",
+            place: "Arlington, VA",
+          },    
+      ];
+      const [openModal, setOpenModal] = useState(false);
     return (
         <Layout className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
@@ -64,24 +121,25 @@ const Styleguide = () => {
             <div>
                 <Table />
             </div>
+            <div className={`${Styles.colMd4} ${Styles.pLr12}  `}>
+            <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
+            {views.map((item) => (
+            <LatestDeatils latestImage={item.img}
+              name={item.name}
+              postion={item.positionFirst}
+              latestHeadingNumber={item.number}
+              latestHeadingSecond={item.positionSecond}
+              latestHeadingThird={item.place}            
+            />
+          ))}
+            </div>
+            </div>
             <div className={Styles.modalMain}>
-                <Modal isIcon={true} headShow={true} modalHeading={"sign in"} >
-                    <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
-                </Modal>
-                <Modal headShow={false} isIcon={false} modalHeading={"sign in"} >
-                    <div className={Styles.mt30}>
-                        <Heading headingType={"h1"} >Heading Demo</Heading>
-                    </div>
-                    <div className={Styles.mt30}>
-                        <Search inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
-                    </div>
-                    <div className={Styles.mt30}>
-                        <CheckBox checked="checked" labelName={"This is a checkbox"} />
-                    </div>
-                    <div className={Styles.buttonMain}>
-                        <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
-                    </div>
-                </Modal>
+                <Button btnHandler={() => setOpenModal(true)} btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>show Modal</Button>
+                {openModal &&
+                    <Modal iconHandler={() => setOpenModal(false)} isIcon={true} headShow={true} modalHeading={"sign in"} >
+                        <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                    </Modal>}
             </div>
 
             <div className={Styles.List}>
@@ -98,3 +156,4 @@ const Styleguide = () => {
     )
 }
 export default Styleguide
+
