@@ -1,0 +1,55 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/styles.scss';
+@import '../../../assets/scss/mixins.scss';
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 100px;
+
+    .menu {
+        display: grid;
+        padding: 15px 0px;
+        text-align: center;
+        max-width: 100px;
+        background: $primary;
+        border-radius: 0px 18px 18px 0px;
+        min-height: 500px;
+
+        & li {
+            cursor: pointer;
+        }
+
+        .burgerIcon {
+            transition: 0.5s ease-in-out;
+        }
+
+    }
+
+    .sidebarFooter {
+        margin-top: 100px;
+    }
+
+    .sidebarMain {
+        padding: 22px 20px 34px 48px;
+        margin-top: 190px;
+        width: 100%;
+        max-width: 428px;
+        min-height: 100vh;
+        background: $white;
+        border-right: 12px solid $primary;
+
+        .advanceSearchText {
+            @include flexJustifyBetween;
+        }
+
+        .burgerIcon {
+            transition: 1s ease-in-out;
+        }
+        .inputMain {
+            max-width: 266px;
+            @include flexJustifyBetween
+        }
+    }
+}

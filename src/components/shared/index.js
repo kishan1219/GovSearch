@@ -15,7 +15,8 @@ import ListItem from "./list-item/list-item";
 import ModalHeader from "./modalHeader/modalHeader";
 import ModalBody from "./modalBody";
 import Modal from "./modal/modal";
-
+import Sidebar from "./sidebar/sidebar";
+import Search from "./search/search";
 export {
   Icon,
   Input,
@@ -34,4 +35,6 @@ export {
     ModalHeader,
     ModalBody,
     Modal,
+    Sidebar,
+    Search,
 };

@@ -1,8 +1,12 @@
 import React from 'react'
-
+import { Search, Sidebar } from '../../components/shared'
+import Styles from './home.module.scss'
  const Home = () => {
   return (
-    <div><h1>Home</h1> </div>
+    <div>
+    <div className={Styles.search}><Search /> </div>
+    <Sidebar /> 
+    </div>
   )
 }
 
