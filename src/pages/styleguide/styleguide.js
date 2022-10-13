@@ -1,11 +1,11 @@
 import React from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card ,Text,Table,ListGroup,ListItem, Modal} from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, Modal, Layout } from '../../components/shared/index'
 
 import Styles from './styleguide.module.scss'
 const Styleguide = () => {
     return (
-        <div className={Styles.wrapper}>
+        <Layout className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -55,10 +55,10 @@ const Styleguide = () => {
                 <Card children={"example card"} />
             </div>
             <div className={Styles.newsCard}>
-            <NewsCard src='images/newsCardImage.png' 
-            textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} 
-            textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
-                
+                <NewsCard src='images/newsCardImage.png'
+                    textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
+                    textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+
             </div>
 
             <div>
@@ -85,14 +85,15 @@ const Styleguide = () => {
             </div>
 
             <div className={Styles.List}>
-            <ListGroup >
-              <ListItem children={"List"}/>
-              <ListItem children={"List"}/>
-              <ListItem children={"List"}/>
-              <ListItem children={"List"}/>
-            </ListGroup>
-          </div>
-        </div>
+                <ListGroup >
+                    <ListItem children={"List"} />
+                    <ListItem children={"List"} />
+                    <ListItem children={"List"} />
+                    <ListItem children={"List"} />
+                </ListGroup>
+            </div>
+           
+        </Layout>
 
     )
 }
