@@ -1,5 +1,8 @@
 import layout from "./layout";
 
+import SearchBar from "./searchbar/searchbar";
 export{
-    layout
+    layout,
+   
+    SearchBar
 }
