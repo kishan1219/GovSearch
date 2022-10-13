@@ -1,53 +1,115 @@
-@import '../../assets/scss/variables.scss';
-
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
 .wrapper {
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 30px;
-background: $white01;
-.mt30 {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 30px;
+  background: $white01;
+  .mt30 {
     margin-top: 30px;
-}
-    .search {
-        position: relative;
+  }
+  .search {
+    position: relative;
 
-        .searchBox {
-            max-width: 500px;
-            width: 100%;
+    .searchBox {
+      max-width: 500px;
+      width: 100%;
 
-            .icoClass {
-                position: absolute;
-
-            }
-        }
+      .icoClass {
+        position: absolute;
+      }
     }
+  }
 
-    .iconMain {
-        padding: 10px 0px 10px 66px;
+  .iconMain {
+    padding: 10px 0px 10px 66px;
+  }
+
+  .inputMain {
+    margin-top: 30px;
+    max-width: 600px;
+    display: grid;
+  }
+
+  .checboxMain {
+    padding: 10px 0px 10px 66px;
+  }
+
+  .buttonMain {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px;
+    flex-wrap: wrap;
+  }
+
+  .newsCard {
+    margin: 30px 20px;
+  }
+  .colMd4{
+    flex: 0 0 33.333333%;
+    max-width: 730px;
+    @include sm{
+      flex: 0 0 100%;
     }
-
-    .inputMain {
-        margin-top: 30px;
-        max-width: 600px;
-        display: grid;
+  }
+  .colMd12{
+    flex: 0 0 100%;
+  }
+  .homeCard {
+    max-height: 36vh;
+    word-break: break-word;
+    padding-right: 30px;
+    @include xlg {
+      max-height: 264px;
     }
-
-    .checboxMain {
-        padding: 10px 0px 10px 66px;
+    @include sm {
+      max-height: 240px;
+      margin-bottom: 84px;
+      padding-right: 0px;
     }
-
-
-
-    .buttonMain {
-        max-width: 1400px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 30px 0px;
-        flex-wrap: wrap;
+    @include mo {
+      margin-bottom: 60px;
     }
-
-    .newsCard {
-        margin: 30px 20px;
+    .cardImg {
+      max-width: 250px;
+      width: 100%;
+      text-align: center;
     }
+    .pR30 {
+      padding-right: 30px;
+      @include xxmd {
+        padding-right: unset;
+      }
+    }
+    .newsHeading {
+      line-height: 120%;
+      @include xlg {
+        font-size: $font-mlg;
+      }
+      @include xxmd {
+        font-size: 11px;
+      }
+      @include sm {
+        font-size: 14px;
+      }
+    }
+    .newsDetils {
+      line-height: 143%;
+      margin-top: 34px;
+      @include xxmd {
+        font-size: 10px;
+      }
+      @include sm {
+        font-size: 12px;
+      }
+    }
+  }
+  @include ScrollBar;
+  .scrollBar {
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+  }
 }

@@ -9,6 +9,8 @@ import Button from "./button/button";
 import Heading from "./heading/heading";
 import Table from "./table";
 import Card from "./card/card";
+import LatestDeatils from "./latestDeatils"
+    
 export{
     Icon,
     Input,
@@ -21,6 +23,8 @@ export{
     Heading,
     Table,
     Card,
+ LatestDeatils 
+
     
 
 
