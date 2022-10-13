@@ -1,0 +1,16 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins.scss';
+
+.container {
+    width: 100%;
+    position: relative;
+    .closeIcon {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+    }
+    .headClass {
+        padding-top: 30px;
+        text-align: center;
+    }
+}

@@ -21,6 +21,7 @@
         border-radius: 12px;
         font-weight: 700;
     }
+
     &.sm01 {
         max-width: 100%;
         min-width: 97px;
@@ -28,6 +29,7 @@
         border-radius: 12px;
         font-weight: 700;
     }
+
     &.sm02 {
         max-width: 100%;
         min-width: 107px;
@@ -52,6 +54,7 @@
         border-radius: 12px;
         font-weight: 700;
     }
+
     &.md01 {
         max-width: 100%;
         min-width: 136px;
@@ -60,16 +63,35 @@
         border-radius: 12px;
         font-weight: 700;
     }
-    &.md02{
+
+    &.md02 {
+        max-width: 100%;
+        min-width: 186px;
+        max-height: 40px;
+        font-size: $font-xxxl;
+        border-radius: 12px;
+        font-weight: 300;
+        border: 1px solid $darkGray;
+    }
+
+    &.md03 {
         max-width: 100%;
         min-width: 225px;
         max-height: 56px;
         font-size: $font-xxxl;
         border-radius: 12px;
         font-weight: 700;
-    }
-    
 
+    }
+
+    &.md04 {
+        max-width: 100%;
+        min-width: 323px;
+        font-size: $font-mlg;
+        border-radius: 12px;
+        font-weight: 700;
+        height:68px;
+    }
     &.lg {
         max-width: 100%;
         min-width: 344px;
@@ -77,14 +99,16 @@
         border-radius: 12px;
         font-weight: 700;
     }
-    &.lg01{
+
+    &.lg01 {
         max-width: 100%;
         min-width: 372px;
         font-size: $font-xxxl;
         border-radius: 12px;
         font-weight: 700;
     }
-    &.lg02{
+
+    &.lg02 {
         max-width: 100%;
         min-width: 408px;
         font-size: $font-xxxl;
@@ -111,9 +135,17 @@
         color: $white;
         background: $gray;
     }
-    &.dangerPrimary{
-        color:$white;
-        background:$red;
+
+    &.dangerPrimary {
+        color: $white;
+        background: $red;
+    }
+
+    &.transparent {
+        color: $darkGray;
+        letter-spacing: 0.4px;
+        opacity: 0.75;
+        text-transform: uppercase;
     }
 
     &.default {

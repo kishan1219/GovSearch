@@ -1,5 +1,6 @@
 @import "../../assets/scss/variables.scss";
 @import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/styles.scss";
 .wrapper {
   width: 100%;
   min-height: 100vh;
@@ -47,14 +48,14 @@
   .newsCard {
     margin: 30px 20px;
   }
-  .colMd4{
+  .colMd4 {
     flex: 0 0 33.333333%;
     max-width: 730px;
-    @include sm{
+    @include sm {
       flex: 0 0 100%;
     }
   }
-  .colMd12{
+  .colMd12 {
     flex: 0 0 100%;
   }
   .homeCard {
@@ -112,4 +113,59 @@
       background: $white;
     }
   }
-}
+
+ 
+    background: $white01;
+
+    .mt30 {
+      margin-top: 30px;
+    }
+
+    .search {
+      margin-top: 30px;
+      position: relative;
+
+      .searchBox {
+        .icoClass {
+          position: absolute;
+        }
+      }
+    }
+
+    .iconMain {
+      padding: 10px 0px 10px 66px;
+    }
+
+    .inputMain {
+      margin-top: 30px;
+      max-width: 600px;
+      display: grid;
+    }
+
+    .checboxMain {
+      padding: 10px 0px 10px 66px;
+    }
+
+    .buttonMain {
+      max-width: 1400px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 30px 0px;
+      flex-wrap: wrap;
+    }
+
+    .newsCard {
+      margin: 30px 20px;
+    }
+
+    .modalMain {
+      @include flexJustifyEvenly;
+
+      .searchBox {
+        max-width: 450px;
+      }
+    }
+  
+ }
+

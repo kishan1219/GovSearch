@@ -1,0 +1,31 @@
+@import '../../../assets/scss/variables.scss';
+.search{
+    display: flex;
+   gap: 25px; 
+   align-items: center;
+ 
+   
+    .inputMain{
+    
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        background-color: $white;
+       position: relative;
+       max-width: 290px;
+       width: 100%;
+       
+    }
+    .rightIcon{
+        position: absolute;
+        left: 280px;
+       padding-top: 8px;
+        
+        cursor: pointer;
+    }
+    .textAdv{
+        text-decoration-line: underline;
+        color: $gray;
+        cursor: pointer;
+    }
+}
