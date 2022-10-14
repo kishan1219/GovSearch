@@ -9,6 +9,7 @@ const Input = ({
   variant,
   defaultValue,
   value,
+  onClick,
   id,
   name,
   onChange,
@@ -49,6 +50,7 @@ const Input = ({
         defaultValue={defaultValue}
         value={value}
         name={name}
+        onClick={onClick}
         {...reference}
         {...onChange}
         {...pattern}
@@ -82,6 +84,7 @@ Input.propTypes = {
   onKeyPress: PropTypes.any,
   readOnly: PropTypes.bool,
   disabled: PropTypes.bool,
+  onClick:PropTypes.string
 };
 
 export default Input;
