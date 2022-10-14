@@ -65,7 +65,7 @@ const Styleguide = () => {
     ];
     // const [openModal, setOpenModal] = useState(false);
     return (
-        <Layout className={Styles.wrapper}>
+        <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -110,7 +110,7 @@ const Styleguide = () => {
                 <Heading headingType={"h6"} >Heading Demo</Heading>
             </div>
             <div className={Styles.newsCard}>
-                <NewsCard src='images/newsCardImage.png'
+                <NewsCard src='assets/images/officer.jpg'
                     textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
                     textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
 
@@ -183,7 +183,7 @@ const Styleguide = () => {
                     </Card>
                 </div>
             </div>
-        </Layout>
+        </div>
 
     )
 }

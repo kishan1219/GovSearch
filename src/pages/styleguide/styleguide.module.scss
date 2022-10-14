@@ -52,11 +52,11 @@
   .newsCard {
     margin: 30px 20px;
   }
-
+  /* LatestDeatils  scss*/
   .colMd4 {
     flex: 0 0 33.333333%;
     max-width: 730px;
-
+   
     @include sm {
       flex: 0 0 100%;
     }
@@ -67,78 +67,76 @@
   }
 
   .homeCard {
-    max-height: 36vh;
+    max-height: 450px;
     word-break: break-word;
-    padding-right: 30px;
-
-    @include xlg {
+    @include xlg{
       max-height: 264px;
     }
-
-    @include sm {
+    @include sm{
       max-height: 240px;
       margin-bottom: 84px;
-      padding-right: 0px;
     }
-
-    @include mo {
-      margin-bottom: 60px;
-    }
-
-    .cardImg {
-      max-width: 250px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .pR30 {
+    .pR30{
       padding-right: 30px;
-
-      @include xxmd {
+      @include xxmd{
         padding-right: unset;
-      }
+      }   
     }
-
     .newsHeading {
       line-height: 120%;
-
       @include xlg {
         font-size: $font-mlg;
       }
-
-      @include xxmd {
+      @include xxmd{
         font-size: 11px;
       }
-
-      @include sm {
+      @include sm{
         font-size: 14px;
-      }
+      }    
     }
-
     .newsDetils {
       line-height: 143%;
       margin-top: 34px;
-
-      @include xxmd {
+      @include xxmd{
         font-size: 10px;
       }
-
-      @include sm {
+      @include sm{
         font-size: 12px;
       }
     }
+     
   }
-
-  
-  .scrollBar {
-    @include ScrollBar;
+  @include ScrollBar;
+  .scrollBar { 
     &::-webkit-scrollbar-track {
       background: $white;
     }
   }
-
-
-  background: $white01;
+  .w60{  
+    @include md{
+      flex: 0 0 60%;
+      margin:0 20% 50px;  
+    }
+    @include sm{
+      flex: 0 0 100%;
+      margin:unset;
+    }
+  }
+  .cardHeading{
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin-bottom: 35px;
+    font-family: 'Poppins';
+    @include xxmd{
+      font-size: 22px;
+    }
+    @include sm{
+      margin-bottom: 50px;
+    }
+  }
+ /* LatestDeatils  scss*/
+ 
 
   .mt30 {
     margin-top: 30px;

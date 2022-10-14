@@ -9,6 +9,7 @@
     min-height: 100vh;
     z-index: 1;
     padding-top: 100px;
+
     .menu {
         display: grid;
         padding: 15px 0px;
@@ -44,20 +45,23 @@
             @include flexJustifyBetween;
         }
 
+        @include ScrollBar;
+
         .scrollBar {
-          &::-webkit-scrollbar-track {
-            background: $white;
-            @include ScrollBar;
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
         }
-        }
-      
+
         .burgerIcon {
             transition: 1s ease-in-out;
         }
+
         .inputMain {
             max-width: 266px;
             @include flexJustifyBetween
         }
+
         .textBoldMain {
             max-width: 277px;
         }
