@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./card.module.scss";
 import PropTypes from "prop-types";
+
 /**
  * Render NotificationList
  * @param {node} children
@@ -10,10 +11,11 @@ import PropTypes from "prop-types";
 const Card = ({    
     children,
     className,
+
   }) => {
   return (
     <div className={`${Styles.card} ${[className]}`}>    
-      {children}
+      <div>{children}</div> 
     </div>
   )  
 };
