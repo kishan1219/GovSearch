@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils, Modal, Layout } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils, } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from'../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -63,9 +63,9 @@ const Styleguide = () => {
             place: "Arlington, VA",
         },
     ];
-    const [openModal, setOpenModal] = useState(false);
+    // const [openModal, setOpenModal] = useState(false);
     return (
-        <Layout className={Styles.wrapper}>
+        <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -109,13 +109,8 @@ const Styleguide = () => {
                 <Heading headingType={"h5"} >Heading Demo</Heading>
                 <Heading headingType={"h6"} >Heading Demo</Heading>
             </div>
-
-
-
-
-
             <div className={Styles.newsCard}>
-                <NewsCard src='images/newsCardImage.png'
+                <NewsCard src='assets/images/officer.jpg'
                     textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
                     textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
 
@@ -137,14 +132,6 @@ const Styleguide = () => {
                     ))}
                 </div>
             </div>
-            <div className={Styles.modalMain}>
-                <Button btnHandler={() => setOpenModal(true)} btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>show Modal</Button>
-                {openModal &&
-                    <Modal iconHandler={() => setOpenModal(false)} isIcon={true} headShow={true} modalHeading={"sign in"} >
-                        <NewsCard src='images/newsCardImage.png' textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"} textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
-                    </Modal>}
-            </div>
-
             <div className={Styles.List}>
                 <ListGroup >
                     <ListItem children={"List"} />
@@ -154,13 +141,12 @@ const Styleguide = () => {
                 </ListGroup>
             </div>
             <div className={Styles.searchbar}>
-                <SearchBar inputclassName={Styles.searchBox} placeholder={"search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
+                <SearchBar inputclassName={Styles.s} placeholder={"Search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
             </div>
 
             <div className={Styles.chart} style={{ width: 300 }}>
                 <BarChart/>
             </div>
-
             <div className={Styles.logInmainBox}> 
                 <div className={Styles.logInBox}>
                     <Card >
@@ -176,8 +162,6 @@ const Styleguide = () => {
                         <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Sign in?</Text>
                     </Card>
                 </div>
-
-
                 <div className={Styles.logInBox}>
                     <Card >
                         <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Password</Heading>
@@ -199,10 +183,7 @@ const Styleguide = () => {
                     </Card>
                 </div>
             </div>
-
-
-
-        </Layout>
+        </div>
 
     )
 }

@@ -51,6 +51,11 @@ span{
     line-height: 36px;
     @include textStyling;
 }
+.lgIconText {
+    font-size: $font-lgIcon;
+    line-height: 33px;
+    @include textStyling;
+}
 .mdBigText {
     font-size: $font-mdbig;
     line-height: 54px;
