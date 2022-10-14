@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils, Modal, Layout } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Table, ListGroup, ListItem, LatestDeatils, Modal, Layout } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
+
 
 const Styleguide = () => {
     const views = [
@@ -61,6 +62,8 @@ const Styleguide = () => {
         },
     ];
     const [openModal, setOpenModal] = useState(false);
+   
+
     return (
         <Layout className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
@@ -150,48 +153,6 @@ const Styleguide = () => {
                     <ListItem children={"List"} />
                 </ListGroup>
             </div>
-
-            <div className={Styles.logInmainBox}> 
-                <div className={Styles.logInBox}>
-                    <Card >
-                        <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Sign in</Heading>
-                        <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
-                            Enter your email address to sign in.</Text>
-                        <div className={Styles.inputMain} >
-                            <Input className={Styles.mt30} placeholder="Enter Your Email" variant="border" />
-                        </div>
-                        <div className={Styles.btnMain} >
-                            <Button size={"lg02"} variant={"disaled"}>Continue</Button>
-                        </div>
-                        <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Sign in?</Text>
-                    </Card>
-                </div>
-
-
-                <div className={Styles.logInBox}>
-                    <Card >
-                        <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Password</Heading>
-                        <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
-                            Enter your password to continue.</Text>
-                        <div className={Styles.inputMain} >
-                            <Input className={Styles.mt30} placeholder="test@technomile.com" variant="border" />
-                            <Input className={Styles.mt30} type="password" variant="border" />
-
-                        </div>
-                        <div className={Styles.forgotText}>
-                            <Text variant={"smText"} color={"black"} strong={"strong4"}>forgot password?</Text>
-                        </div>
-                        <div className={Styles.btnMain} >
-                            <Button size={"lg02"} variant={"solidPrimary"}>Continue</Button>
-                        </div>
-                        <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Login?</Text>
-
-                    </Card>
-                </div>
-            </div>
-
-
-
         </Layout>
 
     )
