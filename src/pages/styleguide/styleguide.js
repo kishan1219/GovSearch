@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils,  Layout } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils, } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from'../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
