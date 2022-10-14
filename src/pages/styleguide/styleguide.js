@@ -72,7 +72,7 @@ const Styleguide = () => {
                 <CheckBox checked="checked" labelName="gray" variant="grayFill" className={Styles.mb20} />
             </div>
             <div className={Styles.search}>
-                <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
+                <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray"} iconclassName={"icoClass"} />
             </div>
             <div className={Styles.iconMain}>
                 <Icon type={"refresh"} variant="primary" size={"icon_xlarge"} />

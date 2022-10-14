@@ -13,8 +13,11 @@ export default function SearchBar({ type, placeholder,onClick,inputclassName,ico
   return (
     <div className={Styles.search}>
       
-      <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}  />
-       <div className={Styles.rightIcon}><Icon  type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.iconMain} ${iconclassName}`}/></div>
+ <div className={Styles.mainIco}>
+                <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder={placeholder} />
+                <Icon  type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
+               
+                </div>
        <Button size={"md"} variant={"solidSecondary"}>Search</Button>
        <Text className={Styles.textAdv} variant={"smText"} color={"gray"} strong={"strong4"}>Advanced</Text>
 

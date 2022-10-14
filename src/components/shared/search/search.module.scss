@@ -1,15 +1,20 @@
 @import '../../../assets/scss/variables.scss';
+.mainSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .head{
     position: relative;
     .headingo{
       
-       margin-left: 140px;
+       margin-left: 160px;
     }
     .btnSearch{
         position: absolute;
         left: 280px;
         }
-.search{
+.searchb{
     display: flex;
     gap: 25px;
    margin-top: 17px;
@@ -18,12 +23,12 @@
  position: relative;
  .inSearch{
     position: relative;
-    max-width: 575px;
+    min-width: 575px;
     width: 100%;
     margin-right: 25px;
     .inputMain{
-        // max-width: 575px;
-        //  width: 100%;
+        min-width: 575px;
+         max-width: 100%;
          height: 52px;
          border-radius: 12px;
          padding: 0px 12px 0px 12px;
@@ -40,13 +45,18 @@
  
  .selectBtn{
     background: $primary04;
-    max-width: 120px;
-    width: 100%;
+    width: 120px;
+ 
+    text-align: center;
     color: $white;
     border-radius: 12px;
     font-family: 'Poppins';
 font-weight: 600;
 font-size: 16px;
+  
+ }
+ svg{
+    display: none;
  }
    
 }
