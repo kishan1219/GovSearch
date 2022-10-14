@@ -44,6 +44,13 @@
             @include flexJustifyBetween;
         }
 
+        .scrollBar {
+          &::-webkit-scrollbar-track {
+            background: $white;
+            @include ScrollBar;
+        }
+        }
+      
         .burgerIcon {
             transition: 1s ease-in-out;
         }

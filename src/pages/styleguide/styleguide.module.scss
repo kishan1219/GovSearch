@@ -129,9 +129,9 @@
     }
   }
 
-  @include ScrollBar;
-
+  
   .scrollBar {
+    @include ScrollBar;
     &::-webkit-scrollbar-track {
       background: $white;
     }

@@ -68,45 +68,47 @@ const Sidebar = () => {
                 {/*div for button pill start */}
                 <div className='mT30' />
                 {/*div for button pill end */}
-                <div className='mT34'>
-                    <div className={`${'dFlex jusctifyContentSpaceBetween'} ${Styles.textBoldMain} `}>
-                        <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Contacts</Text>
-                        <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                <div className={Styles.scrollBar}>
+                    <div className='mT34'>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween'} ${Styles.textBoldMain} `}>
+                            <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Contacts</Text>
+                            <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                        </div>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
+                            <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Positions</Text>
+                            <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                        </div>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
+                            <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Offices</Text>
+                            <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                        </div>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
+                            <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Vendor</Text>
+                            <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                        </div>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
+                            <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Locations</Text>
+                            <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                        </div>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
+                            <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>More</Text>
+                            <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                        </div>
                     </div>
-                    <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
-                        <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Positions</Text>
-                        <Icon color={'primary'} type='pluscircle' variant='icon_large' />
+                    <div className='dFlex mT35 alignEnd jusctifyContentSpaceBetween'>
+                        <Text family='roboto' variant={"smText"} className={"op5 underline cursor"} color={"darkGray"}>Clear</Text>
+                        <Text family='roboto' variant={"smText"} className={"op5 underline cursor"} color={"darkGray"}>Save Search</Text>
+                        <Button size={"xmd01"} variant={"solidPrimary"}>Search</Button>
                     </div>
-                    <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
-                        <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Offices</Text>
-                        <Icon color={'primary'} type='pluscircle' variant='icon_large' />
-                    </div>
-                    <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
-                        <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Vendor</Text>
-                        <Icon color={'primary'} type='pluscircle' variant='icon_large' />
-                    </div>
-                    <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
-                        <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Locations</Text>
-                        <Icon color={'primary'} type='pluscircle' variant='icon_large' />
-                    </div>
-                    <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
-                        <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>More</Text>
-                        <Icon color={'primary'} type='pluscircle' variant='icon_large' />
-                    </div>
-                </div>
-                <div className='dFlex mT35 alignEnd jusctifyContentSpaceBetween'>
-                    <Text family='roboto' variant={"smText"} className={"op5 underline cursor"} color={"darkGray"}>Clear</Text>
-                    <Text family='roboto' variant={"smText"} className={"op5 underline cursor"} color={"darkGray"}>Save Search</Text>
-                    <Button size={"xmd01"} variant={"solidPrimary"}>Search</Button>
-                </div>
-                <div className='mT44'>
-                    <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Intel</Text>
-                    <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Defense</Text>
-                    <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>News</Text>
-                    <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Stats</Text>
-                    <div className={`${'mT27 dFlex alignItemsCenter jusctifyContentSpaceBetween'} ${Styles.textBoldMain}`}>
-                        <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Favorites/List</Text>
-                        <Icon color={'primary'} type='star' variant='icon_large' />
+                    <div className='mT44'>
+                        <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Intel</Text>
+                        <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Defense</Text>
+                        <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>News</Text>
+                        <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Stats</Text>
+                        <div className={`${'mT27 dFlex alignItemsCenter jusctifyContentSpaceBetween'} ${Styles.textBoldMain}`}>
+                            <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Favorites/List</Text>
+                            <Icon color={'primary'} type='star' variant='icon_large' />
+                        </div>
                     </div>
                 </div>
             </div>
