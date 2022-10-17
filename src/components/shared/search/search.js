@@ -16,19 +16,21 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
         setAge(event.target.value);
     };
     return (
+        <div className={Styles.mainSearch}>
         <div className={Styles.head}>
             <div className={Styles.headingo}>
                 <Text className={Styles.textGov} variant={"xxxxxlText"} color={"secondary"} strong={"strong6"} family={"poppins"}>GovSearch</Text>
             </div>
-            <div className={Styles.search}>
+            <div className={Styles.searchb}>
                 <Select
                     className={`${Styles.selectBtn}`}
                     value={search}
                     onChange={handleChange}
                     SelectProps={{ IconComponent: () => null }}
                     displayEmpty
+                
                 >
-                    <MenuItem value="" >All</MenuItem>
+                    <MenuItem value="All" >All</MenuItem>
                     <MenuItem value="Contacts">Contacts</MenuItem>
                     <MenuItem value="Offices">Offices</MenuItem>
                     <MenuItem value="Vendors">Vendors</MenuItem>
@@ -45,7 +47,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                 <Button size={"md04"} variant={"solidPrimary"}> Search</Button></div>
             
         </div>
-
+        </div>
 
 
 

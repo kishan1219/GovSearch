@@ -11,19 +11,7 @@
   .mt30 {
     margin-top: 30px;
   }
-
-  // .search {
-  //   position: relative;
-
-  //   .searchBox {
-  //     max-width: 500px;
-  //     width: 100%;
-
-  //     .icoClass {
-  //       position: absolute;
-  //     }
-  //   }
-  // }
+ 
 
 
   .iconMain {
@@ -142,16 +130,16 @@
     margin-top: 30px;
   }
 
-  .search {
-    margin-top: 30px;
-    position: relative;
+//   .search {
+//     margin-top: 30px;
+//     position: relative;
 
-    .searchBox {
-      .icoClass {
-        position: absolute;
-      }
-    }
-  }
+//     .searchBox {
+//       .icoClass {
+//         position: absolute;
+//       }
+//     }
+//   }
 
   .iconMain {
     padding: 10px 0px 10px 66px;
@@ -229,6 +217,12 @@
       margin-top: 9px;
     }
   }
+  
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

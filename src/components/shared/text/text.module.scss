@@ -68,7 +68,8 @@ span{
 }
 .xxxxxlText{
     font-size:$font-xxxxxl;
-    line-height: 120px;
+    line-height: 120%;
+    letter-spacing: -1.5px;
     @include textStyling;  
 }
 .poppins {
