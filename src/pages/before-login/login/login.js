@@ -10,10 +10,17 @@ const Login = () => {
     const [active, setActiveNow] = useState();
     const [show, setShow] = useState(false);
     const [showHide, setShowHide] = useState(true);
+    const [showFactor,setShowFactor]=useState(false);
+
 
     const showDetails = () => {
         setShow(true);
         setShowHide(false);
+    }
+    const showMultiFactor = () => {
+        setShow(false);
+        setShowHide(false);
+        setShowFactor(true);
     }
    
 
@@ -98,13 +105,44 @@ const Login = () => {
                         </div>
 
                                 <div className={Styles.btnMain}  >
-                                    <Button size={"lg02"} variant={active === 0 ? "solidPrimary" : "disabled"} btnHandler={handleSubmit(onSubmit)} >Continue</Button>
+                                    <Button size={"lg02"} variant={active === 0 ? "solidPrimary" : "disabled"} btnHandler={showMultiFactor} >Continue</Button>
 
                                 </div>
                                 <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Sign in?</Text>
                             </div>
                         </div>
                     </div>)}
+
+
+                   {/* Multifactor Card  */}
+                   { showFactor && (
+                    <div>
+                        <div className={Styles.mainCard}>
+                            <div className={Styles.mainBox}>
+                                <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Multi-Factor</Heading>
+                                <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>Authentication</Heading>
+                                <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
+                                Enter Code</Text>
+
+                                <div className={Styles.inputMainBox}>
+                                <Input  className={Styles.inputBox} variant="grey" />
+                                <Input className={Styles.inputBox} variant="grey" />
+                                <Input className={Styles.inputBox} variant="grey" />
+                                <Input className={Styles.inputBox} variant="grey" />
+                                <Input className={Styles.inputBox} variant="grey" />
+                                <Input className={Styles.inputBox} variant="grey" />
+                                </div>
+                            
+
+                                <div className={Styles.btnMain}  >
+                                    {/* <Button size={"lg02"} variant={active === 0 ? "solidPrimary" : "disabled"} btnHandler={handleSubmit(onSubmit)} >Continue</Button> */}
+                                    <Button size={"lg02"} variant={"solidPrimary"} btnHandler={handleSubmit(onSubmit)} >Enter</Button>
+                                </div>
+                                <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Sign in?</Text>
+                            </div>
+                        </div>
+                    </div>
+                   )}
             </div>
 
 

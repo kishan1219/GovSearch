@@ -15,6 +15,14 @@
         .mainBox {
             padding: 37px 48px 48px 48px;
 
+            .inputMainBox{
+                display: flex;
+
+                .inputBox {
+                    width: 50px;
+                }
+            }
+
             .errorMsg {
                 color: $red1;
                 text-align: left;
@@ -33,8 +41,9 @@
             width: 100%;
             max-width: 504px;
             margin: 20px 0px 0px 40px;
-            .mainText{
-                margin-top:20px;
+
+            .mainText {
+                margin-top: 20px;
             }
 
             .forgotText {
@@ -50,8 +59,11 @@
             // }
 
             .inputMain {
-                width: 366px;
+                width: 408px;
                 margin-top: 27px;
+              
+
+                
 
                 .passText {
                     margin-top: 25px;
