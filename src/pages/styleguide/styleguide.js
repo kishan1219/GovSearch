@@ -6,6 +6,7 @@ import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
 import Cardtab from '../../components/shared/Cardtab'
 import Criteria from '../Criteria/Criteria'
+import { useState } from 'react'
 
 
 const Styleguide = () => {
