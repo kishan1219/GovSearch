@@ -1,0 +1,42 @@
+
+//@import "././assets/scss/variables.scss";
+@import "../../../assets/scss/variables.scss";
+
+
+
+.tab{
+    background-color:$white;
+    width: 272px;
+    height: 80px;
+    border-radius:10px;
+    padding-left: 13px;
+    display: flex;
+    .tabWrapper{
+        display: flex;
+        align-items: center;
+        .CheckBox{
+            margin-bottom: 20px;
+        }
+        .imgFluid{
+            size: 40px;
+        }
+    }
+    .titleMain{
+        margin: 22px 41px 0px 12px;
+        .tagName{
+            // line-height: 0px;
+        }
+        .titleNumber{
+            display: flex;
+            align-items: center;
+            margin-top:9px;
+            line-height: 0px;
+            .contect{
+                letter-spacing: 8px;
+                margin: 0px 0px 5px 75px;
+                
+            }
+        }
+    }
+    
+}

@@ -251,10 +251,19 @@ html {
 .ml30 {
   margin-left: 30px;
 }
+.ml40 {
+  margin-left: 40px;
+}
+.ml50 {
+  margin-left: 50px;
+}
 .mr5 {
   margin-right: 5px;
 }
 
+.mr10 {
+  margin-right: 10px;
+}
 .mr12 {
   margin-right: 12px;
 }
@@ -270,8 +279,17 @@ html {
   margin-bottom: 12px;
 }
 
+.mr30 {
+  margin-right: 30px;
+}
+.mr35 {
+  margin-right: 35px;
+}
 .mr40 {
   margin-right: 40px;
+}
+.mr45 {
+  margin-right: 45px;
 }
 .mr50 {
   margin-right: 50px;
@@ -420,6 +438,9 @@ html {
 
 .alignEnd {
   align-items: flex-end;
+}
+.alignbaseline {
+  align-items: baseline;
 }
 
 .centerAlign {
