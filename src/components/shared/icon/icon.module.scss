@@ -36,11 +36,17 @@ i {
 .icon_xsmall {
   font-size: $font-xxs;
 }
+.icon_xsmall01 {
+  font-size:$font-xs;
+}
 .icon_small {
   font-size: $font-sm;
 }
 .icon_medium {
   font-size: $font-md;
+}
+.icom_big{
+  font-size: $font-xmbig;
 }
 .icon_large {
   font-size: $font-lgIcon;

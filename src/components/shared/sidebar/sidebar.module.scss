@@ -24,7 +24,7 @@
         }
 
         .burgerIcon {
-            transition: 0.5s ease-in-out;
+            transition: 0.3s ease;
         }
 
     }
@@ -38,8 +38,12 @@
         width: 100%;
         max-width: 428px;
         min-height: 100vh;
-        background: $white;
-        border-right: 12px solid $primary;
+        background: $white01;
+        border-right: 6px solid $primary;
+
+        & input:focus {
+            border: 1px solid $white02;
+        }
 
         .advanceSearchText {
             @include flexJustifyBetween;
@@ -59,14 +63,32 @@
 
         .inputMain {
             max-width: 266px;
-            @include flexJustifyBetween
+            @include flexJustifyBetween;
+
+            .searchInput {
+                max-width: 116px;
+                margin-right: 116px;
+                background: transparent;
+
+                & ::placeholder {
+                    @include fonts-poppins;
+                    font-size: $font-xbig;
+                }
+
+            }
         }
 
         .textBoldMain {
             max-width: 277px;
         }
     }
+
     .scrollWrapper {
         max-height: calc(84vh - 230px);
+    }
+
+    .scrollWrapper1 {
+        max-height: calc(62vh - 300px);
+        margin-right: 5px;
     }
 }
