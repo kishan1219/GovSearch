@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Search from '../../components/shared/search/search'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils,  Layout } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Card, Text, Table, ListGroup, ListItem, LatestDeatils,} from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from'../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -65,7 +65,7 @@ const Styleguide = () => {
     ];
     // const [openModal, setOpenModal] = useState(false);
     return (
-        <Layout className={Styles.wrapper}>
+        <div className={Styles.wrapper}>
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -119,19 +119,22 @@ const Styleguide = () => {
             <div>
                 <Table />
             </div>
-            <div className={`${Styles.colMd4} ${Styles.pLr12}  `}>
-                <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
-                    {views.map((item) => (
-                        <LatestDeatils latestImage={item.img}
-                            name={item.name}
-                            postion={item.positionFirst}
-                            latestHeadingNumber={item.number}
-                            latestHeadingSecond={item.positionSecond}
-                            latestHeadingThird={item.place}
-                        />
-                    ))}
-                </div>
-            </div>
+            {/* LatestDeatils */}
+            <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
+            <Text className={`${Styles.cardHeading}`} color="darkGray" strong="strong3">Latest Detail Views</Text>
+          <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
+          {views.map((item) => (
+            <LatestDeatils latestImage={item.img}
+              name={item.name}
+              postion={item.positionFirst}
+              latestHeadingNumber={item.number}
+              latestHeadingSecond={item.positionSecond}
+              latestHeadingThird={item.place}            
+            />
+          ))}
+          </div>
+          </div>
+             {/* LatestDeatils */}
             <div className={Styles.List}>
                 <ListGroup >
                     <ListItem children={"List"} />
@@ -183,7 +186,7 @@ const Styleguide = () => {
                     </Card>
                 </div>
             </div>
-        </Layout>
+        </div>
 
     )
 }
