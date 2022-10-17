@@ -1,0 +1,37 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/styles.scss";
+
+
+.Criteria{
+    width: 1680px;
+    height: 660px;
+    background-color:$lightGray02;
+    display:block;
+    justify-content: center;
+    padding: 57px 0px 0px 74px;
+    outline: 20px solid #FFFF;
+    border-radius: 10px;
+    .tab{
+        // margin-bottom:125px;
+        position: relative;
+        .accordianheader{
+            margin-bottom:125px;
+            .sign{
+                margin-left: 120px;
+                position: absolute;
+                bottom: -17px;                                
+            }                        
+        }       
+    }
+
+    .accordianbody{
+        margin-bottom: 176px;
+    }
+
+    .tab01{
+        position: relative;
+ 
+    }
+    
+}

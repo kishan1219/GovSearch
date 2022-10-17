@@ -16,6 +16,7 @@ import ModalHeader from "./modalHeader/modalHeader";
 import ModalBody from "./modalBody";
 import Modal from "./modal/modal";
 
+
 export {
   Icon,
   Input,
@@ -34,4 +35,5 @@ export {
     ModalHeader,
     ModalBody,
     Modal,
+    
 };
