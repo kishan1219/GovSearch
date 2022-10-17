@@ -1,44 +1,65 @@
 @import '../../../assets/scss/variables.scss';
+.mainSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .head{
+    position: relative;
     .headingo{
-        max-width: 546px;
-       margin-left: 120px;
+      
+       margin-left: 160px;
     }
-.search{
+    .btnSearch{
+        position: absolute;
+        left: 280px;
+        }
+.searchb{
     display: flex;
     gap: 25px;
    margin-top: 17px;
    margin-bottom: 33px;
+ align-items: center;
  position: relative;
+ .inSearch{
+    position: relative;
+    min-width: 575px;
+    width: 100%;
+    margin-right: 25px;
+    .inputMain{
+        min-width: 575px;
+         max-width: 100%;
+         height: 52px;
+         border-radius: 12px;
+         padding: 0px 12px 0px 12px;
+             background-color: $white;   
+             border: 1px solid rgba(0, 0, 0, 0.23); 
+         }
+         .rightIcon{
+             position: absolute;
+            right: 0px;
+           top: 12px;
+             cursor: pointer;
+             padding-right: 10px;
+         }
+ }
+ 
  .selectBtn{
     background: $primary04;
-    max-width: 120px;
-    width: 100%;
+    width: 120px;
+ 
+    text-align: center;
     color: $white;
     border-radius: 12px;
     font-family: 'Poppins';
 font-weight: 600;
 font-size: 16px;
+  
  }
-    .inputMain{
-   max-width: 575px;
-    width: 100%;
-    height: 52px;
-    border-radius: 12px;
-    padding: 0px 12px 0px 12px;
-        background-color: $white;
-    
-       
-    }
-    .rightIcon{
-        position: absolute;
-        left: 690px;
-      padding-top: 10px;
-        cursor: pointer;
-    }
+ svg{
+    display: none;
+ }
+   
 }
-.btnSearch{
- position: absolute;
- left: 120px;
-}
+
 }

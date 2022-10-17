@@ -1,0 +1,98 @@
+@import "../../../assets/scss/variables.scss";
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+
+    .technoMile {
+        width: 100%;
+        max-width: 982px;
+        background: $white04;
+        padding-top: 53px;
+        text-align: center;
+
+        .mainBox {
+            padding: 37px 48px 48px 48px;
+
+            .inputMainBox{
+                display: flex;
+
+                .inputBox {
+                    width: 50px;
+                }
+            }
+
+            .errorMsg {
+                color: $red1;
+                text-align: left;
+            }
+        }
+
+        .imageBox {
+            margin-left: 60px;
+        }
+
+        .mainCard {
+            box-sizing: border-box;
+            display: inline-block;
+            border-radius: 8px;
+            background: $white;
+            width: 100%;
+            max-width: 504px;
+            margin: 20px 0px 0px 40px;
+
+            .mainText {
+                margin-top: 20px;
+            }
+
+            .forgotText {
+                text-align: right;
+                margin-top: 9px;
+            }
+
+
+            // .mainHead {
+
+            //     padding-bottom: 19px;
+            //     text-align: center;
+            // }
+
+            .inputMain {
+                width: 408px;
+                margin-top: 27px;
+              
+
+                
+
+                .passText {
+                    margin-top: 25px;
+                }
+            }
+
+            .btnMain {
+                margin-top: 51px;
+            }
+
+            .secText {
+                text-align: center;
+                padding-top: 20px;
+            }
+        }
+    }
+
+    .resourCes {
+        width: 100%;
+        max-width: 952px;
+        background: $white;
+
+        .resourCesBox {
+            text-align: center;
+            margin-top: 35px;
+
+            .firstImgBox {
+                margin: 45px 0px;
+            }
+        }
+    }
+}

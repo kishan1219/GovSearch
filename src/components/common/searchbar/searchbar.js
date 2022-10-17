@@ -1,5 +1,7 @@
 import React from 'react'
 import Styles from './searchbar.module.scss';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 import {
   Input,
@@ -9,12 +11,32 @@ import {
 } from "../../shared/index";
 import propTypes from 'prop-types'
 
-export default function SearchBar({ type, placeholder,onClick,inputclassName,iconclassName,size,iconColor }) {
+export default function SearchBar({ type, placeholder,onClick,inputclassName,iconclassName,size,iconColor,search }) {
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+      setAge(event.target.value);
+  };
   return (
     <div className={Styles.search}>
-      
-      <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}  />
-       <div className={Styles.rightIcon}><Icon  type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.iconMain} ${iconclassName}`}/></div>
+       <Select
+                    className={`${Styles.allBtn}`}
+                    value={search}
+                    onChange={handleChange}
+                    SelectProps={{ IconComponent: () => null }}
+                    displayEmpty
+                
+                >
+                    <MenuItem value="All" >All</MenuItem>
+                    <MenuItem value="Contacts">Contacts</MenuItem>
+                    <MenuItem value="Offices">Offices</MenuItem>
+                    <MenuItem value="Vendors">Vendors</MenuItem>
+                </Select>
+ <div className={Styles.mainIco}>
+                <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder={placeholder} />
+                <Icon  type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
+               
+                </div>
        <Button size={"md"} variant={"solidSecondary"}>Search</Button>
        <Text className={Styles.textAdv} variant={"smText"} color={"gray"} strong={"strong4"}>Advanced</Text>
 

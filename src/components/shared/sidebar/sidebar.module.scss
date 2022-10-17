@@ -1,0 +1,94 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/styles.scss';
+@import '../../../assets/scss/mixins.scss';
+
+.container {
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    z-index: 1;
+    padding-top: 100px;
+
+    .menu {
+        display: grid;
+        padding: 15px 0px;
+        text-align: center;
+        max-width: 100px;
+        background: $primary;
+        border-radius: 0px 18px 18px 0px;
+        min-height: 500px;
+
+        & li {
+            cursor: pointer;
+        }
+
+        .burgerIcon {
+            transition: 0.5s ease-in-out;
+        }
+
+    }
+
+    .sidebarFooter {
+        margin-top: 100px;
+    }
+
+    .sidebarMain {
+        padding: 22px 20px 34px 48px;
+        width: 100%;
+        max-width: 428px;
+        min-height: 100vh;
+        background: $white01;
+        border-right: 6px solid $primary;
+
+        & input:focus {
+            border: 1px solid $white02;
+        }
+
+        .advanceSearchText {
+            @include flexJustifyBetween;
+        }
+
+        @include ScrollBar;
+
+        .scrollBar {
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+        }
+
+        .burgerIcon {
+            transition: 1s ease-in-out;
+        }
+
+        .inputMain {
+            max-width: 266px;
+            @include flexJustifyBetween;
+
+            .searchInput {
+                max-width: 116px;
+                margin-right: 116px;
+                background: transparent;
+
+                & ::placeholder {
+                    @include fonts-poppins;
+                    font-size: $font-xbig;
+                }
+
+            }
+        }
+
+        .textBoldMain {
+            max-width: 277px;
+        }
+    }
+
+    .scrollWrapper {
+        max-height: calc(84vh - 230px);
+    }
+
+    .scrollWrapper1 {
+        max-height: calc(62vh - 300px);
+        margin-right: 5px;
+    }
+}

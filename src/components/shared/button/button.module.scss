@@ -63,6 +63,14 @@
         border-radius: 12px;
         font-weight: 700;
     }
+    &.xmd01 {
+        max-width: 100%;
+        min-width: 157px;
+        max-height: 40px;
+        font-size: $font-mlg;
+        border-radius: 8px;
+        font-weight: 700;
+    }
 
     &.md02 {
         max-width: 100%;
@@ -111,6 +119,7 @@
     &.lg02 {
         max-width: 100%;
         min-width: 408px;
+        min-height: 55px;
         font-size: $font-xxxl;
         border-radius: 12px;
         font-weight: 700;
@@ -131,7 +140,7 @@
         background: $primary05;
     }
 
-    &.disaled {
+    &.disabled {
         color: $white;
         background: $gray;
     }

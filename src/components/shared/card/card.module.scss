@@ -1,11 +1,12 @@
-
+@import "../../../assets/scss/variables.scss";
 .card {
     box-sizing: border-box;
     display: inline-block;
     border-radius: 8px;
     padding: 0px 24px 0px 0px;
-    // background: $white;
+    background: $white;
     width: 100%;
+    max-width: 504px;
   
   }
   

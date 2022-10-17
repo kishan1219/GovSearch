@@ -1,26 +1,145 @@
 @import "../../assets/scss/variables.scss";
 @import "../../assets/scss/mixins.scss";
 @import "../../assets/scss/styles.scss";
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
-  padding-top: 30px;
   background: $white01;
+
+
   .mt30 {
     margin-top: 30px;
   }
-  .search {
-    position: relative;
+ 
 
-    .searchBox {
-      max-width: 500px;
-      width: 100%;
 
-      .icoClass {
-        position: absolute;
-      }
+  .iconMain {
+    padding: 10px 0px 10px 66px;
+  }
+
+  .inputMain {
+    margin-top: 30px;
+    max-width: 600px;
+    display: grid;
+  }
+
+  .checboxMain {
+    padding: 10px 0px 10px 66px;
+  }
+
+  .buttonMain {
+    max-width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0px;
+    flex-wrap: wrap;
+  }
+
+  .newsCard {
+    margin: 30px 20px;
+  }
+  /* LatestDeatils  scss*/
+  .colMd4 {
+    flex: 0 0 33.333333%;
+    max-width: 730px;
+   
+    @include sm {
+      flex: 0 0 100%;
     }
   }
+
+  .colMd12 {
+    flex: 0 0 100%;
+  }
+
+  .homeCard {
+    max-height: 450px;
+    word-break: break-word;
+    @include xlg{
+      max-height: 264px;
+    }
+    @include sm{
+      max-height: 240px;
+      margin-bottom: 84px;
+    }
+    .pR30{
+      padding-right: 30px;
+      @include xxmd{
+        padding-right: unset;
+      }   
+    }
+    .newsHeading {
+      line-height: 120%;
+      @include xlg {
+        font-size: $font-mlg;
+      }
+      @include xxmd{
+        font-size: 11px;
+      }
+      @include sm{
+        font-size: 14px;
+      }    
+    }
+    .newsDetils {
+      line-height: 143%;
+      margin-top: 34px;
+      @include xxmd{
+        font-size: 10px;
+      }
+      @include sm{
+        font-size: 12px;
+      }
+    }
+     
+  }
+  @include ScrollBar;
+  .scrollBar { 
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
+  }
+  .w60{  
+    @include md{
+      flex: 0 0 60%;
+      margin:0 20% 50px;  
+    }
+    @include sm{
+      flex: 0 0 100%;
+      margin:unset;
+    }
+  }
+  .cardHeading{
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin-bottom: 35px;
+    font-family: 'Poppins';
+    @include xxmd{
+      font-size: 22px;
+    }
+    @include sm{
+      margin-bottom: 50px;
+    }
+  }
+ /* LatestDeatils  scss*/
+ 
+
+  .mt30 {
+    margin-top: 30px;
+  }
+
+//   .search {
+//     margin-top: 30px;
+//     position: relative;
+
+//     .searchBox {
+//       .icoClass {
+//         position: absolute;
+//       }
+//     }
+//   }
 
   .iconMain {
     padding: 10px 0px 10px 66px;
@@ -49,125 +168,61 @@
     margin: 30px 20px;
   }
 
-  
-  .colMd4 {
-    flex: 0 0 33.333333%;
-    max-width: 730px;
-    @include sm {
-      flex: 0 0 100%;
+  .modalMain {
+    @include flexJustifyEvenly;
+
+    .searchBox {
+      max-width: 450px;
     }
   }
-  .colMd12 {
-    flex: 0 0 100%;
-  }
-  .homeCard {
-    max-height: 36vh;
-    word-break: break-word;
-    padding-right: 30px;
-    @include xlg {
-      max-height: 264px;
-    }
-    @include sm {
-      max-height: 240px;
-      margin-bottom: 84px;
-      padding-right: 0px;
-    }
-    @include mo {
-      margin-bottom: 60px;
-    }
-    .cardImg {
-      max-width: 250px;
-      width: 100%;
+
+
+
+}
+
+.logInmainBox {
+  display: flex;
+
+  .logInBox {
+    padding: 20px 30px;
+    @include fonts-poppins;
+
+    .mainHead {
+      margin: 37px 0px 19px 0px;
       text-align: center;
     }
-    .pR30 {
-      padding-right: 30px;
-      @include xxmd {
-        padding-right: unset;
-      }
-    }
-    .newsHeading {
-      line-height: 120%;
-      @include xlg {
-        font-size: $font-mlg;
-      }
-      @include xxmd {
-        font-size: 11px;
-      }
-      @include sm {
-        font-size: 14px;
-      }
-    }
-    .newsDetils {
-      line-height: 143%;
-      margin-top: 34px;
-      @include xxmd {
-        font-size: 10px;
-      }
-      @include sm {
-        font-size: 12px;
-      }
-    }
-  }
-  @include ScrollBar;
-  .scrollBar {
-    &::-webkit-scrollbar-track {
-      background: $white;
-    }
-  }
 
- 
-    background: $white01;
-
-    .mt30 {
-      margin-top: 30px;
-    }
-
-    .search {
-      margin-top: 30px;
-      position: relative;
-
-      .searchBox {
-        .icoClass {
-          position: absolute;
-        }
-      }
-    }
-
-    .iconMain {
-      padding: 10px 0px 10px 66px;
+    .mainText {
+      text-align: center;
     }
 
     .inputMain {
-      margin-top: 30px;
-      max-width: 600px;
-      display: grid;
+      max-width: 368px;
+      margin-left: 30px;
     }
 
-    .checboxMain {
-      padding: 10px 0px 10px 66px;
+    .btnMain {
+      margin: 51px 0px 20px 30px;
     }
 
-    .buttonMain {
-      max-width: 1400px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 30px 0px;
-      flex-wrap: wrap;
+
+    .secText {
+      padding-bottom: 48px;
+      text-align: center;
+      margin-left: 20px;
     }
 
-    .newsCard {
-      margin: 30px 20px;
+    .forgotText {
+      text-align: right;
+      margin-top: 9px;
     }
-
-    .modalMain {
-      @include flexJustifyEvenly;
-
-      .searchBox {
-        max-width: 450px;
-      }
-    }
+  }
   
- }
+}
+.searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
