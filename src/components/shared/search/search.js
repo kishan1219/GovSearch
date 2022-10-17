@@ -58,7 +58,9 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                     </div>
                     <Button  btnClass={Styles.transbton} size={"md02"} variant={"transparent"}>Advanced</Button>
                 </div >
-              <div> <div  className={Styles.error}>
+              
+                <div className={Styles.btnSearch }>
+                <div  className={Styles.error}>
                          {errors?.search?.type === "required" && (
                            <p>please enter content</p>
                          )}
@@ -67,11 +69,9 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                          )}
                         
                        </div> 
-                <div className={Styles.btnSearch }>
-               
                     <Button btnClass={Styles.solidSearch} size={"md04"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
 
-                    </div>
+
             </div>
         </div>
 
