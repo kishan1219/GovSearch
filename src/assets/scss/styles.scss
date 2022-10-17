@@ -201,18 +201,25 @@ html {
   margin-left: auto;
 }
 
+.mT25 {
+  margin-top: 25px;
+}
 .mT27 {
   margin-top: 27px;
 }
+
 .mT30 {
   margin-top: 30px;
 }
+
 .mT34 {
   margin-top: 34px;
 }
+
 .mT35 {
   margin-top: 35px;
 }
+
 .mT44 {
   margin-top: 44px;
 }
@@ -222,22 +229,28 @@ html {
   margin-right: auto;
 }
 
+.ml5 {
+  margin-left: 5px;
+}
 .ml10 {
   margin-left: 10px;
 }
 
+.ml18 {
+  margin-left: 18px;
+}
 .ml20 {
   margin-left: 20px;
 }
 
-.ml30 {
-  margin-left: 30px;
-}
 
 .ml25 {
   margin-left: 25px;
 }
 
+.ml30 {
+  margin-left: 30px;
+}
 .mr5 {
   margin-right: 5px;
 }
@@ -246,6 +259,9 @@ html {
   margin-right: 12px;
 }
 
+.mr20 {
+  margin-right: 20px;
+}
 .mr24 {
   margin-right: 24px;
 }
@@ -254,6 +270,9 @@ html {
   margin-bottom: 12px;
 }
 
+.mr40 {
+  margin-right: 40px;
+}
 .mr50 {
   margin-right: 50px;
 }
@@ -261,10 +280,14 @@ html {
 .mt10 {
   margin-top: 10px;
 }
+.mt15 {
+  margin-top: 10px;
+}
 
 .mt20 {
   margin-top: 20px;
 }
+
 .mt22 {
   margin-top: 22px;
 }
@@ -417,4 +440,8 @@ html {
 
 .textRight {
   text-align: right;
+}
+
+.textUnderlineHover:hover {
+  text-decoration: none;
 }

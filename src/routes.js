@@ -1,4 +1,4 @@
-import { Home, About, Styleguide } from "./pages";
+import { Home, About, Styleguide, login } from "./pages";
 
 export const routes =[
     {
@@ -14,6 +14,11 @@ export const routes =[
       {
         path: "/style-guide",
         component: Styleguide,
+        exact: false
+      },
+      {
+        path: "/login",
+        component: login,
         exact: false
       },
 ]

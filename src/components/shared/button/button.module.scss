@@ -119,7 +119,7 @@
     &.lg02 {
         max-width: 100%;
         min-width: 408px;
-        min-height: 50px;
+        min-height: 55px;
         font-size: $font-xxxl;
         border-radius: 12px;
         font-weight: 700;
@@ -140,7 +140,7 @@
         background: $primary05;
     }
 
-    &.disaled {
+    &.disabled {
         color: $white;
         background: $gray;
     }
