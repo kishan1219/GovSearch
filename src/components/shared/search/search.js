@@ -2,6 +2,7 @@ import React from 'react'
 import Styles from './search.module.scss';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import { useForm } from "react-hook-form";
 import {
     Input,
     Icon,
@@ -15,6 +16,9 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
     const handleChange = (event) => {
         setSearchcode(event.target.value);
     };
+    const { register, formState: { errors }, handleSubmit } = useForm();
+
+    const onSubmit = (data) => console.log(data);
     return (
         <div className={Styles.mainSearch}>
             <div className={Styles.head}>
@@ -35,16 +39,39 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         <MenuItem value="Offices">Offices</MenuItem>
                         <MenuItem value="Vendors">Vendors</MenuItem>
                     </Select>
-                    <div className={Styles.inSearch}>
-                        <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder} />
+                    <div className={Styles.inSearch}  onSubmit={handleSubmit(onSubmit)}>
+                        <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder} 
+                         type="search"
+                         name="search"
+                         reference={register("search", {
+                           required: true,
+                           pattern: {
+                             value: /^[A-Za-z]+$/
+               
+                           },
+               
+                         })}
+                       />
+                      
                         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
                    
                     </div>
-                    <Button size={"md02"} variant={"transparent"}>Advanced</Button>
+                    <Button  btnClass={Styles.transbton} size={"md02"} variant={"transparent"}>Advanced</Button>
                 </div >
-                <div className={Styles.btnSearch}><Button size={"md04"} variant={"solidPrimary"}> Search</Button></div>
+              <div> <div  className={Styles.error}>
+                         {errors?.search?.type === "required" && (
+                           <p>please enter content</p>
+                         )}
+                         {errors?.search?.type === "pattern" && (
+                           <p>only allow character</p>
+                         )}
+                        
+                       </div> 
+                <div className={Styles.btnSearch }>
+               
+                    <Button btnClass={Styles.solidSearch} size={"md04"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
 
-
+                    </div>
             </div>
         </div>
 

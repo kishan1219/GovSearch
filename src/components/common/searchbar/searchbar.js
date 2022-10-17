@@ -17,7 +17,9 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
     const handleChange = (event) => {
         setSearchcode(event.target.value);
     };
+
   return (
+    <>
     <div className={Styles.search}>
       <Select
         className={`${Styles.allBtn}`}
@@ -32,16 +34,17 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
         <MenuItem value="Offices">Offices</MenuItem>
         <MenuItem value="Vendors">Vendors</MenuItem>
       </Select>
-      <div className={Styles.mainIco}>
+      <div className={Styles.mainIco }  >
         <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder={placeholder} />
         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
-
+       
       </div>
-      <Button size={"md"} variant={"solidSecondary"}>Search</Button>
+      <Button btnClass={Styles.searcbutt} size={"md"} variant={"solidSecondary"}>Search</Button>
       <Text className={Styles.textAdv} variant={"smText"} color={"gray"} strong={"strong4"}>Advanced</Text>
 
     </div >
-
+   
+   </>
 
 
   );

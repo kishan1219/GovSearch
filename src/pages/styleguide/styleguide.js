@@ -155,6 +155,9 @@ const Styleguide = () => {
             </div>
 
             <div className={Styles.chart} style={{ width: 300 }}>
+            <Text className={Styles.textbar} variant={"smText"} color={"white"} strong={"strong4"}>1000</Text>
+            <Text className={Styles.textbarone} variant={"smText"} color={"white"} strong={"strong4"}>1200</Text>
+            <Text className={Styles.textbartwo} variant={"smText"} color={"white"} strong={"strong4"}>300</Text>
                 <BarChart />
             </div>
             
