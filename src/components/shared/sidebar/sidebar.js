@@ -20,6 +20,7 @@ const Sidebar = () => {
     const [showOfficeType, setShowOfficeType] = useState(false)
     const [showFederalBranch, setShowFederalBranch] = useState(false)
     const [showFederalAgency, setShowFederalAgency] = useState(false)
+    const [showFederalContent, setShowFederalContent] = useState(true)
 
     const toggle = () => {
         setSidebarContentHide(true);
@@ -29,14 +30,15 @@ const Sidebar = () => {
         setSidebarContentHide(false);
         setSidebarHide(true)
     }
-   
-
+    const officeToggle = () => {
+        setShowOfficeNameSecond(!showOfficeNameSecond); setShowOfficeType(!showOfficeType); setShowFederalBranch(!showFederalBranch); setShowFederalAgency(!showFederalAgency)
+    }
     return (
         <div className={Styles.container}>
             {sidebarHide && <div>
                 <ListGroup className={Styles.menu}>
                     <ListItem>
-                        <Icon onClick={toggle} className={sidebarContentHide ? Styles.burgerIcon : ''} type='equal' color={"white"} variant='icon_xlarge' />
+                        <Icon onClick={toggle} className={Styles.burgerIcon} type='equal' color={"white"} variant='icon_xlarge' />
                     </ListItem>
                     <ListItem handleClick={() => { toggle(); setShowContact(true) }} className={Styles.mt22}>
                         <Icon type='multipleuser' color={"white"} variant='icon_xlarge' />
@@ -67,7 +69,7 @@ const Sidebar = () => {
                 <div className={Styles.sidebarMain}>
                     <div className={Styles.advanceSearchText}>
                         <Text family='roboto' className={"op5 cursor"} color={"gray"} variant={"lgIconText"}>Advanced Search</Text>
-                        <Icon className={sidebarHide ? Styles.burgerIcon : ''} onClick={toggleClose} type='close' color={"gray"} variant='icon_xlarge' />
+                        <Icon className={Styles.burgerIcon} onClick={toggleClose} type='close' color={"gray"} variant='icon_xlarge' />
                     </div>
                     <Text family='roboto' variant={"smText"} className={"op5 mt25 ml20 underline cursor textUnderlineHover"} color={"darkGray"}>Saved Searches</Text>
                     <div className='dFlex mT30 alignbaseline'>
@@ -152,7 +154,7 @@ const Sidebar = () => {
                                     </div>}
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
                                     <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Offices</Text>
-                                    <Icon onClick={() => { setShowOfficeNameSecond(true); setShowOfficeType(true); setShowFederalBranch(true); setShowFederalAgency(true) }} color={'primary'} type={showOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
+                                    <Icon onClick={officeToggle} color={'primary'} type={showOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                 </div>
                                 {showOfficeNameSecond &&
                                     <div>
@@ -218,10 +220,11 @@ const Sidebar = () => {
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml50'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Federal Agency</Text>
-                                            <Icon className={'mr50'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                            <Icon onClick={() => setShowFederalContent(!showFederalContent)} className={'mr50'} color={'primary'} type={showFederalContent ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                         </div>
-                                        <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar} ${"ml25 mt30"}`}>
-                                            <Text family='poppins' strong={'strong7'} variant={'smText'} color={showCounty ? 'secondary' : 'primary03'}>Alabma</Text>
+                                    {showFederalContent &&
+                                       <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar} ${"ml25 mt30"}`}>
+                                            <Text family='poppins' strong={'strong7'} variant={'smText'} color={'secondary'}>Alabma</Text>
                                             <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Georgia</Text>
                                             <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>virginia</Text>
                                             <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Maryland</Text>
@@ -231,7 +234,7 @@ const Sidebar = () => {
                                             <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
                                             <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
                                             <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
-                                        </div>
+                                        </div>}
                                     </div>
                                 }
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
