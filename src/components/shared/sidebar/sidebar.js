@@ -29,9 +29,7 @@ const Sidebar = () => {
         setSidebarContentHide(false);
         setSidebarHide(true)
     }
-    const switchToggle = () => {
-        setHideContact(!hideContact)
-    }
+   
 
     return (
         <div className={Styles.container}>
