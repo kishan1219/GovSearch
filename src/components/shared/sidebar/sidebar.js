@@ -16,12 +16,17 @@ const Sidebar = () => {
     const [showPositionsType, setShowPositionsType] = useState(false)
     const [showCounty, setShowCounty] = useState(false)
     const [showOfficeName, setShowOfficeName] = useState(false)
+    const [showOfficeState, setShowOfficeState] = useState(false)
     const [showOfficeNameSecond, setShowOfficeNameSecond] = useState(false)
     const [showOfficeType, setShowOfficeType] = useState(false)
     const [showFederalBranch, setShowFederalBranch] = useState(false)
     const [showFederalAgency, setShowFederalAgency] = useState(false)
-    const [showFederalContent, setShowFederalContent] = useState(true)
-
+    const [showOfficeTypeContent, setShowOfficeTypeContent] = useState(true)
+    const [showFederalBranchContent, setShowFederalBranchContent] = useState(true)
+    const [showFederalAgencyContent, setShowFederalAgencyContent] = useState(true)
+    const [showStateType, setShowStateType] = useState(false)
+    const [showOfficeCounty, setshowOfficeCounty] = useState(false)
+    const [showOfficeNameThird, setShowOfficeNameThird] = useState(false)
     const toggle = () => {
         setSidebarContentHide(true);
         setSidebarHide(false)
@@ -31,7 +36,14 @@ const Sidebar = () => {
         setSidebarHide(true)
     }
     const officeToggle = () => {
-        setShowOfficeNameSecond(!showOfficeNameSecond); setShowOfficeType(!showOfficeType); setShowFederalBranch(!showFederalBranch); setShowFederalAgency(!showFederalAgency)
+        setShowOfficeNameSecond(!showOfficeNameSecond);
+        setShowOfficeType(!showOfficeType);
+        setShowFederalBranch(!showFederalBranch);
+        setShowFederalAgency(!showFederalAgency)
+        setShowStateType(!showStateType)
+        setShowOfficeNameThird(!showOfficeNameThird)
+        setshowOfficeCounty(!showOfficeCounty)
+        setShowOfficeState(!showOfficeState)
     }
     return (
         <div className={Styles.container}>
@@ -151,7 +163,8 @@ const Sidebar = () => {
                                                     </>
                                                 }
                                             </div>}
-                                    </div>}
+                                    </div>
+                                }
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
                                     <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Offices</Text>
                                     <Icon onClick={officeToggle} color={'primary'} type={showOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
@@ -160,7 +173,7 @@ const Sidebar = () => {
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml10'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Office Name</Text>
-                                            <Icon className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                            <Icon onClick={() => { setShowOfficeNameSecond(!showOfficeNameSecond); setShowOfficeState(true) }} className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
                                         </div>
                                         <div className={`${'mt50 ml20'} ${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
                                             <Text className={'ml10'} family='poppins' strong='strong7' variant={'smText'} color='secondary'>Department of the Army</Text>
@@ -176,65 +189,115 @@ const Sidebar = () => {
                                         </div>
                                     </div>
                                 }
+                                {showOfficeState &&
+                                    <div className='mT34 mr20'>
+                                        <div className={`${'dFlex jusctifyContentSpaceBetween ml20 mT25'} ${Styles.textBoldMain} `}>
+                                            <Text family='poppins' strong='strong4' variant={'xxlText'} color={showStateType ? 'secondary' : 'primary'}>State</Text>
+                                            <Icon className={'mr20'} onClick={() => { setShowStateType(!showStateType); setshowOfficeCounty(false) }} color={'primary'} type={showStateType ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
+                                        </div>
+                                        {showStateType &&
+                                            <div className={`${'mt50 ml25'} `}>
+                                                <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
+                                                    <Text handleClick={() => setshowOfficeCounty(true)} className={`${'ml5'} ${showOfficeCounty ? '' : 'cursor'}`} family='poppins' strong={showOfficeCounty ? 'strong7' : 'strong4'} variant={'smText'} color={showOfficeCounty ? 'secondary' : 'primary03'}>Alabma</Text>
+                                                    <Text className={'mt10 ml5'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Georgia</Text>
+                                                    <Text className={'mt10 ml5'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>virginia</Text>
+                                                    <Text className={'mt10 ml5'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Maryland</Text>
+                                                    <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Washington DC</Text>
+                                                    <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>New York</Text>
+                                                    <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Colorado</Text>
+                                                    <Text className={'mt10 ml5'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
+                                                    <Text className={'mt10 ml5'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
+                                                    <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
+                                                </div>
+                                                {showOfficeCounty &&
+                                                    <div className={`${'dFlex jusctifyContentSpaceBetween ml20 mT25'} ${Styles.textBoldMain} `}>
+                                                        <Text className={'ml18'} family='poppins' strong='strong4' variant={'xxlText'} color={'primary'}>County</Text>
+                                                        <Icon onClick={() => { setShowOfficeNameThird(true); setshowOfficeCounty(false) }} className={'mr45'} color={'primary'} type={'pluscircle'} variant='icon_large' />
+                                                    </div>}
+                                                {showOfficeNameThird &&
+                                                    <>
+                                                        <div className={`${'dFlex jusctifyContentSpaceBetween mT25'} ${Styles.textBoldMain} `}>
+                                                            <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Office Name</Text>
+                                                            <Icon onClick={() => { setShowOfficeNameThird(false); setShowStateType(false) }} className={'mr20'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                                        </div>
+                                                        <div className={`${'mt50'} ${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
+                                                            <Text className={'ml10'} family='poppins' strong='strong7' variant={'smText'} color='secondary'>Department of the Army</Text>
+                                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Department of the Airforce</Text>
+                                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Department of the Navy</Text>
+                                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Department of the Defence</Text>
+                                                            <Text className={'mt15'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DOD-Office of the CIO</Text>
+                                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>New York</Text>
+                                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Colorado</Text>
+                                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
+                                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
+                                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
+                                                        </div>
+                                                    </>
+                                                }
+                                            </div>}
+                                    </div>
+                                }
                                 {showOfficeType &&
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml10'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Office Type</Text>
-                                            <Icon className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                            <Icon className={'mr12'} onClick={() => { setShowOfficeTypeContent(!showOfficeTypeContent); setShowFederalBranch(false); setShowFederalBranchContent(false); setShowFederalAgency(false); setShowFederalAgencyContent(false) }} color={'primary'} type={showOfficeTypeContent ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                         </div>
-                                        <div className={`${'mt50 ml20'} ${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
-                                            <Text className={'ml10'} family='poppins' strong='strong7' variant={'smText'} color='secondary'>All</Text>
-                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Federal</Text>
-                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Defence</Text>
-                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>State</Text>
-                                            <Text className={'mt15'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Muncipal</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Local</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>County</Text>
-                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
-                                            <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
-                                        </div>
+                                        {showOfficeTypeContent &&
+                                            <div className={`${'mt50 ml20'} ${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
+                                                <Text className={'ml10'} family='poppins' strong='strong7' variant={'smText'} color='secondary'>All</Text>
+                                                <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Federal</Text>
+                                                <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Defence</Text>
+                                                <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>State</Text>
+                                                <Text className={'mt15'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Muncipal</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Local</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>County</Text>
+                                                <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
+                                                <Text className={'mt10 ml10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
+                                            </div>}
                                     </div>
                                 }
                                 {showFederalBranch &&
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml40'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Federal Branch</Text>
-                                            <Icon className={'mr45'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                            <Icon onClick={() => { setShowFederalBranchContent(!showFederalBranchContent); setShowFederalAgency(false); setShowFederalAgencyContent(false) }} className={'mr45'} color={'primary'} type={showFederalBranchContent ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                         </div>
-                                        <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar} ${"ml25 mt30"}`}>
-                                            <Text family='poppins' strong={'strong7'} variant={'smText'} color={'secondary'}>Alabma</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Georgia</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>virginia</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Maryland</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Washington DC</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>New York</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Colorado</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
-                                        </div>
+                                        {showFederalBranchContent &&
+                                            <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar} ${"ml25 mt30"}`}>
+                                                <Text family='poppins' strong={'strong7'} variant={'smText'} color={'secondary'}>Alabma</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Georgia</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>virginia</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Maryland</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Washington DC</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>New York</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Colorado</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
+                                            </div>}
                                     </div>
                                 }
                                 {showFederalAgency &&
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml50'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Federal Agency</Text>
-                                            <Icon onClick={() => setShowFederalContent(!showFederalContent)} className={'mr50'} color={'primary'} type={showFederalContent ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
+                                            <Icon onClick={() => setShowFederalAgencyContent(!showFederalAgencyContent)} className={'mr50'} color={'primary'} type={showFederalAgencyContent ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                         </div>
-                                    {showFederalContent &&
-                                       <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar} ${"ml25 mt30"}`}>
-                                            <Text family='poppins' strong={'strong7'} variant={'smText'} color={'secondary'}>Alabma</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Georgia</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>virginia</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Maryland</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Washington DC</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>New York</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Colorado</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
-                                            <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
-                                        </div>}
+                                        {showFederalAgencyContent &&
+                                            <div className={`${Styles.scrollWrapper1} ${Styles.scrollBar} ${"ml25 mt30"}`}>
+                                                <Text family='poppins' strong={'strong7'} variant={'smText'} color={'secondary'}>Alabma</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Georgia</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>virginia</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Maryland</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Washington DC</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>New York</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Colorado</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>DC Metro Region</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Huntsiville Region</Text>
+                                                <Text className={'mt10'} family='poppins' strong='strong4' variant={'smText'} color={'primary03'}>Sun Belt Region</Text>
+                                            </div>}
                                     </div>
                                 }
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
