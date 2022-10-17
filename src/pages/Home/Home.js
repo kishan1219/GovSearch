@@ -1,11 +1,11 @@
 import React from 'react'
-import { Sidebar } from '../../components/shared'
+import { Layout, Sidebar } from '../../components/shared'
 import Styles from './home.module.scss'
 const Home = () => {
   return (
-    <div className={Styles.container}>
+    <Layout className={Styles.container}>
       <Sidebar />
-    </div>
+    </Layout>
   )
 }
 
