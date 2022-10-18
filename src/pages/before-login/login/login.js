@@ -3,16 +3,21 @@ import Image from '../../../components/shared/image/image'
 import Styles from './login.module.scss'
 import { Input, Button, Heading, Text, Modal } from '../../../components/shared/index'
 import { useForm } from "react-hook-form";
+import OtpInput from 'react-otp-input';
+
 
 
 
 const Login = () => {
 
-
+    const [OTP, setOTP] = useState("");
     const [show, setShow] = useState(false);
     const [showHide, setShowHide] = useState(true);
     const [showFactor, setShowFactor] = useState(false);
     const [showForgat, setShowForgat] = useState(false);
+
+
+
 
 
     const showDetails = () => {
@@ -71,7 +76,7 @@ const Login = () => {
                             <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
                                 Enter your email address to sign in.</Text>
                             <div className={Styles.inputMain} >
-                                <Input className={Styles.mt30} 
+                                <Input className={Styles.mt30}
                                     variant="border" type="email" placeholder="Enter Your Email"
                                     name="email"
 
@@ -128,7 +133,7 @@ const Login = () => {
 
                                     </div>
                                     <div className={Styles.inputSec}>
-                                        <Input className={Styles.passText} placeholder="*******************" type="password" variant="border" />
+                                        <Input className={Styles.passText} placeholder="Password" type="password" variant="border" />
                                     </div>
                                 </div>
                                 <div className={Styles.forgotText}  >
@@ -158,23 +163,23 @@ const Login = () => {
                             <div>
                                 <Text className={Styles.enterText} variant={"smText"} color={"black"} strong={"strong4"}>Enter Code</Text>
                             </div>
-                            <div className={Styles.inputBox}>
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
+
+
+
+                            <div className={Styles.inputMainBox}>
+                                <OtpInput
+                                     inputStyle={Styles.inputTab} containerStyle={Styles.numInput} 
+                                     numInputs={6} value={OTP} onChange={setOTP} />
                             </div>
-                            
-                               
-                               
-                            
+
+
                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
                             <div className={Styles.btnMain}  >
                                 <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Enter</Button>
                             </div>
-                            <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Login?</Text>
+                            <div onClick={showLogin}>
+                            <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"} onClick={showDetails}>Can’t Login?</Text>
+                        </div>
                         </div>
                     </Modal>
                 )}
@@ -185,8 +190,9 @@ const Login = () => {
                                 <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>E-mail</Heading>
                                 <Text className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
                                 <div className={Styles.inptBox} >
-                                    <Input className={Styles.passText} type="text" placeholder={"Enter email"} variant="border" />
+                                    <Input className={Styles.passText} type="email" placeholder={"Enter email"} variant="border" />
                                 </div>
+
                                 <div className={Styles.btnMain}  >
                                     <Button size={"xlmd"} variant={"solidPrimary"} >Next</Button>
                                 </div>

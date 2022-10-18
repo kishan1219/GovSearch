@@ -26,6 +26,10 @@
             margin-top: 27px;
             padding: 0px 35px;
         }
+        .inputMainBox{
+            margin-left: 41px;
+            margin-top: 40px;
+        }
 
         .forgotBox {
 
@@ -65,6 +69,11 @@
         .continueBtn{
             margin-top: 28px;
         }
+
+       
+
+
+
 
         .authenticHeading {
             margin: 33px 0px 0px 0px;
@@ -130,19 +139,16 @@
                 width: 408px;
                 margin-top: 27px;
 
-                .inputSec {
-                    & ::placeholder {
-                        color: black;
-                    
-                       
-                    }
-                }
+             
 
                 .passText {
                     margin-top: 25px;
 
                 }
 
+            }
+            .inputMainBox{
+                display: flex;
             }
 
             .btnMain {
@@ -154,6 +160,7 @@
                 text-align: center;
                 text-decoration: underline;
             }
+            
 
            
 
