@@ -11,7 +11,7 @@ import {
 } from "../../shared/index";
 import propTypes from 'prop-types'
 
-export default function SearchBar({ type, placeholder, onClick, inputclassName, iconclassName, size, iconColor, search }) {
+export default function SearchBar({   onClick, inputclassName }) {
   const [searchCode, setSearchcode] = React.useState('All');
 
     const handleChange = (event) => {
@@ -19,7 +19,7 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
     };
 
   return (
-    <>
+  
     <div className={Styles.search}>
       <Select
         className={`${Styles.allBtn}`}
@@ -29,14 +29,14 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
         displayEmpty
 
       >
-        <MenuItem value="All" >All</MenuItem>
-        <MenuItem value="Contacts">Contacts</MenuItem>
-        <MenuItem value="Offices">Offices</MenuItem>
-        <MenuItem value="Vendors">Vendors</MenuItem>
+        <MenuItem value="All" className={Styles.selectList} >All</MenuItem>
+        <MenuItem value="Contacts" className={Styles.selectList} >Contacts</MenuItem>
+        <MenuItem value="Offices" className={Styles.selectList} >Offices</MenuItem>
+        <MenuItem value="Vendors" className={Styles.selectList} >Vendors</MenuItem>
       </Select>
       <div className={Styles.mainIco }  >
-        <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder={placeholder} />
-        <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
+        <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder="Search" />
+        <Icon type="search" size={"icon_large"} color={"gray05"} onClick={onClick} className={`${Styles.rightIcon}`} />
        
       </div>
       <Button btnClass={Styles.searcbutt} size={"md"} variant={"solidSecondary"}>Search</Button>
@@ -44,13 +44,12 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
 
     </div >
    
-   </>
+  
 
 
   );
 }
 SearchBar.propTypes = {
-  placeholder: propTypes.string,
   className: propTypes.any,
   type: propTypes.any,
   onClick: propTypes.func,

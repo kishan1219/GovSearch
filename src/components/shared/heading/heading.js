@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { HEADINGTYPES } from './constant'
 import styles from './heading.module.scss'
 
 const renderHeading = ({
@@ -20,9 +19,6 @@ const renderHeading = ({
 
 
   switch (headingType) {
-    case 'h0': {
-      return <h0  onClick={onClick} className={`${styles[headingType]} ${[className]} ${fontColor} ${textVariant} ${strikeThrough} ${fontFamily} `}>{children}</h0>
-    }
     case 'h1': {
       return <h1  onClick={onClick} className={`${styles[headingType]} ${[className]} ${fontColor} ${textVariant} ${strikeThrough} ${fontFamily} `}>{children}</h1>
     }
@@ -54,7 +50,6 @@ const Heading = (props) => {
 }
 
 Heading.defaultProps = {
-  type: HEADINGTYPES.TEXT,
   headingType: 'h4',
   color: 'primary',
 }
