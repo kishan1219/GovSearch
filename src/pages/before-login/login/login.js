@@ -36,6 +36,14 @@ const Login = () => {
         setShowForgat(true);
 
     }
+    const showPass = () => {
+        setShow(true);
+        setShowHide(false);
+        setShowFactor(false);
+        setShowForgat(false);
+
+    }
+
 
 
 
@@ -141,11 +149,11 @@ const Login = () => {
                     <Modal>
                         <div className={Styles.multifactorMainBox}>
                             <div className={Styles.authenticHeading}>
-                                <Heading color={"secondary"} headingType={"h1"}>Multi-Factor </Heading>
-                                <Heading className={Styles.autoHead} color={"secondary"} headingType={"h1"}>Authentication</Heading>
+                                <Heading color={"secondary"} headingType={"h1"} >Multi-Factor </Heading>
+                                <Heading className={Styles.autoHead} color={"secondary"} headingType={"h1"} >Authentication</Heading>
                             </div>
                             <div>
-                                <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Enter Code</Text>
+                                <Text className={Styles.enterText} variant={"smText"} color={"black"} strong={"strong4"}>Enter Code</Text>
                             </div>
                             <div className={Styles.inputBox}>
                                 <Input className={Styles.mt30Box} variant="grey" />
@@ -175,7 +183,7 @@ const Login = () => {
                                 <div className={Styles.btnMain}  >
                                     <Button size={"xmd01"} variant={"solidPrimary"} >Next</Button>
                                 </div>
-                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"}>Back to Login?</Text>
+                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"}  strong={"strong4"} handleClick={showPass} >Back to Login?</Text>
                             </div>
                         </Modal>
                     </div>
@@ -193,7 +201,7 @@ const Login = () => {
 
             <div className={Styles.resourCes}>
                 <div className={Styles.resourCesBox}>
-                    <Heading headingType={"h1"} color={"$primary05"}>Featured Resources</Heading>
+                    <Heading headingType={"h1"} color={"secondary"}>Featured Resources</Heading>
                     <div className={Styles.firstImgBox}><Image src='assets/images/elevate.jpg' alt={"Logo"} /></div>
 
                     <div>
