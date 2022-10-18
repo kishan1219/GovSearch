@@ -48,7 +48,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
     variant: "solidPrimary",
-    size: "sm",
+    size: "md",
     type: BUTTONACTION.BUTTON,
     block: false,
     disabled: false,

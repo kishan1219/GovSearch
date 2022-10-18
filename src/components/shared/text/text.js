@@ -39,9 +39,9 @@ const Text = ({
 
 // Default Props
 Text.defaultProps = {
-  variant: 'xxlText',
+  variant: 'mdText',
   className: '',
-  color: 'primary',
+  color: '',
   children: '',
   family:'poppins',
   strong:'strong4'
