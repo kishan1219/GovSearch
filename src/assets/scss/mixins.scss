@@ -73,7 +73,12 @@
     }
   
   }
-  
+
+  @mixin  fontWeight {
+    font-weight: 700;
+    max-width:100%;
+    border-radius: 12px;
+  }
 @mixin fonts-poppins {
     font-family: 'poppins', 'sans-serif';
     font-style: normal;
@@ -140,6 +145,31 @@
       background: $primary;
       border-radius: 10px;
       border: 1px solid $white03;
+    }
+  }
+}
+@mixin ScrollBarTransparent {
+  .scrollBarTransparent {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 12px;
+      height: 10px;
+       @include sm{
+         width: 10px;
+         height: 8px;
+       }
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 8px;
+        @include sm {
+          width: 6px;
+        }
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      border-radius: 10px;
+      border: 1px solid transparent;
     }
   }
 }

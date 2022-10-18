@@ -58,7 +58,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
                    
                     </div>
-                    <Button  btnClass={Styles.transbton} size={"md02"} variant={"transparent"}>Advanced</Button>
+                    <Button  btnClass={Styles.transbton} size={"mdxl"} variant={"transparent"}>Advanced</Button>
                 </div >
               
                 <div className={Styles.btnSearch }>
@@ -71,7 +71,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                          )}
                         
                        </div> 
-                    <Button btnClass={Styles.solidSearch} size={"md04"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
+                    <Button btnClass={Styles.solidSearch} size={"xxlg"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
 
 
             </div>
