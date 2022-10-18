@@ -44,6 +44,14 @@
         display: none;
     }
 
+    fieldset {
+        border: none;
+    }
+    div {
+        border: none;
+        outline: none;
+        padding: 9px 0 9px !important;
+    }
     .textAdv {
         text-decoration-line: underline;
         color: $gray;
@@ -56,4 +64,12 @@
  
 
     }
+}
+.selectList {
+    width: 100%;
+    text-align: right;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.15px;
+    color: $darkGray;
 }

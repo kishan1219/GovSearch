@@ -11,7 +11,7 @@ import {
 } from "../../shared/index";
 import propTypes from 'prop-types'
 
-export default function SearchBar({ type, placeholder, onClick, inputclassName, iconclassName, size, iconColor, search }) {
+export default function SearchBar({ type,  onClick, inputclassName, iconclassName, size, iconColor, search }) {
   const [searchCode, setSearchcode] = React.useState('All');
 
     const handleChange = (event) => {
@@ -29,13 +29,13 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
         displayEmpty
 
       >
-        <MenuItem value="All" >All</MenuItem>
-        <MenuItem value="Contacts">Contacts</MenuItem>
-        <MenuItem value="Offices">Offices</MenuItem>
-        <MenuItem value="Vendors">Vendors</MenuItem>
+        <MenuItem value="All" className={Styles.selectList} >All</MenuItem>
+        <MenuItem value="Contacts" className={Styles.selectList} >Contacts</MenuItem>
+        <MenuItem value="Offices" className={Styles.selectList} >Offices</MenuItem>
+        <MenuItem value="Vendors" className={Styles.selectList} >Vendors</MenuItem>
       </Select>
       <div className={Styles.mainIco }  >
-        <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder={placeholder} />
+        <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder="Search" />
         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
        
       </div>
@@ -50,7 +50,6 @@ export default function SearchBar({ type, placeholder, onClick, inputclassName, 
   );
 }
 SearchBar.propTypes = {
-  placeholder: propTypes.string,
   className: propTypes.any,
   type: propTypes.any,
   onClick: propTypes.func,
