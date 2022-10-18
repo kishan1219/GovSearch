@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './latestDeatils.module.scss'
+import styles from './latest-deatils.module.scss'
 import Image from "../image";
 import Text from "../text";
 

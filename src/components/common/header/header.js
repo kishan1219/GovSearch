@@ -21,7 +21,7 @@ const  Header =({size,variant,className,isTechnomileLogo, isGovSearchLogo,isSear
           }
           {isTechnomileLogo && <Image src="assets/images/logo.png" alt="logo"  className={Styles.headerLogo} />}
         </div>
-        {isSearch && <SearchBar openMenuBar={openMenuBar} />}
+        {isSearch && <SearchBar openMenuBar={openMenuBar}  />}
         <div className={Styles.headerRight}>
           {isFederal &&
             <Tooltip title="Currently, Click event is not developed">
