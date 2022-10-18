@@ -61,12 +61,18 @@ const Home = () => {
         place: "Arlington, VA",
     },
 ];
+
   return (
     <Layout className={Styles.container}>
       <Sidebar />
       <Header isSearch={false} isRightNav={true} isFederal={false} isProfessional={true} />
 
-      <div className={Styles.search}>
+      {/* <div className={Styles.search}>
+                <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray"} iconclassName={"icoClass"} />
+            </div> */}
+        
+            <div className={Styles.search} >
+              
                 <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray"} iconclassName={"icoClass"} />
             </div>
           <div className={Styles.barnewslist}>

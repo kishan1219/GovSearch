@@ -26,24 +26,24 @@ const  Header =({size,variant,className,isTechnomileLogo, isGovSearchLogo,isSear
           {isFederal &&
             <Tooltip title="Currently, Click event is not developed">
               <div>
-                <Text className={Styles.headerRightHeading}>Federal</Text>
+                <Text className={Styles.headerRightH}>Federal</Text>
               </div>
             </Tooltip>
           }
-          {isAdmin && <Text className={Styles.headerRightHeading}>TechnoMile Admin</Text>}
-          {isProfessionalEdition && <Tooltip title="Currently, Click event is not developed"><div><Text className={Styles.headerRightHeading}>GovSearch Professional Edition</Text></div></Tooltip>}
-          {isProfessional && <Text className={Styles.headerRightHeading}>Professional</Text>}
-          {isGovSearchProfessional && <Text className={Styles.headerRightHeading}>GovSearch Professional Edition</Text>}
-          {isStateLocal && <Text className={Styles.headerRightHeading}>State, Local, and Municipal</Text>}
+          {isAdmin && <Text className={Styles.headerRightH}>TechnoMile Admin</Text>}
+          {isProfessionalEdition && <Tooltip title="Currently, Click event is not developed"><div><Text className={Styles.headerRightH}>GovSearch Professional Edition</Text></div></Tooltip>}
+          {isProfessional && <Text className={Styles.headerRightH}>Professional</Text>}
+          {isGovSearchProfessional && <Text className={Styles.headerRightH}>GovSearch Professional Edition</Text>}
+          {isStateLocal && <Text className={Styles.headerRightH}>State, Local, and Municipal</Text>}
           {isRightNav &&
             <>
               <div className={Styles.headerNotifications}>
                 <Icon type={"notification"} size="icon_large" variant="gray" className={Styles.headerNotification} onClick={() => { SetShowNotification(!showNotification); setShowBc(false) }} />
-                <div className={Styles.headerGreenTick}></div>
+                <div className={Styles.notificationsGreenTick}></div>
               </div>
-              <div className={Styles.headerRightBCRoot}>
+              <div className={Styles.headerRightBC}>
                 <Text className={`${Styles.headerRightBC} ${showBC ? Styles.dullBc : null}`} handleClick={() => { setShowBc(!showBC); SetShowNotification(false) }}>BC</Text>
-                {/* <Image src="assets/images/NavyBradley.jpg"/> */}
+
               </div>
               <Tooltip title="Currently, Click event is not developed">
                 <div>

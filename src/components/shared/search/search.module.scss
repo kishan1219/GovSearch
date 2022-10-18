@@ -1,87 +1,73 @@
-@import '../../../assets/scss/variables.scss';
-@import '../../../assets/scss/mixins.scss';
-
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
 .mainSearch {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 
-    .head {
-        position: relative;
-
-        .headingo {
-            margin-right: 75px;
-        }
-
-        .btnSearch {
-            position: absolute;
-            left: 270px;
-
-            .error {
-                margin-bottom: 10px;
-                color: $red;
-            }
-
-            .solidSearch:hover {
-                background-color: $primary04;
-            }
-        }
-
-        .searchb {
-            display: flex;
-            gap: 25px;
-            margin-top: 17px;
-            margin-bottom: 33px;
-            align-items: center;
-            outline: none;
-            border: none;
-
-            .transbton:hover {
-                background-color: $gray;
-                color: $white;
-            }
-
-            .inSearch {
-                position: relative;
-                min-width: 575px;
-                width: 100%;
-
-                .inputMain {
-                    height: 52px;
-                    border-radius: 12px;
-                    padding: 0px 44px 0px 12px;
-                    background-color: $white;
-                    border: 1px solid rgba(0, 0, 0, 0.23);
-                }
-
-                .rightIcon {
-                    position: absolute;
-                    right: 0px;
-                    top: 12px;
-                    cursor: pointer;
-                    padding-right: 10px;
-                }
-            }
-
-            .selectBtn {
-                background: $primary04;
-                min-width: 120px;
-                height: 51px;
-                text-align: center;
-                color: $white;
-                border-radius: 12px;
-                @include fonts-poppins;
-                font-weight: 600;
-                font-size: 16px;
-                padding: 0px;
-
-            }
-
-            svg {
-                display: none;
-            }
-
-        }
-
+  .head {
+    position: relative;
+    .headingo {
+      margin-right: 75px;
     }
+    .btnSearch {
+      position: absolute;
+      left: 270px;
+      .error {
+        margin-bottom: 10px;
+        color: $red;
+      }
+      .solidSearch:hover {
+        background-color: $primary04;
+      }
+    }
+    .searchb {
+      display: flex;
+      gap: 25px;
+      margin-top: 17px;
+      margin-bottom: 33px;
+      align-items: center;
+      outline: none;
+      border: none;
+      .transbton:hover {
+        background-color: $gray;
+        color: $white;
+      }
+      .inSearch {
+        position: relative;
+        min-width: 575px;
+        width: 100%;
+        .inputMain {
+          height: 52px;
+          border-radius: 12px;
+          padding: 0px 44px 0px 12px;
+          background-color: $white;
+          border: 1px solid rgba(0, 0, 0, 0.23);
+        }
+        .rightIcon {
+          position: absolute;
+          right: 0px;
+          top: 12px;
+          cursor: pointer;
+          padding-right: 10px;
+        }
+      }
+
+      .selectBtn {
+        background: $primary04;
+        min-width: 120px;
+        height: 51px;
+        text-align: center;
+        color: $white;
+        border-radius: 12px;
+        @include fonts-poppins;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 0px;
+      }
+      svg {
+        display: none;
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from '../button/button.module.scss';
-import { BUTTONACTION } from './constant';
+
 
 const Button = ({
     variant,
@@ -49,7 +49,6 @@ Button.propTypes = {
 Button.defaultProps = {
     variant: "solidPrimary",
     size: "md",
-    type: BUTTONACTION.BUTTON,
     block: false,
     disabled: false,
     children: 'Button Title',

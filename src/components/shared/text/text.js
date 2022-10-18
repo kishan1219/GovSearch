@@ -44,7 +44,7 @@ Text.defaultProps = {
   color: '',
   children: '',
   family:'poppins',
-  strong:'strong4'
+  strong:''
 }
 // PropTypes Validation
 Text.propTypes = {
