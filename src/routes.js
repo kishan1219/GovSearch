@@ -1,26 +1,20 @@
-import { Home, About, Styleguide, login } from "./pages";
+import { Styleguide, login, Notification } from "./pages";
 
-export const routes =[
-    {
-        path: "/",
-        component: Home,
-        exact: true
-      },
-      {
-        path: "/about",
-        component: About,
-        exact: false
-      },
-      {
-        path: "/style-guide",
-        component: Styleguide,
-        exact: false
-      },
-      {
-        path: "/login",
-        component: login,
-        exact: false
-      },
-]
+export const routes = [
+  {
+    path: "/",
+    component: login,
+    exact: true,
+  },
+  {
+    path: "/style-guide",
+    component: Styleguide,
+    exact: false,
+  },
 
-
+  {
+    path: "/notification",
+    component: Notification,
+    exact: false,
+  },
+];

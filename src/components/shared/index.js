@@ -9,7 +9,7 @@ import Button from "./button/button";
 import Heading from "./heading/heading";
 import Table from "./table";
 import Card from "./card/card";
-import LatestDeatils from "./latestDeatils";
+import LatestDeatils from "./latest-deatils";
 import ListGroup from "./list-group";
 import ListItem from "./list-item/list-item";
 import ModalHeader from "./modalHeader/modalHeader";
