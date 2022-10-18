@@ -27,6 +27,7 @@ const Sidebar = () => {
     const [showStateType, setShowStateType] = useState(false)
     const [showOfficeCounty, setshowOfficeCounty] = useState(false)
     const [showOfficeNameThird, setShowOfficeNameThird] = useState(false)
+    const [hideOfficeNameSecond, sethideOfficeNameSecond] = useState(false)
     const toggle = () => {
         setSidebarContentHide(true);
         setSidebarHide(false)
@@ -36,14 +37,15 @@ const Sidebar = () => {
         setSidebarHide(true)
     }
     const officeToggle = () => {
+        sethideOfficeNameSecond(!hideOfficeNameSecond);
         setShowOfficeNameSecond(!showOfficeNameSecond);
         setShowOfficeType(!showOfficeType);
         setShowFederalBranch(!showFederalBranch);
         setShowFederalAgency(!showFederalAgency)
-        setShowStateType(!showStateType)
-        setShowOfficeNameThird(!showOfficeNameThird)
-        setshowOfficeCounty(!showOfficeCounty)
-        setShowOfficeState(!showOfficeState)
+        setShowStateType(false)
+        setShowOfficeNameThird(false)
+        setshowOfficeCounty(false)
+        setShowOfficeState(false)
     }
     return (
         <div className={Styles.container}>
@@ -167,8 +169,10 @@ const Sidebar = () => {
                                 }
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
                                     <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Offices</Text>
-                                    <Icon onClick={officeToggle} color={'primary'} type={showOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
+                                    <Icon onClick={officeToggle} color={'primary'} type={hideOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                 </div>
+                               {hideOfficeNameSecond &&
+                                <>
                                 {showOfficeNameSecond &&
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml10'} ${Styles.textBoldMain} `}>
@@ -300,6 +304,7 @@ const Sidebar = () => {
                                             </div>}
                                     </div>
                                 }
+                                </>}
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
                                     <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Vendor</Text>
                                     <Icon color={'primary'} type='pluscircle' variant='icon_large' />

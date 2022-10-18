@@ -3,4 +3,10 @@
     min-height: 100vh;
     width:100%;
     background: $white01;
+    .layout {
+        position: fixed;
+        width: 100%;
+        min-width: 428px;
+        z-index: 1;
+    }
 }
