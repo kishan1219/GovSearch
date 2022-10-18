@@ -121,6 +121,7 @@ const Login = () => {
                                             <p>*Please enter email address.</p>
                                         )}
 
+
                                         {errors?.email?.type === "pattern" && (
                                             <p>*Alphabetical characters only</p>
                                         )}
@@ -165,6 +166,10 @@ const Login = () => {
                                 <Input className={Styles.mt30Box} variant="grey" />
                                 <Input className={Styles.mt30Box} variant="grey" />
                             </div>
+                            
+                               
+                               
+                            
                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
                             <div className={Styles.btnMain}  >
                                 <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Enter</Button>
