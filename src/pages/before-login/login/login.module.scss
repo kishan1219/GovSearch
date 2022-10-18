@@ -12,10 +12,70 @@
         padding-top: 53px;
         text-align: center;
 
+        .mt30Box {
+            width: 68px;
+            height: 85px;
+        }
+
+        .inputBox {
+            display: flex;
+            gap: 10px;
+            margin-left: 10px;
+            max-width: 99px;
+            margin-top: 27px;
+            padding: 0px 35px;
+        }
+
+        .forgotBox {
+
+            padding: 85px 30px 85px 30px;
+
+            .forgotText {
+                margin: 30px 0px 0px 0px;
+            }
+        }
+
+        .enterText {
+            margin-top: 27px;
+        }
+
+        .secText {
+            margin-top: 27px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .secTwoText {
+            margin: 21px 0px 22px 0px;
+            cursor: pointer;
+            text-decoration: underline;
+
+        }
+
+        .inptBox {
+            width: 408px;
+            margin: 25px auto;
+
+        }
+
+        .btnMain {
+            margin: 23px 0px 14px 0px;
+        }
+
+        .authenticHeading {
+            margin: 33px 0px 0px 0px;
+
+            .autoHead {
+                margin-top: 10px;
+            }
+
+        }
+
+
         .mainBox {
             padding: 37px 48px 48px 48px;
 
-            .inputMainBox{
+            .inputMainBox {
                 display: flex;
 
                 .inputBox {
@@ -49,7 +109,10 @@
             .forgotText {
                 text-align: right;
                 margin-top: 9px;
+                text-decoration: underline;
+                cursor: pointer;
             }
+
 
 
             // .mainHead {
@@ -61,9 +124,9 @@
             .inputMain {
                 width: 408px;
                 margin-top: 27px;
-              
 
-                
+
+
 
                 .passText {
                     margin-top: 25px;
@@ -77,7 +140,9 @@
             .secText {
                 text-align: center;
                 padding-top: 20px;
+                text-decoration: underline;
             }
+
         }
     }
 

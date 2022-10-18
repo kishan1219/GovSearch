@@ -69,24 +69,12 @@
     justify-content: flex-end;
     flex: 0 0 0%;
     max-width: 280px;
-    cdc
+   
 
-    // @include lg{
-    //     margin-left: 45px;
-    // }
-    // @include xlmd{
-    //     margin-left: 30px;
-    // }
-    // @include xmd{
-    //     margin-left: 25px;
-    // }
-    // @include md{
-    //     margin-left: 18px;
-    //     max-width: 210px;
-    // }
-.headerRightHeading {
+.headerRightH {
     color: $gray;
-    font-size: $font-xllg;
+    font-size: $font-md;
+    line-height: 19px;
     cursor: pointer;
     @include lg{
         font-size: 23px;
@@ -122,7 +110,7 @@
         margin: 0 10px;
     }
 }
-.headerGreenTick{
+.notificationsGreenTick{
     position: absolute;
     width: 10px;
     height: 10px;
@@ -145,7 +133,7 @@
     }
 }
 }
-.headerRightBCRoot{
+.headerRightBC{
     width: 54px;
     height: 54px;
     display: flex;
