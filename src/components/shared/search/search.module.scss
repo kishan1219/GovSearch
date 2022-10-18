@@ -9,6 +9,11 @@
     position: relative;
     .headingo {
       margin-right: 75px;
+      margin-bottom: 55px;
+      .headingGov{
+        font-size: 100px;
+        
+      }
     }
     .btnSearch {
       position: absolute;
@@ -24,7 +29,7 @@
     .searchb {
       display: flex;
       gap: 25px;
-      margin-top: 17px;
+    //   margin-top: 17px;
       margin-bottom: 33px;
       align-items: center;
       outline: none;
