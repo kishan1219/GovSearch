@@ -1,33 +1,37 @@
-import React from 'react'
-import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
 
- const Barchart = () => {
-  const chartReference = React.createRef();
-  ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
-  const data = {
+
+import React from 'react'
+import {Bar} from 'react-chartjs-2'
+import { useState } from 'react'
+import {Chart as chartjs} from "chart.js/auto"
+
+
+
+
+function BarChart({}){
+ 
+  const [userData,] = useState({
+  
     labels: ['Contacts', 'Offices', 'Vendors'],
-    datasets: [
-      {
-        label: 'Stats Charts',
-        backgroundColor: ['#3267B1', '#242450', '#306BE8'],
-        borderColor: '#EBEBEB',
-        borderWidth: 1,
-        borderRadius: [0, 0, 0],
-        data: [1000, 1200, 300],
+    datasets: [{
+     
+      data:[1000,1200,300],
+   
+    backgroundColor: [
+        '#3267B1',
+        '#242450',
+        '#306BE8',
       
-      },
-      {
-        backgroundColor: '#F5F5F5',
-        hoverBackgroundColor: '#F5F5F5',
-        data: [1000, 1200, 300],
-        datalabels: {
-          display: false
-        }
-      },
-    ]
-  };
-  const options = {
+      ],
+      borderColor: [
+        '#EBEBEB',
+       
+      ],
+    },
+   
+  ],
+  })
+  const axis = {
     responsive: true,
     scales: {
       x: {
@@ -55,32 +59,9 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
         }
       }
     },
-    plugins: {
-      legend: {
-        display: false,
-      },
-      title: {
-        display: true,
-      },
-      tooltip: {
-        filter: tooltipItem => !tooltipItem.datasetIndex
-      },
-      datalabels: {
-        display: true,
-        anchor: 'top',
-        color: '#FFFFFF',
-        align: 'top',
-      },
-    }
+  
   };
+  return <div><Bar data={userData} options={axis}/></div>
+  }
 
-  return (
-    <div>  <Bar
-    ref={chartReference}
-    height={200}
-    options={options}
-    data={data}
-  /></div>
-  )
-}
- export default Barchart
+  export default BarChart
