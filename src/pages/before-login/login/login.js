@@ -126,7 +126,7 @@ const Login = () => {
                                         )}
 
                                     </div>
-                                    <Input className={Styles.passText} type="password" variant="border" />
+                                    <Input className={Styles.passText} placeholder="*******************" type="password" variant="border" />
                                 </div>
                                 <div className={Styles.forgotText}  >
                                     <Text variant={"smText"} color={"black"} strong={"strong4"} handleClick={showForgatData} >forgot password?</Text>
@@ -178,7 +178,7 @@ const Login = () => {
                                 <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>E-mail</Heading>
                                 <Text  className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
                                 <div className={Styles.inptBox} >
-                                    <Input className={Styles.passText} type="password" variant="border" />
+                                    <Input className={Styles.passText} type="password" placeholder={"Pozedevelopment@gmail.com"} variant="border" />
                                 </div>
                                 <div className={Styles.btnMain}  >
                                     <Button size={"xmd01"} variant={"solidPrimary"} >Next</Button>

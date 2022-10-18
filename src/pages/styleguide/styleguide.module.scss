@@ -224,5 +224,24 @@
     align-items: center;
     justify-content: center;
 }
+// char scss
 
+.chart{
+  position: relative;
 
+  .textbar{
+    position: absolute;
+    top: 70px;
+    left:32px;
+  }
+  .textbarone{
+    position: absolute;
+    top: 43px;
+    left:133px
+  }
+  .textbartwo{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+  }
+}

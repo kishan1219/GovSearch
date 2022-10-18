@@ -48,7 +48,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
     variant: "solidPrimary",
-    size: "sm",
+    size: "md",
     block: false,
     disabled: false,
     children: 'Button Title',
