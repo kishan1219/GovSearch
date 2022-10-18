@@ -40,5 +40,6 @@ export {
   Modal,
   Sidebar,
   Search,
-  Barchart
+  Barchart,
+
 };

@@ -1,12 +1,14 @@
 import React from 'react'
-// import Search from '../../components/shared/search/search'
 import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Table, ListGroup, ListItem, LatestDeatils, Search } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import { Header } from '../../components/common'
 import Cardtab from '../../components/shared/Cardtab'
 import Criteria from '../Criteria/Criteria'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 
 const Styleguide = () => {
@@ -67,9 +69,25 @@ const Styleguide = () => {
             place: "Arlington, VA",
         },
     ];
-    const [openModal, setOpenModal] = useState(false);
+    // const [openModal, setOpenModal] = useState(false);
     return (
         <div className={Styles.wrapper}>
+            <div >
+        <Switch/>
+        <FormControlLabel control={<Switch defaultChecked />} label="Label" />
+      </div>
+      <Header />
+      <Header isSearch={false} />
+      <Header isRightNav={true} isFederal={false} isProfessional={true} />
+      <Header isSearch={false} isRightNav={true} isFederal={false} isProfessional={true} />
+      <Header isSearch={true} isRightNav={true} isFederal={false} isGovSearchProfessional={true} />
+      <Header isSearch={false} isRightNav={true} isFederal={false} isStateLocal={true} />
+      <Header isTechnomileLogo={true} isGovSearchLogo={false} />
+      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} />
+      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />
+      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />
+      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={false} isFederal={false} />
+      <Header size="sm" isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} />
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -155,6 +173,9 @@ const Styleguide = () => {
             </div>
 
             <div className={Styles.chart} style={{ width: 300 }}>
+            <Text className={Styles.textbar} variant={"smText"} color={"white"} strong={"strong4"}>1000</Text>
+            <Text className={Styles.textbarone} variant={"smText"} color={"white"} strong={"strong4"}>1200</Text>
+            <Text className={Styles.textbartwo} variant={"smText"} color={"white"} strong={"strong4"}>300</Text>
                 <BarChart />
             </div>
             

@@ -15,6 +15,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
         borderWidth: 1,
         borderRadius: [0, 0, 0],
         data: [1000, 1200, 300],
+      
       },
       {
         backgroundColor: '#F5F5F5',

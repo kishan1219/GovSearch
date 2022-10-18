@@ -13,6 +13,13 @@
     .btnSearch{
         position: absolute;
         left: 270px;
+        .error{
+            margin-bottom: 10px;
+            color: $red;
+         }
+         .solidSearch:hover{
+            background-color: $primary04;
+         }
         }
 .searchb{
     display: flex;
@@ -22,6 +29,10 @@
  align-items: center;
  outline: none;
  border: none;
+ .transbton:hover{
+    background-color: $gray;
+    color: $white;
+ }
  .inSearch{
     position: relative;
     min-width: 575px;
@@ -41,7 +52,7 @@
              padding-right: 10px;
          }
  }
- 
+
  .selectBtn{
     background: $primary04;
     min-width: 120px;
