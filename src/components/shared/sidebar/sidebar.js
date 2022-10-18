@@ -16,6 +16,7 @@ const Sidebar = () => {
     const [showPositionsType, setShowPositionsType] = useState(false)
     const [showCounty, setShowCounty] = useState(false)
     const [showOfficeName, setShowOfficeName] = useState(false)
+    const [showOfficeState, setShowOfficeState] = useState(false)
     const [showOfficeNameSecond, setShowOfficeNameSecond] = useState(false)
     const [showOfficeType, setShowOfficeType] = useState(false)
     const [showFederalBranch, setShowFederalBranch] = useState(false)
@@ -23,10 +24,10 @@ const Sidebar = () => {
     const [showOfficeTypeContent, setShowOfficeTypeContent] = useState(true)
     const [showFederalBranchContent, setShowFederalBranchContent] = useState(true)
     const [showFederalAgencyContent, setShowFederalAgencyContent] = useState(true)
-    // const [showOfficeState, setShowOfficeState] = useState(false)
-    // const [showStateType, setShowStateType] = useState(false)
-    // const [showOfficeCounty, setshowOfficeCounty] = useState(false)
-    // const [showOfficeNameThird, setShowOfficeNameThird] = useState(false)
+    const [showStateType, setShowStateType] = useState(false)
+    const [showOfficeCounty, setshowOfficeCounty] = useState(false)
+    const [showOfficeNameThird, setShowOfficeNameThird] = useState(false)
+    const [hideOfficeNameSecond, sethideOfficeNameSecond] = useState(false)
     const toggle = () => {
         setSidebarContentHide(true);
         setSidebarHide(false)
@@ -36,14 +37,15 @@ const Sidebar = () => {
         setSidebarHide(true)
     }
     const officeToggle = () => {
+        sethideOfficeNameSecond(!hideOfficeNameSecond);
         setShowOfficeNameSecond(!showOfficeNameSecond);
         setShowOfficeType(!showOfficeType);
         setShowFederalBranch(!showFederalBranch);
         setShowFederalAgency(!showFederalAgency)
-        // setShowStateType(!showStateType)
-        // setShowOfficeNameThird(!showOfficeNameThird)
-        // setshowOfficeCounty(!showOfficeCounty)
-        // setShowOfficeState(!showOfficeState)
+        setShowStateType(false)
+        setShowOfficeNameThird(false)
+        setshowOfficeCounty(false)
+        setShowOfficeState(false)
     }
     return (
         <div className={Styles.container}>
@@ -167,13 +169,15 @@ const Sidebar = () => {
                                 }
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
                                     <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Offices</Text>
-                                    <Icon onClick={officeToggle} color={'primary'} type={showOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
+                                    <Icon onClick={officeToggle} color={'primary'} type={hideOfficeNameSecond ? 'minuscircle' : 'pluscircle'} variant='icon_large' />
                                 </div>
+                               {hideOfficeNameSecond &&
+                                <>
                                 {showOfficeNameSecond &&
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml10'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Office Name</Text>
-                                            <Icon onClick={() => { setShowOfficeNameSecond(!showOfficeNameSecond);}} className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                            <Icon onClick={() => { setShowOfficeNameSecond(!showOfficeNameSecond); setShowOfficeState(true) }} className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
                                         </div>
                                         <div className={`${'mt50 ml20'} ${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
                                             <Text className={'ml10'} family='poppins' strong='strong7' variant={'smText'} color='secondary'>Department of the Army</Text>
@@ -189,7 +193,7 @@ const Sidebar = () => {
                                         </div>
                                     </div>
                                 }
-                                {/* {showOfficeState &&
+                                {showOfficeState &&
                                     <div className='mT34 mr20'>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween ml20 mT25'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={showStateType ? 'secondary' : 'primary'}>State</Text>
@@ -236,7 +240,7 @@ const Sidebar = () => {
                                                 }
                                             </div>}
                                     </div>
-                                } */}
+                                }
                                 {showOfficeType &&
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml10'} ${Styles.textBoldMain} `}>
@@ -300,6 +304,7 @@ const Sidebar = () => {
                                             </div>}
                                     </div>
                                 }
+                                </>}
                                 <div className={`${'dFlex jusctifyContentSpaceBetween mT30'} ${Styles.textBoldMain} `}>
                                     <Text family='roboto' strong='strong7' variant={'xxlText'} color={'secondary'}>Vendor</Text>
                                     <Icon color={'primary'} type='pluscircle' variant='icon_large' />
