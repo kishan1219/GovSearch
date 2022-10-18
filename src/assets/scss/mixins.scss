@@ -73,7 +73,12 @@
     }
   
   }
-  
+
+  @mixin  fontWeight {
+    font-weight: 700;
+    max-width:100%;
+    border-radius: 12px;
+  }
 @mixin fonts-poppins {
     font-family: 'poppins', 'sans-serif';
     font-style: normal;

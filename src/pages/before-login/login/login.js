@@ -71,7 +71,7 @@ const Login = () => {
                             <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
                                 Enter your email address to sign in.</Text>
                             <div className={Styles.inputMain} >
-                                <Input className={Styles.mt30}
+                                <Input className={Styles.mt30} 
                                     variant="border" type="email" placeholder="Enter Your Email"
                                     name="email"
 
@@ -91,7 +91,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <div className={Styles.btnMain}  >
-                                <Button size={"lg02"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
+                                <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
 
                             </div>
                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"} >Can’t Sign in?</Text>
@@ -126,14 +126,16 @@ const Login = () => {
                                         )}
 
                                     </div>
-                                    <Input className={Styles.passText} placeholder="*******************" type="password" variant="border" />
+                                    <div className={Styles.inputSec}>
+                                        <Input className={Styles.passText} placeholder="*******************" type="password" variant="border" />
+                                    </div>
                                 </div>
                                 <div className={Styles.forgotText}  >
                                     <Text variant={"smText"} color={"black"} strong={"strong4"} handleClick={showForgatData} >forgot password?</Text>
                                 </div>
 
-                                <div className={Styles.btnMain}  >
-                                    <Button size={"lg02"} variant={"solidPrimary"} btnHandler={showMultiFactor} >Continue</Button>
+                                <div className={Styles.continueBtn} >
+                                    <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showMultiFactor} >Continue</Button>
 
                                 </div>
                                 <div onClick={showLogin}>
@@ -165,7 +167,7 @@ const Login = () => {
                             </div>
                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
                             <div className={Styles.btnMain}  >
-                                <Button size={"lg02"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
+                                <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Enter</Button>
                             </div>
                             <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Login?</Text>
                         </div>
@@ -176,14 +178,14 @@ const Login = () => {
                         <Modal>
                             <div className={Styles.forgotBox}>
                                 <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>E-mail</Heading>
-                                <Text  className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
+                                <Text className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
                                 <div className={Styles.inptBox} >
-                                    <Input className={Styles.passText} type="password" placeholder={"Pozedevelopment@gmail.com"} variant="border" />
+                                    <Input className={Styles.passText} type="text" placeholder={"Enter email"} variant="border" />
                                 </div>
                                 <div className={Styles.btnMain}  >
-                                    <Button size={"xmd01"} variant={"solidPrimary"} >Next</Button>
+                                    <Button size={"xlmd"} variant={"solidPrimary"} >Next</Button>
                                 </div>
-                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"}  strong={"strong4"} handleClick={showPass} >Back to Login?</Text>
+                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"} handleClick={showPass} >Back to Login?</Text>
                             </div>
                         </Modal>
                     </div>

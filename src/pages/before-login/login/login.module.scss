@@ -5,6 +5,7 @@
     min-height: 100vh;
     display: flex;
 
+
     .technoMile {
         width: 100%;
         max-width: 982px;
@@ -59,7 +60,10 @@
         }
 
         .btnMain {
-            margin: 23px 0px 14px 0px;
+           margin-top: 48px;
+        }
+        .continueBtn{
+            margin-top: 28px;
         }
 
         .authenticHeading {
@@ -74,6 +78,7 @@
 
         .mainBox {
             padding: 37px 48px 48px 48px;
+            
 
             .inputMainBox {
                 display: flex;
@@ -125,23 +130,31 @@
                 width: 408px;
                 margin-top: 27px;
 
-
-
+                .inputSec {
+                    & ::placeholder {
+                        color: black;
+                        margin: 50px;
+                    }
+                }
 
                 .passText {
                     margin-top: 25px;
+
                 }
+
             }
 
             .btnMain {
                 margin-top: 51px;
+
             }
 
             .secText {
                 text-align: center;
-                padding-top: 20px;
                 text-decoration: underline;
             }
+
+           
 
         }
     }
