@@ -11,7 +11,7 @@ import {
 } from "../../shared/index";
 import propTypes from 'prop-types'
 
-export default function SearchBar({ type,  onClick, inputclassName, iconclassName, size, iconColor, search }) {
+export default function SearchBar({   onClick, inputclassName }) {
   const [searchCode, setSearchcode] = React.useState('All');
 
     const handleChange = (event) => {
@@ -19,7 +19,7 @@ export default function SearchBar({ type,  onClick, inputclassName, iconclassNam
     };
 
   return (
-    <>
+  
     <div className={Styles.search}>
       <Select
         className={`${Styles.allBtn}`}
@@ -36,7 +36,7 @@ export default function SearchBar({ type,  onClick, inputclassName, iconclassNam
       </Select>
       <div className={Styles.mainIco }  >
         <Input className={`${Styles.inputcla} ${inputclassName}`} placeholder="Search" />
-        <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
+        <Icon type="search" size={"icon_large"} color={"gray05"} onClick={onClick} className={`${Styles.rightIcon}`} />
        
       </div>
       <Button btnClass={Styles.searcbutt} size={"md"} variant={"solidSecondary"}>Search</Button>
@@ -44,7 +44,7 @@ export default function SearchBar({ type,  onClick, inputclassName, iconclassNam
 
     </div >
    
-   </>
+  
 
 
   );

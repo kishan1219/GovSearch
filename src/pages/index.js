@@ -1,9 +1,9 @@
-import Home from "./Home";
+import home from "./home";
 import Styleguide from "./styleguide/styleguide";
 import login from "./before-login/login";
 
 export {
-    Home,
+    home,
     Styleguide,
     login
 }
