@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { Layout } from '../../components/shared'
+import Styles from './about.module.scss'
  const About = () => {
   return (
-    <div><h1>About</h1></div>
+    <Layout>
+    
+    </Layout>
   )
 }
 

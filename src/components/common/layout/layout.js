@@ -5,13 +5,13 @@ import Sidebar from '../../shared/sidebar/sidebar';
 
 
 
-const Layout = ({ children,layoutClass}) => {
+const Layout = ({ children, layoutClass }) => {
     return (
         <div className={Styles.layoutMain}>
-        <div className={`${layoutClass} ${Styles.layout}`}>
+            <div className={`${layoutClass} ${Styles.layout}`}>
                 <Sidebar />
             </div>
-                <div className={Styles.childreMain}>{children}</div>
+            <div className={Styles.childreMain}>{children}</div>
         </div>
     );
 }

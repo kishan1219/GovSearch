@@ -18,7 +18,7 @@ const CheckBox = ({
     id
   }) => {
     return (
-      <div className={`${Styles.checkboxWrapper} ${className}`}>
+      <div className={`${Styles.checkboxContainer} ${className}`}>
         <label className={`${Styles.checkedSection} ${Styles[variant]} ${labelClass}
          ${labelName === undefined ? Styles.displayBlock : ""}`}>
           <input
