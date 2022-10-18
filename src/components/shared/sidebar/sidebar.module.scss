@@ -57,6 +57,14 @@
             }
         }
 
+        @include ScrollBarTransparent;
+
+        .scrollBarTransparent {
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+        }
+
         .burgerIcon {
             transition: 1s ease-in-out;
         }
@@ -89,6 +97,6 @@
 
     .scrollWrapper1 {
         max-height: calc(62vh - 300px);
-        margin-right: 5px;
+        max-width: 210px;
     }
 }
