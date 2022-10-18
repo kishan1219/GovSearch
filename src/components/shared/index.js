@@ -3,17 +3,15 @@ import Input from "./input";
 import Text from "./text";
 import Image from "./image";
 import Layout from "../common/layout/layout";
-import CheckBox from "./checkbox/checkbox";
-import NewsCard from "./news-card/newsCard";
-import Button from "./button/button";
-import Heading from "./heading/heading";
+import CheckBox from "./checkbox";
+import NewsCard from "./news-card";
+import Button from "./button";
+import Heading from "./heading";
 import Table from "./table";
 import Card from "./card/card";
 import LatestDeatils from "./latestDeatils";
 import ListGroup from "./list-group";
 import ListItem from "./list-item/list-item";
-import ModalHeader from "./modal-header/modalHeader";
-import ModalBody from "./modal-body";
 import Modal from "./modal/modal";
 import Sidebar from "./sidebar/sidebar";
 import Search from "./search/search";
@@ -35,8 +33,6 @@ export {
   LatestDeatils,
   ListGroup,
   ListItem,
-  ModalHeader,
-  ModalBody,
   Modal,
   Sidebar,
   Search,

@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Styles from './modal.module.scss'
-import ModalHeader from '../modal-header/modalHeader'
-import ModalBody from '../modal-body'
+import ModalHeader from './modal-header/modal-header'
+import ModalBody from './modal-body'
 /**
  * Render Icon
  * @param {string} size

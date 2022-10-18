@@ -1,15 +1,10 @@
-import { Home, About, Styleguide, login } from "./pages";
+import { Home, Styleguide, login } from "./pages";
 
 export const routes =[
     {
         path: "/",
         component: Home,
         exact: true
-      },
-      {
-        path: "/about",
-        component: About,
-        exact: false
       },
       {
         path: "/style-guide",

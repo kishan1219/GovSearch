@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import  Styles from './modalBody.module.scss'
+import  Styles from './modal-body.module.scss'
 const ModalBody = ({
     children,
     className,

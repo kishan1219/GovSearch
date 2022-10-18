@@ -1,6 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Styles from './newsCard.module.scss'
+import Styles from './news-card.module.scss'
 import Image from '../image'
 import Text from '../text'
 const NewsCard = ({

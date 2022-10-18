@@ -16,7 +16,6 @@ const Sidebar = () => {
     const [showPositionsType, setShowPositionsType] = useState(false)
     const [showCounty, setShowCounty] = useState(false)
     const [showOfficeName, setShowOfficeName] = useState(false)
-    const [showOfficeState, setShowOfficeState] = useState(false)
     const [showOfficeNameSecond, setShowOfficeNameSecond] = useState(false)
     const [showOfficeType, setShowOfficeType] = useState(false)
     const [showFederalBranch, setShowFederalBranch] = useState(false)
@@ -24,9 +23,10 @@ const Sidebar = () => {
     const [showOfficeTypeContent, setShowOfficeTypeContent] = useState(true)
     const [showFederalBranchContent, setShowFederalBranchContent] = useState(true)
     const [showFederalAgencyContent, setShowFederalAgencyContent] = useState(true)
-    const [showStateType, setShowStateType] = useState(false)
-    const [showOfficeCounty, setshowOfficeCounty] = useState(false)
-    const [showOfficeNameThird, setShowOfficeNameThird] = useState(false)
+    // const [showOfficeState, setShowOfficeState] = useState(false)
+    // const [showStateType, setShowStateType] = useState(false)
+    // const [showOfficeCounty, setshowOfficeCounty] = useState(false)
+    // const [showOfficeNameThird, setShowOfficeNameThird] = useState(false)
     const toggle = () => {
         setSidebarContentHide(true);
         setSidebarHide(false)
@@ -40,10 +40,10 @@ const Sidebar = () => {
         setShowOfficeType(!showOfficeType);
         setShowFederalBranch(!showFederalBranch);
         setShowFederalAgency(!showFederalAgency)
-        setShowStateType(!showStateType)
-        setShowOfficeNameThird(!showOfficeNameThird)
-        setshowOfficeCounty(!showOfficeCounty)
-        setShowOfficeState(!showOfficeState)
+        // setShowStateType(!showStateType)
+        // setShowOfficeNameThird(!showOfficeNameThird)
+        // setshowOfficeCounty(!showOfficeCounty)
+        // setShowOfficeState(!showOfficeState)
     }
     return (
         <div className={Styles.container}>
@@ -173,7 +173,7 @@ const Sidebar = () => {
                                     <div>
                                         <div className={`${'dFlex jusctifyContentSpaceBetween mt50 ml10'} ${Styles.textBoldMain} `}>
                                             <Text family='poppins' strong='strong4' variant={'xxlText'} color={'secondary'}>Office Name</Text>
-                                            <Icon  className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
+                                            <Icon onClick={() => { setShowOfficeNameSecond(!showOfficeNameSecond);}} className={'mr12'} color={'primary'} type={'minuscircle'} variant='icon_large' />
                                         </div>
                                         <div className={`${'mt50 ml20'} ${Styles.scrollWrapper1} ${Styles.scrollBar}`}>
                                             <Text className={'ml10'} family='poppins' strong='strong7' variant={'smText'} color='secondary'>Department of the Army</Text>

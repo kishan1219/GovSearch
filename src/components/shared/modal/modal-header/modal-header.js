@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Styles from './modalHeader.module.scss'
-import Icon from '../icon'
-import Text from '../text'
+import Styles from './modal-header.module.scss'
+import Icon from '../../icon'
+import Text from '../../text'
 
 /**
  * Render Icon
