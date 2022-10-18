@@ -1,10 +1,10 @@
-import Home from "./Home";
+import home from "./home";
 import About from "./About";
 import Styleguide from "./styleguide/styleguide";
 import login from "./before-login/login";
 
 export{
-    Home,
+    home,
      About,
      Styleguide,
      login

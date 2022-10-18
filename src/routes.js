@@ -1,9 +1,9 @@
-import { Home, About, Styleguide, login } from "./pages";
+import { home, About, Styleguide, login } from "./pages";
 
 export const routes =[
     {
         path: "/",
-        component: Home,
+        component: home,
         exact: true
       },
       {
