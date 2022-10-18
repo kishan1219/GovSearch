@@ -144,7 +144,7 @@
   }
 }
 @mixin ScrollBarTransparent {
-  .scrollBar {
+  .scrollBarTransparent {
     overflow-y: auto;
     &::-webkit-scrollbar {
       width: 12px;
