@@ -1,6 +1,5 @@
 import React from 'react'
 import { Bar } from "react-chartjs-2";
-import { Chart } from 'chart.js';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js'
 
  const Barchart = () => {
@@ -16,6 +15,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Toolti
         borderWidth: 1,
         borderRadius: [0, 0, 0],
         data: [1000, 1200, 300],
+      
       },
       {
         backgroundColor: '#F5F5F5',
