@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import {
     Input,
     Icon,
-    Button, Text
+    Button, Text,
+    Heading
 } from "../index";
 import propTypes from 'prop-types'
 
@@ -23,7 +24,8 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
         <div className={Styles.mainSearch}>
             <div className={Styles.head}>
                 <div className={Styles.headingo}>
-                    <Text className={Styles.textGov} variant={"xxxxxlText"} color={"secondary"} strong={"strong6"} family={"poppins"}>GovSearch</Text>
+                <Heading headingType={"h1"} className={Styles.headingGov} color={"secondary"} fontWeight={"strong6"} family={"poppins"}>GovSearch</Heading>
+                    
                 </div>
                 <div className={Styles.searchb}>
                     <Select

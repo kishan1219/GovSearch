@@ -3,7 +3,7 @@
 .checkboxContainer {
     display: block;
 
-    .checkedSection {
+    .labelChecked {
         position: relative;
         padding-left: 20px;
         cursor: pointer;
@@ -27,16 +27,16 @@
             width: 0;
         }
 
-        input:checked~.checkmark {
+        input:checked~.labelmark {
             background-color: $primary;
             border: 1px solid $primary;
         }
 
-        input:checked~.checkmark:after {
+        input:checked~.labelmark:after {
             display: block;
         }
 
-        .checkmark {
+        .labelmark {
             position: absolute;
             top: -2;
             left: 0;
@@ -62,7 +62,7 @@
                 transform: rotate(45deg);
             }
         }
-        .nameWrapper {
+        .labelWrapper {
             font-weight: 400;
             font-size: $font-lg;
             line-height: 100%;
@@ -71,16 +71,16 @@
         }   
 
         &.gray {
-            .checkmark {
+            .labelmark {
                 border: 1px solid $gray;
             }
 
-            input:checked~.checkmark {
+            input:checked~.labelmark {
                 background-color: transparent;
                 border: 1px solid $gray;
             }
 
-            .checkmark {
+            .labelmark {
                 &:after {
                     border: solid $gray;
                     border-width: 0 2px 2px 0;
@@ -90,7 +90,7 @@
                 }
             }
 
-            .nameWrapper {
+            .labelWrapper {
                 font-size: $font-xs;
                 line-height: 15px;
                 color: $gray;
@@ -99,16 +99,16 @@
         }
 
         &.primary {
-            .checkmark {
+            .labelmark {
                 border: 1px solid $gray;
             }
 
-            input:checked~.checkmark {
+            input:checked~.labelmark {
                 background-color: transparent;
                 border: 1px solid $primary;
             }
 
-            .checkmark {
+            .labelmark {
                 &:after {
                     border: solid $primary;
                     border-width: 0 2px 2px 0;
@@ -118,7 +118,7 @@
                 }
             }
 
-            .nameWrapper {
+            .labelWrapper {
                 font-size: $font-sm;
                 line-height: 16px;
                 color: $gray;
@@ -127,16 +127,16 @@
         }
 
         &.grayFill {
-            .checkmark {
+            .labelmark {
                 border: 1px solid $gray;
             }
 
-            input:checked~.checkmark {
+            input:checked~.labelmark {
                    background-color: $white03;
                    border: 1px solid $gray;
             }
 
-            .checkmark {
+            .labelmark {
                 &:after {
                     content: "";
                     position: absolute;
@@ -152,7 +152,7 @@
                 }
             }
 
-            .nameWrapper {
+            .labelWrapper {
                 font-size: $font-sm;
                 line-height: 16px;
                 color: $gray;
@@ -162,16 +162,16 @@
 
         &.hidden {
             padding: 0;
-            .checkmark {
+            .labelmark {
                 border: 0;
                 display: none;
             }
 
-            input:checked~.checkmark {
+            input:checked~.labelmark {
                 border: 0px;
             }
 
-            .checkmark {
+            .labelmark {
                 &:after {
                     content: "";
                     position: absolute;
@@ -185,7 +185,7 @@
                     transform: inherit;
                 }
             }
-            .nameWrapper {
+            .labelWrapper {
                 font-size: $font-sm;
                 line-height: 16px;
                 color: $gray;

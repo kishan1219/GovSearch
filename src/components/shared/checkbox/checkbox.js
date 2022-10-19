@@ -19,7 +19,7 @@ const CheckBox = ({
   }) => {
     return (
       <div className={`${Styles.checkboxContainer} ${className}`}>
-        <label className={`${Styles.checkedSection} ${Styles[variant]} ${labelClass}
+        <label className={`${Styles.labelChecked} ${Styles[variant]} ${labelClass}
          ${labelName === undefined ? Styles.displayBlock : ""}`}>
           <input
            defaultChecked ={checked}
@@ -31,8 +31,8 @@ const CheckBox = ({
             disabled={disabled}
             id={id}
           />
-          <Text htmlFor={id} className={Styles.checkmark} />
-          <Text htmlFor={id} className={`${Styles.nameWrapper} ${[customClass]} ${Styles[color]}`}>{labelName}</Text>
+          <Text htmlFor={id} className={Styles.labelmark} />
+          <Text htmlFor={id} className={`${Styles.labelWrapper} ${[customClass]} ${Styles[color]}`}>{labelName}</Text>
         </label>
       </div>
     )
