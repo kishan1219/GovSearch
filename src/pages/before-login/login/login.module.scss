@@ -27,8 +27,30 @@
             padding: 0px 35px;
         }
         .inputMainBox{
-            margin-left: 41px;
+            margin-left: 82px;
             margin-top: 40px;
+            .inputTab{
+                // padding:16px;
+                font-size: 40px;
+               
+               }
+               .numInput{
+                display: flex;
+                justify-content: space-around;
+                width: 400px;
+               
+               }
+               
+               
+               input[type="text" i] {
+                 margin-left: 13px;
+                 height: 85px;
+                 background:$white03;
+                 width:68px !important;
+                 border:none;
+                 font-size: 30px;
+               
+               } 
         }
 
         .forgotBox {
