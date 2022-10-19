@@ -454,7 +454,7 @@ const Sidebar = () => {
                         <div className='dFlex mT35 alignEnd jusctifyContentSpaceBetween'>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Clear</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Save Search</Text>
-                            <Button btnClass='mr10' size={"xmd01"} variant={"solidPrimary"}>Search</Button>
+                            <Button btnClass='mr10' size={"xlmd"} variant={"solidPrimary"}>Search</Button>
                         </div>
                         <div className='mT44'>
                             <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Intel</Text>
