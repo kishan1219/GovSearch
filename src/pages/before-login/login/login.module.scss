@@ -14,25 +14,38 @@
         background: $white04;
         padding-top: 53px;
         text-align: center;
-        .multifactorMainBox{
-            width:592px;
+
+        .multifactorMainBox {
+            width: 592px;
+
+            .mainHead {
+                @include fonts-poppins;
+            }
         }
- 
-.transparent{
-    background:transparent;
-    box-shadow: none;
-}
-.factorContent{
-   padding:55px 42px 38px 50px;
-   @include fonts-poppins;
-    .factorText{
-        margin-top: 30px;
-    }
-    .nextBtn{
-        margin-top: 24px;
-    }
-   
-}
+
+        .factorBox {
+            width: 590px;
+        }
+
+        .transparent {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .factorContent {
+            padding: 55px 42px 38px 50px;
+            @include fonts-poppins;
+
+            .factorText {
+                margin-top: 30px;
+            }
+
+            .nextBtn {
+                margin-top: 24px;
+            }
+
+        }
+
         .mt30Box {
             width: 68px;
             height: 85px;
@@ -42,32 +55,38 @@
             display: flex;
             margin-top: 60px;
             margin-left: 80px;
+
             .cardOne {
-                .cardMainBox{
+                .cardMainBox {
                     margin-top: 24px;
-                    .checboxMain{
+
+                    .checboxMain {
                         margin-top: 40px;
                         margin-left: 30px;
                         display: flex;
-                       
+
                     }
-                    
-                    .buttonMain{
+
+                    .buttonMain {
                         margin-top: 24px;
                         text-align: right;
                     }
-                    .tncText{
+
+                    .tncText {
                         margin-left: 26px;
-                        margin-top: 4px;
+                        margin-top: 3px;
                     }
-                    .fieldText{
+
+                    .fieldText {
                         text-align: right;
                         margin-top: 24px;
                     }
                 }
-                .accountHead{
+
+                .accountHead {
                     margin-top: 16px;
                 }
+
                 .accountHead {
                     text-align: left;
                     margin-left: 50px;
@@ -75,12 +94,12 @@
 
                 .inputHolder {
                     display: flex;
-                    padding:23px 24px;
+                    padding: 23px 24px;
 
                     .SecondInput {
                         margin-left: 30px;
                     }
-                  
+
 
                     .accountInfoBox {
                         display: grid;
@@ -91,14 +110,23 @@
                         }
 
                         .empInput {
-                            width: 306px;
+                            width: 282px;
+                            background: $white03;
+                            font-size: 18px;
+                            border-radius: 10px;
+                            padding: 14px;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            list-style: none;
+                            text-indent: 1px;
+                            text-overflow: '';
                         }
 
                         .empInputTwo {
                             width: 45px;
                             margin-left: 29px;
                             background: $white03;
-                            outline:none;
+                            outline: none;
                             overflow: hidden;
                             border: none;
                         }
@@ -106,24 +134,35 @@
                         .arrowInput {
                             text-align: left;
                             display: flex;
+                            position: relative;
+
+                            .iconDown {
+                                right: 18px;
+                                top: 11px;
+                                color: $gray07;
+                                position: absolute;
+                            }
                         }
 
 
                     }
                 }
             }
-            .secondMainCard{
+
+            .secondMainCard {
                 margin-top: 63px;
                 margin-left: 105px;
-            .cartTwo{
-                width: 708px;
-                height: 519px;
-                margin-top: 26px;
-                .imgBox{
-                    margin-top: 5px;
+
+                .cartTwo {
+                    width: 708px;
+                    height: 519px;
+                    margin-top: 26px;
+
+                    .imgBox {
+                        margin-top: 5px;
+                    }
                 }
             }
-        }
 
         }
 
@@ -222,8 +261,11 @@
 
 
         .mainBox {
-            padding: 37px 48px 48px 48px;
+            padding: 37px 57px 48px 57px;
 
+            .mainHead {
+                @include fonts-poppins;
+            }
 
             .inputMainBox {
                 display: flex;
@@ -250,11 +292,11 @@
             border-radius: 8px;
             background: $white;
             width: 100%;
-            max-width: 504px;
+            max-width: 520px;
             margin: 20px 0px 0px 40px;
 
             .mainText {
-                margin-top: 20px;
+                margin-top: 25px;
             }
 
             .forgotText {
@@ -266,7 +308,7 @@
 
             .inputMain {
                 width: 408px;
-                margin-top: 27px;
+                // margin-top: 27px;
 
                 .passText {
                     margin-top: 25px;
@@ -278,7 +320,7 @@
             }
 
             .btnMain {
-                margin-top: 51px;
+                margin-top: 30px;
 
             }
 
@@ -286,6 +328,7 @@
                 text-align: center;
                 text-decoration: underline;
             }
+
 
 
 
