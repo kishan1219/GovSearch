@@ -19,7 +19,7 @@ const LatestDeatils = ({
       <div className={`${styles.colMd6} ${styles.pR12} `}>
         <div className={`${styles.row} `}>
             <div className={`${styles.colMd3} ${styles.textCenter}`}>
-              <Image src={latestImage} alt="armySeal" className={styles.imgFluid} />
+              <Image src={latestImage} alt="armyseal" className={styles.imgFluid} />
             </div>
             <div className={`${styles.colMd9} ${styles.pL12}`}>
               <div className={`${styles.mB8}`}>
