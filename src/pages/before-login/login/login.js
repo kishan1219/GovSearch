@@ -163,17 +163,12 @@ const Login = () => {
                             <div>
                                 <Text className={Styles.enterText} variant={"smText"} color={"black"} strong={"strong4"}>Enter Code</Text>
                             </div>
-
-
-
                             <div className={Styles.inputMainBox}>
                                 <OtpInput
                                      inputStyle={Styles.inputTab} containerStyle={Styles.numInput} 
                                      numInputs={6} value={OTP} onChange={setOTP} />
                             </div>
-
-
-                            <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
+                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
                             <div className={Styles.btnMain}  >
                                 <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Enter</Button>
                             </div>
@@ -183,6 +178,7 @@ const Login = () => {
                         </div>
                     </Modal>
                 )}
+         {/* Show Password Modal  */}
                 {showForgat && (
                     <div>
                         <Modal>
@@ -192,7 +188,6 @@ const Login = () => {
                                 <div className={Styles.inptBox} >
                                     <Input className={Styles.passText} type="email" placeholder={"Enter email"} variant="border" />
                                 </div>
-
                                 <div className={Styles.btnMain}  >
                                     <Button size={"xlmd"} variant={"solidPrimary"} >Next</Button>
                                 </div>
@@ -201,17 +196,9 @@ const Login = () => {
                         </Modal>
                     </div>
                 )}
+                </div>
 
-
-            </div>
-
-
-
-
-
-
-
-
+          {/* Right Side Box */}
             <div className={Styles.resourCes}>
                 <div className={Styles.resourCesBox}>
                     <Heading headingType={"h1"} color={"secondary"}>Featured Resources</Heading>
