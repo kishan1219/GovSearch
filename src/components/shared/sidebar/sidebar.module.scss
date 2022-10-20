@@ -41,6 +41,14 @@
         background: $white01;
         border-right: 6px solid $primary;
 
+        & input {
+            background: transparent;
+
+            &::placeholder {
+                @include fonts-poppins;
+            }
+        }
+
         & input:focus {
             border: 1px solid $white02;
         }
@@ -74,11 +82,11 @@
             @include flexJustifyBetween;
 
             .searchInput {
-                max-width: 116px;
-                margin-right: 116px;
+                max-width: 200px;
+                margin-right: 40px;
                 background: transparent;
 
-                & ::placeholder {
+                &::placeholder {
                     @include fonts-poppins;
                     font-size: $font-xbig;
                 }
