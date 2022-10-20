@@ -51,7 +51,7 @@ const Heading = (props) => {
 
 Heading.defaultProps = {
   headingType: 'h4',
-  color: 'primary',
+  color: '',
 }
 
 Heading.propTypes = {

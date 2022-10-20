@@ -1,6 +1,6 @@
 import React from 'react'
-import { Header } from '../../components/common'
-import { Layout, Sidebar,Search,LatestDeatils,Text,NewsCard } from '../../components/shared'
+
+import { Layout,Search,LatestDeatils,Text,NewsCard } from '../../components/shared'
 import Styles from './home.module.scss'
 import BarChart from '../../components/shared/barchart/barchart'
 
@@ -64,8 +64,8 @@ const Home = () => {
 
   return (
     <Layout className={Styles.container}>
-      <Sidebar />
-      <Header isSearch={false} isRightNav={true} isFederal={false} isProfessional={true} />
+    
+     
 
       {/* <div className={Styles.search}>
                 <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray"} iconclassName={"icoClass"} />

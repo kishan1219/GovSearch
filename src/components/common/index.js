@@ -1,10 +1,10 @@
-import layout from "./layout";
+import Layout from "./layout";
 
 import SearchBar from "./searchbar/searchbar";
-import Header from "./header";
+
 export{
-    layout,
+    Layout,
    
     SearchBar,
-    Header
+    
 }
