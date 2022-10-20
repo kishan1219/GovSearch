@@ -22,6 +22,7 @@ const Text = ({
   htmlfor,
   family,
   underline,
+  value,
 }) => {
   const fontColor = color ? Styles[color] : ''
   const fontWeight = strong ? Styles[strong] : ''
@@ -29,7 +30,7 @@ const Text = ({
   return (
     <div
       htmlFor={htmlfor}
-      className={`${Styles[variant]} ${fontColor} ${underline} ${fontWeight} ${fontFamily} ${[className]}`}
+      className={`${Styles[variant]} ${fontColor} ${value} ${underline} ${fontWeight} ${fontFamily} ${[className]}`}
       onClick={handleClick}
     >
       {children}

@@ -8,7 +8,7 @@
   .head {
     position: relative;
     .headingo {
-      margin-right: 75px;
+      margin-right: 50px;
       margin-bottom: 55px;
       .headingGov{
         font-size: 100px;
@@ -48,6 +48,9 @@
           padding: 0px 44px 0px 12px;
           background-color: $white;
           border: 1px solid rgba(0, 0, 0, 0.23);
+          &::placeholder {
+            color: $lightGray01;
+          }
         }
         .rightIcon {
           position: absolute;

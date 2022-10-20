@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import {
     Input,
     Icon,
-    Button, Text,
+    Button,
     Heading
 } from "../index";
 import propTypes from 'prop-types'
@@ -24,12 +24,12 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
         <div className={Styles.mainSearch}>
             <div className={Styles.head}>
                 <div className={Styles.headingo}>
-                <Heading headingType={"h1"} className={Styles.headingGov} color={"secondary"} fontWeight={"strong6"} family={"poppins"}>GovSearch</Heading>
-                    
+                    <Heading headingType={"h1"} className={Styles.headingGov} color={"secondary"} fontWeight={"strong6"} family={"poppins"}>GovSearch</Heading>
+
                 </div>
                 <div className={Styles.searchb}>
                     <Select
-                    
+
                         className={`${Styles.selectBtn}`}
                         value={searchCode}
                         onChange={handleChange}
@@ -41,37 +41,37 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         <MenuItem value="Offices">Offices</MenuItem>
                         <MenuItem value="Vendors">Vendors</MenuItem>
                     </Select>
-                    <div className={Styles.inSearch}  onSubmit={handleSubmit(onSubmit)}>
-                        <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder} 
-                         type="search"
-                         name="search"
-                         reference={register("search", {
-                           required: true,
-                           pattern: {
-                             value: /^[A-Za-z]+$/
-               
-                           },
-               
-                         })}
-                       />
-                      
+                    <div className={Styles.inSearch} onSubmit={handleSubmit(onSubmit)}>
+                        <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}
+                            type="search"
+                            name="search"
+                            reference={register("search", {
+                                required: true,
+                                pattern: {
+                                    value: /^[A-Za-z]+$/
+
+                                },
+
+                            })}
+                        />
+
                         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
-                   
+
                     </div>
-                    <Button  btnClass={Styles.transbton} size={"mdxl"} variant={"transparent"}>Advanced</Button>
-                </div >
-              
-                <div className={Styles.btnSearch }>
-                <div  className={Styles.error}>
-                         {errors?.search?.type === "required" && (
-                           <p>please enter content</p>
-                         )}
-                         {errors?.search?.type === "pattern" && (
-                           <p>only allow character</p>
-                         )}
-                        
-                       </div> 
-                    <Button btnClass={Styles.solidSearch} size={"xxlg"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
+                    <Button btnClass={Styles.transbton} size={"mdxl"} variant={"transparent"}>Advanced</Button>
+                </div>
+
+                <div className={Styles.btnSearch}>
+                    <div className={Styles.error}>
+                        {errors?.search?.type === "required" && (
+                            <p>please enter content</p>
+                        )}
+                        {errors?.search?.type === "pattern" && (
+                            <p>only allow character</p>
+                        )}
+
+                    </div>
+                    <Button btnClass={Styles.solidSearch} size={"xxllg"} variant={"solidPrimary"} btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
 
 
             </div>

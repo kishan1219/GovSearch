@@ -1,144 +1,102 @@
 @import "../../assets/scss/variables.scss";
 @import "../../assets/scss/mixins.scss";
 @import "../../assets/scss/styles.scss";
+@import "../../assets/scss/breakpoints.scss";
 
-.search {
-    display: flex;
-    justify-content: center;
-    
+.searchMain {
+    margin-left: 300px;
+    margin-bottom: 120px;
 }
-.barnewslist{
-    display: flex;
-    margin-top: 150px;
-    margin-left: 30px;
-}
+
 .colMd4 {
     flex: 0 0 33.333333%;
-    max-width: 400px;
-    height: 328px;
-   margin-left: 175px;
-//    margin-top: 150px;
+    max-width: 730px;
+
     @include sm {
-      flex: 0 0 100%;
+        flex: 0 0 100%;
     }
-  }
+}
 
-  .colMd12 {
-    flex: 0 0 100%;
-  }
+@include ScrollBar;
 
-  .homeCard {
-    max-height: 320px;
-    word-break: break-word;
-    @include xlg{
-      max-height: 264px;
-    }
-    @include sm{
-      max-height: 240px;
-      margin-bottom: 84px;
-    }
-    .pR30{
-      padding-right: 30px;
-      @include xxmd{
-        padding-right: unset;
-      }   
-    }
-    .newsHeading {
-      line-height: 120%;
-      @include xlg {
-        font-size: $font-mlg;
-      }
-      @include xxmd{
-        font-size: 11px;
-      }
-      @include sm{
-        font-size: 14px;
-      }    
-    }
-    .newsDetils {
-      line-height: 143%;
-      margin-top: 34px;
-      @include xxmd{
-        font-size: 10px;
-      }
-      @include sm{
-        font-size: 12px;
-      }
-    }
-     
-  }
-  @include ScrollBar;
-  .scrollBar { 
+.scrollBar {
     &::-webkit-scrollbar-track {
-      background: $white;
+        background: $white;
     }
-  }
-  .w60{  
-    @include md{
-      flex: 0 0 60%;
-      margin:0 20% 50px;  
+}
+
+.w60 {
+    @include md {
+        flex: 0 0 60%;
+        margin: 0 20% 50px;
     }
-    @include sm{
-      flex: 0 0 100%;
-      margin:unset;
+
+    @include sm {
+        flex: 0 0 100%;
+        margin: unset;
     }
-  }
-  .cardHeading{
+}
+
+.cardHeading {
     font-size: 28px;
     text-align: center;
     display: block;
     margin-bottom: 35px;
-    font-family: 'Poppins';
-    @include xxmd{
-      font-size: 22px;
-    }
-    @include sm{
-      margin-bottom: 50px;
-    }
-  }
-  .newsCard{
-    margin-left: 85px;
-    max-width: 475px;
-    width: 100%;
-    max-height: 243px;
-    @include ScrollBar;
-  .scrollBar { 
-    &::-webkit-scrollbar-track {
-      background: $white;
-    }
-  }
-  }
-  // char scss
 
-.chart{
-  
-  margin-left: 120px;
- 
-  .barch{
-    max-width: 520px;
-  width: 100%;
-  height: 320px;
-    border-radius: 12px;
-    background-color: $white;
-      position: relative;
-  
-    padding: 110px 20px 0px 20px;
-  
-    .textbar{
-      position: absolute;
-      top: 175px;
-      left:62px;
+    @include xxmd {
+        font-size: 22px;
     }
-    .textbarone{
-      position: absolute;
-      top: 150px;
-      left:177px
+
+    @include sm {
+        margin-bottom: 50px;
     }
-    .textbartwo{
-      position: absolute;
-      bottom: 70px;
-      right: 65px;
-    }
-  }
 }
-  
+
+.homeCard {
+    max-height: 450px;
+    word-break: break-word;
+
+    @include xlg {
+        max-height: 264px;
+    }
+
+    @include sm {
+        max-height: 240px;
+        margin-bottom: 84px;
+    }
+
+    .pR30 {
+        padding-right: 30px;
+
+        @include xxmd {
+            padding-right: unset;
+        }
+    }
+}
+
+.scrollWrapper {
+    max-height: calc(49vh - 120px);
+
+}
+
+.chart {
+    position: relative;
+    max-width: 520px;
+    .textbar {
+        position: absolute;
+        top: 180px;
+        left: 32px;
+    }
+
+    .textbarone {
+        position: absolute;
+        top: 165px;
+        left: 133px
+    }
+
+    .textbartwo {
+        position: absolute;
+        bottom: 114px;
+        right: 40px;
+    }
+}

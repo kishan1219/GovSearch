@@ -56,6 +56,11 @@ span{
     line-height: 33px;
     @include textStyling;
 }
+.xbigText {
+    font-size: $font-xbig;
+    line-height: 34px;
+    @include textStyling;  
+}
 .mdBigText {
     font-size: $font-mdbig;
     line-height: 54px;
@@ -72,9 +77,6 @@ span{
     letter-spacing: -1.5px;
     @include textStyling;  
 }
-.poppins {
-    font-family: 'poppins', 'sans-serif';
-  }
   .roboto {
     font-family: 'roboto','sans-serif'
   }
