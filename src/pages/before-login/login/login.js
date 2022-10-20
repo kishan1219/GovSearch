@@ -146,7 +146,7 @@ const Login = () => {
                                 <Text className={Styles.mainText} variant={"mlgText"} color={""} strong={"strong4"}>
                                     Enter your password to continue.</Text>
                                 <div className={Styles.inputMain} >
-                                    <Input className={Styles.mt30}
+                                    <Input 
                                         variant="border" type="email" placeholder="Enter Your Email"
                                         name="email"
 

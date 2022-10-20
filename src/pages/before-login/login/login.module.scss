@@ -263,6 +263,8 @@
         .mainBox {
             padding: 37px 57px 48px 57px;
 
+
+
             .mainHead {
                 @include fonts-poppins;
             }
@@ -308,7 +310,7 @@
 
             .inputMain {
                 width: 408px;
-                // margin-top: 27px;
+                 margin-top: 20px;
 
                 .passText {
                     margin-top: 25px;
