@@ -259,9 +259,7 @@ const Login = () => {
                                         </div>
                                     </Card>
                                     <div className={Styles.checboxMain}>
-
                                         <CheckBox checked="checked" variant="gray" className={Styles.mb20} />
-
                                         <div className={Styles.tncText}>
                                             <Text variant={"xsText"}>"I have read, understand, and agree to the entire Master License and Online Service Agreement "</Text>
                                         </div>
@@ -269,7 +267,6 @@ const Login = () => {
                                     <div className={Styles.buttonMain}>
                                         <Button size={"xlmd"} variant={"solidPrimary"} >Confirm</Button>
                                     </div>
-
                                 </div>
                             </div>
                             <div className={Styles.secondMainCard} >
