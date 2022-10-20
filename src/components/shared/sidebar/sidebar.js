@@ -71,7 +71,16 @@ const Sidebar = () => {
         setShowVendorName(!showVendorName)
         setShowVendorContractVehicle(!showVendorContractVehicle)
     }
-
+    const SwitchToggle = () => {
+        if (setHideContact(!hideContact)) {
+            setShowfederalPlus(false)
+        }
+        else if (setShowfederalPlus(!showfederalPlus)) {
+            {
+                setHideContact(false)
+            }
+        }
+    }
     return (
         <div className={Styles.container}>
             {sidebarHide &&
@@ -80,7 +89,7 @@ const Sidebar = () => {
                         <ListItem>
                             <Icon onClick={toggle} className={Styles.burgerIcon} type='equal' color={"white"} variant='icon_xlarge' />
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); setShowContact(true) }} className={Styles.mt22}>
+                        <ListItem handleClick={() => { toggle(); setShowContact(true); setHideContact(true); setShowfederalPlus(false) }} className={Styles.mt22}>
                             <Icon type='multipleuser' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Contacts</Text>
                         </ListItem>
@@ -88,15 +97,15 @@ const Sidebar = () => {
                             <Icon type='office' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Offices</Text>
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); vendorToggle(); setShowVendorNameContent(true); }}>
+                        <ListItem handleClick={() => { toggle(); vendorToggle(); setShowVendorNameContent(true); setHideContact(true); setShowfederalPlus(false) }}>
                             <Icon type='vendors' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Vendors</Text>
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); setShowLocation(true); setShowLocationType(true); }} >
+                        <ListItem handleClick={() => { toggle(); setShowLocation(true); setShowLocationType(true); setHideContact(true); setShowfederalPlus(false) }} >
                             <Icon type='locations' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Locations</Text>
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); setShowMore(true) }}>
+                        <ListItem handleClick={() => { toggle(); setShowMore(true); setHideContact(true); setShowfederalPlus(false) }}>
                             <Icon type='more' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">More</Text>
                         </ListItem>
@@ -112,14 +121,14 @@ const Sidebar = () => {
                         <Icon className={Styles.burgerIcon} onClick={toggleClose} type='close' color={"gray"} variant='icon_xlarge' />
                     </div>
                     <Text family='roboto' variant={"smText"} className={"op5 mt25 ml20 underline cursor textUnderlineHover"} color={"darkGray"}>Saved Searches</Text>
-                    <div className='dFlex mT30 alignbaseline'>
+                    <div className='dFlex mT30 alignbaseline mr20'>
                         <div className={Styles.inputMain}>
                             <Input className={Styles.searchInput} placeholder={"Search"} />
                             <Icon type='search' color={"black"} variant='icon_xlarge' />
                         </div>
                         <div className={"ml30 fFlex flexColumn"}>
-                            <Icon onClick={() => setHideContact(!hideContact)} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
-                            <Switch onChange={() => setHideContact(!hideContact)} color="primary" size="small" />
+                            <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
+                            <Switch color="primary" size="small" />
                         </div>
                     </div>
                     {/*div for button pill start */}
@@ -127,7 +136,7 @@ const Sidebar = () => {
                         <Chip label="All" color="primary" size='small' variant="outlined" />
                     </div>
                     {/* div for button pill end */}
-                    <div className={`${Styles.scrollWrapper} ${hideContact ? Styles.scrollBarTransparent : Styles.scrollBar} ${"mr5"}`}>
+                    <div className={`${Styles.scrollWrapper} ${hideContact ? Styles.scrollBarTransparent : Styles.scrollBar}`}>
                         {hideContact &&
                             <div className='mT34'>
                                 <div className={`${'dFlex jusctifyContentSpaceBetween'} ${Styles.textBoldMain} `}>

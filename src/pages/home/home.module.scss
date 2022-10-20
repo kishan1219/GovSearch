@@ -1,3 +1,102 @@
 @import "../../assets/scss/variables.scss";
 @import "../../assets/scss/mixins.scss";
 @import "../../assets/scss/styles.scss";
+@import "../../assets/scss/breakpoints.scss";
+
+.searchMain {
+    margin-left: 300px;
+    margin-bottom: 120px;
+}
+
+.colMd4 {
+    flex: 0 0 33.333333%;
+    max-width: 730px;
+
+    @include sm {
+        flex: 0 0 100%;
+    }
+}
+
+@include ScrollBar;
+
+.scrollBar {
+    &::-webkit-scrollbar-track {
+        background: $white;
+    }
+}
+
+.w60 {
+    @include md {
+        flex: 0 0 60%;
+        margin: 0 20% 50px;
+    }
+
+    @include sm {
+        flex: 0 0 100%;
+        margin: unset;
+    }
+}
+
+.cardHeading {
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin-bottom: 35px;
+
+    @include xxmd {
+        font-size: 22px;
+    }
+
+    @include sm {
+        margin-bottom: 50px;
+    }
+}
+
+.homeCard {
+    max-height: 450px;
+    word-break: break-word;
+
+    @include xlg {
+        max-height: 264px;
+    }
+
+    @include sm {
+        max-height: 240px;
+        margin-bottom: 84px;
+    }
+
+    .pR30 {
+        padding-right: 30px;
+
+        @include xxmd {
+            padding-right: unset;
+        }
+    }
+}
+
+.scrollWrapper {
+    max-height: calc(49vh - 120px);
+
+}
+
+.chart {
+    position: relative;
+    max-width: 520px;
+    .textbar {
+        position: absolute;
+        top: 180px;
+        left: 32px;
+    }
+
+    .textbarone {
+        position: absolute;
+        top: 165px;
+        left: 133px
+    }
+
+    .textbartwo {
+        position: absolute;
+        bottom: 114px;
+        right: 40px;
+    }
+}
