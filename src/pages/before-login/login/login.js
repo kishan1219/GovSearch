@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import Image from '../../../components/shared/image/image'
 import Styles from './login.module.scss'
-import { Input, Button, Heading, Text, Modal } from '../../../components/shared/index'
+import { Input, Button, Heading, Text, Modal, CheckBox } from '../../../components/shared/index'
 import { useForm } from "react-hook-form";
 import OtpInput from 'react-otp-input';
+import { Card } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+
 
 
 
@@ -15,6 +19,7 @@ const Login = () => {
     const [showHide, setShowHide] = useState(true);
     const [showFactor, setShowFactor] = useState(false);
     const [showForgat, setShowForgat] = useState(false);
+    const [notLogin, setnotLogin] = useState(false);
 
 
 
@@ -48,11 +53,24 @@ const Login = () => {
         setShowForgat(false);
 
     }
+    const shownotLogin = () => {
+        setShow(false);
+        setShowHide(false);
+        setShowFactor(false);
+        setShowForgat(false);
+        setnotLogin(true);
+
+    }
 
 
 
 
 
+    const [searchCode, setSearchcode] = React.useState('');
+
+    const handleChange = (event) => {
+        setSearchcode(event.target.value);
+    };
 
     const { register, formState: { errors }, } = useForm({
         mode: 'onChange',
@@ -99,7 +117,7 @@ const Login = () => {
                                 <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
 
                             </div>
-                            <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"} >Can’t Sign in?</Text>
+                            <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"} handleClick={shownotLogin} >Can’t Sign in?</Text>
                         </div>
                     </div>)}
 
@@ -154,7 +172,8 @@ const Login = () => {
 
                 {/* Multifactor Card  */}
                 {showFactor && (
-                    <Modal>
+                    <Modal className={Styles.multifactorMainBox}>
+
                         <div className={Styles.multifactorMainBox}>
                             <div className={Styles.authenticHeading}>
                                 <Heading color={"secondary"} headingType={"h1"} >Multi-Factor </Heading>
@@ -165,23 +184,23 @@ const Login = () => {
                             </div>
                             <div className={Styles.inputMainBox}>
                                 <OtpInput
-                                     inputStyle={Styles.inputTab} containerStyle={Styles.numInput} 
-                                     numInputs={6} value={OTP} onChange={setOTP} />
+                                    inputStyle={Styles.inputTab} containerStyle={Styles.numInput}
+                                    numInputs={6} value={OTP} onChange={setOTP} />
                             </div>
-                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
+                            <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
                             <div className={Styles.btnMain}  >
                                 <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Enter</Button>
                             </div>
                             <div onClick={showLogin}>
-                            <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"} onClick={showDetails}>Can’t Login?</Text>
-                        </div>
+                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"} onClick={showDetails}>Can’t Login?</Text>
+                            </div>
                         </div>
                     </Modal>
                 )}
-         {/* Show Password Modal  */}
+                {/* Show Password Modal  */}
                 {showForgat && (
                     <div>
-                        <Modal>
+                        <Modal >
                             <div className={Styles.forgotBox}>
                                 <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>E-mail</Heading>
                                 <Text className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
@@ -196,12 +215,112 @@ const Login = () => {
                         </Modal>
                     </div>
                 )}
-                </div>
 
-          {/* Right Side Box */}
+
+                {notLogin && (
+                    <Modal className={Styles.transparent}>
+                        <div className={Styles.cardBox}>
+                            <div className={Styles.cardOne}>
+
+                                <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}> Confirm Account Information</Heading>
+                                <div className={Styles.cardMainBox}>
+                                    <Card>
+
+                                        <div className={Styles.inputHolder}>
+                                            <div className={Styles.accountInfoBox}>
+                                                <Input className={Styles.Infoinput} placeholder="First  Name" variant="grey" />
+                                                <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
+                                                <Input className={Styles.Infoinput} placeholder="Title / Role" variant="grey" />
+
+                                                <div className={Styles.arrowInput}>
+                                                    <Input className={Styles.empInput} placeholder="# of Employees" variant="grey" />
+                                                    <Select
+                                                        className={Styles.empInputTwo}
+                                                        value={searchCode}
+                                                        onChange={handleChange}
+                                                        SelectProps={{ IconComponent: () => null }}
+                                                        displayEmpty
+                                                    >
+                                                        <MenuItem value="All" search={"1"} >1</MenuItem>
+                                                        <MenuItem value="Contacts">2</MenuItem>
+                                                        <MenuItem value="Offices">3</MenuItem>
+                                                        <MenuItem value="Vendors">4</MenuItem>
+                                                    </Select>
+                                                </div>
+                                            </div>
+                                            <div className={Styles.SecondInput}>
+                                                <div className={Styles.accountInfoBox}>
+                                                    <Input className={Styles.Infoinput} placeholder="Last Name" variant="grey" />
+                                                    <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
+                                                    <Input className={Styles.Infoinput} placeholder="Company" variant="grey" />
+                                                    <Input className={Styles.Infoinput} placeholder="Company URL" variant="grey" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Card>
+                                    <div className={Styles.checboxMain}>
+
+                                        <CheckBox checked="checked" variant="gray" className={Styles.mb20} />
+
+                                        <div className={Styles.tncText}>
+                                            <Text variant={"xsText"}>"I have read, understand, and agree to the entire Master License and Online Service Agreement "</Text>
+                                        </div>
+                                    </div>
+                                    <div className={Styles.buttonMain}>
+                                        <Button size={"xlmd"} variant={"solidPrimary"} >Confirm</Button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div className={Styles.secondMainCard} >
+                                <Card>
+                                    <div className={Styles.cartTwo}>
+                                        <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}>TechnoMile Intelligence Suite</Heading>
+                                        <div className={Styles.imgBox}>
+                                            <Image src='assets/images/TechnoMile_elements.jpg' alt={"Logo"} />
+                                        </div>
+                                    </div>
+                                </Card>
+                            </div>
+                        </div>
+
+                    </Modal>
+                    // <Modal className={Styles.multifactorMainBox}>
+                    //     <div className={Styles.factorContent}>
+                    //         <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}> Congrats  </Heading>
+                    //         <Text className={Styles.factorText} variant="xxxlText">Almost there please confirm Multi-Factor Authentication by checking your email.
+                    //             Once you click next you will be asked to enter the code found in your email you have provided.
+                    //         </Text>
+                    //         <div className={Styles.nextBtn} >
+                    //         <Button size={"xlsm"} variant={"solidPrimary"} >Next</Button>
+                    //         </div>
+                    //     </div>
+                    // </Modal>
+                )}
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {/* Right Side Box */}
             <div className={Styles.resourCes}>
                 <div className={Styles.resourCesBox}>
-                    <Heading headingType={"h1"} color={"secondary"}>Featured Resources</Heading>
+                    <Heading className={Styles.featured} headingType={"h1"} color={"secondary"}>Featured Resources</Heading>
                     <div className={Styles.firstImgBox}><Image src='assets/images/elevate.jpg' alt={"Logo"} /></div>
 
                     <div>
