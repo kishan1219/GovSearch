@@ -3,16 +3,21 @@ import Image from '../../../components/shared/image/image'
 import Styles from './login.module.scss'
 import { Input, Button, Heading, Text, Modal } from '../../../components/shared/index'
 import { useForm } from "react-hook-form";
+import OtpInput from 'react-otp-input';
+
 
 
 
 const Login = () => {
 
-
+    const [OTP, setOTP] = useState("");
     const [show, setShow] = useState(false);
     const [showHide, setShowHide] = useState(true);
     const [showFactor, setShowFactor] = useState(false);
     const [showForgat, setShowForgat] = useState(false);
+
+
+
 
 
     const showDetails = () => {
@@ -91,7 +96,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <div className={Styles.btnMain}  >
-                                <Button size={"lg02"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
+                                <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
 
                             </div>
                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"} >Can’t Sign in?</Text>
@@ -121,19 +126,22 @@ const Login = () => {
                                             <p>*Please enter email address.</p>
                                         )}
 
+
                                         {errors?.email?.type === "pattern" && (
                                             <p>*Alphabetical characters only</p>
                                         )}
 
                                     </div>
-                                    <Input className={Styles.passText} placeholder="*******************" type="password" variant="border" />
+                                    <div className={Styles.inputSec}>
+                                        <Input className={Styles.passText} placeholder="Password" type="password" variant="border" />
+                                    </div>
                                 </div>
                                 <div className={Styles.forgotText}  >
                                     <Text variant={"smText"} color={"black"} strong={"strong4"} handleClick={showForgatData} >forgot password?</Text>
                                 </div>
 
-                                <div className={Styles.btnMain}  >
-                                    <Button size={"lg02"} variant={"solidPrimary"} btnHandler={showMultiFactor} >Continue</Button>
+                                <div className={Styles.continueBtn} >
+                                    <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showMultiFactor} >Continue</Button>
 
                                 </div>
                                 <div onClick={showLogin}>
@@ -155,50 +163,42 @@ const Login = () => {
                             <div>
                                 <Text className={Styles.enterText} variant={"smText"} color={"black"} strong={"strong4"}>Enter Code</Text>
                             </div>
-                            <div className={Styles.inputBox}>
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
-                                <Input className={Styles.mt30Box} variant="grey" />
+                            <div className={Styles.inputMainBox}>
+                                <OtpInput
+                                     inputStyle={Styles.inputTab} containerStyle={Styles.numInput} 
+                                     numInputs={6} value={OTP} onChange={setOTP} />
                             </div>
-                            <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
+                             <Text className={Styles.secText} variant={"smText"} color={"black"} strong={"strong4"}>Resend Code</Text>
                             <div className={Styles.btnMain}  >
-                                <Button size={"lg02"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
+                                <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Enter</Button>
                             </div>
-                            <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"}>Can’t Login?</Text>
+                            <div onClick={showLogin}>
+                            <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"} onClick={showDetails}>Can’t Login?</Text>
+                        </div>
                         </div>
                     </Modal>
                 )}
+         {/* Show Password Modal  */}
                 {showForgat && (
                     <div>
                         <Modal>
                             <div className={Styles.forgotBox}>
                                 <Heading className={Styles.mainHead} color={"secondary"} headingType={"h1"}>E-mail</Heading>
-                                <Text  className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
+                                <Text className={Styles.forgotText} variant={"smText"} color={"black"} strong={"strong4"}>Please Enter your Your verify E-mail id</Text>
                                 <div className={Styles.inptBox} >
-                                    <Input className={Styles.passText} type="password" placeholder={"Pozedevelopment@gmail.com"} variant="border" />
+                                    <Input className={Styles.passText} type="email" placeholder={"Enter email"} variant="border" />
                                 </div>
                                 <div className={Styles.btnMain}  >
-                                    <Button size={"xmd01"} variant={"solidPrimary"} >Next</Button>
+                                    <Button size={"xlmd"} variant={"solidPrimary"} >Next</Button>
                                 </div>
-                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"}  strong={"strong4"} handleClick={showPass} >Back to Login?</Text>
+                                <Text className={Styles.secTwoText} variant={"smText"} color={"black"} strong={"strong4"} handleClick={showPass} >Back to Login?</Text>
                             </div>
                         </Modal>
                     </div>
                 )}
+                </div>
 
-
-            </div>
-
-
-
-
-
-
-
-
+          {/* Right Side Box */}
             <div className={Styles.resourCes}>
                 <div className={Styles.resourCesBox}>
                     <Heading headingType={"h1"} color={"secondary"}>Featured Resources</Heading>

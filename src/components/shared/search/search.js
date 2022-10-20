@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import {
     Input,
     Icon,
-    Button, Text
+    Button, Text,
+    Heading
 } from "../index";
 import propTypes from 'prop-types'
 
@@ -23,7 +24,8 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
         <div className={Styles.mainSearch}>
             <div className={Styles.head}>
                 <div className={Styles.headingo}>
-                    <Text className={Styles.textGov} variant={"xxxxxlText"} color={"secondary"} strong={"strong6"} family={"poppins"}>GovSearch</Text>
+                <Heading headingType={"h1"} className={Styles.headingGov} color={"secondary"} fontWeight={"strong6"} family={"poppins"}>GovSearch</Heading>
+                    
                 </div>
                 <div className={Styles.searchb}>
                     <Select
@@ -56,7 +58,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
                    
                     </div>
-                    <Button  btnClass={Styles.transbton} size={"md02"} variant={"transparent"}>Advanced</Button>
+                    <Button  btnClass={Styles.transbton} size={"mdxl"} variant={"transparent"}>Advanced</Button>
                 </div >
               
                 <div className={Styles.btnSearch }>
@@ -69,7 +71,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                          )}
                         
                        </div> 
-                    <Button btnClass={Styles.solidSearch} size={"md04"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
+                    <Button btnClass={Styles.solidSearch} size={"xxlg"} variant={"solidPrimary"}  btnHandler={handleSubmit(onSubmit)} > Search</Button></div>
 
 
             </div>

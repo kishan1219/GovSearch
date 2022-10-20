@@ -106,18 +106,18 @@ const Styleguide = () => {
             </div>
 
             <div className={Styles.buttonMain}>
-                <Button size={"lg"} variant={"solidPrimary"}> Demo </Button>
-                <Button size={"lg"} variant={"disaled"}>      Demo</Button>
-                <Button size={"lg"} variant={"solidPrimary"}> Demo</Button>
-                <Button size={"sm01"} variant={"solidSecondary"}>Demo</Button>
-                <Button size={"md"} variant={"solidSecondary"}>Demo</Button>
-                <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
-                <Button size={"lg01"} variant={"solidPrimary"}>Demo</Button>
-                <Button size={"md03"} variant={"dangerPrimary"}>Demo</Button>
-                <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
-                <Button btnClass={Styles.mt30} size={"lg01"} variant={"solidPrimary"}>Demo</Button>
-                <Button size={"sm02"} variant={"dangerPrimary"}>Demo</Button>
-                <Button size={"md02"} variant={"transparent"}>Advanced</Button>
+                <Button size={"xlg"} variant={"solidPrimary"}> Demo </Button>
+                <Button size={"xlg"} variant={"disaled"}>      Demo</Button>
+                <Button size={"xlg"} variant={"solidPrimary"}> Demo</Button>
+                <Button size={"sm"} variant={"solidSecondary"}>Demo</Button>
+                <Button size={"xmd"} variant={"solidSecondary"}>Demo</Button>
+                <Button btnClass={Styles.mt30} size={"xxlg"} variant={"solidPrimary"}>Demo</Button>
+                <Button size={"lg"} variant={"solidPrimary"}>Demo</Button>
+                <Button size={"xxlmd"} variant={"dangerPrimary"}>Demo</Button>
+                <Button btnClass={Styles.mt30} size={"xxlg"} variant={"solidPrimary"}>Demo</Button>
+                <Button btnClass={Styles.mt30} size={"xxlg"} variant={"solidPrimary"}>Demo</Button>
+                <Button size={"xlsm"} variant={"dangerPrimary"}>Demo</Button>
+                <Button size={"xlmd"} variant={"transparent"}>Advanced</Button>
             </div>
             <div>
                 <Text className={Styles.text} variant={"xxlText"} color={"red"} strong={"strong7"}>hello</Text>
