@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Image from '../../../components/shared/image/image'
 import Styles from './login.module.scss'
 import { Input, Button, Heading, Text, Modal, CheckBox, Icon } from '../../../components/shared/index'
-import { useForm } from "react-hook-form";
 import OtpInput from 'react-otp-input';
 import { Card } from '@mui/material';
 
@@ -79,21 +78,6 @@ const Login = () => {
   
 
 
-
-
-
-
-    const [searchCode, setSearchcode] = React.useState('');
-
-    const handleChange = (event) => {
-        setSearchcode(event.target.value);
-    };
-
-    const { register, formState: { errors }, } = useForm({
-        mode: 'onChange',
-    });
-    // const onSubmit = data => console.log(data);
-    console.log(errors);
     return (
 
         <div className={Styles.container}>
@@ -111,22 +95,8 @@ const Login = () => {
                             <div className={Styles.inputMain} >
                                 <Input 
                                     variant="border" type="email" placeholder="Enter Your Email"
-                                    name="email"
-
-                                    reference={register("email", {
-                                        required: true,
-                                        pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                    })} />
-                                <div className={Styles.errorMsg}>
-                                    {errors?.email?.type === "required" && (
-                                        <p>*Please enter email address.</p>
-                                    )}
-
-                                    {errors?.email?.type === "pattern" && (
-                                        <p>*Alphabetical characters only</p>
-                                    )}
-
-                                </div>
+                                    name="email" />
+                               
                             </div>
                             <div className={Styles.btnMain}  >
                                 <Button size={"xxlg"} variant={"solidPrimary"} btnHandler={showDetails}>Continue</Button>
@@ -150,21 +120,8 @@ const Login = () => {
                                         variant="border" type="email" placeholder="Enter Your Email"
                                         name="email"
 
-                                        reference={register("email", {
-                                            required: true,
-                                            pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                        })} />
-                                    <div className={Styles.errorMsg}>
-                                        {errors?.email?.type === "required" && (
-                                            <p>*Please enter email address.</p>
-                                        )}
-
-
-                                        {errors?.email?.type === "pattern" && (
-                                            <p>*Alphabetical characters only</p>
-                                        )}
-
-                                    </div>
+                                       />
+                                   
                                     <div className={Styles.inputSec}>
                                         <Input className={Styles.passText} placeholder="Enter Your Password" type="password" variant="border" />
                                     </div>

@@ -1,4 +1,4 @@
-import { home, Styleguide, login, Notification } from "./pages";
+import { home, Styleguide, login, Notification, Account } from "./pages";
 
 export const routes = [
   {
@@ -19,6 +19,11 @@ export const routes = [
   {
     path: "/notification",
     component: Notification,
+    exact: false,
+  }, 
+   {
+    path: "/account",
+    component: Account,
     exact: false,
   }
 ]

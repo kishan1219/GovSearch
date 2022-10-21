@@ -45,12 +45,6 @@
       .transbton:hover {
         background-color: $gray;
         color: $white;
-
-        & div {
-          border: none;
-          outline: none;
-          padding: 9px 0 9px !important;
-        }
       }
 
       .inSearch {
@@ -90,6 +84,12 @@
         font-weight: 600;
         font-size: 16px;
         padding: 0px;
+
+        div {
+          border: none;
+          outline: none;
+          padding: 9px 0 9px !important;
+        }
       }
 
       svg {
