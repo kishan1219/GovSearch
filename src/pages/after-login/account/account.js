@@ -83,7 +83,8 @@ const Account = () => {
                                         <Image src="assets/images/account2.jpg" alt={"Logo"} />
                                     </div>
                                     <div className={Styles.contentBox} >
-                                        <Heading className={Styles.accountHead} color={"gray"} headingType={"h1"}>Taskorder Management</Heading>
+                                        <Heading className={Styles.accountHead} color={"gray"} headingType={"h1"}>Taskorder</Heading>
+                                        <Heading className={Styles.manageHead} color={"gray"} headingType={"h1"}>Management</Heading>
                                         <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>
                                         Simplify and streamline task order management.</Text>
 
