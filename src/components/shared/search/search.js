@@ -43,7 +43,6 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                     </Select>
                     <div className={Styles.inSearch} onSubmit={handleSubmit(onSubmit)}>
                         <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}
-                            type="search"
                             name="search"
                             reference={register("search", {
                                 required: true,
