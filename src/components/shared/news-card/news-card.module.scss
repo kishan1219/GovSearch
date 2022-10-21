@@ -5,6 +5,7 @@
 .wrapper {
     width: 100%;
     max-width: 476px;
+    min-height: 343px;
     background: $white01;
 
     .newsCardMain {
@@ -24,5 +25,16 @@
     .textSecond {
         max-width: 472px;
         margin-top: 34px;
+    }
+
+    @include ScrollBar;
+
+    .scrollBar {
+        &::-webkit-scrollbar-track {
+            background: $white;
+        }
+    }
+    .scrollWrapper {
+        max-height: calc(49vh - 115px);
     }
 }

@@ -9,7 +9,7 @@
     box-sizing: border-box;
     min-height: 100vh;
     z-index: 1;
-    top: 150px;
+    top: 145px;
 
     .menu {
         display: grid;
@@ -35,18 +35,23 @@
     }
 
     .sidebarMain {
-        padding: 22px 10px 34px 48px;
+        padding: 14px 10px 34px 48px;
         width: 100%;
         max-width: 428px;
         min-height: 100vh;
         background: $white01;
         border-right: 6px solid $primary;
 
+        @include tab {
+            padding-top: 15px;
+        }
+
         & input {
             background: transparent;
 
             &::placeholder {
                 @include fonts-poppins;
+                color: $white02;
             }
         }
 
@@ -86,11 +91,10 @@
             .searchInput {
                 max-width: 200px;
                 margin-right: 40px;
-                background: transparent;
-
                 &::placeholder {
                     @include fonts-poppins;
-                    font-size: $font-xbig;
+                    font-size: $font-xllg;
+                  
                 }
 
             }
@@ -108,5 +112,15 @@
     .scrollWrapper1 {
         max-height: calc(62vh - 300px);
         max-width: 210px;
+    }
+
+    .primaryChipColor {
+        background: $primary;
+        color: $white;
+        padding: 2px 7px;
+    }
+
+    .primarySwitchColor {
+        color: $white;
     }
 }

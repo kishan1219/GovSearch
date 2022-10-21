@@ -79,6 +79,7 @@ const Sidebar = () => {
             setHideContact(false)
         }
     }
+
     return (
         <div className={Styles.container}>
             {sidebarHide &&
@@ -126,12 +127,12 @@ const Sidebar = () => {
                         </div>
                         <div className={"ml30 fFlex flexColumn"}>
                             <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
-                            <Switch color="primary" size="small" />
+                            <Switch onClick={SwitchToggle} className={Styles.primarySwitchColor} size="small" />
                         </div>
                     </div>
                     {/*div for button pill start */}
                     <div className='mT30' >
-                        <Chip label="All" color="primary" size='small' variant="outlined" />
+                        <Chip label="All" className={Styles.primaryChipColor} size='small' variant="outlined" />
                     </div>
                     {/* div for button pill end */}
                     <div className={`${Styles.scrollWrapper} ${hideContact ? Styles.scrollBarTransparent : Styles.scrollBar}`}>
@@ -571,7 +572,7 @@ const Sidebar = () => {
                             </div>
                         }
 
-                        <div className='dFlex mT35 alignEnd jusctifyContentSpaceBetween'>
+                        <div className='dFlex mT35 alignItemsCenter jusctifyContentSpaceBetween'>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Clear</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Save Search</Text>
                             <Button btnClass='mr10' size={"xlmd"} variant={"solidPrimary"}>Search</Button>
