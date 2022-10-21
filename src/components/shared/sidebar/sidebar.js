@@ -76,9 +76,7 @@ const Sidebar = () => {
             setShowfederalPlus(false)
         }
         else if (setShowfederalPlus(!showfederalPlus)) {
-            
-                setHideContact(false)
-            
+            setHideContact(false)
         }
     }
     return (

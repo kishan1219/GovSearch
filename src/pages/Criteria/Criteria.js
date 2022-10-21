@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Cardtab from "../../components/shared/Cardtab";
+import Cardtab from "../../components/shared/cardtab";
 import styles from './Criteria.module.scss'
 import Icon from "../../components/shared/icon/icon";
 

@@ -1,1 +1,1 @@
-export {default} from './Cardtab'
+export {default} from './cardtab'

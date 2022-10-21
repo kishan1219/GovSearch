@@ -6,7 +6,7 @@ import BarChart from '../../components/shared/barchart/barchart'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import  Header  from '../../components/common/header/header'
-import Cardtab from '../../components/shared/Cardtab'
+import Cardtab from '../../components/shared/cardtab'
 import Criteria from '../Criteria/Criteria'
 // import { useState } from 'react'
 
