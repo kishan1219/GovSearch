@@ -1,0 +1,83 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
+.wrapper {
+    background: $white03;
+    min-height: 100vh;
+    max-width: 100%;
+    @include fonts-poppins;
+    .suiteHead{
+        margin-top: 33px;
+        margin-left: 250px;
+    }
+    .MainBox{
+        margin-top: 25px;  
+    }
+    @include ScrollBar;
+
+    .scrollBar {
+        &::-webkit-scrollbar-track {
+            background: $white;
+        }
+    }
+    .scrollWrapper {
+        max-height: calc(80vh - 120px);
+        width: 95%;
+    
+    }
+    .productHead {
+        display: flex;
+        align-items: center;
+        margin-left: 673px;
+     
+        .checboxMain{
+           margin-left: 200px;
+            margin-top: 4px;
+        }
+        .prodHead{
+            font-size: 36px;
+           
+        }
+    }
+
+    .inteliMainBox {
+        margin-left: 232px;
+
+        .growthtHead {
+              margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+        }
+
+        .inteliText {
+            display: flex;
+
+            // margin-top: 40px;
+
+            .rightCard {
+                margin-left: 48px;
+            }
+
+            .mainCard {
+                width: 100%;
+                max-width: 600px;
+                background: $white;
+
+                .cardBox {
+                    display: flex;
+                    padding: 50px 28px 38px 9px;
+                }
+
+                .contentBox {
+                    margin-left: 25px;
+                    margin-top: 22px;
+                  
+
+                    .identityText {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

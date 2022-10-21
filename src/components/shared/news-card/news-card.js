@@ -10,7 +10,7 @@ textSecond,
 }) => {
   return (
     <div className={Styles.wrapper}>
-    <Text className={"mB14 textCenter"} variant="xbigtext" color="gray01" strong="strong3">News</Text>
+    <Text className={"mB14 textCenter"}  variant="xbigText" color="gray01" strong="strong3">News</Text>
     <div className={Styles.newsCardMain}>
         <Image className={Styles.cardImage} src={src} alt='image' />
         <Text family='roboto' color={"black"} variant={"xxxlText"} className={Styles.textPrimary} strong='strong6' >{textFirst}</Text>
