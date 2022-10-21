@@ -1,9 +1,11 @@
 @import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
 
 .container {
     width: 100%;
     min-height: 100vh;
     display: flex;
+
 
 
     .technoMile {
@@ -13,9 +15,155 @@
         padding-top: 53px;
         text-align: center;
 
+        .multifactorMainBox {
+            width: 592px;
+
+            .mainHead {
+                @include fonts-poppins;
+            }
+        }
+
+        .factorBox {
+            width: 590px;
+        }
+
+        .transparent {
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .factorContent {
+            padding: 55px 42px 38px 50px;
+            @include fonts-poppins;
+
+            .factorText {
+                margin-top: 30px;
+            }
+
+            .nextBtn {
+                margin-top: 24px;
+            }
+
+        }
+
         .mt30Box {
             width: 68px;
             height: 85px;
+        }
+
+        .cardBox {
+            display: flex;
+            margin-top: 60px;
+            margin-left: 80px;
+
+            .cardOne {
+                .cardMainBox {
+                    margin-top: 24px;
+
+                    .checboxMain {
+                        margin-top: 40px;
+                        margin-left: 30px;
+                        display: flex;
+
+                    }
+
+                    .buttonMain {
+                        margin-top: 24px;
+                        text-align: right;
+                    }
+
+                    .tncText {
+                        margin-left: 26px;
+                        margin-top: 3px;
+                    }
+
+                    .fieldText {
+                        text-align: right;
+                        margin-top: 24px;
+                    }
+                }
+
+                .accountHead {
+                    margin-top: 16px;
+                }
+
+                .accountHead {
+                    text-align: left;
+                    margin-left: 50px;
+                }
+
+                .inputHolder {
+                    display: flex;
+                    padding: 23px 24px;
+
+                    .SecondInput {
+                        margin-left: 30px;
+                    }
+
+
+                    .accountInfoBox {
+                        display: grid;
+                        gap: 24px;
+
+                        .Infoinput {
+                            width: 380px;
+                        }
+
+                        .empInput {
+                            width: 282px;
+                            background: $white03;
+                            font-size: 18px;
+                            border-radius: 10px;
+                            padding: 14px;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            list-style: none;
+                            text-indent: 1px;
+                            text-overflow: '';
+                        }
+
+                        .empInputTwo {
+                            width: 45px;
+                            margin-left: 29px;
+                            background: $white03;
+                            outline: none;
+                            overflow: hidden;
+                            border: none;
+                        }
+
+                        .arrowInput {
+                            text-align: left;
+                            display: flex;
+                            position: relative;
+
+                            .iconDown {
+                                right: 18px;
+                                top: 11px;
+                                color: $gray07;
+                                position: absolute;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .secondMainCard {
+                margin-top: 63px;
+                margin-left: 105px;
+
+                .cartTwo {
+                    width: 708px;
+                    height: 519px;
+                    margin-top: 26px;
+
+                    .imgBox {
+                        margin-top: 5px;
+                    }
+                }
+            }
+
         }
 
         .inputBox {
@@ -26,32 +174,36 @@
             margin-top: 27px;
             padding: 0px 35px;
         }
-        .inputMainBox{
+
+        .inputMainBox {
             margin-left: 82px;
             margin-top: 40px;
-            .inputTab{
+
+            .inputTab {
                 // padding:16px;
                 font-size: 40px;
-               
-               }
-               .numInput{
+
+            }
+
+            .numInput {
                 display: flex;
                 justify-content: space-around;
                 width: 400px;
-               
-               }
-               
-               
-               input[type="text" i] {
-                 margin-left: 13px;
-                 height: 85px;
-                 background:$white03;
-                 width:68px !important;
-                 border:none;
-                 font-size: 30px;
-               
-               } 
+
+            }
+
+
+            input[type="text" i] {
+                margin-left: 13px;
+                height: 85px;
+                background: $white03;
+                width: 68px !important;
+                border: none;
+                font-size: 30px;
+
+            }
         }
+
 
         .forgotBox {
 
@@ -86,13 +238,14 @@
         }
 
         .btnMain {
-           margin-top: 48px;
+            margin-top: 48px;
         }
-        .continueBtn{
+
+        .continueBtn {
             margin-top: 28px;
         }
 
-       
+
 
 
 
@@ -108,8 +261,13 @@
 
 
         .mainBox {
-            padding: 37px 48px 48px 48px;
-            
+            padding: 37px 57px 48px 57px;
+
+
+
+            .mainHead {
+                @include fonts-poppins;
+            }
 
             .inputMainBox {
                 display: flex;
@@ -129,17 +287,18 @@
             margin-left: 60px;
         }
 
+
         .mainCard {
             box-sizing: border-box;
             display: inline-block;
             border-radius: 8px;
             background: $white;
             width: 100%;
-            max-width: 504px;
+            max-width: 520px;
             margin: 20px 0px 0px 40px;
 
             .mainText {
-                margin-top: 20px;
+                margin-top: 25px;
             }
 
             .forgotText {
@@ -149,32 +308,21 @@
                 cursor: pointer;
             }
 
-
-
-            // .mainHead {
-
-            //     padding-bottom: 19px;
-            //     text-align: center;
-            // }
-
             .inputMain {
                 width: 408px;
-                margin-top: 27px;
-
-             
+                 margin-top: 20px;
 
                 .passText {
                     margin-top: 25px;
-
                 }
-
             }
-            .inputMainBox{
+
+            .inputMainBox {
                 display: flex;
             }
 
             .btnMain {
-                margin-top: 51px;
+                margin-top: 30px;
 
             }
 
@@ -182,12 +330,15 @@
                 text-align: center;
                 text-decoration: underline;
             }
-            
 
-           
+
+
+
 
         }
+
     }
+
 
     .resourCes {
         width: 100%;

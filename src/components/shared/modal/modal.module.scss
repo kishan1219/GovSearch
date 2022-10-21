@@ -6,11 +6,17 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 590px;
+    // max-width: 590px;
     background: $white;
     box-shadow: $shadow02;
     border-radius: 10px;
 
+    &.transparent{
+        
+            background-color: transparent;
+            box-shadow: none;
+        
+    }
 
 }
 
