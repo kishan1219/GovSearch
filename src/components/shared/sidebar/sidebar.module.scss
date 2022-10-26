@@ -32,6 +32,11 @@
 
     .sidebarFooter {
         margin-top: 100px;
+        
+        @include xxmd {
+            margin-top: 20px;
+        }
+
     }
 
     .sidebarMain {
@@ -47,7 +52,7 @@
         }
 
         & input {
-            background: transparent;
+            background: $white;
 
             &::placeholder {
                 @include fonts-poppins;
@@ -85,21 +90,29 @@
         }
 
         .inputMain {
-            max-width: 266px;
+            width: 100%;
             @include flexJustifyBetween;
+            position: relative;
 
             .searchInput {
-                max-width: 200px;
-                margin-right: 40px;
+                min-width: 260px;
+
                 &::placeholder {
                     @include fonts-poppins;
                     font-size: $font-xllg;
-                  
-                }
 
+                }
+            }
+
+            .iconSearch {
+                position: absolute;
+                top: 4px;
+                right: 10px;
             }
         }
-
+        .toggleSwitch{
+            margin: 0px;
+        }
         .textBoldMain {
             max-width: 277px;
         }

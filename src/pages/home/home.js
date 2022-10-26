@@ -87,10 +87,7 @@ const Home = () => {
                         textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
                 </div>
                 <div className={Styles.chart}>
-                    <Text className={"mB14 textCenter mB100"} variant="xbigText" color="darkGray" strong="strong3">Updates</Text>
-                    <Text className={Styles.textbar} variant={"smText"} color={"white"} strong={"strong4"}>1000</Text>
-                    <Text className={Styles.textbarone} variant={"smText"} color={"white"} strong={"strong4"}>1200</Text>
-                    <Text className={Styles.textbartwo} variant={"smText"} color={"white"} strong={"strong4"}>300</Text>
+                    <Text className={"textCenter mB100"} variant="xbigText" color="darkGray" strong="strong3">Updates</Text>
                     <BarChart />
                 </div>
             </div>

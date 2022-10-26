@@ -1,315 +1,385 @@
 @import '../../../assets/scss/mixins.scss';
 @import '../../../assets/scss/styles.scss';
 
-.header {    
+.header {
     position: relative;
     margin-left: 150px;
     margin-right: 45px;
     margin-bottom: 80px;
+
     &.mlmd {
         margin-left: 95px;
     }
-    @include lg{
+
+    @include lg {
         margin-left: 110px;
     }
-    @include md{
+
+    @include md {
         margin-left: 112px;
         margin-bottom: 40px;
     }
-    @include tab{
+
+    @include tab {
         margin-left: unset;
         margin-right: unset;
         width: 100%;
     }
+
     &.sm {
         width: 100%;
-        max-width: 600px;    
-      }
-    .headerContent{
-        .headerLeft{
+        max-width: 600px;
+    }
+
+    .headerContent {
+        .headerLeft {
             flex: 0 0 fit-content;
             max-width: 339px;
             cursor: pointer;
-            @include lg{
-            margin-left: 0;
+
+            @include lg {
+                margin-left: 0;
             }
-            @include md{
+
+            @include md {
                 max-width: 225px;
             }
-            @include tab{
+
+            @include tab {
                 max-width: 339px;
             }
         }
-.headerHeading{
-    font-size: $font-xlbig;
-    color: $paua;
-    line-height: 90px;
-    
-    @include xlg{
-        font-size: 48px;
-    }
-    @include xlmd{
-        font-size: 42px;
-    }
-    @include xmd{
-        font-size: 28px;
-    }
-    @include md{
-        font-size: 23px;
-    }
-    
-}
-.headerLogo {
-    max-width: 337px;
-    width: 100%;
-}
-.headerRight{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 0 0 0%;
-    max-width: 280px;
-   
 
-.headerRightH {
-    color: $gray;
-    font-size: $font-md;
-    line-height: 19px;
-    white-space: nowrap; 
-    max-width: 135px; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block; 
-    cursor: pointer;
-    @include lg{
-        font-size: 23px;
-    }
-    @include xxmd{
-        font-size: 20px;
-    }
-    @include md{
-        font-size: 19px;
-    }
-    @include iPad{
-        display: none;
-    }
-}
-.headerNotifications{
-    position: relative;
-.headerNotification {
-    margin: 0 25px;
-    cursor: pointer;
-    @include lg{
-        margin: 0 20px;
-        font-size: 25px;
-    }
-    @include xxmd{
-        margin: 0 17px;
-        font-size: 23px;
-    }
-    @include xmd{
-        margin: 0 12px;
-    }
-    @include md{
-        font-size: 22px;
-        margin: 0 10px;
-    }
-}
-.notificationsGreenTick{
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 0;
-    right: 20px;
-    background-color: $green02;
-    @include lg{
-        top: -3px;
-        right: 15px;
-    }
-    @include xmd{
-        top: -3px;
-        right: 9px;
-    }
-    @include md{
-        width: 8px;
-        height: 8px;
-        right: 9px;
-    }
-}
-}
-.headerRightBC{
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $white;
-    padding: 10px;
-    border-radius: 50%;
-    border: 2px solid $green;
-    @include lg{
-        width: 48px;
-        height: 48px;
-    }
-    @include xxmd{
-        width: 40px;
-        height: 40px;
-    }
-    @include md{
-        font-size: 18px;
-    }
-.headerRightBC {
-    font-size: $font-xllg;
-    cursor: pointer;
-    color: $black;
-    @include lg{
-        font-size: 23px;
-    }
-    @include xxmd{
-        font-size: 20px;
-    }
-    @include md{
-        font-size: 18px;
-    }
-}
+        .headerHeading {
+            font-size: $font-xlbig;
+            color: $paua;
+            line-height: 90px;
 
-.dullBc{
-    color:  $white02;
-}
-}
-    .headerMenu {
-        margin-left: 25px;
-        cursor: pointer;
-        @include lg{
-        margin-left: 20px;
-        font-size: 30px; 
-        }
-        @include xxmd{
-        margin-left: 15px;
-        font-size: 27px;
-        }
-        @include xmd{
-        margin-left: 12px;
-        }
-        @include md{
-        margin-left: 10px;
-        font-size: 24px;
-        }
-    }
-}
-}
-.notificationContent{
-    position: absolute;
-    right: 0px;
-    top: 90px;
-    max-width: 310px;
-    background: $white;
-    z-index: 99;
-
-     .notificationText{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px 22px 26px 22px;
-        font-family: 'Roboto',sans-serif;
-        @include lg{
-            padding: 20px 22px 22px 22px;
+            @include xlg {
+                font-size: 48px;
             }
-        @include md{
-            padding: 18px 20px 18px 20px;
-            } 
-         .notificationRecent{
-            font-size: $font-xllg;
-            color: $gray;
-            margin-bottom: 10px;
-            @include lg{
-                font-size: 22px;
+
+            @include xlmd {
+                font-size: 42px;
+            }
+
+            @include xmd {
+                font-size: 28px;
+            }
+
+            @include md {
+                font-size: 23px;
+            }
+
+        }
+
+        .headerLogo {
+            max-width: 337px;
+            width: 100%;
+        }
+
+        .headerRight {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 0 0 0%;
+            max-width: 280px;
+
+
+            .headerRightH {
+                color: $gray;
+                font-size: $font-md;
+                line-height: 19px;
+                white-space: nowrap;
+                max-width: 135px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                cursor: pointer;
+
+                @include lg {
+                    font-size: 23px;
                 }
-            @include xxmd{
+
+                @include xxmd {
+                    font-size: 20px;
+                }
+
+                @include md {
+                    font-size: 19px;
+                }
+
+                @include iPad {
+                    display: none;
+                }
+            }
+
+            .headerNotifications {
+                position: relative;
+
+                .headerNotification {
+                    margin: 0 25px;
+                    cursor: pointer;
+
+                    @include lg {
+                        margin: 0 20px;
+                        font-size: 25px;
+                    }
+
+                    @include xxmd {
+                        margin: 0 17px;
+                        font-size: 23px;
+                    }
+
+                    @include xmd {
+                        margin: 0 12px;
+                    }
+
+                    @include md {
+                        font-size: 22px;
+                        margin: 0 10px;
+                    }
+                }
+
+                .notificationsGreenTick {
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    top: 0;
+                    right: 20px;
+                    background-color: $green02;
+
+                    @include lg {
+                        top: -3px;
+                        right: 15px;
+                    }
+
+                    @include xmd {
+                        top: -3px;
+                        right: 9px;
+                    }
+
+                    @include md {
+                        width: 8px;
+                        height: 8px;
+                        right: 9px;
+                    }
+                }
+            }
+
+            .headerRightBC {
+                width: 54px;
+                height: 54px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $white;
+                padding: 10px;
+                border-radius: 50%;
+                border: 2px solid $green;
+
+                @include lg {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                @include xxmd {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @include md {
+                    font-size: 18px;
+                }
+
+                .headerRightBC {
+                    font-size: $font-xllg;
+                    cursor: pointer;
+                    color: $black;
+
+                    @include lg {
+                        font-size: 23px;
+                    }
+
+                    @include xxmd {
+                        font-size: 20px;
+                    }
+
+                    @include md {
+                        font-size: 18px;
+                    }
+                }
+
+                .dullBc {
+                    color: $white02;
+                }
+            }
+
+            .headerMenu {
+                margin-left: 25px;
+                cursor: pointer;
+
+                @include lg {
+                    margin-left: 20px;
+                    font-size: 30px;
+                }
+
+                @include xxmd {
+                    margin-left: 15px;
+                    font-size: 27px;
+                }
+
+                @include xmd {
+                    margin-left: 12px;
+                }
+
+                @include md {
+                    margin-left: 10px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .notificationContent {
+        position: absolute;
+        right: 0px;
+        top: 90px;
+        max-width: 310px;
+        background: $white;
+        z-index: 99;
+
+        .notificationText {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 22px 26px 22px;
+            font-family: 'Roboto', sans-serif;
+
+            @include lg {
+                padding: 20px 22px 22px 22px;
+            }
+
+            @include md {
+                padding: 18px 20px 18px 20px;
+            }
+
+            .notificationRecent {
+                font-size: $font-xllg;
+                color: $gray;
+                margin-bottom: 10px;
+
+                @include lg {
+                    font-size: 22px;
+                }
+
+                @include xxmd {
+                    font-size: 20px;
+                }
+
+                @include md {
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .notificationAlert1 {
+                font-size: $font-mlg;
+                color: $secondary;
+                margin-bottom: 20px;
+
+                @include lg {
+                    font-size: 17px;
+                    margin-bottom: 15px;
+                }
+
+                @include xxmd {
+                    margin-bottom: 12px;
+                }
+
+                @include md {
+                    font-size: 15px;
+                    margin-bottom: 8px;
+                }
+
+                .notificationAlertDark {
+                    font-weight: 700;
+                }
+            }
+
+            .notificationMiddleLine {
+                border: $border01;
+                width: 126px;
+                margin-bottom: 10px;
+
+                @include md {
+                    margin-bottom: 8px;
+                }
+            }
+
+            .notificationAlert2 {
+                margin-bottom: 35px;
+                opacity: 0.8;
+
+                @include lg {
+                    margin-bottom: 27px;
+                }
+
+                @include xxmd {
+                    margin-bottom: 22px;
+                }
+
+                @include md {
+                    margin-bottom: 18px;
+                }
+            }
+
+            .notificationAllBtn {
+                max-width: 115px;
+                font-size: $font-sm;
+                text-transform: none;
+            }
+        }
+
+        .notificationBC {
+            align-items: flex-end;
+            padding: 0;
+        }
+
+        .bcList {
+            color: $secondary;
+            font-size: $font-xllg;
+
+            @include lg {
+                font-size: 22px;
+            }
+
+            @include xxmd {
                 font-size: 20px;
             }
-            @include md{
+
+            @include md {
                 font-size: 18px;
-                margin-bottom: 8px;
-            } 
-         }
-         .notificationAlert1{
-            font-size:  $font-mlg;
-            color: $secondary;
-            margin-bottom: 20px;
-            @include lg{
-                font-size: 17px;
-                margin-bottom: 15px;
-                }
-            @include xxmd{
-                margin-bottom: 12px;
-            } 
-            @include md{
-                font-size: 15px;
-                margin-bottom: 8px;
             }
-            .notificationAlertDark{
-                font-weight: 700;
-            }
-         }
-         .notificationMiddleLine{
-            border: $border01;
-            width: 126px;
-            margin-bottom: 10px;
-            @include md{
-                margin-bottom: 8px;
-            }
-           }
-         .notificationAlert2{
-            margin-bottom: 35px;
-            opacity: 0.8;
-            @include lg{
-                margin-bottom: 27px;
-                }
-            @include xxmd{
-                margin-bottom: 22px;
-            }
-            @include md{
-                margin-bottom: 18px;
-            } 
-         }
-         .notificationAllBtn{
-             max-width: 115px;
-             font-size: $font-sm;
-             text-transform: none;
-         }
-     } 
-        .notificationBC{
-        align-items: flex-end;
-        padding: 0;
-    }
-    .bcList {
-      color: $secondary;
-      font-size: $font-xllg; 
-      @include lg{
-            font-size: 22px;
         }
-        @include xxmd{
-            font-size: 20px;
-        }
-        @include md{
-            font-size: 18px;
-        } 
-    }
-    .bcListm15 {
-        margin: 20px;
-        cursor: pointer;
-        @include lg{
-            margin: 15px;
+
+        .bcListm15 {
+            margin: 20px;
+            cursor: pointer;
+
+            @include lg {
+                margin: 15px;
             }
-        @include xxmd{
-            margin: 13px;
-            }   
-        @include md{
-            margin: 11px;
-        } 
+
+            @include xxmd {
+                margin: 13px;
+            }
+
+            @include md {
+                margin: 11px;
+            }
+        }
     }
-}
 }
