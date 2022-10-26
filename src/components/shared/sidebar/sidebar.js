@@ -8,9 +8,7 @@ import Text from '../text'
 import Styles from './sidebar.module.scss'
 import SwitchUnstyled, { switchUnstyledClasses } from '@mui/base/SwitchUnstyled';
 import { styled } from '@mui/system';
-import Stack from "@mui/material/Stack";
 import Chip from '@mui/material/Chip';
-import { FormGroup } from '@mui/material'
 const Sidebar = () => {
     const [sidebarHide, setSidebarHide] = useState(true)
     const [sidebarContentHide, setSidebarContentHide] = useState(false)
@@ -89,53 +87,7 @@ const Sidebar = () => {
     const handleDelete = () => {
         console.info('You clicked the delete icon.');
     };
-    // const AntSwitch = styled(Switch)(({ theme }) => ({
-    //     width: 40,
-    //     height: 15,
-    //     padding: 0,
-    //     display: 'flex',
-    //     '&:active': {
-    //         '& .MuiSwitch-thumb': {
-    //             width: 20,
-    //          },
-    //         '& .MuiSwitch-switchBase.Mui-checked.MuiSwitch-thumb': {
-    //             transform: 'translateX(9px)',
-    //             color: '#FFFFFF',
-    //         },
-    //     },
-    //     '& .MuiSwitch-switchBase': {
-    //         padding: 2,
-    //         '&.Mui-checked': {
-    //             transform: 'translateX(22px)',
-    //             color: '#FFFFFF',
-    //             '& + .MuiSwitch-track': {
-    //                 opacity: 1,
-    //                 backgroundColor: theme.palette.mode === 'dark' ? '#F1F1F3' : '#5286FF',
-    //             },
-    //         },
-    //     },
-    //     '& .MuiSwitch-thumb': {
-    //         boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
-    //         width: 12,
-    //         height: 12,
-    //         borderRadius: 6,
-    //         // color: '#5286FF',
-    //         '&.MuiSwitch-thumb.Mui-checked': {
-    //             backgroundColor: '#FFFFFF',
-    //           } 
-    //         // transition: theme.transitions.create(['width'], {
-    //         //     duration: 200,
-    //         // }),
-    //     },
-    //     '& .MuiSwitch-track': {
-    //         borderRadius: 16 / 2,
-    //         opacity: 1,
-    //         backgroundColor:
-    //             theme.palette.mode === 'dark' ? '#5286FF' : '#F1F1F3',
-    //         boxSizing: 'border-box',
-    //     },
-    // }));
-
+   
     const blue = {
         500: '#007FFF',
     };
@@ -253,13 +205,6 @@ const Sidebar = () => {
                         </div>
                         <div className={"ml30 fFlex flexColumn"}>
                             <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
-                            {/* <Switch inputProps={{ "aria-label": "ant design" }} onClick={SwitchToggle} className={Styles.primarySwitchColor} size="small" /> */}
-                            {/* <FormGroup>
-
-                                <Stack direction="row" spacing={1} alignItems="center">
-                                    <AntSwitch inputProps={{ 'aria-label': 'ant design' }} />
-                                </Stack>
-                            </FormGroup> */}
                             <div>
                                 <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label}  />
                             </div>
