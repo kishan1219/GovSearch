@@ -7,7 +7,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import  Header  from '../../components/common/header/header'
 import Cardtab from '../../components/shared/cardtab'
-import Criteria from '../Criteria/Criteria'
+import Criteria from '../criteria/criteria'
 // import { useState } from 'react'
 
 

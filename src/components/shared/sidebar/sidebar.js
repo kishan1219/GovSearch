@@ -216,6 +216,9 @@ const Sidebar = () => {
                             '& .MuiChip-deleteIcon': {
                                 color: '#ffffff',
                                 fontSize: '12px',
+                                border: '1px solid #ffffff',
+                                padding: '2px',
+                                borderRadius: '50px',
 
                             },
                         }} label="All" onClick={handleClick} onDelete={handleDelete} deleteIcon={<Icon type='close' variant={"icon_small"} />} className={Styles.primaryChipColor} size='small' variant="outlined" />
