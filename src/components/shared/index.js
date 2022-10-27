@@ -17,7 +17,7 @@ import Sidebar from "./sidebar/sidebar";
 import Search from "./search/search";
 import Barchart from "./barchart";
 import Header from "../common/header/header";
-import cardtab from "./cardtab";
+import Cardtab from "./cardtab";
 
 export {
   Icon,
@@ -39,5 +39,5 @@ export {
   Search,
   Barchart,
   Header,
-  cardtab
+  Cardtab
 };

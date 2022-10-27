@@ -78,8 +78,16 @@
         }
     }
 }
-
+.scrollWrapper {
+    max-height: calc(49vh - 115px);
+}
 .chart {
     position: relative;
     min-width: 400px;
+    .updateText {
+        margin-bottom: 150px;
+        @include xlmd {
+            margin-bottom: 120px;
+        }
+    }
 }

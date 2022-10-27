@@ -89,12 +89,12 @@ const Sidebar = () => {
     };
    
     const blue = {
-        500: '#007FFF',
+        500: '#5286FF',
     };
 
     const grey = {
 
-        500: '#F1f1f1',
+        500: '#5286FF',
 
     };
 
@@ -124,7 +124,7 @@ const Sidebar = () => {
           top: 2px;
           left: 4px;
           border-radius: 16px;
-          background-color: #5286FF;
+          background-color: #fff;
           position: relative;
           
           transition-property: all;
@@ -216,6 +216,9 @@ const Sidebar = () => {
                             '& .MuiChip-deleteIcon': {
                                 color: '#ffffff',
                                 fontSize: '12px',
+                                border: '1px solid #ffffff',
+                                padding: '2px',
+                                borderRadius: '50px',
 
                             },
                         }} label="All" onClick={handleClick} onDelete={handleDelete} deleteIcon={<Icon type='close' variant={"icon_small"} />} className={Styles.primaryChipColor} size='small' variant="outlined" />

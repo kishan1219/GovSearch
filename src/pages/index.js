@@ -4,12 +4,15 @@ import login from "./before-login/login";
 import {Notification} from "./after-login";
 import Account from "./after-login/account/account";
 import accountsetting from "./after-login/accountsetting";
+
 export {
     home,
     Styleguide,
     login,
     Notification,
     Account,
-   accountsetting
+   accountsetting,
+   
+  
     
 }

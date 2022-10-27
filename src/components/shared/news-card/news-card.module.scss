@@ -27,14 +27,5 @@
         margin-top: 34px;
     }
 
-    @include ScrollBar;
-
-    .scrollBar {
-        &::-webkit-scrollbar-track {
-            background: $white;
-        }
-    }
-    .scrollWrapper {
-        max-height: calc(49vh - 115px);
-    }
+   
 }

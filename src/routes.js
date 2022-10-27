@@ -27,7 +27,7 @@ export const routes = [
     exact: false,
   },
   {
-    path: "/accountsetting",
+    path: "/account-setting",
     component: accountsetting,
     exact: false,
   }

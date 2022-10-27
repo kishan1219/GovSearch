@@ -3,35 +3,77 @@
 @import "../../assets/scss/styles.scss";
 
 
-.Criteria{
-    width: 1680px;
-    height: 660px;
+.criteria{
+    width:100%;
+    max-width:1680px;
+    height:100%;
+    min-height:660px;
     background-color:$lightGray02;
     display:block;
     justify-content: center;
     padding: 57px 0px 0px 74px;
-    outline: 20px solid #FFFF;
+    outline: 20px solid $white;
     border-radius: 10px;
+    position: relative;
+    
     .tab{
-        // margin-bottom:125px;
+        margin-bottom:125px;
         position: relative;
-        .accordianheader{
-            margin-bottom:125px;
+        .tabIcon{
+           margin-top:-14px;
+           margin-left: 120px;
             .sign{
-                margin-left: 120px;
                 position: absolute;
-                bottom: -17px;                                
-            }                        
+                &::before{
+                    content: "";
+                    position:absolute;
+                    background-color:$black;
+                    width:1px;
+                    height: 125px;
+                    top: 25px;
+                    right: 14px;
+                }            
+            }                                           
         }       
     }
-
-    .accordianbody{
-        margin-bottom: 176px;
-    }
-
-    .tab01{
+    .tabRight{
+        display: flex;
+        margin-bottom:125px;
+        max-width: 100%;
         position: relative;
- 
+       
+        .tabIcon{
+            margin-top:-14px;
+            margin-left: 120px;
+            position: relative;                      
+        }
+       
+      .tab02{
+            margin-left: 33px;
+            position: relative;
+
+            &::before{
+                content: "";
+                position:absolute;
+                background-color:$black;
+                width:307px;
+                height:1px;
+                right:135px;
+                top:-31px;
+                
+            } 
+            &::after{
+                content: "";
+                position:absolute;
+                background-color:$black;
+                width:1px;
+                height:31px;
+                left:136px;
+                top:-31px;
+                
+            }
+              
+           
+        }
     }
-    
 }
