@@ -49,11 +49,11 @@
 
     &.xlmd {
         max-width: 100%;
-        min-height: 50px;
+        min-height: 47px;
         min-width: 157px;
         max-height: 40px;
         font-size: $font-mlg;
-        border-radius: 8px;
+        border-radius: 12px;
         font-weight: 700;
     }
 
@@ -101,8 +101,15 @@
 
         min-width: 408px;
         min-height: 55px;
-        font-size: $font-xxxl;
+        font-size: $font-mlg;
     }
+    &.xlsmlg {
+
+        min-width: 213px;
+        min-height: 44px;
+        font-size: $font-mlg;
+    }
+
 
     // variant
     &.solidPrimary {
