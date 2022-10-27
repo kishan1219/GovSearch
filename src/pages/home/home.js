@@ -62,7 +62,7 @@ const Home = () => {
     ];
 
     return (
-        <Layout>
+        <Layout isSearch={false} isFederal={false}>
             <div className={Styles.searchMain}>
                 <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray04"} iconclassName={"icoClass"} />
             </div>
@@ -81,16 +81,13 @@ const Home = () => {
                         ))}
                     </div>
                 </div>
-                <div className={`${Styles.newsCard} ${Styles.scrollBar} ${Styles.scrollWrapper}`}>
+                <div className={`${Styles.newsCard}`}>
                     <NewsCard src='assets/images/officer.jpg'
                         textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
                         textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
                 </div>
                 <div className={Styles.chart}>
-                    <Text className={"mB14 textCenter mB100"} variant="xbigtext" color="gray01" strong="strong3">Updates</Text>
-                    <Text className={Styles.textbar} variant={"smText"} color={"white"} strong={"strong4"}>1000</Text>
-                    <Text className={Styles.textbarone} variant={"smText"} color={"white"} strong={"strong4"}>1200</Text>
-                    <Text className={Styles.textbartwo} variant={"smText"} color={"white"} strong={"strong4"}>300</Text>
+                    <Text className={"textCenter mB100"} variant="xbigText" color="darkGray" strong="strong3">Updates</Text>
                     <BarChart />
                 </div>
             </div>

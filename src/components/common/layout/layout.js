@@ -6,10 +6,10 @@ import Header from '../header';
 
 
 
-const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar }) => {
+const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal }) => {
     return (
         <div className={Styles.layoutMain}>
-            {isHeader && <Header />}
+            {isHeader && <Header isSearch={isSearch} isFederal={isFederal}/>}
             {isTechnomile && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />}
             {isAccount && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />}
             {isAccountSetting && <Header isSearch={true} isRightNav={true} isFederal={false} isGovSearchProfessional={true} />}

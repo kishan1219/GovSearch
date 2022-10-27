@@ -9,7 +9,7 @@
     box-sizing: border-box;
     min-height: 100vh;
     z-index: 1;
-    top: 150px;
+    top: 145px;
 
     .menu {
         display: grid;
@@ -32,21 +32,31 @@
 
     .sidebarFooter {
         margin-top: 100px;
+        
+        @include xxmd {
+            margin-top: 20px;
+        }
+
     }
 
     .sidebarMain {
-        padding: 22px 10px 34px 48px;
+        padding: 14px 10px 34px 48px;
         width: 100%;
         max-width: 428px;
         min-height: 100vh;
         background: $white01;
         border-right: 6px solid $primary;
 
+        @include tab {
+            padding-top: 15px;
+        }
+
         & input {
-            background: transparent;
+            background: $white;
 
             &::placeholder {
                 @include fonts-poppins;
+                color: $white02;
             }
         }
 
@@ -80,22 +90,29 @@
         }
 
         .inputMain {
-            max-width: 266px;
+            width: 100%;
             @include flexJustifyBetween;
+            position: relative;
 
             .searchInput {
-                max-width: 200px;
-                margin-right: 40px;
-                background: transparent;
+                min-width: 260px;
 
                 &::placeholder {
                     @include fonts-poppins;
-                    font-size: $font-xbig;
-                }
+                    font-size: $font-xllg;
 
+                }
+            }
+
+            .iconSearch {
+                position: absolute;
+                top: 4px;
+                right: 10px;
             }
         }
-
+        .toggleSwitch{
+            margin: 0px;
+        }
         .textBoldMain {
             max-width: 277px;
         }
@@ -108,5 +125,15 @@
     .scrollWrapper1 {
         max-height: calc(62vh - 300px);
         max-width: 210px;
+    }
+
+    .primaryChipColor {
+        background: $primary;
+        color: $white;
+        padding: 2px 7px;
+    }
+
+    .primarySwitchColor {
+        color: $white;
     }
 }

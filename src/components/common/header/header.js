@@ -96,9 +96,8 @@ const Header = ({
               </div>
               <div className={Styles.headerRightBC}>
                 <Text
-                  className={`${Styles.headerRightBC} ${
-                    showBC ? Styles.dullBc : null
-                  }`}
+                  className={`${Styles.headerRightBC} ${showBC ? Styles.dullBc : null
+                    }`}
                   handleClick={() => {
                     setShowBc(!showBC);
                     SetShowNotification(false);

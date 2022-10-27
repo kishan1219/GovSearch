@@ -36,14 +36,13 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         SelectProps={{ IconComponent: () => null }}
                         displayEmpty
                     >
-                        <MenuItem value="All" search={"All"} >All</MenuItem>
-                        <MenuItem value="Contacts">Contacts</MenuItem>
-                        <MenuItem value="Offices">Offices</MenuItem>
-                        <MenuItem value="Vendors">Vendors</MenuItem>
+                        <MenuItem value="All" search={"All"} >ALL</MenuItem>
+                        <MenuItem value="Contacts">CONTACTS</MenuItem>
+                        <MenuItem value="Offices">OFFICES</MenuItem>
+                        <MenuItem value="Vendors">VENDORS</MenuItem>
                     </Select>
                     <div className={Styles.inSearch} onSubmit={handleSubmit(onSubmit)}>
                         <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}
-                            type="search"
                             name="search"
                             reference={register("search", {
                                 required: true,
@@ -71,7 +70,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         )}
 
                     </div>
-                    <Button btnClass={Styles.solidSearch} size={"xxllg"} variant={"solidPrimary"} btnHandler={handleSubmit(onSubmit)} > SEARCH </Button></div>
+                    <Button btnClass={Styles.solidSearch} size={"xxllg"} variant={"solidPrimary"} btnHandler={handleSubmit(onSubmit)} >SEARCH</Button></div>
 
 
             </div>

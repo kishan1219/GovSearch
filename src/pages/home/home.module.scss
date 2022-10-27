@@ -52,12 +52,13 @@
         margin-bottom: 50px;
     }
 }
-.xbigText{
+
+.xbigText {
     font-size: 28px;
 }
 
 .homeCard {
-    max-height: 450px;
+    max-height: 350px;
     word-break: break-word;
 
     @include xlg {
@@ -78,30 +79,7 @@
     }
 }
 
-.scrollWrapper {
-    max-height: calc(49vh - 120px);
-
-}
-
 .chart {
     position: relative;
-    max-width: 520px;
-    .textbar {
-        position: absolute;
-        top: 180px;
-        left: 32px;
-    }
-    
-
-    .textbarone {
-        position: absolute;
-        top: 165px;
-        left: 133px
-    }
-
-    .textbartwo {
-        position: absolute;
-        bottom: 114px;
-        right: 40px;
-    }
+    min-width: 400px;
 }

@@ -1,36 +1,29 @@
-
-
 import React from 'react'
-import {Bar} from 'react-chartjs-2'
-import { useState } from 'react'
-import {Chart as chartjs} from "chart.js/auto"
+import { Bar } from 'react-chartjs-2'
+import { Chart as chartjs } from "chart.js/auto"
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
+function BarChart() {
 
+  const userData = {
 
-
-function BarChart({}){
- 
-  const [userData,] = useState({
-  
     labels: ['Contacts', 'Offices', 'Vendors'],
     datasets: [{
-     
-      data:[1000,1200,300],
-   
-    backgroundColor: [
+
+      data: [1000, 1200, 300],
+
+      backgroundColor: [
         '#3267B1',
         '#242450',
         '#306BE8',
-      
       ],
       borderColor: [
         '#EBEBEB',
-       
       ],
     },
-   
-  ],
-  })
+
+    ],
+  }
   const axis = {
     responsive: true,
     scales: {
@@ -59,9 +52,21 @@ function BarChart({}){
         }
       }
     },
-  
-  };
-  return <div><Bar data={userData} options={axis}/></div>
-  }
+    plugins: {
+      legend: {
+        display: false,
+      },
+      datalabels: {
+        anchor: "end",
+        align: "end",
+        offset: -30,
+        color: "#FFFFFF",
+        font: { size: 18 }
+      }
+    },
 
-  export default BarChart
+  };
+  return <div><Bar plugins={[ChartDataLabels]} data={userData} options={axis} /></div>
+}
+
+export default BarChart

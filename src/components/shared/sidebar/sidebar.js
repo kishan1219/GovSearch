@@ -6,7 +6,8 @@ import ListGroup from '../list-group'
 import ListItem from '../list-item/list-item'
 import Text from '../text'
 import Styles from './sidebar.module.scss'
-import Switch from '@mui/material/Switch';
+import SwitchUnstyled, { switchUnstyledClasses } from '@mui/base/SwitchUnstyled';
+import { styled } from '@mui/system';
 import Chip from '@mui/material/Chip';
 const Sidebar = () => {
     const [sidebarHide, setSidebarHide] = useState(true)
@@ -76,11 +77,87 @@ const Sidebar = () => {
             setShowfederalPlus(false)
         }
         else if (setShowfederalPlus(!showfederalPlus)) {
-            
-                setHideContact(false)
-            
+            setHideContact(false)
         }
     }
+    const handleClick = () => {
+        console.info('You clicked the Chip.');
+    };
+
+    const handleDelete = () => {
+        console.info('You clicked the delete icon.');
+    };
+   
+    const blue = {
+        500: '#007FFF',
+    };
+
+    const grey = {
+
+        500: '#F1f1f1',
+
+    };
+
+    const Root = styled('span')(
+        ({ theme }) => `
+        font-size: 0;
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 15px;
+        margin: 10px;
+        cursor: pointer;
+      
+        & .${switchUnstyledClasses.track} {
+          background: ${theme.palette.mode === 'dark' ? grey[500] : grey[500]};
+          border-radius: 16px;
+          display: block;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+        }
+      
+        & .${switchUnstyledClasses.thumb} {
+          display: block;
+          width: 12px;
+          height: 12px;
+          top: 2px;
+          left: 4px;
+          border-radius: 16px;
+          background-color: #5286FF;
+          position: relative;
+          
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 120ms;
+        }
+      
+        &.${switchUnstyledClasses.checked} {
+          .${switchUnstyledClasses.thumb} {
+            left: 25px;
+            top: 2px;
+            background-color: #fff;
+          }
+      
+          .${switchUnstyledClasses.track} {
+            background: ${blue[500]};
+          }
+        }
+      
+        & .${switchUnstyledClasses.input} {
+          cursor: inherit;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: 1;
+          margin: 0;
+        }
+        `,
+    );
+    const label = { slotProps: { input: { 'aria-label': 'Demo switch' } } };
     return (
         <div className={Styles.container}>
             {sidebarHide &&
@@ -124,16 +201,24 @@ const Sidebar = () => {
                     <div className='dFlex mT30 alignbaseline mr20'>
                         <div className={Styles.inputMain}>
                             <Input className={Styles.searchInput} placeholder={"Search"} />
-                            <Icon type='search' color={"black"} variant='icon_xlarge' />
+                            <Icon className={Styles.iconSearch} type='search' color={"black"} variant='icon_xlarge' />
                         </div>
                         <div className={"ml30 fFlex flexColumn"}>
                             <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
-                            <Switch color="primary" size="small" />
+                            <div>
+                                <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label}  />
+                            </div>
                         </div>
                     </div>
                     {/*div for button pill start */}
                     <div className='mT30' >
-                        <Chip label="All" color="primary" size='small' variant="outlined" />
+                        <Chip sx={{
+                            '& .MuiChip-deleteIcon': {
+                                color: '#ffffff',
+                                fontSize: '12px',
+
+                            },
+                        }} label="All" onClick={handleClick} onDelete={handleDelete} deleteIcon={<Icon type='close' variant={"icon_small"} />} className={Styles.primaryChipColor} size='small' variant="outlined" />
                     </div>
                     {/* div for button pill end */}
                     <div className={`${Styles.scrollWrapper} ${hideContact ? Styles.scrollBarTransparent : Styles.scrollBar}`}>
@@ -398,8 +483,6 @@ const Sidebar = () => {
                                                                 </div>
                                                             </>
                                                         }
-
-
                                                     </div>}
                                             </>
                                         }
@@ -573,7 +656,7 @@ const Sidebar = () => {
                             </div>
                         }
 
-                        <div className='dFlex mT35 alignEnd jusctifyContentSpaceBetween'>
+                        <div className='dFlex mT35 alignItemsCenter jusctifyContentSpaceBetween'>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Clear</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Save Search</Text>
                             <Button btnClass='mr10' size={"xlmd"} variant={"solidPrimary"}>Search</Button>

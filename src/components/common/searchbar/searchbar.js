@@ -42,7 +42,7 @@ export default function SearchBar({   onClick, inputclassName }) {
       <Button btnClass={Styles.searcbutt} size={"md"} variant={"solidSecondary"}>Search</Button>
       <Text className={Styles.textAdv} variant={"smText"} color={"gray"} strong={"strong4"}>Advanced</Text>
 
-    </div >
+    </div>
    
   
 

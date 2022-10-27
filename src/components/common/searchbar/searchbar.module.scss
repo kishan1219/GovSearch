@@ -15,6 +15,9 @@
             border-radius: 5px;
             padding: 0px 40px 0px 10px;
             background-color: $white;
+             &::placeholder {
+            color: $white02;
+          }
         }
 
         .rightIcon {
@@ -47,24 +50,24 @@
     fieldset {
         border: none;
     }
+
     div {
         border: none;
         outline: none;
         padding: 9px 0 9px !important;
     }
+
     .textAdv {
         text-decoration-line: underline;
         color: $gray;
         cursor: pointer;
     }
-    
-    .searcbutt:hover {
-       
-        background-color: $primary04;
- 
 
+    .searcbutt:hover {
+        background-color: $primary04;
     }
 }
+
 .selectList {
     width: 100%;
     text-align: right;
