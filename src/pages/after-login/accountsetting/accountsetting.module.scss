@@ -102,6 +102,7 @@
     }
 
     .editCard {
+        
         .profileCard {
             width: 100%;
             max-width: 868px;
@@ -115,6 +116,7 @@
             width: 172px;
             height: 25px;
             margin-top: 5px;
+           
         }
 
 
@@ -154,7 +156,7 @@
             }
 
             .iconArrowDown {
-                right: 36px;
+                right: 35px;
                 top: 26px;
                 font-size: 24px;
                 position: absolute;
@@ -179,6 +181,7 @@
                 width: 544px;
                 height: 50px;
                 font-size: 18px;
+                color: $white02;
                 padding-left: 16px;
                 border-radius: 10px;
                 -webkit-appearance: none;
@@ -191,11 +194,11 @@
             .typeBox {
                 width: 50px;
                 height: 50px;
-                margin-left: 30px;
+                margin-left: 23px;
             }
 
             .iconType {
-                right: 256px;
+                right: 263px;
                 top: 14px;
                 font-size: 24px;
                 position: absolute;
@@ -225,6 +228,24 @@
 
 
     }
+    .scrollBar {
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+    .scrollBar {
+        &::-webkit-scrollbar-track {
+            background: $white;
+        }
+    }
+
+    .scrollWrapper {
+        max-height: calc(95vh - 120px);
+        width: 63%;
+
+    }
+    
 
     .nextBtn {
         display: flex;
