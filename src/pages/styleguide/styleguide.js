@@ -5,9 +5,9 @@ import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import  Header  from '../../components/common/header/header'
+import Header from '../../components/common/header/header'
 import Cardtab from '../../components/shared/cardtab'
-import Criteria from '../criteria/criteria'
+import Criteria from '../criteria'
 // import { useState } from 'react'
 
 
@@ -73,21 +73,21 @@ const Styleguide = () => {
     return (
         <div className={Styles.wrapper}>
             <div >
-        <Switch/>
-        <FormControlLabel control={<Switch defaultChecked />} label="Label" />
-      </div>
-      <Header />
-      <Header isSearch={false} />
-      <Header isRightNav={true} isFederal={false} isProfessional={true} />
-      <Header isSearch={false} isRightNav={true} isFederal={false} isProfessional={true} />
-      <Header isSearch={true} isRightNav={true} isFederal={false} isGovSearchProfessional={true} />
-      <Header isSearch={false} isRightNav={true} isFederal={false} isStateLocal={true} />
-      <Header isTechnomileLogo={true} isGovSearchLogo={false} />
-      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} />
-      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />
-      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />
-      <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={false} isFederal={false} />
-      <Header size="sm" isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} />
+                <Switch />
+                <FormControlLabel control={<Switch defaultChecked />} label="Label" />
+            </div>
+            <Header />
+            <Header isSearch={false} />
+            <Header isRightNav={true} isFederal={false} isProfessional={true} />
+            <Header isSearch={false} isRightNav={true} isFederal={false} isProfessional={true} />
+            <Header isSearch={true} isRightNav={true} isFederal={false} isGovSearchProfessional={true} />
+            <Header isSearch={false} isRightNav={true} isFederal={false} isStateLocal={true} />
+            <Header isTechnomileLogo={true} isGovSearchLogo={false} />
+            <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} />
+            <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />
+            <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />
+            <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={false} isFederal={false} />
+            <Header size="sm" isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} />
             <div className={Styles.checboxMain}>
                 <CheckBox checked="checked" labelName="primary" variant="primary" className={Styles.mb20} />
                 <CheckBox checked="checked" labelName="gray" variant="gray" className={Styles.mb20} />
@@ -172,15 +172,15 @@ const Styleguide = () => {
                 <SearchBar inputclassName={Styles.s} placeholder={"Search"} size={"icon_large"} iconColor={"gray05"} iconclassName={"icoClass"} />
             </div>
 
-            <div className={Styles.chart} style={{ width: 300 }}>
-            <Text className={Styles.textbar} variant={"smText"} color={"white"} strong={"strong4"}>1000</Text>
-            <Text className={Styles.textbarone} variant={"smText"} color={"white"} strong={"strong4"}>1200</Text>
-            <Text className={Styles.textbartwo} variant={"smText"} color={"white"} strong={"strong4"}>300</Text>
+            <div className={Styles.chart} style={{ width: 500, }}>
                 <BarChart />
             </div>
-            
-            <Cardtab />
-             <Criteria/>
+            <div className='mt30 mb50'>
+                <Cardtab />
+            </div>
+            <div className='mt40'>
+                <Criteria />
+            </div>
         </div>
 
     )

@@ -82,12 +82,18 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={`${Styles.newsCard}`}>
-                    <NewsCard src='assets/images/officer.jpg'
-                        textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
-                        textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                    <Text className={"mB14 textCenter"} variant="xbigText" color="darkGray" strong="strong3">News</Text>
+                    <div className={`${Styles.scrollBar} ${Styles.scrollWrapper}`}>
+                        <NewsCard src='assets/images/officer.jpg'
+                            textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
+                            textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                        <NewsCard src='assets/images/officer.jpg'
+                            textFirst={"FORCM Jason R. Dunn is the new Force Master Chief of Commander Navy Installations Command"}
+                            textSecond="He succeeds former Chief, FORCM Greg A. Vidaurri, in the position. He served as Tomahawk LPO ..." />
+                    </div>
                 </div>
                 <div className={Styles.chart}>
-                    <Text className={"textCenter mB100"} variant="xbigText" color="darkGray" strong="strong3">Updates</Text>
+                    <Text className={`${"textCenter"}  ${Styles.updateText}`} variant="xbigText" color="darkGray" strong="strong3">Updates</Text>
                     <BarChart />
                 </div>
             </div>

@@ -5,7 +5,7 @@
   display: flex;
   text-align: center;
   justify-content: center;
-
+  margin-right: 100px;
   .head {
     position: relative;
 
@@ -36,7 +36,6 @@
     .searchb {
       display: flex;
       gap: 25px;
-      //   margin-top: 17px;
       margin-bottom: 33px;
       align-items: center;
       outline: none;
