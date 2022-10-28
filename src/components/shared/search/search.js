@@ -24,7 +24,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
         <div className={Styles.mainSearch}>
             <div className={Styles.head}>
                 <div className={Styles.headingo}>
-                    <Heading headingType={"h1"} className={Styles.headingGov} color={"secondary"} fontWeight={"strong6"} family={"poppins"}>GovSearch</Heading>
+                    <Heading headingType={"h1"} className={Styles.headingGov} color={"secondary"}>GovSearch</Heading>
 
                 </div>
                 <div className={Styles.searchb}>

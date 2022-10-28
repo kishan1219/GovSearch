@@ -8,7 +8,7 @@ const Cardtab = () => {
     return (
         <div className={styles.tab}>
             <div className={styles.tabWrapper}>
-                <CheckBox checked="checked" variant="grayFill" size="" className={styles.CheckBox} />
+                <CheckBox variant="grayFill" size="" className={styles.CheckBox} />
                 <Image src="assets/images/OfficialArmySeal.png" alt="armySeal" className={styles.imgFluid} />
             </div>
             <div className={styles.titleMain}>

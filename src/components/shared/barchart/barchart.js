@@ -35,15 +35,16 @@ function BarChart() {
           fontSize: 14
         },
         grid: {
-          display: true,
+          display: false,
           color: '#F5F5F5',
           borderWidth: 7,
           borderColor: ' #D9D9D9',
+          
         }
       },
       y: {
         ticks: {
-          display: false,
+          display: true,
           color: '#F5F5F5',
         },
         grid: {
@@ -62,7 +63,7 @@ function BarChart() {
         offset: -30,
         color: "#FFFFFF",
         font: { size: 18 }
-      }
+      },
     },
 
   };
