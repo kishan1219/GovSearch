@@ -4,6 +4,12 @@ import Styles from './accountsetting.module.scss'
 import { Heading, Card, Text, Button, Layout, Input, Icon } from '../../../components/shared/index'
 const AccountSetting = () => {
   const [showselect, setSelect] = useState(false);
+  const [selectState, setSelectState] = useState(false);
+  const [licencetype,setLicenceType] = useState(false);
+  const [buisnesstype,setBuisnessType] = useState(false);
+
+
+
   const [show, setShow] = useState(true);
   const [hide, setHide] = useState(false);
 
@@ -143,21 +149,21 @@ const AccountSetting = () => {
 
         {/* Edit Profile */}
         {hide && (
-          <div className={Styles.editCard}>
+          <div className={`${Styles.editCard} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
              <Heading headingType={"h2"} className={Styles.profileHead}> Profile</Heading>
             <Card className={Styles.profileCard}>
               <div className={Styles.formBox}>
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>First Name</Text>
+                    <Text variant={"mlgText"} strong='strong4'>First Name</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Email</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Email</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Title / Role</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Title / Role</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
 
@@ -165,15 +171,15 @@ const AccountSetting = () => {
 
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Last Name</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Last Name</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Phone</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Phone</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Company</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Company</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
 
@@ -182,45 +188,47 @@ const AccountSetting = () => {
 
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Address</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Address</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong6'>State</Text>
-                    <select className={Styles.empInput} disabled={showselect ? false : true}>
+                    <Text variant={"mlgText"} strong='strong4'>State</Text>
+                    <select className={Styles.empInput} disabled={selectState ? false : true}>
                       <option selected value="# of Employees"></option>
-                      <option value="1">India</option>
-                      <option value="2">Australia</option>
-                      <option value="3">England</option>
-                      <option value="4">Italy</option>
+                      <option value="1">U.P.</option>
+                      <option value="2">M.P.</option>
+                      <option value="3">Bihar</option>
+                      <option value="4">Goa</option>
+                    </select>
+
+                    <Input className={Styles.inputarrowBox} variant="border" />
+                    <Icon onClick={() => setSelectState(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
+                  </div>
+                  <div className={Styles.arrowInput}>
+                    <Text variant={"mlgText"} strong='strong4'>Number of Employees</Text>
+                    <select className={Styles.empInput} disabled={showselect ? false : true}>
+                      <option selected value=""></option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="2">3</option>
+                      <option value="2">4</option>
+
                     </select>
 
                     <Input className={Styles.inputarrowBox} variant="border" />
                     <Icon onClick={() => setSelect(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
-                  <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong6'>Number of Employees</Text>
-                    <select className={Styles.empInput} disabled={showselect ? false : true}>
-                      <option selected value="# of Employees"></option>
-                      <option value="1">GovSearch Proffesional</option>
-                      <option value="2">GovSearch Defense</option>
-
-                    </select>
-
-                    <Input className={Styles.inputarrowBox} variant="border" />
-                    <Icon onClick={() => setSelect(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
-                  </div>
 
                 </div>
 
 
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong6'>Zip Code</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Zip Code</Text>
                     <Input className={Styles.inputbox} variant="border" />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong6'>Country</Text>
+                    <Text variant={"mlgText"} strong='strong4'>Country</Text>
                     <select className={Styles.empInput} disabled={showselect ? false : true}>
                       <option selected value="# of Employees"></option>
                       <option value="1">India</option>
@@ -233,8 +241,8 @@ const AccountSetting = () => {
                     <Icon onClick={() => setSelect(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong6'>Types of Business</Text>
-                    <select className={Styles.empInput} disabled={showselect ? false : true}>
+                    <Text variant={"mlgText"} strong='strong4'>Types of Business</Text>
+                    <select className={Styles.empInput} disabled={buisnesstype ? false : true}>
                       <option selected value="# of Employees"></option>
                       <option value="1">GovSearch Proffesional</option>
                       <option value="2">GovSearch Defense</option>
@@ -242,7 +250,7 @@ const AccountSetting = () => {
                     </select>
 
                     <Input className={Styles.inputarrowBox} variant="border" />
-                    <Icon onClick={() => setSelect(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                    <Icon onClick={() => setBuisnessType(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                 </div>
 
@@ -250,7 +258,7 @@ const AccountSetting = () => {
               </div>
               <div className={Styles.nextBtn}>
                 <div>
-                  <Text variant={"mlgText"} strong='strong6'>URL (website)</Text>
+                  <Text variant={"mlgText"} strong='strong4'>URL (website)</Text>
                   <Input className={Styles.inputbox} variant="border" />
                 </div>
                 <Button size={"xsm"} variant={"solidPrimary"}>Save</Button>
@@ -260,7 +268,7 @@ const AccountSetting = () => {
               <Heading className={Styles.manageHead} headingType={"h2"}>User Management</Heading>
               <div className={Styles.arrowInput}>
          
-                <select className={Styles.typeInput} disabled={showselect ? false : true}>
+                <select className={Styles.typeInput} disabled={licencetype ? false : true}>
                   <option selected value="Licence Type">Licence Type </option>
                   <option value="1">GovSearch Proffesional</option>
                   <option value="2">GovSearch Defense</option>
@@ -269,7 +277,7 @@ const AccountSetting = () => {
 
 
                 <Input className={Styles.typeBox}  />
-                <Icon onClick={() => setSelect(true)} className={Styles.iconType} type='soliddownpolygon' variant='icon_xlarge' />
+                <Icon onClick={() => setLicenceType(true)} className={Styles.iconType} type='soliddownpolygon' variant='icon_xlarge' />
                 
               </div>
               <div className={Styles.emailBox}>
