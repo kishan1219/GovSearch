@@ -16,7 +16,7 @@
     }
 
     .statsCard {
-        min-width: 549px;
+        max-width: 549px;
         min-height: 452px;
         box-shadow: $shadow02;
         border-radius: 10px;
@@ -25,7 +25,5 @@
         .statsChart {
             margin-top: 200px;
         }
-
-        ;
     }
 }

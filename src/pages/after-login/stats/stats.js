@@ -133,12 +133,24 @@ const stats = () => {
                 display: false,
             },
             datalabels: {
-                anchor: "end",
-                align: "end",
-                offset: -20,
-                color: "#000000",
-                font: { size: 18 }
-            },
+                align: 'end',
+                anchor: 'end',
+                font: function (context) {
+                    var w = context.chart.width;
+                    return {
+                        size: w < 512 ? 14 : 18,
+                        weight: 'bold',
+                    };
+                },
+            }
+        },
+
+        // Core options
+        aspectRatio: 5 / 3,
+        layout: {
+            padding: {
+                top: 32
+            }
         },
 
     };
@@ -158,7 +170,7 @@ const stats = () => {
                         </div>
                     </div>
                 </div>
-                <Grid lg={12} container spacing={4}>
+                <Grid container spacing={4}>
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Contacts</Heading>
                         <Card className={Styles.statsCard} >
