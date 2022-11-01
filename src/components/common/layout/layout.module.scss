@@ -1,21 +1,51 @@
 @import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+
 .layoutMain {
     background: $white01;
     width: 100%;
     min-height: 100vh;
     padding: 40px 0 0;
     position: relative;
+
     .header {
         text-align: center;
     }
+
     .sidebar {
         position: fixed;
         width: 100%;
         min-width: 428px;
-        z-index: 1;  
+        z-index: 1;
     }
-    .mainContainer{
+
+    .mainContainer {
         margin-left: 150px;
         margin-right: 45px;
+
     }
+}
+
+@include ScrollBar;
+
+.scrollBar {
+    &::-webkit-scrollbar-track {
+        background: $white;
+
+        @include sm {
+            width: 12px;
+            height: 8px;
+        }
+    }
+
+
+    &::-webkit-scrollbar-track {
+        @include sm {
+            width: 10px;
+        }
+    }
+}
+
+.scrollWrapper {
+    max-height: calc(90vh - 115px);
 }

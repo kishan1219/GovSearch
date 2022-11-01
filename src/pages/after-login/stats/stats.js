@@ -11,13 +11,9 @@ const stats = () => {
     const blue = {
         500: '#5286FF',
     };
-
     const grey = {
-
         500: '#5286FF',
-
     };
-
     const Root = styled('span')(
         ({ theme }) => `
         font-size: 0;
@@ -78,12 +74,12 @@ const stats = () => {
         `,
     );
     const label = { slotProps: { input: { 'aria-label': 'Demo switch' } } };
-    const userData = {
+    const data = {
 
         labels: ['Defence', 'Civilians', 'Vendor', 'SLED'],
         datasets: [{
-
-            data: [1000, 1000, 1000, 1000],
+            label: 'bar chart',
+            data: [1000, 1000, 700, 1000],
 
             backgroundColor: [
                 '#C6D2E2',
@@ -94,7 +90,7 @@ const stats = () => {
             borderColor: [
                 '#EBEBEB',
             ],
-            fill: false,
+            borderWidth: 1,
         },
 
         ],
@@ -106,24 +102,23 @@ const stats = () => {
                 barPercentage: 0.1,
                 stacked: true,
                 ticks: {
+                    padding: 30,
                     color: '#000000',
                     fontSize: 18,
                 },
                 grid: {
-                    display: false,
                     drawTicks: false,
                     drawBorder: false,
+                    color: 'transparent'
                 }
             },
             y: {
                 ticks: {
                     display: false,
-                    color: '#F5F5F5',
                 },
                 grid: {
                     drawTicks: false,
                     drawBorder: false,
-                    zeroLineColor: 'white',
                     color: 'transparent'
                 }
             }
@@ -133,25 +128,17 @@ const stats = () => {
                 display: false,
             },
             datalabels: {
-                align: 'end',
+                display: true,
                 anchor: 'end',
-                font: function (context) {
-                    var w = context.chart.width;
-                    return {
-                        size: w < 512 ? 14 : 18,
-                        weight: 'bold',
-                    };
-                },
-            }
+                color: '#000000',
+                align: 'top',
+                fontSize: 18,
+            },
+            title: {
+                display: true,
+            },
         },
 
-        // Core options
-        aspectRatio: 5 / 3,
-        layout: {
-            padding: {
-                top: 32
-            }
-        },
 
     };
     return (
@@ -174,21 +161,21 @@ const stats = () => {
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Contacts</Heading>
                         <Card className={Styles.statsCard} >
-                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={userData} options={axis} />
+                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Positions</Heading>
                         <Card className={Styles.statsCard} >
-                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={userData} options={axis} />
+                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Offices</Heading>
                         <Card className={Styles.statsCard} >
-                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={userData} options={axis} />
+                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
