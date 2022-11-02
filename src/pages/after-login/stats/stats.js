@@ -102,9 +102,23 @@ const stats = () => {
                 barPercentage: 0.1,
                 stacked: true,
                 ticks: {
-                    padding: 30,
+                    padding: 10,
                     color: '#000000',
                     fontSize: 18,
+                    font: function (context) {
+                        var w = context.chart.width;
+                        return {
+                            size: w < 512 ? 14 : 18,
+                            weight: 'bold',
+                        };
+                    },
+                    border: function (context) {
+                        var b = context.chart.border;
+                        return {
+                            size: b < 512 ? 14 : 18,
+                            weight: 'bold',
+                        };
+                    },
                 },
                 grid: {
                     drawTicks: false,
@@ -132,10 +146,17 @@ const stats = () => {
                 anchor: 'end',
                 color: '#000000',
                 align: 'top',
-                fontSize: 18,
+                font: function (context) {
+                    var w = context.chart.width;
+                    return {
+                        size: w < 512 ? 14 : 16,
+                        weight: 'bold',
+                    };
+                },
             },
             title: {
                 display: true,
+                
             },
         },
 
@@ -161,21 +182,21 @@ const stats = () => {
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Contacts</Heading>
                         <Card className={Styles.statsCard} >
-                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
+                            <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Positions</Heading>
                         <Card className={Styles.statsCard} >
-                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
+                            <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
                     <Grid item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Offices</Heading>
                         <Card className={Styles.statsCard} >
-                            <Bar className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
+                            <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
