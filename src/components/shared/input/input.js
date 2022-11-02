@@ -51,8 +51,9 @@ const Input = ({
         value={value}
         name={name}
         onClick={onClick}
+        onChange={onChange}
         {...reference}
-        {...onChange}
+        // {...onChange}
         {...pattern}
         onKeyUp={onKeyUp}
         onKeyPress={onKeyPress}

@@ -113,18 +113,19 @@
                             width: 282px;
                             background: $white03;
                             font-size: 18px;
+                            height: 55px;
                             border-radius: 10px;
                             padding: 14px;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            list-style: none;
+
                             text-indent: 1px;
                             text-overflow: '';
+
                         }
 
+
                         .empInputTwo {
-                            width: 45px;
-                            margin-left: 29px;
+                            width: 286px;
+                            // margin-left: 29px;
                             background: $white03;
                             outline: none;
                             overflow: hidden;
@@ -135,17 +136,36 @@
                             text-align: left;
                             display: flex;
                             position: relative;
-                            .empInputTwo{
-                                width: 20px;
-                                height:20px;
+
+                           
+
+                            // #demo-simple-select-helper-label{
+                            //     border:none;
+                            // }
+
+                            .empInputTwo {
+                                // width: 20px;
+                                height: 55px;
+
+                                .menuItem {
+                                    margin-left: 100px;
+                                }
                             }
-                            
+
 
                             .iconDown {
-                                right: 18px;
-                                top: 11px;
+                                right: 0px;
+                                top: 0px;
                                 color: $gray07;
                                 position: absolute;
+                                // right: 16px;
+                                // top: 2px;
+                                background: $white03;
+                                // color: gray;
+                                border-radius: 12px;
+                                height: 55px;
+                                padding: 12px 12px 0px 12px;
+                                // position: absolute;
                             }
                         }
 
@@ -315,7 +335,7 @@
 
             .inputMain {
                 width: 408px;
-                 margin-top: 20px;
+                margin-top: 20px;
 
                 .passText {
                     margin-top: 25px;

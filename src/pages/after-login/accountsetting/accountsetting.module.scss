@@ -6,6 +6,9 @@
     min-height: 100vh;
     max-width: 100%;
     @include fonts-poppins;
+    .cardHead{
+        font-weight: 400;
+    }
 
     .accountHead {
         margin-bottom: 25px;
@@ -32,9 +35,14 @@
                 justify-content: space-evenly;
                 padding: 26px 0px 9px 0px;
 
+
                 .profileBox {
                     display: grid;
                     gap: 10px;
+
+                    .numofEmp {
+                        margin-top: 5px;
+                    }
                 }
 
 
@@ -43,7 +51,7 @@
             .btnMain {
                 display: flex;
                 justify-content: space-between;
-                padding: 0px 20px 20px 33px;
+                padding: 0px 20px 20px 45px;
             }
 
             .userManageBox {
@@ -97,32 +105,46 @@
 
     .scrollWrapper {
         max-height: calc(95vh - 120px);
-        width: 58%;
+        width: 54%;
 
     }
 
     .editCard {
-        
+
+
         .profileCard {
             width: 100%;
-            max-width: 868px;
+            max-width: 900px;
             margin-left: 57px;
-            padding: 26px 44px 24px 45px;
+            // padding: 26px 44px 24px 45px;
         }
-        .profileHead{
-        margin: 25px 0px 24px 62px;
+
+        .profileHead {
+            margin: 25px 0px 24px 62px;
         }
+
         .inputbox {
-            width: 172px;
-            height: 25px;
+            width: 188px;
+            height: 33px;
             margin-top: 5px;
-           
+            font-size: 17px;
+
         }
 
 
         .formBox {
             display: flex;
             justify-content: space-around;
+            gap: 15px;
+            padding: 26px 44px 5px 45px;
+
+            .SecBox {
+                margin-top: 5px;
+            }
+
+            .titleBox {
+                margin-top: 5px;
+            }
         }
 
 
@@ -138,38 +160,48 @@
         }
 
         .arrowInput {
-            text-align: left;
+            // text-align: left;
             position: relative;
+            margin-top: 5px;
 
             .inputarrowBox {
-                height: 26px;
-                border-radius: 39%;
+                // height: 32px;
+                // border-radius: 39%;
                 width: 17px;
+                border: none;
                 margin-left: 7px;
             }
 
             .iconDown {
-                right: 8px;
-                top: 26px;
-                font-size: 24px;
+                right: 0px;
+                padding: 6px 5px 4px 5px;
+                border: 1px solid #9E9E9E;
+                /* padding: 2px 5px; */
+                border-radius: 12px;
+                top: 29px;
+                font-size: 20px;
                 position: absolute;
             }
 
             .iconArrowDown {
-                right: 35px;
-                top: 26px;
-                font-size: 24px;
+                right: 7px;
+                padding: 6px 5px 4px 5px;
+                border: 1px solid #9E9E9E;
+                /* padding: 2px 5px; */
+                border-radius: 12px;
+                top: 29px;
+                font-size: 20px;
                 position: absolute;
             }
 
             .empInput {
-                width: 123px;
+                width: 143px;
                 border: 1px solid #9E9E9E;
-                height: 25px;
+                height: 33px;
                 padding-left: 10px;
                 font-size: 18px;
                 border-radius: 10px;
-
+                margin-top: 5px;
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 list-style: none;
@@ -182,6 +214,8 @@
                 height: 50px;
                 font-size: 18px;
                 color: $white02;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                background-color: white;
                 padding-left: 16px;
                 border-radius: 10px;
                 -webkit-appearance: none;
@@ -198,8 +232,12 @@
             }
 
             .iconType {
-                right: 263px;
-                top: 14px;
+                right: 253px;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                border-radius: 10px;
+                top: 0px;
+                padding: 15px 12px 10px 15px;
                 font-size: 24px;
                 position: absolute;
             }
@@ -209,6 +247,8 @@
         .mailBox {
             width: 617px;
             margin-top: 24px;
+            font-size: 24px;
+           
         }
 
         .emailBox {
@@ -220,6 +260,7 @@
                 margin-top: 25px;
             }
         }
+
         .manageHead {
             margin-top: 25px;
             margin-bottom: 20px;
@@ -228,6 +269,7 @@
 
 
     }
+
     .scrollBar {
         overflow-y: auto;
         overflow-x: hidden;
@@ -242,15 +284,15 @@
 
     .scrollWrapper {
         max-height: calc(95vh - 120px);
-        width: 63%;
+        width: 64%;
 
     }
-    
+
 
     .nextBtn {
         display: flex;
         justify-content: space-between;
-        padding: 5px 3px 0px 11px;
+        padding: 0px 18px 26px 45px;
         align-items: center;
     }
 }
