@@ -1,0 +1,28 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/styles.scss";
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    @include fonts-poppins;
+
+    .statsText {
+        max-width: 1078px;
+    }
+
+    .toggleMonth {
+        max-width: 200px;
+    }
+
+    .statsCard {
+        max-width: 549px;
+        min-height: 452px;
+        box-shadow: $shadow02;
+        border-radius: 10px;
+        padding: 40px 30px;
+        .statsChart {
+            margin-top: 100px;
+        }
+    }
+}

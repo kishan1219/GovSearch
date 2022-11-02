@@ -80,6 +80,9 @@
 }
 .scrollWrapper {
     max-height: calc(49vh - 115px);
+    @include xxlg {
+    max-height: calc(51vh - 115px);
+    }
 }
 .chart {
     position: relative;

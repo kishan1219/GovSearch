@@ -6,6 +6,7 @@
   text-align: center;
   justify-content: center;
   margin-right: 100px;
+  @include fonts-poppins;
   .head {
     position: relative;
 
@@ -15,7 +16,7 @@
 
       .headingGov {
         font-size: 100px;
-
+        letter-spacing: -1.5px;
       }
     }
 

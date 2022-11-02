@@ -93,9 +93,7 @@ const Sidebar = () => {
     };
 
     const grey = {
-
         500: '#5286FF',
-
     };
 
     const Root = styled('span')(
@@ -121,8 +119,8 @@ const Sidebar = () => {
           display: block;
           width: 12px;
           height: 12px;
-          top: 2px;
-          left: 4px;
+          top: 1px;
+          left: 1px;
           border-radius: 16px;
           background-color: #fff;
           position: relative;
@@ -134,8 +132,8 @@ const Sidebar = () => {
       
         &.${switchUnstyledClasses.checked} {
           .${switchUnstyledClasses.thumb} {
-            left: 25px;
-            top: 2px;
+            left: 27px;
+            top: 1px;
             background-color: #fff;
           }
       
@@ -536,8 +534,6 @@ const Sidebar = () => {
                                                                 </div>
                                                             </>
                                                         }
-
-
                                                     </div>}
                                             </>
                                         }
@@ -665,7 +661,10 @@ const Sidebar = () => {
                             <Button btnClass='mr10' size={"xlmd"} variant={"solidPrimary"}>Search</Button>
                         </div>
                         <div className='mT44'>
-                            <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Intel</Text>
+                          {showfederalPlus &&
+                            <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Fed Civilian</Text>
+                           }
+                            <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Intel</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Defense</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>News</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Stats</Text>

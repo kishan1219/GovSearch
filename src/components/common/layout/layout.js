@@ -8,7 +8,7 @@ import Header from '../header';
 
 const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal }) => {
     return (
-        <div className={Styles.layoutMain}>
+        <div className={`${Styles.layoutMain} ${Styles.scrollBar} ${Styles.scrollWrapper}`} >
             {isHeader && <Header isSearch={isSearch} isFederal={isFederal}/>}
             {isTechnomile && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />}
             {isAccount && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />}

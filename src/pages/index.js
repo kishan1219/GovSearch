@@ -4,6 +4,7 @@ import login from "./before-login/login";
 import {Notification} from "./after-login";
 import Account from "./after-login/account/account";
 import accountsetting from "./after-login/accountsetting";
+import stats from "./after-login/stats/stats";
 
 export {
     home,
@@ -12,6 +13,7 @@ export {
     Notification,
     Account,
    accountsetting,
+   stats,
    
   
     

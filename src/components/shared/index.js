@@ -15,7 +15,7 @@ import ListItem from "./list-item/list-item";
 import Modal from "./modal/modal";
 import Sidebar from "./sidebar/sidebar";
 import Search from "./search/search";
-import Barchart from "./barchart";
+import BarChart from "./barchart/barchart";
 import Header from "../common/header/header";
 import Cardtab from "./cardtab";
 
@@ -37,7 +37,7 @@ export {
   Modal,
   Sidebar,
   Search,
-  Barchart,
+  BarChart,
   Header,
   Cardtab
 };
