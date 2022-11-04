@@ -133,6 +133,10 @@
          width: 10px;
          height: 8px;
        }
+       @include mo {
+        width: 8px;
+         height: 8px;
+       }
     }
     &::-webkit-scrollbar-track {
       background: $white03;

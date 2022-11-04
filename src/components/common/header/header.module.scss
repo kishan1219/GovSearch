@@ -71,6 +71,23 @@
                 font-size: 23px;
             }
 
+            @include mo {
+                order: 1;
+            }
+            @include sm {
+                order: 1;
+                margin-left: 10px;
+            }
+        }
+
+        .searchContainer {
+            @include mo {
+                order: 2;
+            }
+            @include sm {
+                order: 1;
+                margin-left: 10px;
+            }
         }
 
         .headerLogo {
@@ -112,6 +129,19 @@
                 @include iPad {
                     display: none;
                 }
+            }
+
+            .RightNavMain {
+                display: flex;
+                align-items: center;
+
+                @include mo {
+                    margin-right: 10px;
+                }
+            @include sm {
+                margin-right: 10px;
+            }
+                
             }
 
             .headerNotifications {

@@ -70,7 +70,8 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         )}
 
                     </div>
-                    <Button btnClass={Styles.solidSearch} size={"xxllg"} variant={"solidPrimary"} btnHandler={handleSubmit(onSubmit)} >SEARCH</Button></div>
+                    <Button btnClass={Styles.solidSearch} size={"xxllg"} variant={"solidPrimary"} btnHandler={handleSubmit(onSubmit)} >SEARCH</Button>
+                </div>
 
 
             </div>

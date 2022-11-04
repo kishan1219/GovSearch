@@ -87,7 +87,7 @@ const Sidebar = () => {
     const handleDelete = () => {
         console.info('You clicked the delete icon.');
     };
-   
+
     const blue = {
         500: '#5286FF',
     };
@@ -204,7 +204,7 @@ const Sidebar = () => {
                         <div className={"ml30 fFlex flexColumn"}>
                             <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
                             <div>
-                                <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label}  />
+                                <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label} />
                             </div>
                         </div>
                     </div>
@@ -660,10 +660,10 @@ const Sidebar = () => {
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Save Search</Text>
                             <Button btnClass='mr10' size={"xlmd"} variant={"solidPrimary"}>Search</Button>
                         </div>
-                        <div className='mT44'>
-                          {showfederalPlus &&
-                            <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Fed Civilian</Text>
-                           }
+                        <div className={`${Styles.mT44} ${Styles.sidebarMainFooter}`}>
+                            {showfederalPlus &&
+                                <Text family='roboto' variant={"smText"} className={"op5"} color={"darkGray"}>Fed Civilian</Text>
+                            }
                             <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Intel</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>Defense</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 mT27"} color={"darkGray"}>News</Text>

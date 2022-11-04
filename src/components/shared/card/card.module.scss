@@ -3,7 +3,6 @@
     box-sizing: border-box;
     display: inline-block;
     border-radius: 8px;
-    // padding: 0px 24px 0px 0px;
     background: $white;
     width: 100%;
     max-width: 504px;
@@ -15,7 +14,6 @@
       display: block;
       margin: 10px auto;
     }
-  
   }
   
   @media (max-width: 576px) {
@@ -23,5 +21,4 @@
       display: block;
       margin: 10px auto;
     }
-  
   }

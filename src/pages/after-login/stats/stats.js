@@ -108,14 +108,7 @@ const stats = () => {
                     font: function (context) {
                         var w = context.chart.width;
                         return {
-                            size: w < 512 ? 14 : 18,
-                            weight: 'bold',
-                        };
-                    },
-                    border: function (context) {
-                        var b = context.chart.border;
-                        return {
-                            size: b < 512 ? 14 : 18,
+                            size: w < 400 ? 12 : 14,
                             weight: 'bold',
                         };
                     },
@@ -163,17 +156,17 @@ const stats = () => {
 
     };
     return (
-        <Layout isSearch={true} isFederal={false}>
+        <Layout isGovSearchProfessional={true} isSidebar={true} isSearch={true} isFederal={false}>
             <div className={Styles.container}>
-                <Heading headingType={"h4"} color="secondary">Stats</Heading>
-                <div className='dFlex jusctifyContentSpaceBetween mT44 ml10'>
+                <Heading className={Styles.statsHeading} headingType={"h4"} color="secondary">Stats</Heading>
+                <div className={`${'dFlex jusctifyContentSpaceBetween mT44 ml10'} ${Styles.statsContent}`}>
                     <Text className={Styles.statsText} variant={"smText"} color="gray">These stats help you and our users understand what is being updated, added, and track drastic changes that may have occured accross defense civiliand SLM and vendor groups.</Text>
-                    <div>
-                        <div className={`${'dFlex jusctifyContentSpaceBetween'} ${Styles.toggleMonth}`}>
+                    <div className={Styles.toggleMonth}>
+                        <div className={`${'dFlex jusctifyContentSpaceBetween'}`}>
                             <Text className={"mr12"} variant={"smText"} color="black">Monthly</Text>
                             <Text variant={"smText"} color="black">Quaterly</Text>
                         </div>
-                        <div className='ml18 textCenter'>
+                        <div className='textCenter'>
                             <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label} />
                         </div>
                     </div>

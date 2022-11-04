@@ -4,15 +4,69 @@
 
 .container {
     width: 100%;
-    min-height: 100vh;
+    // min-height: 100vh;
     @include fonts-poppins;
+
+    @include mo {
+        margin: 0px 3px 0px 0px;
+    }
+
+    .statsHeading {
+        @include mo {
+            text-align: center;
+            font-size: $font-xllg;
+        }
+    }
 
     .statsText {
         max-width: 1078px;
+
+        @include tab {
+            max-width: 500px;
+        }
+
+        @include iPad {
+            max-width: 400px;
+        }
+
+        @include mo {
+            text-align: center;
+        }
+    }
+
+    .statsContent {
+        @include sm {
+            display: block;
+        }
     }
 
     .toggleMonth {
-        max-width: 200px;
+        max-width: 130px;
+
+        @include sm {
+            margin-top: 20px;
+            max-width: 100px;
+        }
+
+        @include iPad {
+            max-width: 130px;
+
+        }
+
+        @include mo {
+            margin-left: 90px;
+
+        }
+    }
+
+    .toggleSwitch {
+        @include sm {
+            margin-right: 20px;
+            text-align: unset;
+
+        }
+
+
     }
 
     .statsCard {
@@ -21,8 +75,64 @@
         box-shadow: $shadow02;
         border-radius: 10px;
         padding: 40px 30px;
+
+        @include xmd {
+            min-height: 250px;
+            padding: 15px 30px;
+        }
+
+        @include md {
+            min-width: 270px;
+            min-height: 200px;
+            padding: 0px 5px 0px 0px;
+        }
+
+        @include tab {
+            min-width: 230px;
+            min-height: 120px;
+            padding: 0px;
+        }
+
+        @include iPad {
+            min-width: 190px;
+            min-height: 120px;
+            padding: 0px;
+            // margin-right: 10px;
+        }
+
+        @include mo {
+            min-width: 180px;
+            margin: 0 10px;
+        }
+
+        @include msm {
+            padding: 10px;
+            margin: 0px 10px 0px 0px;
+        }
+
+
         .statsChart {
-            margin-top: 100px;
+            margin-top: 80px;
+
+            @include xmd {
+                margin-top: 60px;
+            }
+
+            @include md {
+                margin-top: 30px;
+            }
+
+            @include iPad {
+                margin-top: 40px;
+            }
+
+            @include tab {
+                margin-top: 50px;
+            }
+
+            @include msm {
+                margin-top: 30px;
+            }
         }
     }
 }
