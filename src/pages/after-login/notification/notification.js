@@ -7,7 +7,6 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import Tooltip from "@mui/material/Tooltip";
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 function createData(Subject, Description) {
@@ -31,7 +30,7 @@ const Notification = () => {
     createData("Subject 2", "Description"),
     createData("Subject 3", "Description"),
   ];
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <Layout isFederal={false} isGovSearchProfessional={true}>
       <div className={`${Styles.container} ${"mr50"}`}>

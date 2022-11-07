@@ -11,6 +11,7 @@
     @include mo {
         padding:0;
     }
+   
     .header {
         text-align: center;
     }
@@ -33,6 +34,10 @@
         }
         @include xmd {
             margin: 0px 45px 0px 120px;
+        }
+        @include sm {
+            margin: 0px 45px 0px 85px;
+        
         }
     }
 }
