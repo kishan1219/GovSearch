@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Image from '../../../components/shared/image/image'
 import Styles from './login.module.scss'
-import { Input, Button, Heading, Text, Modal, CheckBox, Icon } from '../../../components/shared/index'
+import { Input, Button, Heading, Text, Modal, CheckBox, Icon,Card } from '../../../components/shared/index'
 import OtpInput from 'react-otp-input';
-import { Card } from '@mui/material';
+// import { Card } from '@mui/material';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
@@ -205,7 +205,7 @@ const Login = () => {
 
                                 <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}> Confirm Account Information</Heading>
                                 <div className={Styles.cardMainBox}>
-                                    <Card>
+                                    <Card class={Styles.publicCard}>
 
                                         <div className={Styles.inputHolder}>
                                             <div className={Styles.accountInfoBox}>
@@ -251,7 +251,7 @@ const Login = () => {
                                     <div className={Styles.checboxMain}>
                                         <CheckBox variant="gray" className={Styles.mb20} />
                                         <div className={Styles.tncText}>
-                                            <Text variant={"smText"}>"I have read, understand, and agree to the entire Master License and Online Service Agreement "</Text>
+                                            <Text className={Styles.instructionText}>"I have read, understand, and agree to the entire Master License and Online Service Agreement "</Text>
                                         </div>
                                     </div>
                                     <div className={Styles.buttonMain}>
@@ -259,16 +259,23 @@ const Login = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className={Styles.secondMainCard}>
+                             <div className={Styles.secondMainCard}>
                                 <Card>
+                                <Heading className={Styles.accountHead} color={"secondary"} headingType={"h2"}>TechnoMile Intelligence Suite</Heading>
+                                 <Image src='assets/images/TechnoMile_elements.jpg' alt={"Logo"} />
+                                 </Card>
+
+                             </div> 
+                            {/* <div className={Styles.secondMainCard}>
+                                <Card className={Styles.secondTechnoMainCard}>
                                     <div className={Styles.cartTwo}>
-                                        <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}>TechnoMile Intelligence Suite</Heading>
+                                        <Heading className={Styles.accountHead} color={"secondary"} headingType={"h2"}>TechnoMile Intelligence Suite</Heading>
                                         <div className={Styles.imgBox}>
                                             <Image src='assets/images/TechnoMile_elements.jpg' alt={"Logo"} />
                                         </div>
                                     </div>
                                 </Card>
-                            </div>
+                            </div> */}
                         </div>
 
                     </Modal>

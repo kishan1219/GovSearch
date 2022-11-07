@@ -136,7 +136,7 @@ const AccountSetting = () => {
 
 
   return (
-    <Layout>
+    <Layout isSidebar={true}>
       <div className={Styles.wrapper}>
         <Heading className={Styles.accountHead} color={"gray"} headingType={"h1"}> Account </Heading>
         {show && (
@@ -270,7 +270,7 @@ const AccountSetting = () => {
               <div className={Styles.formBox}>
                 <div>
                   <div >
-                    <Text variant={"mlgText"} strong='strong4'>First Name</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>First Name</Text>
                     <Input className={Styles.inputbox} variant="border"
                     id="name"
                     name="name"
@@ -281,7 +281,7 @@ const AccountSetting = () => {
                       />
                   </div>
                   <div className={Styles.SecBox}>
-                    <Text variant={"mlgText"} strong='strong4'>Email</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Email</Text>
                     <Input className={Styles.inputbox} variant="border"
                     id="email"
                     name="email"
@@ -289,7 +289,7 @@ const AccountSetting = () => {
                     value={email} />
                   </div>
                   <div className={Styles.titleBox}>
-                    <Text variant={"mlgText"} strong='strong4'>Title / Role</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Title / Role</Text>
                     <Input className={Styles.inputbox} variant="border"
                      id="title"
                      name="title"
@@ -301,7 +301,7 @@ const AccountSetting = () => {
 
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong4'>Last Name</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Last Name</Text>
                     <Input className={Styles.inputbox} variant="border"
                      id="lname"
                      name="lname"
@@ -310,7 +310,7 @@ const AccountSetting = () => {
                         />
                   </div>
                   <div className={Styles.SecBox}>
-                    <Text variant={"mlgText"} strong='strong4'>Phone</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Phone</Text>
                     <Input className={Styles.inputbox} variant="border" 
                     id="phone"
                     name="phone"
@@ -331,7 +331,7 @@ const AccountSetting = () => {
 
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong4'>Address</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Address</Text>
                     <Input className={Styles.inputbox} variant="border"
                     id="address"
                     name="address"
@@ -339,7 +339,7 @@ const AccountSetting = () => {
                     value={address}/>
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong4'>State</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>State</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -358,7 +358,7 @@ const AccountSetting = () => {
                     <Icon onClick={() => setState(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong4'>Number of Employees</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Number of Employees</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -382,7 +382,7 @@ const AccountSetting = () => {
 
                 <div>
                   <div>
-                    <Text variant={"mlgText"} strong='strong4'>Zip Code</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Zip Code</Text>
                     <Input className={Styles.inputbox} variant="border" 
                     id="zipcode"
                     name="zipcode"
@@ -390,7 +390,7 @@ const AccountSetting = () => {
                     value={zipCode}/>
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong4'>Country</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Country</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -408,7 +408,7 @@ const AccountSetting = () => {
                     <Icon onClick={() => setShowData(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text variant={"mlgText"} strong='strong4'>Types of Business</Text>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Types of Business</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -430,7 +430,7 @@ const AccountSetting = () => {
               </div>
               <div className={Styles.nextBtn}>
                 <div>
-                  <Text variant={"mlgText"} strong='strong4'>URL (website)</Text>
+                  <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>URL (website)</Text>
                   <Input className={Styles.inputbox} variant="border" 
                    id="url"
                    name="url"

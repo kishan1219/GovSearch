@@ -1,5 +1,6 @@
 @import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/breakpoints.scss";
 
 .wrapper {
     // background: $white03;
@@ -21,12 +22,14 @@
 
         .manageHead {
             margin-top: 35px;
+         
         }
 
         .mainCard {
             width: 100%;
             max-width: 868px;
             margin-top: 25px;
+            @include tab{width:686px;}
 
 
             .textBox {
@@ -51,7 +54,7 @@
             .btnMain {
                 display: flex;
                 justify-content: space-between;
-                padding: 0px 20px 20px 45px;
+                padding: 0px 20px 20px 39px;
             }
 
             .userManageBox {
@@ -91,7 +94,7 @@
         }
     }
 
-    // @include ScrollBar;
+    @include ScrollBar;
     .scrollBar {
         overflow-y: auto;
 
@@ -105,7 +108,10 @@
 
     .scrollWrapper {
         max-height: calc(95vh - 120px);
-        width: 54%;
+        width: 78%;
+        @include xlmd{width: 89%;}
+        @include xxmd{width: 87%;}
+        @include tab{width: 96%;}
 
     }
 
@@ -116,7 +122,11 @@
             width: 100%;
             max-width: 900px;
             margin-left: 57px;
+            @include tab{width: 610px;}
             // padding: 26px 44px 24px 45px;
+        }
+        .accountText{
+            @include tab{font-size: 11px;}
         }
 
         .profileHead {
@@ -128,6 +138,8 @@
             height: 33px;
             margin-top: 5px;
             font-size: 17px;
+            @include tab{width: 128px;}
+            @include tab{font-size:12px;}
 
         }
 
@@ -192,6 +204,7 @@
                 top: 29px;
                 font-size: 20px;
                 position: absolute;
+                @include tab{right:0;}
             }
 
             .empInput {
@@ -207,6 +220,8 @@
                 list-style: none;
                 text-indent: 1px;
                 text-overflow: '';
+                @include tab{width: 90px;}
+                @include tab{font-size: 11px;}
             }
 
             .typeInput {
@@ -270,23 +285,23 @@
 
     }
 
-    .scrollBar {
-        overflow-y: auto;
-        overflow-x: hidden;
+    // .scrollBar {
+    //     overflow-y: auto;
+    //     overflow-x: hidden;
 
-    }
+    // }
 
-    .scrollBar {
-        &::-webkit-scrollbar-track {
-            background: $white;
-        }
-    }
+    // .scrollBar {
+    //     &::-webkit-scrollbar-track {
+    //         background: $white;
+    //     }
+    // }
 
-    .scrollWrapper {
-        max-height: calc(95vh - 120px);
-        width: 64%;
+    // .scrollWrapper {
+    //     max-height: calc(95vh - 120px);
+    //     width: 64%;
 
-    }
+    // }
 
 
     .nextBtn {
@@ -294,5 +309,7 @@
         justify-content: space-between;
         padding: 0px 18px 26px 45px;
         align-items: center;
+        @include tab{padding-left: 24px;}
+        
     }
 }

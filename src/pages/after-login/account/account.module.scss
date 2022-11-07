@@ -1,17 +1,61 @@
 @import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/breakpoints.scss";
 
 .wrapper {
-    background: $white03;
+  
     min-height: 100vh;
     max-width: 100%;
     @include fonts-poppins;
+    @include xsm{margin-left: 20px;}
+    .imageCard{
+        @include xxsm{ margin-left: 39px !important;}
+        @include msm{ margin-left: 59px;}
+      
+        @include xsm{ margin-left: 59px ;}
+    }
     .suiteHead{
         margin-top: 33px;
-        margin-left: 250px;
+        @include xxsm{margin-left: 0px !important; }
+       
+        @include xsm{margin-left: 16px !important; }
+        @include sm{margin-left: 118px;}
+        @include sm{font-size:25px !important;}
+        @include xxlg{font-size: 22px;}
+
+       
     }
     .MainBox{
         margin-top: 25px;  
+        .identityText{
+            @include xmd{font-size: 14px !important;}
+            @include xlmd{font-size: 16px !important;}
+            
+            }
+        .cardBox {
+            display: flex;
+            padding: 50px 28px 38px 9px;
+           
+        }
+        .contentBox{
+            margin-top: 20px;
+            @include xsm{margin-top: 0px;}
+            @include xsm{text-align: center;}
+        }
+        
+        .insightCard{
+            display: flex;
+            padding: 39px 0px 10px 0px;
+            @include xsm{display: grid;}
+
+        }
+        .accountCard{
+            &:hover {
+                transition: 0.3s;
+               filter: drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.25));
+           }
+        }
+        
     }
     @include ScrollBar;
 
@@ -22,26 +66,94 @@
     }
     .scrollWrapper {
         max-height: calc(80vh - 120px);
-        width: 95%;
+        width: 90%;
+        @include xlg{width: 92%;}
+        @include xxmd{width: 98%;}
+        @include xlmd{width: 95%;}
+
+        @include md{width: 105%;}
+        
+
+
     
     }
     .productHead {
+        
         display: flex;
         align-items: center;
-        margin-left: 673px;
-     
+        max-width: 700px;
+        margin: 0px 0px 0px 355px;
+        justify-content: space-between;
+
+       @include xmd{justify-content: flex-start;}
+      
+        @include xlg{margin-left:460px;}
+        @include xlmd{margin-left:379px;}
+        @include xxmd{margin-left: 351px;}
+        @include md{margin-left: 185px;}
+        @include sm{margin-left: 210px;}
+        @include sm{display: grid;}
+        @include xsm{margin-left:0px;}
+        @include xsm{display: grid;}
+        @include xsm{justify-content: center;}
+      
+       
+        
+
+         
+
+        
+
+      
+        
         .checboxMain{
-           margin-left: 200px;
+        //    margin-left: 200px;
             margin-top: 4px;
-        }
-        .prodHead{
-            font-size: 36px;
+            @include sm{margin: 9px 0px 0px 48px;}
+            @include xmd{margin-left:35px;}
+            @include xxsm{margin-left:0px;}
+
            
         }
+        .prodHead{
+          
+            @include xsm{font-size: 25px !important;}
+            @include xxsm{font-size: 20px !important;}
+            @include sm{font-size: 30px;}
+            @include xmd{font-size: 28px;}
+            @include xlmd{font-size: 28px;}
+            @include xxsm{font-size: 28px;}
+
+           
+            
+            
+            
+           
+          
+
+           
+        }
+        
     }
 
     .inteliMainBox {
-        margin-left: 232px;
+       margin: 20px 15px;
+        .comptetiveCard{
+            display: flex;
+           
+            padding: 39px 0px 10px 0px;
+            @include xsm{display: grid;}
+            .contentBox{
+                margin-top: 20px;
+                @include xsm{margin-top: 0px;}
+            }
+        }
+        .accountCard{
+            &:hover {
+                transition: 0.3s;
+               filter: drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.25));
+           }
+        }
 
         .growthtHead {
               margin-top: 30px;
@@ -51,33 +163,53 @@
 
         .inteliText {
             display: flex;
+            @include sm{display: grid;}
+           
 
             // margin-top: 40px;
 
             .rightCard {
                 margin-left: 48px;
+                @include sm{ margin-left: 0px;}
             }
 
             .mainCard {
-                width: 100%;
-                max-width: 600px;
-                background: $white;
+            //     width: 100%;
+            //     max-width: 600px;
+            //     background: $white;
+            //     @include xlmd{max-width: 542px;}
+            //     @include xmd{max-width: 400px;}
+            //     @include md{max-width: 389px;}
+            //     &:hover {
+            //         transition: 0.3s;
+            //        filter: drop-shadow(0px 20px 25px rgba(0, 0, 0, 0.25));
+            //    }
 
-                .cardBox {
-                    display: flex;
-                    padding: 50px 28px 38px 9px;
-                }
+               
 
                 .contentBox {
                     margin-left: 25px;
                     margin-top: 22px;
+                    
+                  
+                    .identityText{
+                        margin-top: 12px;
+                      
+
+                    }
+
+                    .accountHead{
+                        font-size: 28px;
+                        @include xmd{font-size: 16px;}
+                        @include sm{font-size: 25px;}
+                    }
                    
                     .manageHead{
-                        margin-top: 8px;
+                        margin-top: 13px;
                     }
 
                     .identityText {
-                        margin-top: 20px;
+                        margin-top: 5px;
                     }
                 }
             }

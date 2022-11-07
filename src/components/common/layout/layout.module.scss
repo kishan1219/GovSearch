@@ -22,6 +22,14 @@
     .mainContainer {
         margin-left: 150px;
         margin-right: 45px;
+        @include xsm{margin-left: 0px;}
+        @include mo{margin-left: 0px;}
+        @include msm{margin-left: 0px;}
+        @include sm{margin-left: 0px;}
+        
+
+
+
 
     }
 }
