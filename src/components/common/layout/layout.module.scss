@@ -11,6 +11,7 @@
     @include mo {
         padding:0;
     }
+   
     .header {
         text-align: center;
     }
@@ -41,12 +42,7 @@
             margin:0px 5px;
         }
         
-       
-       
-       
-
-       
-    }
+       }
 }
 
 @include ScrollBar;

@@ -123,11 +123,12 @@
             min-width: 80px;
             font-size: $font-lg;
         }
+        &:hover {
+            background-color: $primary04;
+        }
     }
 
-    &:hover {
-        background-color: $primary04;
-    }
+    
 }
 
 .selectList {
