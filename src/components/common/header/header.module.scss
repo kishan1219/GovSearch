@@ -52,6 +52,9 @@
         @include md {
             flex-wrap: nowrap;
         }
+        @include tab {
+            flex-wrap: wrap;
+        }
         .headerLeft {
             flex: 0 0 fit-content;
             max-width: 339px;
