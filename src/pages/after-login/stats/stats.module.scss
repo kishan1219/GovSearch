@@ -54,6 +54,10 @@
         }
 
         @include mo {
+            margin-left: 130px;
+
+        }
+        @include xsm {
             margin-left: 90px;
 
         }
@@ -68,7 +72,14 @@
 
 
     }
-
+    .cardStyles{
+        @include tab {
+            padding-left: 0px;
+        }
+        @include mo {
+            padding-left: 32px;
+        }
+    }
     .statsCard {
         max-width: 549px;
         min-height: 452px;
@@ -76,40 +87,30 @@
         border-radius: 10px;
         padding: 40px 30px;
 
-        @include xmd {
+        @include xlmd {
             min-height: 250px;
             padding: 15px 30px;
         }
-
         @include md {
-            min-width: 270px;
+            max-width: 270px;
             min-height: 200px;
             padding: 0px 5px 0px 0px;
         }
 
         @include tab {
-            min-width: 230px;
+            max-width: 230px;
             min-height: 120px;
             padding: 0px;
-        }
-
-        @include iPad {
-            min-width: 190px;
-            min-height: 120px;
-            padding: 0px;
-            // margin-right: 10px;
         }
 
         @include mo {
-            min-width: 180px;
+            max-width: 350px;
             margin: 0 10px;
         }
-
-        @include msm {
-            padding: 10px;
-            margin: 0px 10px 0px 0px;
+        @include xsm {
+            max-width: 295px;
+            margin: 0 10px;
         }
-
 
         .statsChart {
             margin-top: 80px;
@@ -122,15 +123,11 @@
                 margin-top: 30px;
             }
 
-            @include iPad {
-                margin-top: 40px;
-            }
-
             @include tab {
                 margin-top: 50px;
             }
 
-            @include msm {
+            @include mo {
                 margin-top: 30px;
             }
         }

@@ -6,6 +6,9 @@
     gap: 25px;
     align-items: center;
 
+    @include md {
+        gap: 10px;
+    }
     @include mo {
         margin-left: 10px;
         gap: 0px;
@@ -16,6 +19,9 @@
         min-width: 290px;
         max-width: 100%;
 
+        @include md {
+            min-width: 120px;
+        }
         @include mo {
             margin: 0px 5px 0px 5px;
             min-width: 100px;
@@ -34,9 +40,11 @@
             &::placeholder {
                 color: $white02;
             }
+
             @include sm {
                 margin-right: 15px;
             }
+
             @include mo {
                 border-radius: 12px;
             }
@@ -57,7 +65,7 @@
 
     .allBtn {
         background: $white02;
-        width: 120px;
+        min-width: 120px;
         text-align: center;
         color: $black;
         height: 48px;
@@ -67,6 +75,11 @@
         font-size: 16px;
         border: none;
         outline: none;
+
+        @include md {
+            min-width: 70px;
+            margin-left: 5px;
+        }
 
         @include mo {
             margin-left: 5px;
@@ -109,6 +122,9 @@
         @include sm {
             margin-right: 15px;
         }
+        @include md {
+            margin-right: 10px;
+        }
 
 
     }
@@ -123,12 +139,13 @@
             min-width: 80px;
             font-size: $font-lg;
         }
+
         &:hover {
             background-color: $primary04;
         }
     }
 
-    
+
 }
 
 .selectList {

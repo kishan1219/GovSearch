@@ -21,9 +21,14 @@
     }
 
     @include tab {
-        margin-left: unset;
+        padding-left: 10px;
+        margin-left: 0px;
         margin-right: unset;
         width: 100%;
+    }
+
+    @include mo {
+        margin-left: unset;
     }
 
     &.sm {
@@ -32,6 +37,9 @@
     }
 
     .headerContent {
+        @include md {
+            flex-wrap: nowrap;
+        }
         .headerLeft {
             flex: 0 0 fit-content;
             max-width: 339px;
@@ -73,10 +81,16 @@
 
             @include mo {
                 order: 1;
+                margin-left: 5px !important;
             }
+
             @include sm {
                 order: 1;
                 margin-left: 10px;
+            }
+
+            @include tab {
+                order: 1;
             }
         }
 
@@ -84,9 +98,14 @@
             @include mo {
                 order: 2;
             }
+
             @include sm {
                 order: 1;
                 margin-left: 10px;
+            }
+
+            @include tab {
+                order: 2;
             }
         }
 
@@ -101,7 +120,9 @@
             justify-content: flex-end;
             flex: 0 0 0%;
             max-width: 280px;
-
+            @include md {
+                max-width: 165px;
+            }
 
             .headerRightH {
                 color: $gray;
@@ -136,12 +157,18 @@
                 align-items: center;
 
                 @include mo {
+                    margin-right: 10x;
+                }
+
+                @include sm {
                     margin-right: 10px;
                 }
-            @include sm {
-                margin-right: 10px;
-            }
-                
+
+                @include tab {
+                    margin-right: 20px;
+
+                }
+
             }
 
             .headerNotifications {

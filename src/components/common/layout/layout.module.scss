@@ -8,6 +8,9 @@
     min-height: 100vh;
     padding: 40px 0 0;
     position: relative;
+    @include md {
+        padding: 10px 0px 0px;
+    }
     @include mo {
         padding:0;
     }
@@ -35,8 +38,8 @@
         @include xmd {
             margin: 0px 45px 0px 120px;
         }
-        @include sm {
-            margin: 0px 45px 0px 85px;
+        @include tab {
+            margin: 0px 45px 0px 90px;
         
         }
     }

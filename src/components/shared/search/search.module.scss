@@ -2,14 +2,23 @@
 @import "../../../assets/scss/mixins.scss";
 
 .mainSearch {
-  display: flex;
   text-align: center;
-  justify-content: center;
   margin-right: 100px;
   @include fonts-poppins;
-@include mo {
-  margin-right: 0px;
-}
+  @include flex;
+
+  @include xlmd {
+    margin-right: 243px;
+  }
+
+  @include md {
+    margin-right: 300px;
+  }
+
+  @include mo {
+    margin-right: 12px;
+  }
+
   .head {
     position: relative;
 
@@ -21,6 +30,10 @@
         font-size: 100px;
         letter-spacing: -1.5px;
 
+        @include tab {
+          font-size: 70px;
+        }
+
         @include mo {
           font-size: 60px;
         }
@@ -28,16 +41,40 @@
     }
 
     .btnSearch {
+      top: 145px;
       position: absolute;
       left: 270px;
+
+      @include xlmd {
+        left: 280px;
+      }
+
+      @include xmd {
+        left: 260px;
+      }
+
+      @include tab {
+        left: 180px;
+      }
+
+      @include mo {
+        left: 140px;
+      }
 
       .error {
         margin-bottom: 10px;
         color: $red;
       }
 
+      .solidSearch {
+        @include mo {
+          min-width: 230px;
+        }
+      }
+
       .solidSearch:hover {
         background-color: $primary04;
+
       }
     }
 
@@ -49,13 +86,15 @@
       outline: none;
       border: none;
 
-      // @include mo {
-      //   flex-wrap: wrap;
-      // }
+      @include mo {
+        flex-wrap: wrap;
+      }
+      @include md {
+        gap: 10px;
+      }
 
       .transbton {
         @include mo {
-          // order: 3;
           display: none;
         }
 
@@ -70,8 +109,12 @@
         min-width: 575px;
         width: 100%;
 
+        @include tab {
+          min-width: 400px;
+        }
+
         @include mo {
-          max-width: 338px !important;
+          min-width: 338px;
           order: 1;
         }
 
