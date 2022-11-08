@@ -1,18 +1,210 @@
 @import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/breakpoints.scss";
 
 .wrapper {
-    background: $white03;
+
     min-height: 100vh;
     max-width: 100%;
     @include fonts-poppins;
-    .suiteHead{
+   
+
+    @include xxlg {
+        padding: 30px;
+
+    }
+
+    @include md {
+        margin-left: 66px;
+
+    }
+
+    @include iPad {
+        margin-left: 0px;
+
+    }
+
+    @include mo {
+        margin-left: 0px;
+
+    }
+
+    @include xsm {
+        margin-left: 0px;
+
+    }
+
+    .suiteHead {
         margin-top: 33px;
-        margin-left: 250px;
+
+        @include xxlg {
+            margin-left: 30px;
+            font-size: 22px;
+
+        }
+
+        @include xlmd {
+            margin-left: 30px;
+            font-size: 28px;
+        }
+
+        @include xmd {
+            margin-left: 30px;
+            font-size: 26px;
+        }
+
+        @include md {
+            margin-left: 30px;
+            font-size: 22px;
+        }
+
+        @include sm {
+            margin-left: 63px;
+            font-size: 21px;
+        }
+
+        @include xsm {
+            margin-left: 16px;
+            font-size: 18px;
+        }
     }
-    .MainBox{
-        margin-top: 25px;  
+
+    .imageCard {
+        @include xxsm {
+            text-align: center;
+        }
+
+        @include mo{
+            text-align: center;
+        }
+
+        @include xsm {
+            text-align: center;
+        }
+       
     }
+
+    .MainBox {
+        margin-top: 25px;
+
+        .growthHead {
+            font-size: 28px;
+            margin: 4px 0px 24px 20px;
+
+            @include lg {
+
+                font-size: 22px;
+            }
+
+            @include xlmd {
+
+                font-size: 28px;
+            }
+
+            @include xmd {
+
+                font-size: 26px;
+            }
+
+
+            @include md {
+
+                font-size: 22px;
+            }
+
+            @include iPad {
+                margin-left: 47px;
+                font-size: 21px;
+            }
+
+            @include xsm {
+
+                font-size: 18px;
+                margin-left: 5px;
+            }
+        }
+
+        .identityText {
+            margin-top: 16px;
+
+            @include xxlg {
+                font-size: 16px;
+
+            }
+
+            @include xlmd {
+                font-size: 14px;
+                max-width: 316px;
+            }
+
+            @include xmd {
+                font-size: 14px;
+            }
+
+            @include md {
+                font-size: 17px;
+            }
+
+            @include sm {
+                font-size: 14px;
+            }
+            @include mo {
+                font-size: 12px;
+            }
+
+            @include xsm {
+                font-size: 11px;
+            }
+        }
+
+        .cardBox {
+            display: flex;
+            padding: 50px 28px 38px 9px;
+
+        }
+
+        .contentBox {
+            margin-top: 20px;
+            @include mo {
+              text-align: center;
+            }
+            @include xsm {
+                margin-top: 0px;
+                text-align: center;
+            }
+        }
+
+        .insightCard {
+            display: flex;
+            padding: 39px 0px 10px 0px;
+            @include mo {
+                display: grid;
+            }
+            @include xsm {
+                display: grid;
+            }
+
+
+        }
+
+        .accountCard {
+            max-width: 504px;
+
+           
+            @include md {
+                max-width: 600px;
+            }
+
+            &:hover {
+                transition: 0.3s;
+                filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
+               
+                
+            }
+        }
+
+    }
+
     @include ScrollBar;
 
     .scrollBar {
@@ -20,64 +212,186 @@
             background: $white;
         }
     }
+
     .scrollWrapper {
         max-height: calc(80vh - 120px);
-        width: 95%;
-    
+        width: 90%;
+
+       
+
+       
+      
+
+        @include xlmd {
+            width: 100%;
+        }
+
+        @include xmd {
+            width: 100%;
+        }
+
+        @include md {
+            max-height: calc(93vh - 120px);
+            width: 105%;
+
+        }
+
+        @include xsm {
+            width: 100%;
+        }
     }
+
     .productHead {
         display: flex;
         align-items: center;
-        margin-left: 673px;
-     
-        .checboxMain{
-           margin-left: 200px;
-            margin-top: 4px;
+        max-width: 1000px;
+        margin: 0px auto;
+
+        
+        @include iPad{
+            display: grid;
+            gap:8px;
         }
-        .prodHead{
-            font-size: 36px;
-           
+        @include mo{
+            display: grid;
+            gap:8px;
         }
+
+
+        @include xsm {
+            margin-left: 0px;
+            display: grid;
+            gap: 7px;
+            justify-content: center;
+        }
+
+
+        .checboxMain {
+
+          margin-left: auto;
+
+          @include iPad{
+            margin:0px auto;
+        }
+
+
+        }
+
+        .prodHead {
+            width: 600px;
+    text-align: right;
+            
+
+            @include xlmd {
+                margin-left: 64px;
+            }
+            @include md {
+                font-size: 28px;
+                width:438px;
+            }
+            @include iPad{
+                font-size: 26px;
+                margin-left: 0px;
+               
+            }
+            @include mo{
+                font-size: 24px;
+                margin-left: 0px;
+                text-align:center;
+                max-width: 366px;
+               
+            }
+
+            
+
+            @include xsm {
+                font-size: 20px;
+                max-width: 366px;
+            }
+        }
+
     }
 
     .inteliMainBox {
-        margin-left: 232px;
+        margin: 20px 15px;
 
-        .growthtHead {
-              margin-top: 30px;
-    margin-left: 15px;
-    margin-bottom: 30px;
+        .accountHead {
+
+            @include xxlg {
+                font-size: 32px;
+            }
+
+            @include lg {
+                font-size: 26px;
+            }
+
+            @include xlmd {
+                font-size: 26px;
+            }
+
+            @include xmd {
+                font-size: 22px;
+            }
+
+            @include md {
+                font-size: 22px;
+            }
+
+
+            @include sm {
+                font-size: 19px;
+            }
+
+
+            @include xsm {
+                font-size: 16px;
+            }
+        }
+
+        .comptetiveCard {
+            display: flex;
+            padding: 39px 0px 10px 0px;
+            @include mo {
+                display: grid;
+            }
+            @include xsm {
+                display: grid;
+            }
+          
+
+            .contentBox {
+                margin-top: 20px;
+
+                @include xsm {
+                    margin-top: 0px;
+                }
+
+            }
+
         }
 
         .inteliText {
             display: flex;
 
-            // margin-top: 40px;
+            @include sm {
+                display: grid;
+            }
 
             .rightCard {
                 margin-left: 48px;
+
+                @include sm {
+                    margin-left: 0px;
+                }
             }
 
             .mainCard {
-                width: 100%;
-                max-width: 600px;
-                background: $white;
-
-                .cardBox {
-                    display: flex;
-                    padding: 50px 28px 38px 9px;
-                }
-
                 .contentBox {
                     margin-left: 25px;
                     margin-top: 22px;
-                   
-                    .manageHead{
-                        margin-top: 8px;
-                    }
 
-                    .identityText {
-                        margin-top: 20px;
+                    .manageHead {
+                        margin-top: 13px;
                     }
                 }
             }

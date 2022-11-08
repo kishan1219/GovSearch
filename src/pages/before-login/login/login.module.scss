@@ -1,5 +1,6 @@
 @import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/breakpoints.scss";
 
 .container {
     width: 100%;
@@ -53,22 +54,42 @@
 
         .cardBox {
             display: flex;
-            margin-top: 60px;
-            margin-left: 80px;
+             margin-top: 198px;
+             @include xxlg{justify-content: space-around;}
+            
 
             .cardOne {
+                width: 100%;
+                max-width: 665px;
+                @include xxlg{max-width: 827px;}
+                @include xmd{ margin-left: 30px;}
+
                 .cardMainBox {
-                    margin-top: 24px;
+                    width: 100%;
+                    max-width: 630px;
+                    margin-top: 25px;
+                    margin-left: 40px;
+                    @include xxlg{max-width: 812px;}
+                    @include xlmd{max-width: 630px;}
+                    @include xmd{max-width: 597px;}
+
+                    .publinCard {
+                        max-width: 562px;
+                    }
 
                     .checboxMain {
-                        margin-top: 40px;
-                        margin-left: 30px;
                         display: flex;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        margin-left: 20px;
+                        .instructionText{
+                            @include xlmd{font-size: 11px;}
+                        }
 
                     }
 
                     .buttonMain {
-                        margin-top: 24px;
+                        // margin-top: 24px;
                         text-align: right;
                     }
 
@@ -83,9 +104,7 @@
                     }
                 }
 
-                .accountHead {
-                    margin-top: 16px;
-                }
+               
 
                 .accountHead {
                     text-align: left;
@@ -95,6 +114,7 @@
                 .inputHolder {
                     display: flex;
                     padding: 23px 24px;
+                    @include xmd{ padding: 23px 15px;}
 
                     .SecondInput {
                         margin-left: 30px;
@@ -106,25 +126,46 @@
                         gap: 24px;
 
                         .Infoinput {
-                            width: 380px;
+                            width: 357px;
+                           
+
+                            @include xlmd {
+                                width: 280px;
+                            }
+
+                            @include xlmd {
+                                height: 40px;
+                            }
+                            @include xmd{
+                                width: 270px;
+                            }
+
                         }
 
                         .empInput {
                             width: 282px;
                             background: $white03;
                             font-size: 18px;
+                            height: 55px;
                             border-radius: 10px;
                             padding: 14px;
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            list-style: none;
                             text-indent: 1px;
                             text-overflow: '';
+
+                            @include xlmd {
+                                width: 213px;
+                            }
+
+                            @include xlmd {
+                                height: 40px;
+                            }
+
                         }
 
+
                         .empInputTwo {
-                            width: 45px;
-                            margin-left: 29px;
+                            width: 286px;
+                            // margin-left: 29px;
                             background: $white03;
                             outline: none;
                             overflow: hidden;
@@ -135,17 +176,40 @@
                             text-align: left;
                             display: flex;
                             position: relative;
-                            .empInputTwo{
-                                width: 20px;
-                                height:20px;
+
+
+
+                            // #demo-simple-select-helper-label{
+                            //     border:none;
+                            // }
+
+                            .empInputTwo {
+                                // width: 20px;
+                                height: 55px;
+
+                                .menuItem {
+                                    margin-left: 100px;
+                                }
                             }
-                            
+
 
                             .iconDown {
-                                right: 18px;
-                                top: 11px;
+                                right: 0px;
+                                top: 0px;
                                 color: $gray07;
                                 position: absolute;
+                                background: $white03;
+                                border-radius: 12px;
+                                height: 42px;
+                                padding: 3px 9px 0px 6px;
+                                @include xlmd{font-size: 27px;}
+                                @include xlmd{padding:8px 9px 0px 9px;}
+                                @include xxlg{padding:11px 9px 0px 9px;height:54px;}
+                                @include xmd{padding:11px 9px 0px 9px;}
+                                @include xxlg{height:54px;}
+                                @include xlmd{height: 40px;}
+                                @include xlmd{padding:8px 7px 0px 7px}
+                                
                             }
                         }
 
@@ -155,18 +219,19 @@
             }
 
             .secondMainCard {
-                margin-top: 63px;
-                margin-left: 105px;
+             margin-left: 79px;
+             margin-top: 48px;
+             @include xmd{ margin-left: 35px;}
+             @include xxlg{margin-left: 0px;}
 
-                .cartTwo {
-                    width: 708px;
-                    height: 519px;
-                    margin-top: 26px;
+             .accountHead{
+                margin-top: 20px;
+             }
+                
 
-                    .imgBox {
-                        margin-top: 5px;
-                    }
-                }
+                
+                    
+            
             }
 
         }
@@ -315,7 +380,7 @@
 
             .inputMain {
                 width: 408px;
-                 margin-top: 20px;
+                margin-top: 20px;
 
                 .passText {
                     margin-top: 25px;

@@ -1,11 +1,13 @@
 @import '../../../assets/scss/mixins.scss';
 @import '../../../assets/scss/styles.scss';
+@import "../../../assets/scss/breakpoints.scss";
 
 .header {
     position: relative;
     margin-left: 150px;
     margin-right: 45px;
     margin-bottom: 80px;
+    
 
     &.mlmd {
         margin-left: 95px;
@@ -35,6 +37,16 @@
         width: 100%;
         max-width: 600px;
     }
+    @include xsm {
+       padding:20px 20px 0px 20px;
+      
+    }
+    @include iPad {
+        padding:20px 20px 0px 20px;
+        
+     }
+   
+  
 
     .headerContent {
         @include md {
@@ -112,7 +124,11 @@
         .headerLogo {
             max-width: 337px;
             width: 100%;
-        }
+            @include mo{ max-width: 206px;}
+            @include xsm{ max-width: 190px;}
+           
+
+        } 
 
         .headerRight {
             display: flex;

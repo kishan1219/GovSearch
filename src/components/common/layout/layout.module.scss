@@ -29,20 +29,26 @@
     .mainContainer {
         margin-left: 163px;
         margin-right: 45px;
-        @include mo {
-            margin:0px 5px !important;
+        @include xmd {
+            margin: 0px 45px 0px 120px;
         }
         @include md {
             margin: 0px 45px 0px 100px;
         }
-        @include xmd {
-            margin: 0px 45px 0px 120px;
-        }
         @include tab {
             margin: 0px 45px 0px 90px;
-        
         }
-    }
+        @include sm {
+            margin-left:0px ;
+        }
+        @include iPad {
+            margin: 0px 45px 0px 67px;
+        }
+        @include mo {
+            margin:0px 5px;
+        }
+        
+       }
 }
 
 @include ScrollBar;
