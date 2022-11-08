@@ -1,0 +1,124 @@
+@import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/styles.scss";
+@import "../../../assets/scss/variables.scss";
+
+.container {
+    user-select: none;
+    @include fonts-poppins;
+
+    .heading {
+        font-size: $font-mdbig;
+        margin: 80px 0px 30px 0px;
+    }
+
+    .tableContainer {
+        width: 100%;
+        max-width: 1300px;
+
+        @include xmd {
+            min-width: 800px;
+            overflow-x: unset;
+        }
+
+        @include md {
+            min-width: 700px;
+        }
+
+        .border {
+            border: none;
+        }
+
+        .tableHead {
+            display: flex;
+
+            .border {
+                width: 100%;
+
+                &:first-child {
+                    max-width: 30%;
+                }
+
+                &:last-child {
+                    max-width: 68%;
+                }
+            }
+        }
+
+        @include ScrollBar;
+
+        .scrollWrapper {
+            @include xmd {
+                max-height: calc(50vh - 135px);
+            }
+            @include md {
+                max-height: calc(70vh - 135px);
+            }
+        }
+
+        .tableBody {
+            height: 300px;
+            display: block;
+            padding-right: 33px;
+            border-bottom: 0;
+
+            .rowBgMain {
+                background: $white;
+                border-radius: 10px;
+                display: block;
+                border: none;
+                margin-bottom: 12px;
+                position: relative;
+
+                .subjectMain {
+                    min-width: 426px;
+                    border: none;
+
+                    @include xmd {
+                        min-width: 340px;
+                    }
+
+                    @include md {
+                        min-width: 285px;
+                    }
+
+                    cursor: pointer;
+
+                    & :hover {
+                        font-weight: 500;
+                        text-decoration: underline;
+                    }
+                }
+
+                .descriptionMain {
+                    min-width: 548px;
+
+                    @include xmd {
+                        min-width: 300px;
+                    }
+
+                    @include md {
+                        min-width: 400px;
+                    }
+                }
+
+                .border {
+                    width: 100%;
+                }
+
+                .deleteText {
+                    cursor: pointer;
+                    z-index: 1;
+                    position: absolute;
+                    top: 70px;
+                    right: 10px;
+                    background: $white;
+                    min-width: 250px;
+                    padding: 10px;
+                    text-align: right;
+                    border: none;
+                }
+            }
+        }
+    }
+
+}

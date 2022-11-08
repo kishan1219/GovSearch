@@ -6,10 +6,10 @@ import Header from '../header';
 
 
 
-const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal }) => {
+const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal,isGovSearchProfessional }) => {
     return (
         <div className={`${Styles.layoutMain} ${Styles.scrollBar} ${Styles.scrollWrapper}`} >
-            {isHeader && <Header isSearch={isSearch} isFederal={isFederal}/>}
+            {isHeader && <Header isSearch={isSearch} isFederal={isFederal} isGovSearchProfessional={isGovSearchProfessional}/>}
             {isTechnomile && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />}
             {isAccount && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />}
             {isAccountSetting && <Header isSearch={true} isRightNav={true} isFederal={false} isGovSearchProfessional={true} />}
@@ -26,7 +26,8 @@ Layout.defaultProps = {
     isTechnomile: false,
     isAccount: false,
     isAccountSetting: false,
-    isSidebar: true
+    isSidebar: true,
+    isGovSearchProfessional:false,
 }
 
 Layout.protoType = {
@@ -37,7 +38,7 @@ Layout.protoType = {
     isSidebar: PropTypes.bool,
     children: PropTypes.any,
     layoutClass: PropTypes.string,
-
+    isGovSearchProfessional: PropTypes.bool,
 }
 
 export default Layout;

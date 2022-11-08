@@ -7,6 +7,9 @@
   justify-content: center;
   margin-right: 100px;
   @include fonts-poppins;
+@include mo {
+  margin-right: 0px;
+}
   .head {
     position: relative;
 
@@ -17,6 +20,10 @@
       .headingGov {
         font-size: 100px;
         letter-spacing: -1.5px;
+
+        @include mo {
+          font-size: 60px;
+        }
       }
     }
 
@@ -42,15 +49,31 @@
       outline: none;
       border: none;
 
-      .transbton:hover {
-        background-color: $gray;
-        color: $white;
+      // @include mo {
+      //   flex-wrap: wrap;
+      // }
+
+      .transbton {
+        @include mo {
+          // order: 3;
+          display: none;
+        }
+
+        .transbton:hover {
+          background-color: $gray;
+          color: $white;
+        }
       }
 
       .inSearch {
         position: relative;
         min-width: 575px;
         width: 100%;
+
+        @include mo {
+          max-width: 338px !important;
+          order: 1;
+        }
 
         .inputMain {
           height: 52px;
@@ -89,6 +112,10 @@
           border: none;
           outline: none;
           padding: 9px 0 9px !important;
+        }
+
+        @include mo {
+          order: 2;
         }
       }
 

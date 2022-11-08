@@ -45,7 +45,7 @@ const Header = ({
             />
           )}
         </div>
-        {isSearch && <SearchBar openMenuBar={openMenuBar} />}
+        {isSearch && <SearchBar searchClassName={Styles.searchContainer} openMenuBar={openMenuBar} />}
         <div className={Styles.headerRight}>
           {isFederal && (
             <Tooltip title="Currently, Click event is not developed">
@@ -80,7 +80,7 @@ const Header = ({
             </Text>
           )}
           {isRightNav && (
-            <>
+            <div className={Styles.RightNavMain}>
               <div className={Styles.headerNotifications}>
                 <Icon
                   type={"notification"}
@@ -116,7 +116,7 @@ const Header = ({
                   />
                 </div>
               </Tooltip>
-            </>
+            </div>
           )}
         </div>
       </div>

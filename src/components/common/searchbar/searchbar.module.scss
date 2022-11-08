@@ -1,23 +1,49 @@
 @import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/breakpoints.scss';
 
 .search {
     display: flex;
     gap: 25px;
     align-items: center;
 
+    @include mo {
+        margin-left: 10px;
+        gap: 0px;
+    }
+
     .mainIco {
         position: relative;
         min-width: 290px;
         max-width: 100%;
+
+        @include mo {
+            margin: 0px 5px 0px 5px;
+            min-width: 100px;
+        }
+
+        @include msm {
+            min-width: 60px;
+        }
 
         .inputcla {
             height: 49px;
             border-radius: 5px;
             padding: 0px 40px 0px 10px;
             background-color: $white;
-             &::placeholder {
-            color: $white02;
-          }
+
+            &::placeholder {
+                color: $white02;
+            }
+            @include sm {
+                margin-right: 15px;
+            }
+            @include mo {
+                border-radius: 12px;
+            }
+
+            @include msm {
+                max-height: 45px;
+            }
         }
 
         .rightIcon {
@@ -41,6 +67,16 @@
         font-size: 16px;
         border: none;
         outline: none;
+
+        @include mo {
+            margin-left: 5px;
+            min-width: 70px;
+            max-height: 40px;
+        }
+
+        @include msm {
+            min-width: 50px;
+        }
     }
 
     svg {
@@ -61,9 +97,35 @@
         text-decoration-line: underline;
         color: $gray;
         cursor: pointer;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        @include mo {
+            display: none;
+        }
+
+        @include sm {
+            margin-right: 15px;
+        }
+
+
     }
 
-    .searcbutt:hover {
+    .searchButton {
+        @include mo {
+            min-width: 100px;
+            margin-right: 3px;
+        }
+
+        @include msm {
+            min-width: 80px;
+            font-size: $font-lg;
+        }
+    }
+
+    &:hover {
         background-color: $primary04;
     }
 }

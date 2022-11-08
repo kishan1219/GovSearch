@@ -51,6 +51,11 @@ span{
     line-height: 36px;
     @include textStyling;
 }
+.xllgText {
+    font-size: $font-xllg;
+    line-height: 30px;
+    @include textStyling;
+}
 .lgIconText {
     font-size: $font-lgIcon;
     line-height: 33px;

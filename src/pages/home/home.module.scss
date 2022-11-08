@@ -6,6 +6,9 @@
 .searchMain {
     margin-left: 300px;
     margin-bottom: 120px;
+    @include mo {
+        margin-left: 30px;
+    }
 }
 
 .colMd4 {

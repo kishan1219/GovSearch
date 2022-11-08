@@ -8,6 +8,21 @@
     min-height: 100vh;
     z-index: 1;
     top: 145px;
+    
+    @include tab {
+        top: 270px;
+    }
+
+    @include sm {
+        top: 280px
+    }
+
+    @include iPad {
+        top: 280px
+    }
+    @include mo {
+        top: 220px;
+    }
 
     .menu {
         display: grid;
@@ -17,6 +32,14 @@
         background: $primary;
         border-radius: 0px 18px 18px 0px;
         min-height: 500px;
+
+        @include md {
+            min-height: 250px;
+        } 
+        @include tab {
+            min-height: 300px;
+        }
+
 
         & li {
             cursor: pointer;
@@ -30,9 +53,22 @@
 
     .sidebarFooter {
         margin-top: 100px;
-        
+
         @include xxmd {
-            margin-top: 20px;
+            margin-top: 30px;
+        }
+
+        @include sm {
+            margin-top: 10px;
+        }
+
+        i {
+            @include tab {
+                margin-left: 25px;
+            }
+        }
+        @include mo {
+            margin-top: 0px;
         }
 
     }
@@ -47,7 +83,9 @@
 
         @include tab {
             padding-top: 15px;
+            min-height: 40vh;
         }
+
 
         & input {
             background: $white;
@@ -108,9 +146,11 @@
                 right: 10px;
             }
         }
-        .toggleSwitch{
+
+        .toggleSwitch {
             margin: 0px;
         }
+
         .textBoldMain {
             max-width: 277px;
         }
@@ -118,6 +158,14 @@
 
     .scrollWrapper {
         max-height: calc(80vh - 230px);
+
+        @include tab {
+            max-height: calc(40vh - 230px);
+        }
+
+        @include sm {
+            min-height: 35vh;
+        }
     }
 
     .scrollWrapper1 {
@@ -133,5 +181,11 @@
 
     .primarySwitchColor {
         color: $white;
+    }
+
+    .sidebarMainFooter div {
+        @include tab {
+            margin-top: 20px;
+        }
     }
 }

@@ -1,5 +1,6 @@
 @import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/breakpoints.scss";
 
 .layoutMain {
     background: $white01;
@@ -7,7 +8,9 @@
     min-height: 100vh;
     padding: 40px 0 0;
     position: relative;
-
+    @include mo {
+        padding:0;
+    }
     .header {
         text-align: center;
     }
@@ -20,17 +23,29 @@
     }
 
     .mainContainer {
-        margin-left: 150px;
+        margin-left: 163px;
         margin-right: 45px;
-        @include xsm{margin-left: 0px;}
-        @include mo{margin-left: 0px;}
-        @include msm{margin-left: 0px;}
-        @include sm{margin-left: 0px;}
+        @include xmd {
+            margin: 0px 45px 0px 120px;
+        }
+        @include md {
+            margin: 0px 45px 0px 100px;
+        }
+        @include sm {
+            margin-left:0px ;
+        }
+        @include iPad {
+            margin: 0px 45px 0px 67px;
+        }
+        @include mo {
+            margin:0px 5px;
+        }
         
+       
+       
+       
 
-
-
-
+       
     }
 }
 
