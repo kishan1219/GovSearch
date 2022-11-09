@@ -24,7 +24,7 @@ const Account = () => {
                 <div className={`${Styles.MainBox} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
                     <div className={Styles.inteliMainBox}>
                         <Grid container spacing={4}>
-                            <Grid item lg={6} sm={12} xs={12}>
+                            <Grid item lg={6} sm={12} md={6} xs={12}>
                                 <Card className={Styles.accountCard} >
                                     <div className={Styles.comptetiveCard} >
                                         <div className={Styles.imageCard}>
@@ -43,7 +43,7 @@ const Account = () => {
 
 
 
-                            <Grid item lg={6} sm={12} xs={12} >
+                            <Grid item lg={6} sm={12} md={6} xs={12} >
 
                                 <Card className={Styles.accountCard} >
 
@@ -69,7 +69,7 @@ const Account = () => {
                     <div className={Styles.inteliMainBox}>
                         <Heading className={Styles.growthHead} color={"secondary"} >Growth Suite</Heading>
                         <Grid container spacing={4}>
-                            <Grid item lg={6} sm={12} xs={12}>
+                            <Grid item lg={6} sm={12} md={6} xs={12}>
                                 <Card className={Styles.accountCard} >
 
                                     <div className={Styles.insightCard} >
@@ -87,7 +87,7 @@ const Account = () => {
                                     </div>
                                 </Card>
                             </Grid>
-                            <Grid item lg={6} sm={12} xs={12} >
+                            <Grid item lg={6} sm={12} md={6} xs={12} >
                                 <div>
                                     <Card className={Styles.accountCard} >
 
