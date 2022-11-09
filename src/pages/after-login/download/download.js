@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Heading, Layout, Text, Icon } from "../../../components/shared";
 import Styles from "./download.module.scss";
 import Table from "@mui/material/Table";
