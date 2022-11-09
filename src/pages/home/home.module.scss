@@ -1,13 +1,26 @@
-@import "../../assets/scss/variables.scss";
 @import "../../assets/scss/mixins.scss";
-@import "../../assets/scss/styles.scss";
-@import "../../assets/scss/breakpoints.scss";
 
 .searchMain {
     margin-left: 300px;
     margin-bottom: 120px;
+
+    @include xlmd {
+        margin-left: 180px;
+    }
+    @include md{
+        margin-left: 0px;
+    }
+
     @include mo {
         margin-left: 30px;
+    }
+}
+
+.newsContainer {
+    @include md {
+        display: block;
+        max-width: 700px;
+        margin-right: 12px;
     }
 }
 
@@ -30,10 +43,10 @@
 }
 
 .w60 {
-    @include md {
-        flex: 0 0 60%;
-        margin: 0 20% 50px;
-    }
+    // @include md {
+    //     flex: 0 0 60%;
+    //     margin: 0 20% 50px;
+    // }
 
     @include sm {
         flex: 0 0 100%;
@@ -65,12 +78,16 @@
     word-break: break-word;
 
     @include xlg {
-        max-height: 264px;
+        max-height: 340px;
     }
 
     @include sm {
         max-height: 240px;
         margin-bottom: 84px;
+    }
+
+    @include md {
+        max-height: 500px;
     }
 
     .pR30 {
@@ -81,17 +98,32 @@
         }
     }
 }
-.scrollWrapper {
-    max-height: calc(49vh - 115px);
-    @include xxlg {
-    max-height: calc(51vh - 115px);
+
+.newsCard {
+    @include tab {
+        margin-bottom: 20px;
     }
 }
+
+.scrollWrapper {
+    max-height: calc(49vh - 115px);
+
+    @include xxlg {
+        max-height: calc(51vh - 115px);
+    }
+
+    @include xlmd {
+        max-height: calc(35vh - 115px);
+    }
+}
+
 .chart {
     position: relative;
     min-width: 400px;
+
     .updateText {
         margin-bottom: 150px;
+
         @include xlmd {
             margin-bottom: 120px;
         }

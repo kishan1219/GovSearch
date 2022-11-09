@@ -29,6 +29,12 @@ const Notification = () => {
     createData("Subject 1", "Description"),
     createData("Subject 2", "Description"),
     createData("Subject 3", "Description"),
+    createData("Subject 1", "Description"),
+    createData("Subject 2", "Description"),
+    createData("Subject 3", "Description"),
+    createData("Subject 1", "Description"),
+    createData("Subject 2", "Description"),
+    createData("Subject 3", "Description"),
   ];
   const [open, setOpen] = useState(false);
   return (
@@ -43,7 +49,7 @@ const Notification = () => {
           Notifications/Alerts
         </Heading>
 
-        <TableContainer className={Styles.tableContainer}>
+        <TableContainer className={`${Styles.tableContainer} ${Styles.scrollBar}`}>
           <Table aria-label="customized table">
             <TableHead>
               <TableRow

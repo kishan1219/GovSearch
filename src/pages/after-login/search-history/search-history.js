@@ -9,17 +9,19 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
-function createData(Keyword, FiltersFirst,FiltersSecond,FiltersThird,FiltersFourth, Results) {
-    return { Keyword, FiltersFirst,FiltersSecond,FiltersThird,FiltersFourth, Results };
+function createData(id,Keyword, FiltersFirst,FiltersSecond,FiltersThird,FiltersFourth, Results) {
+    return { id,Keyword, FiltersFirst,FiltersSecond,FiltersThird,FiltersFourth, Results };
 }
 const SearchHistory = () => {
     const rows = [
-        // createData('“Chief Technology Officer”', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', '1000'),
-        createData( 'Keyword 1', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
-        createData( 'Keyword 2', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
-        createData('Keyword 3', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
-        createData('Keyword 4', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
-        createData('Keyword 5', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'More (5)'),
+        createData('2', 'Keyword 1', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
+        createData('3', 'Keyword 2', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
+        createData('4', 'Keyword 3', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
+        createData('5', 'Keyword 4', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
+        createData('6', 'Keyword 5', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'More (5)'),
+        createData('4', 'Keyword 3', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
+        createData('5', 'Keyword 4', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
+        createData('6', 'Keyword 5', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'More (5)'),
     ];
     const [open, setOpen] = useState(false);
     return (
@@ -54,7 +56,7 @@ const SearchHistory = () => {
                                         “Chief Technology Officer”
                                         </Text>
                                     </TableCell>
-                                    <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
+                                    <TableCell  align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
                                         <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
                                             Filter Name (#)                                        </Text>
                                     </TableCell>

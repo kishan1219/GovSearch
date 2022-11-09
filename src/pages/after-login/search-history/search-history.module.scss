@@ -1,37 +1,9 @@
 @import "../../../assets/scss/mixins.scss";
-@import "../../../assets/scss/styles.scss";
-@import "../../../assets/scss/variables.scss";
+@include notificationContainer;
 
 .container {
-    user-select: none;
-    @include fonts-poppins;
-
-    .heading {
-        font-size: $font-mdbig;
-        margin: 80px 0px 30px 0px;
-    }
-
     .tableContainer {
-        width: 100%;
-        max-width: 1300px;
-        @include fonts-poppins;
-
-        @include xmd {
-            min-width: 800px;
-            overflow-x: unset;
-        }
-
-        @include md {
-            min-width: 700px;
-        }
-
-        .border {
-            border: none;
-        }
-
         .tableHead {
-            display: flex;
-
             .border {
                 width: 25%;
 
@@ -43,89 +15,63 @@
                     max-width: 60%;
                 }
             }
-            .filterBorder{
+
+            .filterBorder {
                 text-align: left;
                 margin-right: 45px
             }
-            .resultBorder{
+
+            .resultBorder {
                 margin-right: 115px;
                 text-align: right;
+                @include xlmd {
+                    margin-right: 12%;
+                }
             }
-            
+
 
         }
 
-        @include ScrollBar;
 
         .scrollWrapper {
-            @include xmd {
-                max-height: calc(50vh - 135px);
-            }
-
-            @include md {
-                max-height: calc(70vh - 135px);
+            @include xlmd {
+                max-height: calc(60vh - 135px);
             }
         }
 
         .tableBody {
-            height: 300px;
-            display: block;
-            padding-right: 33px;
-            border-bottom: 0;
-
-            i {
-                position: absolute;
-                left: 15px;
-            }
+            min-height: 300px;
 
             .rowBgMain {
-                background: $white;
-                border-radius: 10px;
-                display: block;
-                border: none;
-                margin-bottom: 12px;
-                position: relative;
 
                 .subjectMain {
                     min-width: 330px;
-                    border: none;
                     cursor: pointer;
-
-                    & :hover {
-                        font-weight: 500;
-                        text-decoration: underline;
+                    @include xlmd {
+                        min-width: 280px;
                     }
                 }
 
                 .descriptionMain {
                     min-width: 150px;
-                    .filterText{
+
+                    .filterText {
                         min-width: 160px;
                         background: $lightGray;
                         padding: 5px 7px;
                         border-radius: 24px;
-                        
+                        @include xlmd {
+                            min-width: 130px;
+                        }
                     }
-                    .Results{
+
+                    .Results {
                         max-width: 100px;
                     }
                 }
 
                 .border {
-                    width: 20%;
-                }
-
-                .deleteText {
-                    cursor: pointer;
-                    z-index: 1;
-                    position: absolute;
-                    top: 50px;
-                    right: 10px;
-                    background: $white;
-                    min-width: 250px;
-                    padding: 10px;
-                    text-align: right;
-                    border: none;
+                    width: 17%;
                 }
             }
         }

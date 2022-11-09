@@ -8,6 +8,9 @@
     min-height: 100vh;
     padding: 40px 0 0;
     position: relative;
+    @include md {
+        padding: 10px 0px 0px;
+    }
     @include mo {
         padding:0;
     }
@@ -32,13 +35,13 @@
         @include md {
             margin: 0px 45px 0px 0px;
         }
+        @include tab {
+            margin: 0px 45px 0px 90px;
+        }
         @include sm {
             margin-left:0px ;
         }
-        @include iPad {
-            margin: 0px 45px 0px 67px;
-        }
-        @include mo {
+           @include mo {
             margin:0px 5px;
         }
         

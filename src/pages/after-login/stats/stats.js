@@ -172,21 +172,21 @@ const stats = () => {
                     </div>
                 </div>
                 <Grid container spacing={4}>
-                    <Grid item lg={4} sm={4} xs={12} >
+                    <Grid className={Styles.cardStyles} item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Contacts</Heading>
                         <Card className={Styles.statsCard} >
                             <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
-                    <Grid item lg={4} sm={4} xs={12} >
+                    <Grid className={Styles.cardStyles} item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Positions</Heading>
                         <Card className={Styles.statsCard} >
                             <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
 
                         </Card>
                     </Grid>
-                    <Grid item lg={4} sm={4} xs={12} >
+                    <Grid className={Styles.cardStyles} item lg={4} sm={4} xs={12} >
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Offices</Heading>
                         <Card className={Styles.statsCard} >
                             <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />

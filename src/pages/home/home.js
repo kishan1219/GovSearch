@@ -66,7 +66,7 @@ const Home = () => {
             <div className={Styles.searchMain}>
                 <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray04"} iconclassName={"icoClass"} />
             </div>
-            <div className='alignBetween mt35'>
+            <div className={`${Styles.newsContainer} ${'alignBetween mt35'}`}>
                 <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
                     <Text className={`${Styles.cardHeading}`} color="darkGray" strong="strong3">Latest Detail Views</Text>
                     <div className={`${Styles.homeCard} ${Styles.scrollBar} ${Styles.mb40}`}>
