@@ -65,6 +65,9 @@
             i {
                 position: absolute;
                 left: 50px;
+                &:hover {
+                    color: $gray06;
+                }
 
                 @include md {
                     left: 10px;

@@ -8,14 +8,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import IconButton from '@mui/material/IconButton';
-import Collapse from '@mui/material/Collapse';
 function createData(Subject, Description, DescriptionSecond, DescriptionThird) {
     return { Subject, Description, DescriptionSecond, DescriptionThird };
 }
 
 const Download = () => {
-    const [open, setOpen] = useState(false);
-
     const rows = [
         createData(
             "CompayName_User_DateNums",
@@ -98,9 +95,8 @@ const Download = () => {
                                         <IconButton
                                             aria-label="expand row"
                                             size="small"
-                                            onClick={() => setOpen(!open)}
                                         >
-                                            <Icon color={open ? "gray06" : "gray02"} type={"straightmore"} size="icon_xlarge" />
+                                            <Icon color={"gray02"} type={"straightmore"} size="icon_xlarge" />
                                         </IconButton>
                                     </TableCell>
                                     <TableCell
@@ -109,12 +105,6 @@ const Download = () => {
                                         component="th"
                                         scope="row"
                                     >
-
-                                        <Collapse in={open} timeout="auto" unmountOnExit>
-                                            <TableCell className={Styles.deleteText}>
-                                                <Text variant="xllgText" color="darkGray" strong="strong7">Delete</Text>
-                                            </TableCell>
-                                        </Collapse>
                                     </TableCell>
 
                                 </TableRow>
