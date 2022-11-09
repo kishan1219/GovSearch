@@ -8,13 +8,15 @@
     min-height: 100vh;
     padding: 40px 0 0;
     position: relative;
+
     @include md {
         padding: 10px 0px 0px;
     }
+
     @include mo {
-        padding:0;
+        padding: 0;
     }
-   
+
     .header {
         text-align: center;
     }
@@ -29,23 +31,28 @@
     .mainContainer {
         margin-left: 163px;
         margin-right: 45px;
+
         @include xmd {
             margin: 0px 45px 0px 120px;
         }
+
         @include md {
             margin: 0px 45px 0px 100px;
         }
+
         @include tab {
             margin: 0px 45px 0px 90px;
         }
+
         @include sm {
-            margin-left:0px ;
+            margin-left: 0px;
         }
-           @include mo {
-            margin:0px 5px;
+
+        @include mo {
+            margin: 0px 5px;
         }
-        
-       }
+
+    }
 }
 
 @include ScrollBar;

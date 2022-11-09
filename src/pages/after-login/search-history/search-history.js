@@ -36,7 +36,7 @@ const SearchHistory = () => {
                     Search History
                 </Heading>
 
-                <TableContainer className={Styles.tableContainer}>
+                <TableContainer className={`${Styles.tableContainer} ${Styles.scrollBar}`}>
                     <Table aria-label="customized table">
                         <TableHead>
                             <TableRow
@@ -47,7 +47,7 @@ const SearchHistory = () => {
                                 <TableCell className={`${Styles.border} ${Styles.resultBorder}`}>Results</TableCell>
                             </TableRow>
                         </TableHead>
-                        <TableBody className={`${Styles.tableBody} ${Styles.scrollBar} ${Styles.scrollWrapper}`}>
+                        <TableBody className={`${Styles.tableBody}  ${Styles.scrollWrapper}`}>
                         <TableRow
                                     className={` ${Styles.mb12} ${Styles.rowBgMain}`}
                                 >

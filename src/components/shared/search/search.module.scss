@@ -1,4 +1,3 @@
-@import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
 
 .mainSearch {
@@ -58,6 +57,7 @@
       }
 
       @include mo {
+        top: 135px;
         left: 140px;
       }
 
@@ -89,6 +89,7 @@
       @include mo {
         flex-wrap: wrap;
       }
+
       @include md {
         gap: 10px;
       }
@@ -110,7 +111,7 @@
         width: 100%;
 
         @include tab {
-          min-width: 400px;
+          min-width: 350px;
         }
 
         @include mo {

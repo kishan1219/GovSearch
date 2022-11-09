@@ -7,7 +7,8 @@
     @include xlmd {
         margin-left: 180px;
     }
-    @include md{
+
+    @include md {
         margin-left: 0px;
     }
 
@@ -18,9 +19,12 @@
 
 .newsContainer {
     @include md {
-        display: block;
-        max-width: 700px;
+        max-width: 1300px;
         margin-right: 12px;
+    }
+
+    @include tab {
+        flex-wrap: wrap;
     }
 }
 
@@ -31,6 +35,20 @@
     @include sm {
         flex: 0 0 100%;
     }
+
+    @include md {
+        flex: 0 0 30%;
+        padding: 0px;
+        margin-right: 10px;
+    }
+
+    @include tab {
+        flex: 0 0 100% !important;
+        order: 2;
+        margin-top: 50px;
+
+    }
+
 }
 
 
@@ -43,10 +61,9 @@
 }
 
 .w60 {
-    // @include md {
-    //     flex: 0 0 60%;
-    //     margin: 0 20% 50px;
-    // }
+    @include md {
+        flex: 0 0 30%;
+    }
 
     @include sm {
         flex: 0 0 100%;
@@ -86,9 +103,6 @@
         margin-bottom: 84px;
     }
 
-    @include md {
-        max-height: 500px;
-    }
 
     .pR30 {
         padding-right: 30px;
@@ -101,7 +115,14 @@
 
 .newsCard {
     @include tab {
+        max-width: 500px !important;
+        margin-left: 10%;
         margin-bottom: 20px;
+        order: 1;
+    }
+
+    @include md {
+        max-width: 400px;
     }
 }
 
@@ -121,11 +142,29 @@
     position: relative;
     min-width: 400px;
 
+    @include md {
+        min-width: 343px;
+
+    }
+
+    @include tab {
+        margin-top: 50px;
+        order: 3;
+    }
+
     .updateText {
         margin-bottom: 150px;
 
         @include xlmd {
             margin-bottom: 120px;
+        }
+
+        @include md {
+            margin-bottom: 50%;
+        }
+
+        @include tab {
+            margin-bottom: 80px;
         }
     }
 }
