@@ -227,7 +227,7 @@ const AccountSetting = () => {
                   <div className={Styles.userManageBox}>
 
                     <Text className={Styles.licText} variant={"xxxlText"} color={"primary01"} strong={"strong4"}>3</Text>
-                    <Text className={Styles.licText} variant={"mlgText"} color={"gray"} strong={"strong4"}>Remaining License</Text>
+                    <Text className={Styles.remainlicText} variant={"mlgText"} color={"gray"} strong={"strong4"}>Remaining License</Text>
                     <Button btnClass={Styles.updateBtn} size={"xlsmlg"} variant={"solidPrimary"}>Update User Type</Button>
                     <Button btnClass={Styles.inviteBtn} size={"xlmd"} variant={"solidPrimary"}>Invite Users</Button>
                   </div>

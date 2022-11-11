@@ -13,6 +13,12 @@
         }
     }
 
+    @include ScrollBar;
+
+    .scrollBar {
+        overflow: auto;
+    }
+
     .tableContainer {
         width: 100%;
         max-width: 1300px;
@@ -22,9 +28,6 @@
             max-width: 1300px;
             @include ScrollBar;
 
-            .scrollBar {
-                overflow-x: auto;
-            }
         }
 
         @include md {
@@ -64,7 +67,6 @@
 
         }
 
-        @include ScrollBar;
 
         .scrollWrapper {
             @include xmd {
@@ -76,11 +78,13 @@
             }
         }
 
+
         .tableBody {
             max-height: 430px;
             display: block;
             padding-right: 33px;
             border-bottom: 0;
+
 
             i {
                 position: absolute;

@@ -14,11 +14,27 @@
         .cardImage {
             max-width: 250px;
             margin-right: 24px;
+
+            @include md {
+                max-width: 150px;
+                margin-right: 15px;
+
+            }
         }
 
         .textPrimary {
             max-width: 197px;
             line-height: 28px;
+
+            @include md {
+                max-width: 150px;
+                font-weight: 400;
+            }
+
+            @include tab {
+                max-width: 200px;
+                font-weight: 600;
+            }
         }
     }
 
@@ -27,5 +43,5 @@
         margin-top: 34px;
     }
 
-   
+
 }

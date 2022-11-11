@@ -1,0 +1,109 @@
+@import "../../../assets/scss/mixins.scss";
+@include notificationContainer;
+
+.container {
+    .tableContainer {
+        .scrollBar {
+            overflow: auto;
+        }
+
+        .tableHead {
+            .border {
+                width: 25%;
+
+                &:first-child {
+                    max-width: 40%;
+                }
+
+                &:last-child {
+                    max-width: 60%;
+                }
+            }
+
+            .borderHeadSecond {
+                width: 10%;
+                text-align: right;
+                margin-left: 16%;
+                border: none;
+
+                @include md {
+                    width: 16%;
+                }
+            }
+
+            .borderHeadThird {
+                margin-left: 6%;
+                border: none;
+            }
+
+            .borderHeadFour {
+                width: 21%;
+                border: none;
+
+                @include md {
+                    width: 23%;
+                }
+            }
+
+        }
+
+
+        .scrollWrapper {
+            @include xlmd {
+                max-height: calc(60vh - 135px);
+            }
+        }
+
+        .tableBody {
+            max-width: 1300px;
+            max-height: 470px;
+
+            @include md {
+                max-height: 405px;
+            }
+
+            i {
+                position: absolute;
+                left: 50px;
+                &:hover {
+                    color: $gray06;
+                }
+
+                @include md {
+                    left: 10px;
+                }
+            }
+
+            .rowBgMain {
+                .subjectMain {
+                    min-width: 360px;
+                    cursor: pointer;
+                }
+
+                .descriptionMain {
+                    min-width: 300px;
+                }
+
+                .descriptionSec {
+                    max-width: 30px;
+
+                    @include md {
+                        min-width: 115px;
+                    }
+                }
+
+                .border {
+                    width: 6%;
+                }
+
+                .borderSec {
+                    width: 15%;
+                    border: none;
+
+                    @include md {}
+                }
+            }
+        }
+    }
+
+}

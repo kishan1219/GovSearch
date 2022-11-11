@@ -1,11 +1,8 @@
 import home from "./home";
 import Styleguide from "./styleguide/styleguide";
 import login from "./before-login/login";
-import { Notification } from "./after-login";
-import Account from "./after-login/account/account";
-import accountsetting from "./after-login/accountsetting";
-import stats from "./after-login/stats/stats";
-import SearchHistory from "./after-login/search-history/search-history";
+import { Notification,Account,AccountSetting,Download,SearchHistory,stats } from "./after-login";
+
 
 export {
     home,
@@ -13,8 +10,9 @@ export {
     login,
     Notification,
     Account,
-    accountsetting,
+    AccountSetting,
     stats,
     SearchHistory,
+    Download,
 
 }

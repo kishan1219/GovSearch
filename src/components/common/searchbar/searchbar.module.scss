@@ -9,8 +9,12 @@
     @include md {
         gap: 10px;
     }
+    @include tab {
+        gap: 30px;
+    }
+
     @include mo {
-        margin-left: 10px;
+        margin-left: 0px;
         gap: 0px;
     }
 
@@ -22,6 +26,7 @@
         @include md {
             min-width: 120px;
         }
+
         @include mo {
             margin: 0px 5px 0px 5px;
             min-width: 100px;
@@ -122,6 +127,7 @@
         @include sm {
             margin-right: 15px;
         }
+
         @include md {
             margin-right: 10px;
         }

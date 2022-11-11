@@ -112,6 +112,7 @@
         .searchContainer {
             @include mo {
                 order: 2;
+                margin-left: 0px !important;
             }
 
             @include sm {

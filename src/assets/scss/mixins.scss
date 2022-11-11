@@ -232,19 +232,19 @@
       }
     }
 
+    @include ScrollBar;
+
+    .scrollBar {
+      overflow: auto;
+    }
+
     .tableContainer {
       width: 100%;
       max-width: 1300px;
       @include fonts-poppins;
 
       @include xmd {
-        max-width: 800px;
-        @include ScrollBar;
-
-        .scrollBar {
-          overflow-x: auto;
-
-        }
+        max-width: 1300px;
       }
 
       @include md {
@@ -284,7 +284,6 @@
 
       }
 
-      @include ScrollBar;
 
       .scrollWrapper {
         @include xmd {
@@ -296,11 +295,13 @@
         }
       }
 
+
       .tableBody {
         max-height: 430px;
         display: block;
         padding-right: 33px;
         border-bottom: 0;
+
 
         i {
           position: absolute;

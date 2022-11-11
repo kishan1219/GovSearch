@@ -4,6 +4,7 @@ import Tooltip from "@mui/material/Tooltip";
 import propTypes from "prop-types";
 import { Text, Image, Button, Icon } from "../../shared";
 import SearchBar from "../searchbar/searchbar";
+import { useNavigate } from "react-router-dom";
 
 const Header = ({
   size,
@@ -23,7 +24,7 @@ const Header = ({
 }) => {
   const [showNotification, SetShowNotification] = useState(false);
   const [showBC, setShowBc] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <div
       className={`${Styles.header}  ${Styles[size]} ${Styles[variant]}  ${className}`}
@@ -159,6 +160,7 @@ const Header = ({
             <Text
               strong="strong7"
               className={`${Styles.bcList} ${Styles.bcListm15}`}
+              handleClick={()=>navigate("/account")}
             >
               Account
             </Text>
@@ -171,12 +173,14 @@ const Header = ({
             <Text
               strong="strong7"
               className={`${Styles.bcList} ${Styles.bcListm15}`}
+              handleClick={()=>navigate("/search-history")}
             >
               Search History
             </Text>
             <Text
               strong="strong7"
               className={`${Styles.bcList} ${Styles.bcListm15}`}
+              handleClick={()=>navigate("/notification")}
             >
               Notification
             </Text>

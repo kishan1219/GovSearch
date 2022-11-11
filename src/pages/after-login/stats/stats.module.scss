@@ -57,6 +57,7 @@
             margin-left: 130px;
 
         }
+
         @include xsm {
             margin-left: 90px;
 
@@ -72,14 +73,17 @@
 
 
     }
-    .cardStyles{
+
+    .cardStyles {
         @include tab {
-            padding-left: 0px;
+            padding-left: 0px !important;
         }
+
         @include mo {
-            padding-left: 32px;
+            padding-left: 32px !important;
         }
     }
+
     .statsCard {
         max-width: 549px;
         min-height: 452px;
@@ -91,6 +95,7 @@
             min-height: 250px;
             padding: 15px 30px;
         }
+
         @include md {
             max-width: 270px;
             min-height: 200px;
@@ -107,6 +112,7 @@
             max-width: 350px;
             margin: 0 10px;
         }
+
         @include xsm {
             max-width: 295px;
             margin: 0 10px;

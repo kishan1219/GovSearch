@@ -1,8 +1,15 @@
 @import "../../../assets/scss/mixins.scss";
 @include notificationContainer;
 
+
 .container {
     .tableContainer {
+        max-width: 1400px;
+        min-height: 560px;
+        .scrollBar {
+            overflow: auto;
+        }
+
         .tableHead {
             .border {
                 width: 25%;
@@ -24,6 +31,7 @@
             .resultBorder {
                 margin-right: 115px;
                 text-align: right;
+
                 @include xlmd {
                     margin-right: 12%;
                 }
@@ -40,13 +48,12 @@
         }
 
         .tableBody {
-            min-height: 300px;
-
             .rowBgMain {
 
                 .subjectMain {
-                    min-width: 330px;
+                    max-width: 530px;
                     cursor: pointer;
+
                     @include xlmd {
                         min-width: 280px;
                     }
@@ -60,6 +67,7 @@
                         background: $lightGray;
                         padding: 5px 7px;
                         border-radius: 24px;
+
                         @include xlmd {
                             min-width: 130px;
                         }
