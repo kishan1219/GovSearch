@@ -24,62 +24,6 @@ const SearchResult = () => {
         setSelectOther(e.target.value);
         setOther(false);
     };
-    const views = [
-        {
-            id: 1,
-            img: 'assets/images/armySeal.png',
-            positionFirst: "Department of the Army",
-            name: "",
-            number: "7",
-            positionSecond: "Department of Defense",
-            place: "Arlington, VA",
-        },
-        {
-            id: 2,
-            img: 'assets/images/armySeal.png',
-            positionFirst: "Department of the Army",
-            name: "",
-            number: "7",
-            positionSecond: "Department of Defense",
-            place: "Arlington, VA",
-        },
-        {
-            id: 3,
-            img: 'assets/images/armySeal.png',
-            positionFirst: "Department of the Army",
-            name: "",
-            number: "7",
-            positionSecond: "Department of Defense",
-            place: "Arlington, VA",
-        },
-        {
-            id: 4,
-            img: 'assets/images/armySeal.png',
-            positionFirst: "Department of the Army",
-            name: "",
-            number: "7",
-            positionSecond: "Department of Defense",
-            place: "Arlington, VA",
-        },
-        {
-            id: 5,
-            img: 'assets/images/armySeal.png',
-            positionFirst: "Department of the Army",
-            name: "",
-            number: "7",
-            positionSecond: "Department of Defense",
-            place: "Arlington, VA",
-        },
-        {
-            id: 6,
-            img: 'assets/images/armySeal.png',
-            positionFirst: "Department of the Army",
-            name: "",
-            number: "7",
-            positionSecond: "Department of Defense",
-            place: "Arlington, VA",
-        },
-    ];
     return (
         <Layout isFederal={false} isProfessional={true}>
             <div className={Styles.container}>
