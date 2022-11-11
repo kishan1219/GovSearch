@@ -18,14 +18,14 @@ const Button = ({
 }) => {
     return (
         <button type={type}
-        className={`${styles.button}
+            className={`${styles.button}
          ${styles[variant]} ${styles[size]} 
          ${btnClass ? btnClass : ''} ${styles[color]} 
-         ${styles[background]}${block ? styles.block : '' } `}
-         disabled={disabled}
-         onClick={btnHandler}
+         ${styles[background]}${block ? styles.block : ''} `}
+            disabled={disabled}
+            onClick={btnHandler}
         >
-          {children}
+            {children}
         </button>
     );
 
@@ -40,7 +40,7 @@ Button.propTypes = {
     children: PropTypes.any,
     text: PropTypes.string,
     color: PropTypes.string,
-    background:PropTypes.string,
+    background: PropTypes.string,
     btnClass: PropTypes.any
 
 };

@@ -11,7 +11,7 @@ import {
 } from "../index";
 import propTypes from 'prop-types'
 
-export default function Search({ type, search, placeholder, onClick, inputclassName, iconclassName, size, iconColor }) {
+export default function Search({ placeholder, onClick, inputclassName, iconclassName, size, iconColor,advanceBtnHandler}) {
     const [searchCode, setSearchcode] = React.useState('All');
 
     const handleChange = (event) => {
@@ -57,7 +57,7 @@ export default function Search({ type, search, placeholder, onClick, inputclassN
                         <Icon type="search" size={size} color={iconColor} onClick={onClick} className={`${Styles.rightIcon} ${iconclassName}`} />
 
                     </div>
-                    <Button btnClass={Styles.transbton} size={"mdxl"} variant={"transparent"}>Advanced</Button>
+                    <Button btnHandler={advanceBtnHandler} btnClass={Styles.transbton} size={"mdxl"} variant={"transparent"}>Advanced</Button>
                     <div className={Styles.btnSearch}>
                     <div className={Styles.error}>
                         {errors?.search?.type === "required" && (

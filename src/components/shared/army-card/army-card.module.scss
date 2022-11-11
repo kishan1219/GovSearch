@@ -1,0 +1,34 @@
+@import '../../../assets/scss/mixins.scss';
+
+.cardContainer {
+    width: 100%;
+    background-color: $white;
+    max-width: 440px;
+    min-height: 80px;
+    border-radius: 10px;
+    padding: 0px 13px 0px 0px;
+    @include flexJustifyBetween;
+    .greenBorder{
+        min-width: 15px;
+        border-radius: 0px 10px 10px 0px;
+        background: $green01;
+        min-height: 100px;
+        transform: rotate(-180deg);
+        margin-right: 10px;
+    }
+   
+    .titleMain {
+        max-width: 188px;
+        margin: 3px 90px 0px 0px;
+        display: grid;
+        gap: 15px;
+    }
+    .titleNumber {
+        padding-top: 3px;
+        display: grid;
+        gap: 11px;
+        .vaText {
+            margin-top: 30px;
+        }
+    }
+}

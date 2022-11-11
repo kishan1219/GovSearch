@@ -6,15 +6,15 @@ import Header from '../header';
 
 
 
-const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal,isGovSearchProfessional }) => {
+const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal,isGovSearchProfessional,isProfessional }) => {
     return (
         <div className={`${Styles.layoutMain} ${Styles.scrollBar} ${Styles.scrollWrapper}`} >
-            {isHeader && <Header isSearch={isSearch} isFederal={isFederal} isGovSearchProfessional={isGovSearchProfessional}/>}
+            {isHeader && <Header isSearch={isSearch} isFederal={isFederal} isGovSearchProfessional={isGovSearchProfessional} isProfessional={isProfessional}/>}
             {isTechnomile && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isAdmin={true} />}
             {isAccount && <Header isTechnomileLogo={true} isGovSearchLogo={false} isSearch={false} isRightNav={true} isFederal={false} isProfessionalEdition={true} />}
             {isAccountSetting && <Header isSearch={true} isRightNav={true} isFederal={false} isGovSearchProfessional={true} />}
             {isSidebar && <div className={`${layoutClass} ${Styles.sidebar}`}>
-                <Sidebar />
+                <Sidebar  />
             </div>}
 
             <div className={Styles.mainContainer}>{children}</div>
@@ -28,6 +28,7 @@ Layout.defaultProps = {
     isAccountSetting: false,
     isSidebar: true,
     isGovSearchProfessional:false,
+    isProfessional:false,
 }
 
 Layout.protoType = {

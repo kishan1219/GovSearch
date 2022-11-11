@@ -1,25 +1,25 @@
 @import "../../../assets/scss/variables.scss";
+
 .card {
-    box-sizing: border-box;
-    display: inline-block;
-    border-radius: 8px;
-    background: $white;
-    width: 100%;
-    // max-width: 504px;
-    max-width: 600px;
-  
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 8px;
+  background: $white;
+  width: 100%;
+  max-width: 600px;
+
+}
+
+@media (max-width: 840px) {
+  .card {
+    display: block;
+    margin: 10px auto;
   }
-  
-  @media (max-width: 840px) {
-    .card {
-      display: block;
-      // margin: 10px auto;
-    }
+}
+
+@media (max-width: 576px) {
+  .card {
+    display: block;
+    margin: 10px auto;
   }
-  
-  @media (max-width: 576px) {
-    .card {
-      display: block;
-      // margin: 10px auto;
-    }
-  }
+}

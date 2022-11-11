@@ -4,6 +4,9 @@
     margin-left: 300px;
     margin-bottom: 120px;
 
+    @include xxlg {
+        margin-left: 513px;
+    }
     @include xlmd {
         margin-left: 180px;
     }
@@ -58,6 +61,7 @@
     &::-webkit-scrollbar-track {
         background: $white;
     }
+    
 }
 
 .w60 {
@@ -103,7 +107,6 @@
         margin-bottom: 84px;
     }
 
-
     .pR30 {
         padding-right: 30px;
 
@@ -127,14 +130,14 @@
 }
 
 .scrollWrapper {
-    max-height: calc(49vh - 115px);
-
-    @include xxlg {
-        max-height: calc(51vh - 115px);
-    }
+    max-height: 310px;
 
     @include xlmd {
-        max-height: calc(35vh - 115px);
+        max-height: 348px;
+    }
+
+    @include tab {
+        max-height: 340px;
     }
 }
 

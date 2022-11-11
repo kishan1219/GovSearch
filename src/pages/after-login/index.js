@@ -4,6 +4,7 @@ import AccountSetting from "./accountsetting/accountsetting";
 import Download from "./download/download";
 import SearchHistory from "./search-history/search-history";
 import stats from "./stats/stats";
+import Favorites from "./favorites/favorites";
 export{
     Notification,
     Account,
@@ -11,5 +12,6 @@ export{
     Download,
     SearchHistory,
     stats,
+    Favorites,
 
 }

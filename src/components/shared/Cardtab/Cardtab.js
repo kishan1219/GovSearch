@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './cardtab.module.scss'
+import styles from './Cardtab.module.scss'
 import Image from "../image/image";
 import CheckBox from "../checkbox/checkbox";
 import Text from "../text/text";

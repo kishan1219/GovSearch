@@ -1,0 +1,197 @@
+@import "../../../assets/scss/mixins.scss";
+@include notificationContainer;
+
+.container {
+
+    .tableContainer {
+
+        .scrollBar {
+            overflow: auto;
+        }
+
+        .tableHead {
+            .border {
+                width: 54%;
+
+                &:first-child {
+                    max-width: 54%;
+                }
+
+                &:last-child {
+                    max-width: 60%;
+                }
+            }
+
+            .borderHeadSecond {
+                width: 10%;
+                text-align: right;
+                margin-left: 11%;
+                border: none;
+            }
+
+            .borderHeadThird {
+                margin-left: 5%;
+                border: none;
+            }
+
+            .borderHeadFour {
+                width: 18%;
+                border: none;
+
+                @include md {
+                    width: 17%;
+                }
+            }
+
+        }
+
+
+        .scrollWrapper {
+            @include xlmd {
+                max-height: calc(60vh - 135px);
+            }
+        }
+
+        .tableBody {
+            max-width: 1300px;
+            max-height: 470px;
+
+            @include xlmd {
+                max-width: 1200px;
+
+                max-height: 405px;
+            }
+
+            i {
+                position: absolute;
+                left: 50px;
+
+                &:hover {
+                    color: $gray06;
+                }
+
+                @include xlmd {
+                    left: 20px;
+                }
+
+                @include md {
+                    left: 10px;
+                }
+            }
+
+            .rowBgMain {
+                .subjectMain {
+                    min-width: 750px;
+                    cursor: pointer;
+
+                    i {
+                        top: 12px;
+                        left: 105px;
+
+                    }
+
+                }
+                .inputCell {
+                    min-width: 900px;
+                    border: none;
+                    .inputMain{
+                        max-width: 674px;
+                        max-height: 24px;
+                        border-radius: 5px;
+                    }
+                }
+               
+                .descriptionMain {
+                    min-width: 243px;
+                    text-align: center;
+                    border: none;
+
+                }
+
+                .descriptionSec {
+                    border: none;
+                }
+
+                .favoriteMoreIcon {
+                    left: 0px;
+
+                    @include md {
+                        left: -15px;
+                    }
+                }
+
+                .border {
+                    width: 6%;
+                }
+
+                .borderSec {
+                    width: 10%;
+                    border: none;
+                    text-align: right;
+
+                }
+            }
+        }
+        
+        .footerBgMain {
+            max-width: 1130px;
+            background: $white;
+            border-radius: 10px;
+            display: block;
+            border: none;
+            position: relative;
+            .subjectMain {
+                min-width: 700px;
+                cursor: pointer;
+
+                i {
+                    top: 12px;
+                    left: 105px;
+
+                }
+
+            }
+            .inputCell {
+                min-width: 900px;
+                border: none;
+                .inputMain{
+                    max-width: 674px;
+                    max-height: 24px;
+                    border-radius: 5px;
+                    &::placeholder {
+                        color: $lightGray01;
+                    }
+                }
+            }
+            .inputMoreIcon {
+                position: absolute;
+                left: -22px;
+            }
+           
+            .descriptionMain {
+                min-width: 243px;
+                text-align: center;
+                border: none;
+
+            }
+
+            .descriptionSec {
+                border: none;
+            }
+
+
+            .border {
+                width: 6%;
+            }
+
+            .borderSec {
+                width: 10%;
+                border: none;
+                text-align: right;
+
+            }
+        }
+    }
+    
+
+}
