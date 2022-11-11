@@ -1,10 +1,7 @@
-@import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
-@import "../../../assets/scss/styles.scss";
 
 .container {
     width: 100%;
-    // min-height: 100vh;
     @include fonts-poppins;
 
     @include mo {
@@ -76,12 +73,9 @@
 
     .cardStyles {
         @include tab {
-            padding-left: 0px !important;
+            min-width: 40%;
         }
 
-        @include mo {
-            padding-left: 32px !important;
-        }
     }
 
     .statsCard {

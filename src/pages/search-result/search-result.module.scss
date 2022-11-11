@@ -1,0 +1,76 @@
+@import '../../assets/scss/mixins.scss';
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    .searchCriteria {
+        width: 100%;
+        @include flexBetween;
+
+        @include mo {
+            flex-wrap: wrap;
+        }
+    }
+
+    .selectCriteria {
+        max-width: 700px;
+        @include flexJustifyAround;
+
+        @include mo {
+            flex-wrap: wrap;
+        }
+    }
+
+    .closeIcon {
+        border: 1px solid $gray06;
+        border-radius: 50px;
+        padding: 5px;
+        cursor: pointer;
+
+    }
+
+    .officeMain {
+        background: $white;
+        border-radius: 24px;
+        position: relative;
+
+        .officeSelect {
+            min-width: 152px;
+            max-height: 40px;
+        }
+
+        .straightIcon {
+            position: absolute;
+            top: 6px;
+            right: 50px
+        }
+
+        .selectIcon {
+            position: absolute;
+            top: 8px;
+            right: 14px
+        }
+    }
+
+    .deoartmentTableMain {
+        @include tab {
+            display: block
+        }
+
+        .colMd4 {
+            @include latestDetail;
+            .cardHeading{
+                max-width: 440px;
+            }
+            .scrollBar {
+                width: 80%;
+            }
+            @include mo {
+                margin-top: 50px;
+            }
+        }
+    }
+
+
+}

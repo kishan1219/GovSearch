@@ -3,7 +3,7 @@ import Icon from "../icon";
 import Image from '../image';
 import Styles from './table.module.scss';
 import Text from '../text'
-
+import CheckBox from "../checkbox/checkbox";
 
 const Items = [
     {
@@ -154,18 +154,18 @@ class Table extends React.Component {
         return (
             <div className={Styles.container}>
                 <div className={Styles.row}>
-                    <div className={Styles.scroll}>
+                    <div className={Styles.scrollbar}>
                         <table className={Styles.table}>
                             <tbody>
                                 {this.state.List.map((user) => (
                                     <tr key={user.id} className={user.selected ? "selected" : ""}>
                                         <th scope="row">
-                                            <input
-                                                type="checkbox"
+                                            <CheckBox
                                                 checked={user.selected}
-                                                className="form-check-input"
+                                                className={`${"form-check-input"} ${Styles.tableCheckbox}`}
                                                 id="rowcheck{user.id}"
                                                 onChange={(e) => this.onItemCheck(e, user)}
+                                                variant="grayFill"
                                             />
                                         </th>
                                         <tr className={`${Styles[user.vcb]} ${Styles.background}`}>
@@ -173,7 +173,7 @@ class Table extends React.Component {
                                                 <td><Text variant="mlgText" className={Styles.size}>{user.name}</Text></td></th>
                                             <th><td><Text variant="mlgText" className={Styles.size}>{user.value}</Text></td>
                                                 <td><Text variant="mlgText" className={Styles.phone}>{user.country}</Text></td></th>
-                                                
+
                                         </tr>
                                         <td> <Icon type={"star"} /></td>
                                     </tr>

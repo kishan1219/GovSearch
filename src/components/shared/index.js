@@ -18,7 +18,7 @@ import Search from "./search/search";
 import BarChart from "./barchart/barchart";
 import Header from "../common/header/header";
 import Cardtab from "./cardtab";
-
+import ArmyCard from "./army-card/army-card";
 export {
   Icon,
   Input,
@@ -39,5 +39,6 @@ export {
   Search,
   BarChart,
   Header,
-  Cardtab
+  Cardtab,
+  ArmyCard,
 };

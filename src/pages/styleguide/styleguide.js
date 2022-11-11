@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Table, ListGroup, ListItem, LatestDeatils, Search } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Table, ListGroup, ListItem, LatestDeatils, Search, ArmyCard } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -8,9 +8,6 @@ import Switch from '@mui/material/Switch';
 import Header from '../../components/common/header/header'
 import Cardtab from '../../components/shared/cardtab'
 import Criteria from '../criteria'
-// import { useState } from 'react'
-
-
 const Styleguide = () => {
 
     const views = [
@@ -69,7 +66,6 @@ const Styleguide = () => {
             place: "Arlington, VA",
         },
     ];
-    // const [openModal, setOpenModal] = useState(false);
     return (
         <div className={Styles.wrapper}>
             <div >
@@ -178,7 +174,13 @@ const Styleguide = () => {
             <div className='mt30 mb50'>
                 <Cardtab />
             </div>
-            <div className='mt40'>
+            <div className='mt40 mb50'>
+                <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+            </div>
+            <div className='mt40 mb50'>
+                <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false}  isGreenBorder={true} imageSize="imgLarge" />
+            </div>
+            <div className='mt40 mb50'>
                 <Criteria />
             </div>
         </div>

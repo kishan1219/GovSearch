@@ -8,20 +8,20 @@ import PropTypes from "prop-types";
  
  * @returns node
  */
-const Card = ({    
-    children,
-    className,
+const Card = ({
+  children,
+  className,
 
-  }) => {
+}) => {
   return (
-    <div className={`${Styles.card} ${[className]}`}>    
-      <div>{children}</div> 
+    <div className={`${Styles.card} ${[className]}`}>
+      <div>{children}</div>
     </div>
-  )  
+  )
 };
 
 Card.propTypes = {
   className: PropTypes.string,
-  children:PropTypes.any
+  children: PropTypes.any
 };
 export default Card;
