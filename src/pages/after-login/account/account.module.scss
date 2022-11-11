@@ -7,17 +7,18 @@
     min-height: 100vh;
     max-width: 100%;
     @include fonts-poppins;
-   
-
     @include xxlg {
         padding: 30px;
 
     }
+    .scrollBar{
+        @include mo{
+            overflow:transparent;
+        }
+    }
+    @include ScrollBar;
 
-    // @include md {
-    //     margin-left: 66px;
-
-    // }
+    
 
     @include iPad {
         margin-left: 0px;
@@ -32,6 +33,12 @@
     @include xsm {
         margin-left: 0px;
 
+    }
+    .editMain{
+    @include mo{
+        width: 100%;
+        text-align: center;
+    }
     }
 
     .suiteHead {
@@ -86,6 +93,8 @@
 
     .MainBox {
         margin-top: 25px;
+      
+        
 
         .growthHead {
             font-size: 28px;
@@ -142,8 +151,8 @@
             }
 
             @include md {
-                font-size: 14px;
-                width: 256px;
+                font-size: 12px;
+                width: 230px;
             }
 
             @include iPad{
@@ -211,17 +220,14 @@
 
     }
 
-    @include ScrollBar;
+    
 
-    .scrollBar {
-        &::-webkit-scrollbar-track {
-            background: $white;
-        }
-    }
-
+   
     .scrollWrapper {
         max-height: calc(80vh - 120px);
         width: 90%;
+     
+       
 
        
 
@@ -269,6 +275,10 @@
             display: grid;
             gap: 7px;
             justify-content: center;
+        }
+        @include xxsm{
+            width: 163px;
+    margin-left: 16px;
         }
 
 
@@ -333,7 +343,7 @@
             }
 
             @include xlmd {
-                font-size: 26px;
+                font-size: 25px;
             }
 
             @include xmd {
@@ -355,6 +365,9 @@
 
             @include xsm {
                 font-size: 16px;
+            }
+            @include xsm {
+                font-size: 12px;
             }
         }
 

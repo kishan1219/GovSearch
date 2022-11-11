@@ -8,7 +8,7 @@ import {
 
 const Account = () => {
     return (
-        <Layout isHeader={false} isTechnomile={true} isSidebar={false}>
+        <Layout isHeader={false} isTechnomile={true} isSidebar={false} isFederal={false} isGovSearchProfessional={true}>
             <div className={Styles.wrapper}>
 
                 <div className={Styles.productHead}>
@@ -108,8 +108,121 @@ const Account = () => {
                                     </Card>
                                 </div>
                             </Grid>
+                            <Grid item lg={6} sm={12} md={6} xs={12} >
+                                <div>
+                                    <Card className={Styles.accountCard} >
+
+                                        <div className={Styles.insightCard} >
+                                            <div className={Styles.imageCard}>
+                                                <Image src="assets/images/account2.jpg" alt={"Logo"} />
+                                            </div>
+
+                                            <div className={Styles.contentBox} >
+
+                                                <Heading className={Styles.accountHead} color={"gray"} >Account Management</Heading>
+                                                <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>
+
+                                                    Strenger enpand Customer streamline task order management.</Text>
+
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </div>
+                            </Grid>
+                            <Grid item lg={6} sm={12} md={6} xs={12} >
+                                <div>
+                                    <Card className={Styles.accountCard} >
+
+                                        <div className={Styles.insightCard} >
+                                            <div className={Styles.imageCard}>
+                                                <Image src="assets/images/account2.jpg" alt={"Logo"} />
+                                            </div>
+
+                                            <div className={Styles.contentBox} >
+
+                                                <Heading className={Styles.accountHead} color={"gray"} >Partner Portal</Heading>
+                                                <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>
+
+                                                    Securaly efficentialy and streamline task order management.</Text>
+
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </div>
+                            </Grid>
+                            
                         </Grid>
+                        
                     </div>
+                    <div className={Styles.inteliMainBox}>
+                        <Heading className={Styles.growthHead} color={"secondary"} >GRC Suite</Heading>
+                        <Grid container spacing={4}>
+                            <Grid item lg={6} sm={12} md={6} xs={12}>
+                                <Card className={Styles.accountCard} >
+
+                                    <div className={Styles.insightCard} >
+                                        <div className={Styles.imageCard}>
+                                            <Image src="assets/images/account2.jpg" alt={"Logo"} />
+                                        </div>
+
+                                        <div className={Styles.contentBox} >
+
+                                            <Heading className={Styles.accountHead} color={"gray"} >Contract Life Cycle Management</Heading>
+                                            <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>
+                                                Transform BD and capture processes and boost win rates </Text>
+
+                                        </div>
+                                    </div>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={6} sm={12} md={6} xs={12} >
+                                <div>
+                                    <Card className={Styles.accountCard} >
+
+                                        <div className={Styles.insightCard} >
+                                            <div className={Styles.imageCard}>
+                                                <Image src="assets/images/account2.jpg" alt={"Logo"} />
+                                            </div>
+
+                                            <div className={Styles.contentBox} >
+
+                                                <Heading className={Styles.accountHead} color={"gray"} >Agreement Management</Heading>
+                                                <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>
+
+                                                   streamline and acclerate Agreement review and negotiations cycles.</Text>
+
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </div>
+                            </Grid>
+                            <Grid item lg={6} sm={12} md={6} xs={12} >
+                                <div>
+                                    <Card className={Styles.accountCard} >
+
+                                        <div className={Styles.insightCard} >
+                                            <div className={Styles.imageCard}>
+                                                <Image src="assets/images/account2.jpg" alt={"Logo"} />
+                                            </div>
+
+                                            <div className={Styles.contentBox} >
+
+                                                <Heading className={Styles.accountHead} color={"gray"} >Inteligent Contact Ingestion</Heading>
+                                                <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>
+
+                                 Save Hours off contracts sets up and shift your focus to risk management</Text>
+
+                                            </div>
+                                        </div>
+                                    </Card>
+                                </div>
+                            </Grid>
+                         
+                            
+                        </Grid>
+                        
+                    </div>
+
 
 
 
