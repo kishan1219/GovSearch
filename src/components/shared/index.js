@@ -20,6 +20,7 @@ import Header from "../common/header/header";
 import Cardtab from "./cardtab";
 import ArmyCard from "./army-card/army-card";
 import CriteriaCard from "./criteria-card/criteria-card";
+import CardItems from "./card-items/card-items";
 export {
   Icon,
   Input,
@@ -42,5 +43,6 @@ export {
   Header,
   Cardtab,
   ArmyCard,
-  CriteriaCard
+  CriteriaCard,
+  CardItems
 };
