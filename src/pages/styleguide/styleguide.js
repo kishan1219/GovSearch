@@ -1,12 +1,12 @@
 import React from 'react'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Tables, ListGroup, ListItem, LatestDeatils, Search, ArmyCard, CriteriaCard } from '../../components/shared/index'
+import { CheckBox,Card, Icon, Input, Button, NewsCard, Heading, Text, Tables, ListGroup, ListItem, LatestDeatils, Search, ArmyCard, CriteriaCard, CardItems } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import Header from '../../components/common/header/header'
-import Cardtab from '../../components/shared/cardtab'
+import Cardtab from '../../components/shared/cardtab/cardtab'
 import Criteria from '../criteria'
 const Styleguide = () => {
 
@@ -188,8 +188,33 @@ const Styleguide = () => {
             <div className='mt40 mb50'>
                 <CriteriaCard />
             </div>
-            
 
+            <Card className={Styles.cardBox} >
+                <CardItems  textFirst={"Jerry Reimers"} textSecond={"Defense Intelligence S"} textThird={"New"} color3="lightGray01"/>
+                <CardItems  textFirst={"Gary Hausman"} textSecond={"Commandant"} textThird={"update"} color3="lightGray01"/>
+                <CardItems  textFirst={"Stephanie Kelley"} textSecond={"Assistant Commanda"} textThird={"New"} color3="lightGray01"/>
+                <CardItems   textFirst={"Thomas Donehue"} textSecond={"Command Sergeant"} textThird={"update"} color3="lightGray01"/>
+                <CardItems   textFirst={"Steven Collins"} textSecond={"Chief of Staff"} textThird={"New"} color3="lightGray01" fontweight1={"strong7"} fontweight2={"strong7"}/>
+            </Card>
+            <Card className={Styles.cardBox} >
+                <CardItems  isAssetsText={true} isChildText={false} isContactText={false} textFirst={"Contact"} textSecond={"Adam Stanley"} textThird={"Commander"} color1="lightGray01"/>
+                <CardItems isAssetsText={true}  isChildText={false} isContactText={false} textFirst={"Contact"} textSecond={"Gary Hausman"} textThird={"Chief of Staff"} color1="lightGray01"/>
+                <CardItems isAssetsText={true}  isChildText={false}isContactText={false}  textFirst={"Position"} textSecond={"Commandant"} textThird={"Vacant"} color1="lightGray01"/>
+                <CardItems isAssetsText={true}  isChildText={false} isContactText={false} textFirst={"Office"} textSecond={"Office Name"} textThird={"Top Level Office"} color1="lightGray01"/>
+                <CardItems isAssetsText={true}  isChildText={false} isContactText={false} textFirst={"Office"} textSecond={"XVIII Airborne Corps"} textThird={"1st Infantry Divisio"} color1="lightGray01"/>
+                <CardItems isAssetsText={true}  isChildText={false} isContactText={false}  textFirst={"Contact"} textSecond={"John Cogbill"} textThird={"Commandant"} color1="lightGray01" fontweight2={"strong7"} fontweight3={"strong7"}/>
+            </Card>
+             <Card className={Styles.cardBox} >
+                <CardItems  isAssetsText={false} isChildText={true} isContactText={false} textFirst={"Office of the Secretary of the Army"} textSecond={"Arlington, VA"}  />
+                <CardItems isAssetsText={false} isChildText={true} isContactText={false}   textFirst={"Office of the Asistant to Secretary of"} textSecond={"Arlington, VA"}  />
+                <CardItems isAssetsText={false} isChildText={true} isContactText={false}   textFirst={"Auditor General   US Army Audit Agency"} textSecond={"Arlington, VA"}  />
+                <CardItems isAssetsText={false} isChildText={true} isContactText={false}   textFirst={"Chief of Staff"} textSecond={"Arlington, VA"}  />
+                <CardItems  isAssetsText={false} isChildText={true} isContactText={false}  textFirst={"General Counsel"} textSecond={"Arlington, VA"} fontweight1={"strong7"} />
+                <CardItems  isAssetsText={false} isChildText={true} isContactText={false}   textFirst={"General Counsel"} textSecond={"Arlington, VA"} fontweight1={"strong7"}  />
+            </Card>
+            <div>
+           
+            </div>
 
         </div>
 

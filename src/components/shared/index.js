@@ -17,7 +17,7 @@ import Sidebar from "./sidebar/sidebar";
 import Search from "./search/search";
 import BarChart from "./barchart/barchart";
 import Header from "../common/header/header";
-import Cardtab from "./cardtab";
+import Cardtab from "./cardtab/cardtab";
 import ArmyCard from "./army-card/army-card";
 import CriteriaCard from "./criteria-card/criteria-card";
 import CardItems from "./card-items/card-items";
