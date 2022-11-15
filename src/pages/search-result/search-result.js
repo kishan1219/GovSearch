@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Styles from './search-result.module.scss'
-import { ArmyCard, Icon, Layout, Table, Text } from '../../components/shared'
+import { ArmyCard, CheckBox, Icon, Image, Layout, Tables, Text } from '../../components/shared'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import { Table, TableBody, TableCell, TableRow } from '@mui/material';
 // import PropTypes from 'prop-types'
 const SearchResult = () => {
     const [office, setOffice] = useState(false);
@@ -24,6 +25,55 @@ const SearchResult = () => {
         setSelectOther(e.target.value);
         setOther(false);
     };
+    const ItemSecond = [
+        {
+            id: 1,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 2,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 3,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 4,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 5,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 6,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 7,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+        {
+            id: 8,
+            selected: false,
+            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+        },
+    ]
+
+    const [checked, setChecked] = useState(false);
+    const checkboxRef = useRef(null);
+
+    const handleTextClick = () => {
+        setChecked(!checked);
+    };
     return (
         <Layout isFederal={false} isProfessional={true}>
             <div className={Styles.container}>
@@ -41,7 +91,7 @@ const SearchResult = () => {
                 </div>
                 <Text className={"mt10 mb10"} strong='strong3' variant={"smText"} color="gray">Showing 100 results out of 1000</Text>
                 <div className={`${Styles.selectCriteria} ${"mB40"}`}>
-                    <Text className={"cursor"} strong='strong3' variant={"smText"} color="gray">Select All</Text>
+                    <Text handleClick={handleTextClick} className={"cursor"} strong='strong3' variant={"smText"} color="gray">Select All</Text>
                     <Text className={"cursor"} strong='strong3' variant={"smText"} color="gray">Filters</Text>
                     <Icon className={Styles.closeIcon} color={"gray05"} type={"close"} size="icon_xsmall" />
                     <div className={Styles.officeMain}>
@@ -103,25 +153,66 @@ const SearchResult = () => {
                         {/* <Input className={Styles.inputarrowBox} variant="border" /> */}
                     </div>
                 </div>
-                <div className={`${Styles.deoartmentTableMain} ${'alignBetween alignItemsCenter'}`}>
-                    <Table />
+                <div className={`${Styles.departmentTableMain} ${'alignBetween'}`}>
+                    {/* <Tables /> */}
+                    <Table aria-label="customized table" >
+                        <TableBody className={`${Styles.tableBody} ${Styles.scrollBar}`}>
+                            {ItemSecond.map((gridUser) => (
+                                <TableRow>
+                                    <TableCell>
+                                        <TableCell>
+                                            <CheckBox
+                                                checked={checked}
+                                                className={`${"form-check-input"} ${Styles.tableCheckbox}`}
+                                                id="rowcheck{user.id}"
+                                                // onChange={(e) => this.onItemCheck(e, user)}
+                                                variant="grayFill"
+                                                reference={checkboxRef}
+                                                onChange={handleTextClick}
+                                            />
+                                        </TableCell>
+                                        <TableCell>
+                                            {gridUser.card}
+                                        </TableCell>
+                                        <TableCell> <Icon type={"star"} size={"icon_large"} /></TableCell>
+                                    </TableCell>
+                                    <TableCell>
+                                        <TableCell>
+                                            <CheckBox
+                                                checked={gridUser.selected}
+                                                className={`${"form-check-input"} ${Styles.tableCheckbox}`}
+                                                id="rowcheck{user.id}"
+                                                // onChange={(e) => this.onItemCheck(e, user)}
+                                                variant="grayFill"
+                                            />
+                                        </TableCell>
+                                        <TableCell>
+                                            {gridUser.card}
+                                        </TableCell>
+                                        <TableCell> <Icon type={"star"} size={"icon_large"} /></TableCell>
+                                    </TableCell>
+
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
                     <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
                         <Text className={`${Styles.cardHeading} ${'mt30'}`} color="darkGray" strong="strong3">Last Viewed</Text>
                         <div className={Styles.homeCard}>
-                            <div className='mt30'>
-                                <ArmyCard />
+                            <div className='mb30'>
+                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mt30'>
-                                <ArmyCard />
+                            <div className='mb20'>
+                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mt30'>
-                                <ArmyCard />
+                            <div className='mb20'>
+                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mt30'>
-                                <ArmyCard />
+                            <div className='mb20'>
+                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mt30'>
-                                <ArmyCard />
+                            <div className='mb20'>
+                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                         </div>
                     </div>

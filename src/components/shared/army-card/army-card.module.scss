@@ -8,7 +8,12 @@
     border-radius: 10px;
     padding: 0px 13px 0px 0px;
     @include flexJustifyBetween;
-    .greenBorder{
+
+    @include xxsm {
+        flex-wrap: wrap;
+    }
+
+    .greenBorder {
         min-width: 15px;
         border-radius: 0px 10px 10px 0px;
         background: $green01;
@@ -16,17 +21,24 @@
         transform: rotate(-180deg);
         margin-right: 10px;
     }
-   
+
     .titleMain {
         max-width: 188px;
         margin: 3px 90px 0px 0px;
         display: grid;
         gap: 15px;
     }
+
     .titleNumber {
         padding-top: 3px;
         display: grid;
+
+        @include xxsm {
+            margin-left: 70%;
+        }
+
         gap: 11px;
+
         .vaText {
             margin-top: 30px;
         }

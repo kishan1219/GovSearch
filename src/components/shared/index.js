@@ -7,7 +7,7 @@ import CheckBox from "./checkbox";
 import NewsCard from "./news-card";
 import Button from "./button";
 import Heading from "./heading";
-import Table from "./table";
+import Tables from "./tables";
 import Card from "./card/card";
 import LatestDeatils from "./latest-deatils";
 import ListGroup from "./list-group";
@@ -29,7 +29,7 @@ export {
   NewsCard,
   Button,
   Heading,
-  Table,
+  Tables,
   Card,
   LatestDeatils,
   ListGroup,

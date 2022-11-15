@@ -1,9 +1,10 @@
 import React from "react";
 import Icon from "../icon";
 import Image from '../image';
-import Styles from './table.module.scss';
+import Styles from './tables.module.scss';
 import Text from '../text'
 import CheckBox from "../checkbox/checkbox";
+import { TableContainer } from "@mui/material";
 
 const Items = [
     {
@@ -95,6 +96,30 @@ const Items = [
         value: "10,000",
         country: "Arlington, VA",
     },
+    {
+        id: 12,
+        vcb: "orange",
+        selected: false,
+        name: "Audit Agency",
+        value: "10,000",
+        country: "Arlington, VA",
+    },
+    {
+        id: 13,
+        vcb: "orange",
+        selected: false,
+        name: "Audit Agency",
+        value: "10,000",
+        country: "Arlington, VA",
+    },
+    {
+        id: 14,
+        vcb: "orange",
+        selected: false,
+        name: "Audit Agency",
+        value: "10,000",
+        country: "Arlington, VA",
+    },
 ];
 
 class Table extends React.Component {
@@ -152,9 +177,8 @@ class Table extends React.Component {
 
     render() {
         return (
-            <div className={Styles.container}>
-                <div className={Styles.row}>
-                    <div className={Styles.scrollbar}>
+            <TableContainer className={Styles.container}>
+                    <div className={Styles.scrollBar}>
                         <table className={Styles.table}>
                             <tbody>
                                 {this.state.List.map((user) => (
@@ -181,8 +205,7 @@ class Table extends React.Component {
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
+            </TableContainer>
         );
     }
 }
