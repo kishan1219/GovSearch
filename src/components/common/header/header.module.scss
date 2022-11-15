@@ -71,6 +71,9 @@
             @include tab {
                 max-width: 339px;
             }
+            @include xxsm{
+                max-width: 132px;
+            }
         }
 
         .headerHeading {

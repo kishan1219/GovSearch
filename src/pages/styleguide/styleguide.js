@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Table, ListGroup, ListItem, LatestDeatils, Search, ArmyCard } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Table, ListGroup, ListItem, LatestDeatils, Search, ArmyCard, CriteriaCard } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -183,6 +183,10 @@ const Styleguide = () => {
             <div className='mt40 mb50'>
                 <Criteria />
             </div>
+           
+                <CriteriaCard />
+                
+            
         </div>
 
     )

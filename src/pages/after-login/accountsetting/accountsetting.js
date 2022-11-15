@@ -75,12 +75,7 @@ const AccountSetting = () => {
   };
 
 
-  // const handleClick = event => {
-  //   event.preventDefault();
-
-
-  //   console.log(name);
-  // };
+ 
 
 
   const selectionChangeHandler = (event) => {
@@ -108,21 +103,7 @@ const AccountSetting = () => {
     setBuisType(false);
 
   };
-
-
-  // const selectCompanyName = (event) => {
-  //   (event.target.value);
-  //   setShowData(false);
-
-  // }
-
-
-
-
-
-
-
-  const showDetails = () => {
+const showDetails = () => {
     setShow(false);
     setHide(true);
   }
@@ -138,7 +119,7 @@ const AccountSetting = () => {
       <div className={Styles.wrapper}>
         <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}> Account </Heading>
         {show && (
-          <div className={`${Styles.main} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
+          <div className={`${Styles.main}`}>
 
 
             <div className={Styles.profileBox}>
@@ -287,7 +268,7 @@ const AccountSetting = () => {
 
         {/* Edit Profile */}
         {hide && (
-          <div className={`${Styles.editCard} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
+          <div className={`${Styles.editCard}  `}>
             <Heading headingType={"h2"} className={Styles.profileHead}> Profile</Heading>
             <Grid container spacing={1}>
               <Card className={Styles.profileCard}>

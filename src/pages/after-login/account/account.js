@@ -21,7 +21,7 @@ const Account = () => {
                     </div>
                 </div>
                 <Heading className={Styles.suiteHead} color={"secondary"} >  Intelligence Suite</Heading>
-                <div className={`${Styles.MainBox} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
+                <div className={`${Styles.MainBox} `}>
                     <div className={Styles.inteliMainBox}>
                         <Grid container spacing={4}>
                             <Grid item lg={6} sm={12} md={6} xs={12}>

@@ -7,18 +7,18 @@
     min-height: 100vh;
     max-width: 100%;
     @include fonts-poppins;
-    @include xxlg {
-        padding: 30px;
 
-    }
-    .scrollBar{
-        @include mo{
-            overflow:transparent;
+  
+
+    .scrollBar {
+        @include mo {
+            overflow: transparent;
         }
     }
+
     @include ScrollBar;
 
-    
+
 
     @include iPad {
         margin-left: 0px;
@@ -34,11 +34,12 @@
         margin-left: 0px;
 
     }
-    .editMain{
-    @include mo{
-        width: 100%;
-        text-align: center;
-    }
+
+    .editMain {
+        @include mo {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     .suiteHead {
@@ -72,7 +73,7 @@
 
         @include xsm {
             margin-left: 16px;
-            font-size: 18px;
+            font-size: 14px;
         }
     }
 
@@ -81,20 +82,20 @@
             text-align: center;
         }
 
-        @include mo{
+        @include mo {
             text-align: center;
         }
 
         @include xsm {
             text-align: center;
         }
-       
+
     }
 
     .MainBox {
         margin-top: 25px;
-      
-        
+
+
 
         .growthHead {
             font-size: 28px;
@@ -151,20 +152,22 @@
             }
 
             @include md {
-                font-size: 12px;
+                font-size: 11px;
                 width: 230px;
             }
 
-            @include iPad{
+            @include iPad {
                 font-size: 14px;
                 width: 275px;
             }
+
             @include mo {
                 font-size: 12px;
                 text-align: center;
                 width: 100%;
+                max-width: 380px;
                 margin-top: 0px;
-                padding:0px 10px 10px 10px ;
+                padding: 0px 10px 10px 10px;
             }
 
             @include xsm {
@@ -180,9 +183,11 @@
 
         .contentBox {
             margin-top: 20px;
+
             @include mo {
-              text-align: center;
+                text-align: center;
             }
+
             @include xsm {
                 margin-top: 0px;
                 text-align: center;
@@ -192,9 +197,11 @@
         .insightCard {
             display: flex;
             padding: 39px 0px 10px 0px;
+
             @include mo {
                 display: grid;
             }
+
             @include xsm {
                 display: grid;
             }
@@ -205,7 +212,7 @@
         .accountCard {
             max-width: 504px;
 
-           
+
             @include md {
                 max-width: 600px;
             }
@@ -213,26 +220,26 @@
             &:hover {
                 transition: 0.3s;
                 filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
-               
-                
+
+
             }
         }
 
     }
 
-    
 
-   
+
+
     .scrollWrapper {
         max-height: calc(80vh - 120px);
         width: 90%;
-     
-       
 
-       
 
-       
-      
+
+
+
+
+
 
         @include xlmd {
             width: 100%;
@@ -259,14 +266,15 @@
         max-width: 1000px;
         margin: 0px auto;
 
-        
-        @include iPad{
+
+        @include iPad {
             display: grid;
-            gap:8px;
+            gap: 8px;
         }
-        @include mo{
+
+        @include mo {
             display: grid;
-            gap:8px;
+            gap: 8px;
         }
 
 
@@ -276,54 +284,63 @@
             gap: 7px;
             justify-content: center;
         }
-        @include xxsm{
-            width: 163px;
-    margin-left: 16px;
+
+        @include xxsm {
+            width: 226px;
+            margin-left: 16px;
         }
 
 
         .checboxMain {
 
-          margin-left: auto;
+            margin-left: auto;
 
-          @include iPad{
-            margin:0px auto;
-        }
+            @include iPad {
+                margin: 0px auto;
+            }
 
 
         }
 
         .prodHead {
             width: 600px;
-    text-align: right;
-            
+            text-align: right;
+
 
             @include xlmd {
                 margin-left: 64px;
             }
+
             @include md {
                 font-size: 28px;
-                width:438px;
+                width: 438px;
                 margin-left: 134px;
             }
-            @include iPad{
+
+            @include iPad {
                 font-size: 26px;
                 margin-left: 0px;
-               
-            }
-            @include mo{
-                font-size: 24px;
-                margin-left: 0px;
-                text-align:center;
-                max-width: 366px;
-               
+
             }
 
-            
+            @include mo {
+                font-size: 24px;
+                margin-left: 0px;
+                text-align: center;
+                max-width: 366px;
+
+            }
+
+
 
             @include xsm {
                 font-size: 20px;
                 max-width: 366px;
+            }
+
+            @include xsm {
+font-size: 14px;
+                max-width: 156px;
             }
         }
 
@@ -358,14 +375,15 @@
             @include iPad {
                 font-size: 26px;
             }
-            
+
             @include mo {
                 font-size: 16px;
-            }    
+            }
 
             @include xsm {
                 font-size: 16px;
             }
+
             @include xsm {
                 font-size: 12px;
             }
@@ -374,13 +392,15 @@
         .comptetiveCard {
             display: flex;
             padding: 39px 0px 10px 0px;
+
             @include mo {
                 display: grid;
             }
+
             @include xsm {
                 display: grid;
             }
-          
+
 
             .contentBox {
                 margin-top: 20px;
