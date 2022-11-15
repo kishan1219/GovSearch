@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, ListGroup, ListItem, LatestDeatils, Search, ArmyCard, Tables } from '../../components/shared/index'
+import { CheckBox, Icon, Input, Button, NewsCard, Heading, Text, Tables, ListGroup, ListItem, LatestDeatils, Search, ArmyCard, CriteriaCard } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -174,15 +174,22 @@ const Styleguide = () => {
             <div className='mt30 mb50'>
                 <Cardtab />
             </div>
+            {/* Army car */}
             <div className='mt40 mb50'>
                 <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
             </div>
             <div className='mt40 mb50'>
                 <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />
             </div>
+            {/* army card */}
             <div className='mt40 mb50'>
                 <Criteria />
             </div>
+            <div className='mt40 mb50'>
+                <CriteriaCard />
+            </div>
+
+
         </div>
 
     )

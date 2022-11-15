@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Grid } from '@mui/material'
 import Styles from './accountsetting.module.scss'
 import { Heading, Card, Text, Button, Layout, Input, Icon } from '../../../components/shared/index'
 import TextareaAutosize from '@mui/material/TextareaAutosize';
@@ -7,9 +8,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 const AccountSetting = () => {
   const [showselect, setSelect] = useState(false);
-  // const [selectState, setSelectState] = useState(false);
- 
-  // const [buisnesstype, setBuisnessType] = useState(false);
   const [show, setShow] = useState(true);
   const [hide, setHide] = useState(false);
   const [selected, setSelected] = useState("GovSearch Proffesional");
@@ -17,72 +15,67 @@ const AccountSetting = () => {
   const [showdata, setShowData] = useState(false);
   const [licType, setLicType] = useState("USA");
 
-  const[employee,setEmployee] = useState(false);
-  const[employeenum,setEmployeenum]=useState("100");
-// State
-  const[state,setState] = useState(false);
-  const[selectState,setSelectState]=useState("VA");
-  // Buisness Type
-  const[BuisType,setBuisType] = useState(false);
-  const[selectBuisType,setSelectBuisType]=useState("Prpfessional Services");
+  const [employee, setEmployee] = useState(false);
+  const [employeenum, setEmployeenum] = useState("100");
 
-  
+  const [state, setState] = useState(false);
+  const [selectState, setSelectState] = useState("VA");
+
+  const [BuisType, setBuisType] = useState(false);
+  const [selectBuisType, setSelectBuisType] = useState("Prpfessional Services");
+
+
   // For first  Name
   const [name, setName] = useState("Harry");
-  const[lname,setLname] = useState("Pinkston");
-  const[address,setAddress] = useState("Pinkston");
-  const[zipCode,setZipCode] = useState("344535");
-  const[email,setEmail] = useState("matth@gmail.com");
-  const[contact,setContact] = useState("83498585944");
-  const[title,setTitle] = useState("Product Manager");
-  const[company,setCompany] = useState("TechnoMile");
-  const[url,setUrl] = useState("technomile.com");
+  const [lname, setLname] = useState("Pinkston");
+  const [address, setAddress] = useState("Pinkston");
+  const [zipCode, setZipCode] = useState("344535");
+  const [email, setEmail] = useState("matth@gmail.com");
+  const [contact, setContact] = useState("83498585944");
+  const [title, setTitle] = useState("Product Manager");
+  const [company, setCompany] = useState("TechnoMile");
+  const [url, setUrl] = useState("technomile.com");
   const updateName = event => {
     setName(event.target.value);
-  
+
   };
   const updateLastName = event => {
     setLname(event.target.value);
-  
+
   };
   const updateAddress = event => {
     setAddress(event.target.value);
-  
+
   };
   const updateZipCode = event => {
     setZipCode(event.target.value);
-  
+
   };
   const updateEmail = event => {
     setEmail(event.target.value);
-  
+
   };
   const updateContact = event => {
     setContact(event.target.value);
-  
+
   };
   const updateTitle = event => {
     setTitle(event.target.value);
-  
+
   };
   const updateCompany = event => {
     setCompany(event.target.value);
-  
+
   };
-  
-  
+
+
   const updateUrl = event => {
     setUrl(event.target.value);
-  
-  };
-  
-  
-  // const handleClick = event => {
-  //   event.preventDefault();
 
-  
-  //   console.log(name);
-  // };
+  };
+
+
+ 
 
 
   const selectionChangeHandler = (event) => {
@@ -91,40 +84,26 @@ const AccountSetting = () => {
 
   };
   const selectLicenceType = (event) => {
-   setLicType(event.target.value);
+    setLicType(event.target.value);
     setShowData(false);
 
   };
   const selectEmployeenumber = (event) => {
     setEmployeenum(event.target.value);
     setEmployee(false);
- 
-   };
-   const selectOptionState = (event) => {
+
+  };
+  const selectOptionState = (event) => {
     setSelectState(event.target.value);
     setState(false);
- 
-   };
-   const setSelectBuisness = (event) => {
+
+  };
+  const setSelectBuisness = (event) => {
     setSelectBuisType(event.target.value);
     setBuisType(false);
- 
-   };
 
-
-  // const selectCompanyName = (event) => {
-  //   (event.target.value);
-  //   setShowData(false);
-
-  // }
- 
-  
- 
- 
-
-
-
-  const showDetails = () => {
+  };
+const showDetails = () => {
     setShow(false);
     setHide(true);
   }
@@ -136,127 +115,152 @@ const AccountSetting = () => {
 
 
   return (
-    <Layout isSidebar={true}>
+    <Layout isSidebar={true} isFederal={false} isGovSearchProfessional={true}>
       <div className={Styles.wrapper}>
-        <Heading className={Styles.accountHead} color={"gray"} headingType={"h1"}> Account </Heading>
+        <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}> Account </Heading>
         {show && (
-          <div className={`${Styles.main} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
+          <div className={`${Styles.main}`}>
 
 
             <div className={Styles.profileBox}>
 
-              <Heading headingType={"h2"}> Profile</Heading>
-              <Card className={Styles.mainCard}>
+              <Heading className={Styles.profileHead} color={"secondary"} headingType={"h2"}> Profile</Heading>
+              <Grid container spacing={2}>
 
-                <div className={Styles.textBox}>
-                  <div className={Styles.profileBox}>
+                <Card className={Styles.mainCard}>
+
+
+                  <div className={Styles.cardBox}>
+                    <div>
+
+                      <Heading strong='strong3' className={Styles.cardHead}>First  Name</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{name}</Text>
+                    </div>
+                    <div>
+                      <Heading className={Styles.cardHead} >Last Name</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{lname}</Text>
+                    </div>
+                    <div>
+                      <Heading className={Styles.cardHead}>Address</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{address}</Text>
+                    </div>
+                    <div>
+                      <Heading className={Styles.cardHead}>Zip Code</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{zipCode}</Text>
+                    </div>
+
+
+
+                    <div>
+                      <Heading className={Styles.cardHead}>Email</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{email}</Text>
+                    </div>
+                    <div>
+                      <Heading className={Styles.cardHead}>Phone</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{contact}</Text>
+                    </div>
+                    <div>
+                      <Heading className={Styles.cardHead}>State</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{selectState}</Text>
+                    </div>
+                    <div>
+                      <Heading className={Styles.cardHead}>Country</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{licType}</Text>
+                    </div>
+
+
+
+                    <div>
+                      <Heading className={Styles.cardHead}>Title / Role</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{title}</Text>
+                    </div>
                     <div >
-                      <Heading strong='strong3'  className={Styles.cardHead}>First  Name</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{name}</Text>
+                      <Heading className={Styles.cardHead}>Company</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{company}</Text>
                     </div>
                     <div>
-                      <Heading  className={Styles.cardHead}>Email</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{email}</Text>
+                      <Heading className={Styles.cardHead}>Number of Employees</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{employeenum}</Text>
                     </div>
                     <div>
-                      <Heading  className={Styles.cardHead}>Title / Role</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{title}</Text>
+                      <Heading className={Styles.cardHead}>Type of Business</Heading>
+                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{selectBuisType}</Text>
+                    </div>
+                    <div className={Styles.urlBox}>
+                      <Heading className={Styles.cardHead}>URL (website)</Heading>
+                      <Text variant={"mlgText"} className={Styles.cardText} strong='strong3'>{url}</Text>
+                    </div>
+                    <div className={Styles.editMain}>
+                      <Button btnClass={Styles.editBtn} size={"xsm"} variant={"solidPrimary"} btnHandler={showDetails} >Edit</Button>
                     </div>
                   </div>
+                </Card>
+              </Grid>
 
 
-                  <div className={Styles.profileBox}>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Last Name</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{lname}</Text>
-                    </div>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Phone</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{contact}</Text>
-                    </div>
-                    <div >
-                      <Heading  className={Styles.cardHead}>Company</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{company}</Text>
-                    </div>
-                  </div>
-                  <div className={Styles.profileBox}>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Address</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{address}</Text>
-                    </div>
-
-                    <div>
-                      <Heading  className={Styles.cardHead}>State</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{selectState}</Text>
-                    </div>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Number of Employees</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{employeenum}</Text>
-                    </div>
-                  </div>
-                  <div className={Styles.profileBox}>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Zip Code</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{zipCode}</Text>
-                    </div>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Country</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{licType}</Text>
-                    </div>
-                    <div>
-                      <Heading  className={Styles.cardHead}>Type of Business</Heading>
-                      <Text variant={"mlgText"} strong='strong3'>{selectBuisType}</Text>
-                    </div>
-                  </div>
 
 
-                </div>
-                <div className={Styles.btnMain}>
-                  <div>
-                    <Heading  className={Styles.cardHead}>URL (website)</Heading>
-                    <Text variant={"mlgText"} strong='strong3'>{url}</Text>
-                  </div>
-                  <Button size={"xsm"} variant={"solidPrimary"} btnHandler={showDetails} >Edit</Button>
-                </div>
-
-
-              </Card>
             </div>
-            <Heading className={Styles.manageHead} color={"secondary"}  headingType={"h2"}>User Management</Heading>
+            <Heading className={Styles.manageHead} color={"secondary"} headingType={"h2"}>User Management</Heading>
             <div className={Styles.userManage}>
+              <Grid container spacing={2}>
+                <Card className={Styles.mainCard}>
+                  <div className={Styles.userManageBox}>
 
-              <Card className={Styles.mainCard}>
-                <div className={Styles.userManageBox}>
-                  <Text className={Styles.identityText} variant={"xxxlText"} color={"primary01"} strong={"strong4"}>3</Text>
-                  <Text className={Styles.identityText} variant={"mlgText"} color={"gray"} strong={"strong4"}>Remaining License</Text>
-                  <Button size={"xlsmlg"} variant={"solidPrimary"}>Update User Type</Button>
-                  <Button size={"xlmd"} variant={"solidPrimary"}>Invite Users</Button>
-                </div>
-                <div className={Styles.secondCard}>
-                  <div className={Styles.licenseMain}>
-                    <Text strong='strong3' variant={"mlgText"} >Available Licenses</Text>
-                    <Text variant={"mlgText"} strong='strong6'>1</Text>
-                    <Text variant={"mlgText"} strong='strong6'>2</Text>
+                    <Text className={Styles.licText} variant={"xxxlText"} color={"primary01"} strong={"strong4"}>3</Text>
+                    <Text className={Styles.remainlicText} variant={"mlgText"} color={"gray"} strong={"strong4"}>Remaining License</Text>
+                    <Button btnClass={Styles.updateBtn} size={"xlsmlg"} variant={"solidPrimary"}>Update User Type</Button>
+                    <Button btnClass={Styles.inviteBtn} size={"xlmd"} variant={"solidPrimary"}>Invite Users</Button>
                   </div>
-                  <div className={Styles.licenseMain}>
-                    <Text strong='strong3' variant={"mlgText"} >License Types</Text>
-                    <Text variant={"mlgText"} strong='strong6'>{selected}</Text>
-                    <Text variant={"mlgText"} strong='strong6'>GovSearch Defense</Text>
+                  <div className={Styles.secondCard}>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >Available Licenses</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>1</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>2</Text>
+                    </div>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >License Types</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>{selected}</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>GovSearch Defense</Text>
+                    </div>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Expriation Date</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>12/01/2022</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>12/01/2022</Text>
+                    </div>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Assigned Licenses</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>2</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>0</Text>
+                    </div>
                   </div>
-                  <div className={Styles.licenseMain}>
-                    <Text strong='strong3' variant={"mlgText"} >Expriation Date</Text>
-                    <Text variant={"mlgText"} strong='strong6'>12/01/2022</Text>
-                    <Text variant={"mlgText"} strong='strong6'>12/01/2022</Text>
-                  </div>
-                  <div className={Styles.licenseMain}>
-                    <Text strong='strong3' variant={"mlgText"} >Assigned Licenses</Text>
-                    <Text variant={"mlgText"} strong='strong6'>2</Text>
-                    <Text variant={"mlgText"} strong='strong6'>0</Text>
-                  </div>
-                </div>
 
-                <Heading className={Styles.licenseHead} headingType="h2" color="secondary">Assigned Users</Heading>
-              </Card>
+
+                  <Heading className={Styles.licenseHead} headingType="h2" color="secondary">Assigned Users</Heading>
+                  <div className={Styles.assignedCard}>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >First Name</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Matt</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Hunter</Text>
+                    </div>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >Last Name</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Pinkston</Text>
+                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Cronier</Text>
+                    </div>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Email</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>matt@technomile.com</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>hunter@technomile.com</Text>
+                    </div>
+                    <div className={Styles.licenseMain}>
+                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Type</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>Gov Search Admin</Text>
+                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>Gov Search User</Text>
+                    </div>
+                  </div>
+                </Card>
+              </Grid>
             </div>
           </div >
         )}
@@ -264,86 +268,59 @@ const AccountSetting = () => {
 
         {/* Edit Profile */}
         {hide && (
-          <div className={`${Styles.editCard} ${Styles.scrollBar} ${Styles.scrollWrapper} `}>
+          <div className={`${Styles.editCard}  `}>
             <Heading headingType={"h2"} className={Styles.profileHead}> Profile</Heading>
-            <Card className={Styles.profileCard}>
-              <div className={Styles.formBox}>
-                <div>
+            <Grid container spacing={1}>
+              <Card className={Styles.profileCard}>
+                <div className={Styles.formBox}>
                   <div >
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>First Name</Text>
-                    <Input className={Styles.inputbox} variant="border"
-                    id="name"
-                    name="name"
-                    onChange={updateName}
-                    value={name}
-                      
-                      
-                      />
-                  </div>
-                  <div className={Styles.SecBox}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Email</Text>
-                    <Input className={Styles.inputbox} variant="border"
-                    id="email"
-                    name="email"
-                    onChange={updateEmail}
-                    value={email} />
-                  </div>
-                  <div className={Styles.titleBox}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Title / Role</Text>
-                    <Input className={Styles.inputbox} variant="border"
-                     id="title"
-                     name="title"
-                     onChange={updateTitle}
-                     value={title} />
+                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>First Name</Text>
+                    <Input variant="border" className={Styles.inputbox} id="name" name="name" onChange={updateName} value={name} />
                   </div>
 
-                </div>
-
-                <div>
                   <div>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Last Name</Text>
-                    <Input className={Styles.inputbox} variant="border"
-                     id="lname"
-                     name="lname"
-                     onChange={updateLastName}
-                     value={lname}
-                        />
+                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>Last Name</Text>
+                    <Input variant="border" className={Styles.inputbox}
+                      id="lname"
+                      name="lname"
+                      onChange={updateLastName}
+                      value={lname}
+                    />
                   </div>
-                  <div className={Styles.SecBox}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Phone</Text>
-                    <Input className={Styles.inputbox} variant="border" 
-                    id="phone"
-                    name="phone"
-                    onChange={updateContact}
-                    value={contact}/>
-                  </div>
-                  <div className={Styles.titleBox}>
-                    <Text variant={"mlgText"} strong='strong4'>Company</Text>
-                    <Input className={Styles.inputbox} variant="border"
-                     id="company"
-                     name="company"
-                     onChange={updateCompany}
-                     value={company} />
-                  </div>
-
-                </div>
-
-
-                <div>
                   <div>
                     <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Address</Text>
                     <Input className={Styles.inputbox} variant="border"
-                    id="address"
-                    name="address"
-                    onChange={updateAddress}
-                    value={address}/>
+                      id="address"
+                      name="address"
+                      onChange={updateAddress}
+                      value={address} />
+                  </div>
+                  <div>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Zip Code</Text>
+                    <Input className={Styles.inputbox} variant="border"
+                      id="zipcode"
+                      name="zipcode"
+                      onChange={updateZipCode}
+                      value={zipCode} />
+                  </div>
+                  <div>
+                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>Email</Text>
+                    <Input variant="border" className={Styles.inputbox} id="email" name="email" onChange={updateEmail} value={email} />
+                  </div>
+                  <div className={Styles.SecBox}>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Phone</Text>
+                    <Input className={Styles.inputbox} variant="border"
+                      id="phone"
+                      name="phone"
+                      onChange={updateContact}
+                      value={contact} />
                   </div>
                   <div className={Styles.arrowInput}>
                     <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>State</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
-                      value={selectState} 
+                      value={selectState}
                       onChange={selectOptionState}
                       open={state}
 
@@ -354,40 +331,8 @@ const AccountSetting = () => {
                       <MenuItem value="Rusia">Rusia</MenuItem>
                     </Select>
 
-                    {/* <Input className={Styles.inputarrowBox} variant="border" /> */}
+
                     <Icon onClick={() => setState(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
-                  </div>
-                  <div className={Styles.arrowInput}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Number of Employees</Text>
-                    <Select className={Styles.empInput}
-                      IconComponent={() => null}
-                      sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
-                      value={employeenum} 
-                      onChange={selectEmployeenumber}
-                      open={employee}
-
-                    >
-                      <MenuItem value="100">100</MenuItem>
-                      <MenuItem value="200">200</MenuItem>
-                      <MenuItem value="300">300</MenuItem>
-                      <MenuItem value="400">400</MenuItem>
-                    </Select>
-
-                    {/* <Input className={Styles.inputarrowBox} variant="border" /> */}
-                    <Icon onClick={() => setEmployee(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
-                  </div>
-
-                </div>
-
-
-                <div>
-                  <div>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Zip Code</Text>
-                    <Input className={Styles.inputbox} variant="border" 
-                    id="zipcode"
-                    name="zipcode"
-                    onChange={updateZipCode}
-                    value={zipCode}/>
                   </div>
                   <div className={Styles.arrowInput}>
                     <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Country</Text>
@@ -404,8 +349,38 @@ const AccountSetting = () => {
                       <MenuItem value="Turk">Turk</MenuItem>
                     </Select>
 
-                   
+
                     <Icon onClick={() => setShowData(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                  </div>
+                  <div className={Styles.titleBox}>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Title / Role</Text>
+                    <Input className={Styles.inputbox} variant="border"
+                      id="title"
+                      name="title"
+                      onChange={updateTitle}
+                      value={title} />
+                  </div>
+                  <div className={Styles.titleBox}>
+                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>Company</Text>
+                    <Input className={Styles.inputbox} variant="border"
+                      id="company"
+                      name="company"
+                      onChange={updateCompany}
+                      value={company} />
+                  </div>
+                  <div className={Styles.arrowInput}>
+                    <Text className={Styles.empmText} variant={"mlgText"} strong='strong4'>Number of Employees</Text>
+                    <Select className={Styles.empInput} IconComponent={() => null}
+                      sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+                      value={employeenum} onChange={selectEmployeenumber} open={employee} >
+                      <MenuItem value="100">100</MenuItem>
+                      <MenuItem value="200">200</MenuItem>
+                      <MenuItem value="300">300</MenuItem>
+                      <MenuItem value="400">400</MenuItem>
+                    </Select>
+
+
+                    <Icon onClick={() => setEmployee(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.arrowInput}>
                     <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Types of Business</Text>
@@ -418,66 +393,84 @@ const AccountSetting = () => {
                     >
                       <MenuItem value="Prof. Services">Prof. Services</MenuItem>
                       <MenuItem value="Prof. Starts">Prof. Starts </MenuItem>
-                     
+
                     </Select>
 
-                    {/* <Input className={Styles.inputarrowBox} variant="border" /> */}
+
                     <Icon onClick={() => setBuisType(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
+                  <div className={Styles.urlMain}>
+                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>URL (website)</Text>
+                    <Input className={Styles.inputbox} variant="border"
+                      id="url"
+                      name="url"
+                      onChange={updateUrl}
+                      value={url} />
+                  </div>
+                  <div className={Styles.saveBtn}>
+                    <Button btnClass={Styles.savemainBtn} size={"xsm"} variant={"solidPrimary"} btnHandler={saveDetails} >Save</Button>
+                  </div>
+
                 </div>
+              </Card>
+            </Grid>
+            <Heading className={Styles.manageHead} headingType={"h2"}>User Management</Heading>
+            <Grid container spacing={2}>
+
+              <div className={Styles.cardDown}>
 
 
-              </div>
-              <div className={Styles.nextBtn}>
-                <div>
-                  <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>URL (website)</Text>
-                  <Input className={Styles.inputbox} variant="border" 
-                   id="url"
-                   name="url"
-                   onChange={updateUrl}
-                   value={url}/>
-                </div>
-                <Button size={"xsm"} variant={"solidPrimary"} btnHandler={saveDetails} >Save</Button>
-              </div>
-            </Card>
-            <div className={Styles.cardDown}>
-              <Heading className={Styles.manageHead} headingType={"h2"}>User Management</Heading>
-              <div className={Styles.arrowInput}>
+                <div className={Styles.upBox}>
+                  <div className={Styles.arrowInput}>
 
-                {/* <select className={Styles.typeInput} disabled={licencetype ? false : true}>
-                  <option selected value="Licence Type">Licence Type </option>
-                  <option value="1">GovSearch Proffesional</option>
-                  <option value="2">GovSearch Defense</option>
 
-                </select> */}
-                  <Select className={Styles.typeInput}
+                    <Select className={Styles.typeInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
                       value={selected} onChange={selectionChangeHandler}
-                       open={showselect}
+                      open={showselect}
 
                     >
                       <MenuItem value="GovSearch Proffesional">GovSearch Proffesional</MenuItem>
                       <MenuItem value="GovSearch Defense">GovSearch Defense</MenuItem>
-                      
+
                     </Select>
 
 
-                <Icon  onClick={() => setSelect(true)}className={Styles.iconType} type='soliddownpolygon' variant='icon_xlarge' />
+                    <Icon onClick={() => setSelect(true)} className={Styles.iconType} type='soliddownpolygon' variant='icon_xlarge' />
 
-              </div>
-              <div className={Styles.emailBox}>
-                <Input className={Styles.mailBox} type="email" placeholder="Enter Your Email" />
-                {/* <Input className={Styles.commentBox} placeholder="Comments" /> */}
-                <TextareaAutosize
-                  aria-label="minimum height"
-                  minRows={3}
-                  placeholder="comments"
-                  style={{ width: 615, height: 200,  marginTop: 20, paddingTop: 15, paddingLeft: 20,fontSize:25 }}
-                />
+                  </div>
+                  <Input className={Styles.mailBox} type="email" placeholder="Enter Your Email" />
+                  <Input placeholder={"comments"} className={Styles.textAreabox} type="textarea" />
+                 
 
+                </div>
+                
+
+                <div className={Styles.downBoxx}>
+                  <Heading className={Styles.remainHead}>Remaining License</Heading>
+                  <div className={Styles.mainRemaining}>
+                    <div className={Styles.availableBox} >
+                      <Text className={Styles.remainText}>Available</Text>
+                      <Text className={Styles.remainText}>1</Text>
+                      <Text className={Styles.remainText}>2</Text>
+                    </div>
+                    <div className={Styles.availableBox}>
+                      <Text className={Styles.remainText}>License Type</Text>
+                      <Text className={Styles.remainText}>GovSearch Professional </Text>
+                      <Text className={Styles.remainText}>GovSearch Defense</Text>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+              
+             
+              
+            </Grid>
+            <div className={Styles.sendBtn}>
+                    <Text variant={"xxlText"} className={Styles.billinText}>Billing</Text>
+                    <Button btnClass={Styles.sendbtns} size={"xsm"} variant={"solidPrimary"} >Send</Button>
+                  </div>
           </div>
         )}
 

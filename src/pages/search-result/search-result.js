@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Styles from './search-result.module.scss'
-import { ArmyCard, CheckBox, Icon, Image, Layout, Tables, Text } from '../../components/shared'
+import { ArmyCard, CheckBox, Icon, Layout, Tables, Text } from '../../components/shared'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Table, TableBody, TableCell, TableRow } from '@mui/material';

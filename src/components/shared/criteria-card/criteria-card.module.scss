@@ -1,0 +1,74 @@
+@import "../../../assets/scss/mixins.scss";
+
+.cardContainer {
+    font-family: 'Poppins';
+    font-style: normal;
+
+    .criteriaBox {
+        max-width: 554px;
+        border-radius: 10px;
+
+        .cardWrapper {
+            display: flex;
+            padding: 24px 26px 25px 16px;
+
+            .imageBox {
+                .contact {
+                    max-width: 74px;
+                    letter-spacing: 16px;
+                    margin: 0px 39px;
+                }
+            }
+
+            .contentBox {
+                width: 100%;
+                margin-left: 25px;
+                margin-top: 22px;
+                display: grid;
+                gap: 12px;
+
+                .starBox {
+                    display: flex;
+
+                  
+                    .starIcon {
+                        // color: gray;
+
+                        &:hover {
+                            color: rgba(0, 0, 0, 0.3);
+                            transition: 0.5s;
+                        }
+                    }
+
+                    .mainHead {
+                        width: 100%;
+                        max-width: 309px;
+                    }
+                }
+
+                .locationBox {
+                    @include flex;
+
+                    .userLocate {
+                        font-size: 19px;
+                    }
+
+                    .locateText {
+                        width: 100%;
+                        max-width: 312px;
+                    }
+                }
+
+                .descText {
+                    color: rgba(0, 0, 0, 0.3);
+                }
+
+                .btnBox {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+    }
+}

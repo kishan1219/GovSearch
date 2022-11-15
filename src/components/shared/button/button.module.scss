@@ -110,6 +110,11 @@
         min-height: 44px;
         font-size: $font-mlg;
     }
+    &.xxsm{
+        min-width: 78px;
+        max-height: 30px;
+        font-size: $font-mlg;
+    }
 
 
     // variant
@@ -136,6 +141,20 @@
             transition: 0.5s;
         }
 
+    }
+    &.teritary{
+        background: #FFFFFF;
+
+        color: #000000;
+border: 2px solid #222223;
+font-weight: 300;
+border-radius: 8px;
+&:hover {
+    color: #000000;
+    background-color: $gray02;
+    border:none;
+    transition: 0.5s;
+}
     }
 
     &.disabled {
