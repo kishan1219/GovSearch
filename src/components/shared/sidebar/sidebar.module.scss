@@ -1,5 +1,3 @@
-@import '../../../assets/scss/variables.scss';
-@import '../../../assets/scss/styles.scss';
 @import '../../../assets/scss/mixins.scss';
 
 .container {
@@ -8,7 +6,7 @@
     min-height: 100vh;
     z-index: 1;
     top: 145px;
-    
+
     @include tab {
         top: 270px;
     }
@@ -20,8 +18,12 @@
     @include iPad {
         top: 280px
     }
+
     @include mo {
         top: 220px;
+    }
+    @include xsm {
+        top: 100px;
     }
 
     .menu {
@@ -35,7 +37,8 @@
 
         @include md {
             min-height: 250px;
-        } 
+        }
+
         @include tab {
             min-height: 300px;
         }
@@ -54,6 +57,12 @@
     .sidebarFooter {
         margin-top: 100px;
 
+        i {
+            &:hover {
+                color: $lightGray03;
+            }
+        }
+
         @include xxmd {
             margin-top: 30px;
         }
@@ -67,6 +76,7 @@
                 margin-left: 25px;
             }
         }
+
         @include mo {
             margin-top: 0px;
         }
@@ -184,6 +194,9 @@
     }
 
     .sidebarMainFooter div {
+        @include md {
+            margin-top: 40px;
+        }
         @include tab {
             margin-top: 20px;
         }

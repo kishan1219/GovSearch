@@ -2,8 +2,7 @@
 @include ScrollBar;
 
 .scrollBar {
-    max-height: 250px;
-    width: 100%;
+    max-height: 600px;
     overflow: auto;
 }
 
@@ -14,15 +13,76 @@
     .searchCriteria {
         width: 100%;
         @include flexBetween;
+        @include tab {
+            gap: 25px;
+        }
 
         @include mo {
             flex-wrap: wrap;
         }
     }
 
+    .plusIconCard {
+        z-index: 1;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        min-width: 250px;
+        padding: 25px;
+
+        .plusListMain {
+            background: $gray;
+            position: relative;
+            max-width: 160px;
+            max-height: 30px;
+
+            .listSelect {
+                max-width: 250px;
+                max-height: 30px;
+                color: $paua;
+                font-size: $font-xl;
+            }
+
+            .listIcon {
+                position: absolute;
+                top: 0px;
+                right: -45px;
+                background: $gray03;
+                padding: 1px;
+            }
+        }
+
+        .addToBtn {
+            font-size: $font-lg;
+            max-height: 40px;
+            min-width: 120px;
+            margin-left: 87px;
+        }
+    }
+
+    .trioIcon {
+        position: relative;
+
+        & i:hover {
+            color: $gray02;
+        }
+    }
+
     .selectCriteria {
-        max-width: 700px;
+        max-width: 1200px;
         @include flexJustifyAround;
+
+        @include xlmd {
+            max-width: 800px;
+        }
+
+        @include md {
+            max-width: 700px;
+        }
+
+        @include tab {
+            gap: 12px;
+        }
 
         @include mo {
             flex-wrap: wrap;
@@ -51,7 +111,7 @@
         .straightIcon {
             position: absolute;
             top: 6px;
-            right: 50px
+            right: 40px
         }
 
         .selectIcon {
@@ -66,16 +126,22 @@
         @include md {
             display: block
         }
+        @include mo {
+            margin-top: 30px;
+        }
 
         .colMd4 {
             @include latestDetail;
 
             @include md {
-                margin-left: 15%;
+                margin-left: 23%;
             }
 
             @include tab {
-                margin-left: 3%;
+                margin-left: 12%;
+            }
+            @include mo {
+                margin-left: 5px;
             }
 
             .cardHeading {

@@ -11,8 +11,14 @@
 
     @include xxsm {
         flex-wrap: wrap;
+        gap: 20px;
     }
-
+    .cardHeading{
+        &:hover {
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    }
     .greenBorder {
         min-width: 15px;
         border-radius: 0px 10px 10px 0px;

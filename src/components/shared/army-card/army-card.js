@@ -13,7 +13,7 @@ const ArmyCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsT
                 <Image className={imageClass} src={src} alt="armySeal" />
             </div>
             <div className={`${styles.titleMain} ${departmentClass}`}>
-                <Text color="gray01" variant="smText" strong="strong6" >Department of the Army</Text>
+                <Text className={styles.cardHeading} color="gray01" variant="smText" strong="strong6" >Department of the Army</Text>
                 {isVirgina && <Text color="gray" variant="smText" >Virginia</Text>}
                 {isDownLacsText && <Text color="gray01" variant="smText" strong="strong6" >100,000</Text>}
             </div>
