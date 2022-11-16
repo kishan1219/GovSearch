@@ -20,7 +20,7 @@
         font-size: $font-xxl;
     }
 
-    &.sm {
+    &.F {
         min-width: 97px;
         font-size: $font-xxl;
     }
@@ -145,15 +145,15 @@
     }
 
     &.teritary {
-        background: #FFFFFF;
+        background: $white;
 
-        color: #000000;
-        border: 2px solid #222223;
+        color: $black;
+        border: 2px solid $darkGray;
         font-weight: 300;
         border-radius: 8px;
 
         &:hover {
-            color: #000000;
+            color: $black;
             background-color: $gray02;
             border: none;
             transition: 0.5s;

@@ -1,0 +1,38 @@
+.cardContainer {
+
+    .contentBox {
+        display: flex;
+
+        padding: 0px 24px 12px 24px;
+
+        .textFirst {
+            width: 100%;
+            max-width: 207px;
+        }
+
+        .textSecond {
+            min-width: 217px;
+        }
+
+        .assetsFirst {
+           min-width:118px;
+        }
+
+        .assetsSecond {
+            width:100%;
+            max-width:242px;
+        }
+       
+        .childFirst{
+            width: 100%;
+            max-width:328px;
+        }
+        .childSecond{
+            width:100%;
+            max-width: 162px;
+            text-align: right;
+        }
+    }
+
+    // }
+}
