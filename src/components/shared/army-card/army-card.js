@@ -10,7 +10,7 @@ const ArmyCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsT
             {isGreenBorder
                 && <div className={styles.greenBorder} />}
             <div>
-                <Image className={imageClass} src={src} alt="armySeal" />
+                <Image className={`${styles.cardImage} ${imageClass}`} src={src} alt="armySeal" />
             </div>
             <div className={`${styles.titleMain} ${departmentClass}`}>
                 <Text className={styles.cardHeading} color="gray01" variant="smText" strong="strong6" >Department of the Army</Text>

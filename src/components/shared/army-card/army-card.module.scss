@@ -32,6 +32,12 @@
         margin-right: 10px;
     }
 
+    .cardImage {
+        @include xxsm {
+            margin-top: 8px;
+        }
+    }
+
     .titleMain {
         max-width: 188px;
         margin: 3px 90px 0px 0px;
