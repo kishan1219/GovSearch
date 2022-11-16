@@ -13,6 +13,7 @@
     .searchCriteria {
         width: 100%;
         @include flexBetween;
+
         @include tab {
             gap: 25px;
         }
@@ -126,11 +127,14 @@
         @include md {
             display: block
         }
+
         @include mo {
             margin-top: 30px;
         }
 
         .colMd4 {
+            margin-left: 10px;
+            margin-top: 30px;
             @include latestDetail;
 
             @include md {
@@ -140,6 +144,7 @@
             @include tab {
                 margin-left: 12%;
             }
+
             @include mo {
                 margin-left: 5px;
             }
@@ -167,18 +172,16 @@
                     margin: 3px 40px 0px 0px;
                 }
 
-                @include mo {
-                    margin: 3px 40px 0px 0px;
-                }
-
                 @include xsm {
-                    margin: 3px 0px 0px 0px;
+                    margin: 3px 0px 0px 40px;
+                    text-align: left;
                 }
             }
         }
 
         .departmentArmyTab {
             margin: 0px 50px 0px 0px;
+
         }
 
 
