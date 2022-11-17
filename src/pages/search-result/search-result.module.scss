@@ -173,9 +173,13 @@
                 }
 
                 @include xsm {
-                    margin: 3px 0px 0px 40px;
+                    margin: 3px 0px 0px 45px;
                     text-align: left;
                 }
+                @include xxsm {
+                    margin: 3px 0px 0px 40px;
+                }
+              
             }
         }
 

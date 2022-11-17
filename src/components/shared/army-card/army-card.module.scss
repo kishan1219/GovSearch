@@ -9,7 +9,7 @@
     padding: 0px 13px 0px 0px;
     @include flexJustifyBetween;
 
-    @include xxsm {
+    @include xsm {
         max-width: 300px;
         display: block;
         gap: 20px;
@@ -33,7 +33,7 @@
     }
 
     .cardImage {
-        @include xxsm {
+        @include xsm {
             margin-top: 8px;
         }
     }
@@ -44,22 +44,22 @@
         display: grid;
         gap: 15px;
 
-        @include xxsm {
+      
+        @include xsm {
             margin: 3px 0px 0px 0px;
-
         }
     }
 
     .titleNumber {
         padding-top: 3px;
         display: grid;
-
-        @include xxsm {
+        gap: 11px;
+     
+        @include xsm {
             @include flexJustifyAround;
             padding: 10px 0px;
         }
 
-        gap: 11px;
 
         .vaText {
             margin-top: 30px;
