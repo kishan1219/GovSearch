@@ -15,11 +15,12 @@
         @include flexBetween;
 
         @include tab {
-            gap: 25px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         @include mo {
-            flex-wrap: wrap;
+            margin: 0px 5px;
         }
     }
 
@@ -30,6 +31,10 @@
         right: 0px;
         min-width: 250px;
         padding: 25px;
+
+        @include xsm {
+            right: -85px;
+        }
 
         .plusListMain {
             background: $gray;
@@ -64,31 +69,52 @@
     .trioIcon {
         position: relative;
 
+        @include tab {
+            margin-left: 70%;
+        }
+
+        @include mo {
+            margin-left: 0px;
+        }
+
         & i:hover {
             color: $gray02;
+        }
+
+        .plusIconMain {
+            @include mo {
+                margin: 0px 30px;
+            }
+        }
+    }
+
+    .resultText {
+        @include mo {
+            margin-left: 5px;
         }
     }
 
     .selectCriteria {
-        max-width: 1200px;
-        @include flexJustifyAround;
-
-        @include xlmd {
-            max-width: 800px;
-        }
+        max-width: 800px;
+        @include flexJustifyBetween;
 
         @include md {
             max-width: 700px;
         }
 
         @include tab {
-            gap: 12px;
+            flex-wrap: wrap;
+            gap: 14px;
         }
 
         @include mo {
-            flex-wrap: wrap;
+            max-width: 400px;
             margin: 0px 5px;
             gap: 14px;
+        }
+
+        @include xsm {
+            gap: 10px;
         }
     }
 
@@ -97,6 +123,20 @@
         border-radius: 50px;
         padding: 5px;
         cursor: pointer;
+    }
+
+    .otherSelectMain {
+        @include tab {
+            margin-right: 73%;
+        }
+
+        @include mo {
+            margin-right: 0px;
+        }
+
+        @include xxsm {
+            margin-right: 28%;
+        }
     }
 
     .officeMain {
@@ -133,20 +173,13 @@
         }
 
         .colMd4 {
-            margin-left: 10px;
-            margin-top: 30px;
+            margin-left: 70px;
+            margin-top: 70px;
             @include latestDetail;
 
             @include md {
-                margin-left: 23%;
-            }
-
-            @include tab {
-                margin-left: 12%;
-            }
-
-            @include mo {
-                margin-left: 5px;
+                @include flexJustifyCenter;
+                flex-direction: column;
             }
 
             .cardHeading {
@@ -166,7 +199,7 @@
             }
 
             .armyDepartmentTextMain {
-                margin: 3px 60px 0px 0px;
+                margin: 3px 114px 0px 0px;
 
                 @include mo {
                     margin: 3px 40px 0px 0px;
@@ -176,10 +209,11 @@
                     margin: 3px 0px 0px 45px;
                     text-align: left;
                 }
+
                 @include xxsm {
                     margin: 3px 0px 0px 40px;
                 }
-              
+
             }
         }
 
@@ -187,8 +221,6 @@
             margin: 0px 50px 0px 0px;
 
         }
-
-
 
         .tableBody {
 

@@ -36,7 +36,6 @@ const Notification = () => {
     createData("Subject 2", "Description"),
     createData("Subject 3", "Description"),
   ];
-  const [open, setOpen] = useState(false);
   return (
     <Layout isFederal={false} isGovSearchProfessional={true}>
       <div className={`${Styles.container} ${"mr50"}`}>
@@ -85,9 +84,8 @@ const Notification = () => {
                     <IconButton
                       aria-label="expand row"
                       size="small"
-                      onClick={() => setOpen(!open)}
                     >
-                      <Icon color={open ? "gray06" : "gray02"} type={"straightmore"} size="icon_xlarge" />
+                      <Icon color={ "gray06"} type={"straightmore"} size="icon_xlarge" />
                     </IconButton>
                     </TableCell>
                     <TableCell
@@ -96,12 +94,11 @@ const Notification = () => {
                     component="th"
                     scope="row"
                   >
-
-                    <Collapse in={open} timeout="auto" unmountOnExit>
+                    {/* <Collapse in={open} timeout="auto" unmountOnExit>
                       <TableCell className={Styles.deleteText}>
                         <Text variant="xllgText" color="darkGray" strong="strong7">Delete</Text>
                       </TableCell>
-                    </Collapse>
+                    </Collapse> */}
                     </TableCell>
                   
                 </TableRow>

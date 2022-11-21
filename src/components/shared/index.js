@@ -18,7 +18,7 @@ import Search from "./search/search";
 import BarChart from "./barchart/barchart";
 import Header from "../common/header/header";
 import Cardtab from "./cardtab/cardtab";
-import ArmyCard from "./army-card/army-card";
+import ProfileCard from "./profile-card/profile-card";
 import CriteriaCard from "./criteria-card/criteria-card";
 import CardItems from "./card-items/card-items";
 export {
@@ -42,7 +42,7 @@ export {
   BarChart,
   Header,
   Cardtab,
-  ArmyCard,
+  ProfileCard,
   CriteriaCard,
   CardItems
 };

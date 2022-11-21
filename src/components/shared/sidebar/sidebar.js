@@ -201,7 +201,7 @@ const Sidebar = () => {
                             <Input className={Styles.searchInput} placeholder={"Search"} />
                             <Icon className={Styles.iconSearch} type='search' color={"black"} variant='icon_xlarge' />
                         </div>
-                        <div className={"ml30 alignBetween"}>
+                        <div className={"ml30 alignBetween flexColumn"}>
                             <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
                             <div>
                                 <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label} />
@@ -655,7 +655,7 @@ const Sidebar = () => {
                             </div>
                         }
 
-                        <div className='dFlex mT35 alignItemsCenter jusctifyContentSpaceBetween'>
+                        <div className={`${Styles.searchBtnMain} ${'dFlex mT35 alignItemsCenter jusctifyContentSpaceBetween'}`}>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Clear</Text>
                             <Text family='roboto' variant={"smText"} className={"op5 underline cursor textUnderlineHover"} color={"darkGray"}>Save Search</Text>
                             <Button btnClass='mr10' size={"xlmd"} variant={"solidPrimary"}>Search</Button>

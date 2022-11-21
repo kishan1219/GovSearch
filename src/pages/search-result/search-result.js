@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import Styles from './search-result.module.scss'
-import { ArmyCard, Button, Card, CheckBox, Icon, Layout, Tables, Text } from '../../components/shared'
+import { Button, Card, CheckBox, Icon, Layout, ProfileCard, Tables, Text } from '../../components/shared'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Tooltip } from '@mui/material';
 // import PropTypes from 'prop-types'
 const SearchResult = () => {
     const [office, setOffice] = useState(false);
-    const [selectOffice, setSelectOffice] = useState("Offices");
+    const [selectOffice, setSelectOffice] = useState("1");
     const [location, setLocation] = useState(false);
-    const [selectlocation, setSelectlocation] = useState("Location");
+    const [selectlocation, setSelectlocation] = useState("1");
     const [other, setOther] = useState(false);
-    const [selectOther, setSelectOther] = useState("Other");
+    const [selectOther, setSelectOther] = useState("1");
     const [pluslist, setPlusList] = useState(false);
-    const [selectPlusList, setSelectPlusList] = useState(["Existing List Name"]);
+    const [selectPlusList, setSelectPlusList] = useState("1");
     const [tableHide, setTableHide] = useState(true);
     const [gridTableShow, setGridTableShow] = useState(false);
     const [openPlusCard, setOpenPlusCard] = useState(false);
@@ -96,15 +96,17 @@ const SearchResult = () => {
                         <Tooltip title="Currently, Click event is not developed">
                             <div>
                                 <Text className={"mr24 cursor"} variant={"smText"} color="gray">Advanced</Text>
-                            </div></Tooltip>
+                            </div>
+                            </Tooltip>
                         <Tooltip title="Currently, Click event is not developed">
                             <div>
                                 <Text className={"cursor"} variant={"smText"} color="gray">Save Search </Text>
-                            </div></Tooltip>
+                            </div>
+                            </Tooltip>
                     </div>
                     <div className={Styles.trioIcon}>
                         <Icon onClick={tableToggle} color={"gray05"} type={tableHide ? "hierarchy" : "burger"} size="icon_xlarge" />
-                        <Icon onClick={() => { setOpenPlusCard(!openPlusCard); setopenExportCard(false) }} className={"ml40 mr50"} color={openPlusCard ? "gray02" : "gray05"} type={"pluscircle"} size="icon_xlarge" />
+                        <Icon onClick={() => { setOpenPlusCard(!openPlusCard); setopenExportCard(false) }} className={`${Styles.plusIconMain} ${"ml40 mr50"}`} color={openPlusCard ? "gray02" : "gray05"} type={"pluscircle"} size="icon_xlarge" />
                         {openPlusCard &&
                             <Card className={Styles.plusIconCard}>
                                 <div className={`${Styles.plusIcon} ${"alignBetween alignItemsCenter mb20"}`}>
@@ -122,12 +124,12 @@ const SearchResult = () => {
                                         value={selectPlusList}
                                         onChange={targetplusList}
                                         open={pluslist}
-                                        label="Existing List Name"
                                     >
-                                        <MenuItem aria-label='Existing List Name' value="1">List 1</MenuItem>
-                                        <MenuItem value="2">list 2</MenuItem>
-                                        <MenuItem value="3">list 3</MenuItem>
-                                        <MenuItem value="4">list 4</MenuItem>
+                                        
+                                        <MenuItem value={"1"}><Text variant={"mdText"} >Existing List Name</Text></MenuItem>
+                                        <MenuItem value={"2"}>list 1</MenuItem>
+                                        <MenuItem value={"3"}>list 2</MenuItem>
+                                        <MenuItem value={"4"}>list 3</MenuItem>
                                     </Select>
                                     <Icon className={Styles.listIcon} onClick={() => setPlusList(true)} type='soliddownpolygon' color={"darkGray"} variant='icon_large' />
                                 </div>
@@ -148,7 +150,7 @@ const SearchResult = () => {
                             </Card>}
                     </div>
                 </div>
-                <Text className={"mt15 mb15"} strong='strong3' variant={"smText"} color="gray">Showing 100 results out of 1000</Text>
+                <Text className={`${Styles.resultText} ${"mt15 mb15"} `}strong='strong3' variant={"smText"} color="gray">Showing 100 results out of 1000</Text>
                 <div className={`${Styles.selectCriteria} ${"mB40"}`}>
                     <Text handleClick={handleTextClick} className={"cursor"} strong='strong3' variant={"smText"} color="gray">Select All</Text>
                     <Text className={"cursor"} strong='strong3' variant={"smText"} color="gray">Filters</Text>
@@ -165,7 +167,7 @@ const SearchResult = () => {
                             onChange={targetOffice}
                             open={office}
                         >
-                            <MenuItem aria-selected value="1">Offices</MenuItem>
+                            <MenuItem value="1">Offices</MenuItem>
                             <MenuItem value="2">Offices</MenuItem>
                             <MenuItem value="3">Offices</MenuItem>
                             <MenuItem value="4">Offices</MenuItem>
@@ -202,21 +204,19 @@ const SearchResult = () => {
                             <Icon className={Styles.closeIcon} color={"gray05"} type={"close"} size="icon_xsmall" />
                         </div>
                     </Tooltip>
-                    <div className={Styles.officeMain}>
+                    <div className={`${Styles.officeMain} ${Styles.otherSelectMain}`}>
                         <Select className={Styles.officeSelect}
                             IconComponent={() => null}
                             sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 'none' } }}
                             value={selectOther}
                             onChange={targetOther}
                             open={other}
-
                         >
                             <MenuItem value="1">Other</MenuItem>
                             <MenuItem value="2">Other</MenuItem>
                             <MenuItem value="3">Other</MenuItem>
                             <MenuItem value="4">Other</MenuItem>
                         </Select>
-
                         <Icon className={Styles.straightIcon} type='straight' color={"gray01"} variant='icon_large' />
                         <Icon className={Styles.selectIcon} onClick={() => setOther(true)} type='soliddownpolygon' color={"gray04"} variant='icon_large' />
                     </div>
@@ -268,11 +268,11 @@ const SearchResult = () => {
                                                     {gridUser.cardTwo}
                                                 </TableCell>
                                                 <TableCell><Tooltip title="Currently, Click event is not developed">
-                                                        <div>
+                                                    <div>
 
-                                                            <Icon type={"star"} size={"icon_large"} />
-                                                        </div>
-                                                    </Tooltip></TableCell>
+                                                        <Icon type={"star"} size={"icon_large"} />
+                                                    </div>
+                                                </Tooltip></TableCell>
                                             </TableCell>
 
                                         </TableRow>
@@ -283,20 +283,20 @@ const SearchResult = () => {
                     <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
                         <Text className={`${Styles.cardHeading} ${'mt30'}`} color="darkGray" strong="strong3">Last Viewed</Text>
                         <div className={Styles.homeCard}>
-                            <div className='mb30'>
-                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                            <div className='mb12'>
+                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mb20'>
-                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                            <div className='mb12'>
+                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mb20'>
-                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                            <div className='mb12'>
+                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mb20'>
-                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                            <div className='mb12'>
+                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mb20'>
-                                <ArmyCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                            <div className='mb12'>
+                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                         </div>
                     </div>

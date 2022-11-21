@@ -60,27 +60,26 @@ const Favorites = () => {
                                         300
                                     </Text>
                                 </TableCell>
-                                <TableCell component="th" scope="row" className={Styles.descriptionSec}>
+                                <TableCell component="th" scope="row" className={Styles.favroiteDescriptionSec}>
                                     <Text variant="smText" strong="strong6" color="gray">
                                         300
                                     </Text>
                                 </TableCell>
                                 <TableCell
-                                        className={Styles.border}
-                                        align="right"
-                                        component="th"
-                                        scope="row"
+                                    className={Styles.border}
+                                    align="right"
+                                    component="th"
+                                    scope="row"
+                                >
+                                    <IconButton
+                                        aria-label="expand row"
+                                        size="small"
                                     >
-
-                                        <IconButton
-                                            aria-label="expand row"
-                                            size="small"
-                                        >
-                                            <Icon className={Styles.favoriteMoreIcon}  color={"gray02"} type={"straightmore"} size="icon_xlarge" />
-                                        </IconButton>
-                                    </TableCell>
+                                        <Icon className={Styles.favoriteMoreIcon} color={"gray02"} type={"straightmore"} size="icon_xlarge" />
+                                    </IconButton>
+                                </TableCell>
                             </TableRow>
-                           
+
                             {rows.map((row) => (
                                 <TableRow
                                     key={row.Subject}
@@ -107,7 +106,6 @@ const Favorites = () => {
                                         component="th"
                                         scope="row"
                                     >
-
                                         <IconButton
                                             aria-label="expand row"
                                             size="small"
@@ -122,33 +120,30 @@ const Favorites = () => {
                                         scope="row"
                                     >
                                     </TableCell>
-
                                 </TableRow>
                             ))}
-                            
                         </TableBody>
                         <TableFooter className={` ${Styles.mb12} ${Styles.footerBgMain}`}>
-                                <TableCell className={Styles.inputCell} component="th" scope="row">
-                                   <Input className={Styles.inputMain} variant={"grey"} placeholder="New List Name" />
-                                </TableCell>
-                                <TableCell component="th" scope="row" className={Styles.descriptionSec}>
+                            <TableCell className={Styles.inputCell} component="th" scope="row">
+                                <Input className={Styles.inputMain} variant={"grey"} placeholder="New List Name" />
+                            </TableCell>
+                            <TableCell component="th" scope="row" className={Styles.descriptionSec}>
                                 <Button size={"xmd"} color="default">Save</Button>
-                                </TableCell>
-                                <TableCell
-                                        className={Styles.border}
-                                        align="right"
-                                        component="th"
-                                        scope="row"
-                                    >
-
-                                        <IconButton
-                                            aria-label="expand row"
-                                            size="small"
-                                        >
-                                            <Icon className={Styles.inputMoreIcon}  color={"gray02"} type={"straightmore"} size="icon_xlarge" />
-                                        </IconButton>
-                                    </TableCell>
-                            </TableFooter>
+                            </TableCell>
+                            <TableCell
+                                className={Styles.border}
+                                align="right"
+                                component="th"
+                                scope="row"
+                            >
+                                <IconButton
+                                    aria-label="expand row"
+                                    size="small"
+                                >
+                                    <Icon className={Styles.inputMoreIcon} color={"gray02"} type={"straightmore"} size="icon_xlarge" />
+                                </IconButton>
+                            </TableCell>
+                        </TableFooter>
                     </Table>
                 </TableContainer>
             </div>

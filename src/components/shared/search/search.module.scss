@@ -2,17 +2,8 @@
 
 .mainSearch {
   text-align: center;
-  margin-right: 100px;
   @include fonts-poppins;
   @include flex;
-
-  @include xlmd {
-    margin-right: 243px;
-  }
-
-  @include md {
-    margin-right: 300px;
-  }
 
   @include mo {
     margin-right: 12px;
@@ -61,6 +52,10 @@
         left: 140px;
       }
 
+      @include xsm {
+        top: 133px;
+      }
+
       .error {
         margin-bottom: 10px;
         color: $red;
@@ -70,19 +65,21 @@
         @include mo {
           min-width: 230px;
         }
+
+        @include xsm {
+          min-width: 195px;
+        }
       }
 
       .solidSearch:hover {
         background-color: $primary04;
-
       }
     }
 
     .searchb {
-      display: flex;
+      @include flex;
       gap: 25px;
       margin-bottom: 33px;
-      align-items: center;
       outline: none;
       border: none;
 
@@ -119,8 +116,12 @@
           order: 1;
         }
 
+        @include xsm {
+          max-width: 300px;
+        }
+
         .inputMain {
-          height: 52px;
+          min-height: 52px;
           border-radius: 12px;
           padding: 0px 44px 0px 12px;
           background-color: $white;

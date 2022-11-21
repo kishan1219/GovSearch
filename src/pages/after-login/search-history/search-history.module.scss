@@ -1,11 +1,18 @@
 @import "../../../assets/scss/mixins.scss";
 @include notificationContainer;
 
-
 .container {
+    width: 100%;
+    max-height: 100vh;
+
     .tableContainer {
         max-width: 1400px;
-        min-height: 560px;
+        max-height: 560px;
+
+        @include xlg {
+            max-height: 450px;
+        }
+
         .scrollBar {
             overflow: auto;
         }
@@ -36,10 +43,7 @@
                     margin-right: 12%;
                 }
             }
-
-
         }
-
 
         .scrollWrapper {
             @include xlmd {
@@ -49,10 +53,12 @@
 
         .tableBody {
             .rowBgMain {
+                min-height: 70px;
 
                 .subjectMain {
                     max-width: 530px;
                     cursor: pointer;
+                    padding: 0px 16px;
 
                     @include xlmd {
                         min-width: 280px;
@@ -61,6 +67,7 @@
 
                 .descriptionMain {
                     min-width: 150px;
+                    padding: 5px 16px;
 
                     .filterText {
                         min-width: 160px;

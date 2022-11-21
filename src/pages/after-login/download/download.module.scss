@@ -2,6 +2,7 @@
 @include notificationContainer;
 
 .container {
+    width: 100%;
     .tableContainer {
         .scrollBar {
             overflow: auto;
@@ -45,12 +46,10 @@
                 border: none;
 
                 @include md {
-                    width: 25%;
+                    width: 30%;
                 }
             }
-
         }
-
 
         .scrollWrapper {
             @include xlmd {
@@ -60,10 +59,10 @@
 
         .tableBody {
             max-width: 1300px;
-            max-height: 470px;
+            max-height: 350px;
 
-            @include md {
-                max-height: 405px;
+            @include xlmd {
+                max-height: 390px;
             }
 
             i {
@@ -83,17 +82,23 @@
                 .subjectMain {
                     min-width: 360px;
                     cursor: pointer;
+                    @include md {
+                        min-width: 337px;
+                    }
                 }
 
                 .descriptionMain {
                     min-width: 300px;
+                    @include md {
+                        min-width: 240px;
+                    }
                 }
 
                 .descriptionSec {
                     max-width: 30px;
 
                     @include md {
-                        min-width: 115px;
+                        min-width: 55px;
                     }
                 }
 
@@ -104,8 +109,6 @@
                 .borderSec {
                     width: 15%;
                     border: none;
-
-                    @include md {}
                 }
             }
         }

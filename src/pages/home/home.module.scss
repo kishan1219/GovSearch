@@ -1,27 +1,18 @@
 @import "../../assets/scss/mixins.scss";
 
-.searchMain {
-    margin-left: 300px;
-    margin-bottom: 120px;
+// .searchMain {
+//    @include flexJustifyCenter;
+//     margin-bottom: 120px;
 
-    @include xxlg {
-        margin-left: 360px;
-    }
-    @include xlg {
-        margin-left: 240px;
-    }
-    @include xlmd {
-        margin-left: 180px;
-    }
+//     @include xlg {
+//         margin-left: 50px;
+//     }
 
-    @include md {
-        margin-left: 0px;
-    }
+//     @include md {
+//         margin-left: 0px;
+//     }
 
-    @include mo {
-        margin-left: 30px;
-    }
-}
+// }
 
 .newsContainer {
     @include md {
@@ -37,6 +28,7 @@
 .colMd4 {
     flex: 0 0 33.333333%;
     max-width: 730px;
+    max-height: 343px;
 
     @include sm {
         flex: 0 0 100%;
@@ -52,11 +44,10 @@
         flex: 0 0 100% !important;
         order: 2;
         margin-top: 50px;
-
+        max-height: 440px;
     }
 
 }
-
 
 @include ScrollBar;
 
@@ -64,7 +55,6 @@
     &::-webkit-scrollbar-track {
         background: $white;
     }
-    
 }
 
 .w60 {
@@ -98,7 +88,7 @@
 }
 
 .homeCard {
-    max-height: 350px;
+    max-height: 305px;
     word-break: break-word;
 
     @include xlg {
@@ -107,6 +97,11 @@
 
     @include sm {
         max-height: 240px;
+        margin-bottom: 84px;
+    }
+
+    @include mo {
+        max-height: 400px;
         margin-bottom: 84px;
     }
 
@@ -121,19 +116,29 @@
 
 .newsCard {
     @include tab {
-        max-width: 500px !important;
+        flex: 0 0 90%;
+        max-width: 600px !important;
+        max-height: 343px;
         margin-left: 10%;
         margin-bottom: 20px;
         order: 1;
     }
 
+    @include mo {
+        max-height: 400px;
+    }
+
     @include md {
         max-width: 400px;
+    }
+    @include xsm {
+        margin-left: 5px;
+        flex: 0 0 95%;
     }
 }
 
 .scrollWrapper {
-    max-height: 310px;
+    max-height: 321px;
 
     @include xlmd {
         max-height: 348px;
@@ -147,13 +152,14 @@
 .chart {
     position: relative;
     min-width: 400px;
+    max-height: 343px;
 
     @include md {
         min-width: 343px;
-
     }
 
     @include tab {
+        flex: 0 0 90%;
         margin-top: 50px;
         order: 3;
     }
@@ -162,7 +168,7 @@
         margin-bottom: 150px;
 
         @include xlmd {
-            margin-bottom: 120px;
+            margin-bottom: 160px;
         }
 
         @include md {

@@ -6,7 +6,7 @@
 
     .heading {
         font-size: $font-mdbig;
-        margin: 80px 0px 30px 0px;
+        margin: 80px 0px 10px 0px;
 
         @include mo {
             font-size: $font-xllg;
@@ -109,13 +109,6 @@
 
                     @include md {
                         min-width: 285px;
-                    }
-
-                    cursor: pointer;
-
-                    & :hover {
-                        font-weight: 500;
-                        text-decoration: underline;
                     }
                 }
 

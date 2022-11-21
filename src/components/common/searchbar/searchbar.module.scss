@@ -1,21 +1,22 @@
-@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/mixins.scss';
 @import '../../../assets/scss/breakpoints.scss';
 
 .search {
     display: flex;
-    gap: 25px;
     align-items: center;
+    gap: 25px;
 
     @include md {
         gap: 10px;
     }
+
     @include tab {
         gap: 30px;
     }
 
     @include mo {
         margin-left: 0px;
-        gap: 0px;
+        gap: 10px;
     }
 
     .mainIco {
@@ -132,7 +133,6 @@
             margin-right: 10px;
         }
 
-
     }
 
     .searchButton {
@@ -150,8 +150,6 @@
             background-color: $primary04;
         }
     }
-
-
 }
 
 .selectList {

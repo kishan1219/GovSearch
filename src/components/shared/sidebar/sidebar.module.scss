@@ -22,6 +22,7 @@
     @include mo {
         top: 220px;
     }
+
     @include xsm {
         top: 100px;
     }
@@ -43,7 +44,6 @@
             min-height: 300px;
         }
 
-
         & li {
             cursor: pointer;
         }
@@ -51,7 +51,6 @@
         .burgerIcon {
             transition: 0.3s ease;
         }
-
     }
 
     .sidebarFooter {
@@ -80,7 +79,6 @@
         @include mo {
             margin-top: 0px;
         }
-
     }
 
     .sidebarMain {
@@ -93,9 +91,14 @@
 
         @include tab {
             padding-top: 15px;
-            min-height: 40vh;
+            min-height: 80vh;
         }
 
+        @include mo {
+            min-height: 90vh;
+            padding: 14px 10px 34px 17px;
+
+        }
 
         & input {
             background: $white;
@@ -146,7 +149,14 @@
                 &::placeholder {
                     @include fonts-poppins;
                     font-size: $font-xllg;
+                }
 
+                @include mo {
+                    min-width: 200px;
+                }
+
+                @include xsm {
+                    min-width: 190px;
                 }
             }
 
@@ -163,19 +173,16 @@
 
         .textBoldMain {
             max-width: 277px;
+
+            @include xsm {
+                max-width: 250px;
+
+            }
         }
     }
 
     .scrollWrapper {
-        max-height: calc(80vh - 230px);
-
-        @include tab {
-            max-height: calc(40vh - 230px);
-        }
-
-        @include sm {
-            min-height: 35vh;
-        }
+        max-height: 100vh;
     }
 
     .scrollWrapper1 {
@@ -193,10 +200,19 @@
         color: $white;
     }
 
+    .searchBtnMain {
+        @include xsm {
+            justify-content: unset;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
     .sidebarMainFooter div {
         @include md {
             margin-top: 40px;
         }
+
         @include tab {
             margin-top: 20px;
         }

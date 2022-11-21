@@ -149,7 +149,7 @@ const stats = () => {
             },
             title: {
                 display: true,
-                
+
             },
         },
 
@@ -183,7 +183,6 @@ const stats = () => {
                         <Heading className={"ml25 mT44 mB28"} headingTy pe={"h4"} color="secondary">Positions</Heading>
                         <Card className={Styles.statsCard} >
                             <Bar height={"200"} className={Styles.statsChart} plugins={[ChartDataLabels]} data={data} options={axis} />
-
                         </Card>
                     </Grid>
                     <Grid className={Styles.cardStyles} item lg={4} sm={4} xs={12} >

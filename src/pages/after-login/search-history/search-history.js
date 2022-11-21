@@ -9,8 +9,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
-function createData(id,Keyword, FiltersFirst,FiltersSecond,FiltersThird,FiltersFourth, Results) {
-    return { id,Keyword, FiltersFirst,FiltersSecond,FiltersThird,FiltersFourth, Results };
+function createData(id, Keyword, FiltersFirst, FiltersSecond, FiltersThird, FiltersFourth, Results) {
+    return { id, Keyword, FiltersFirst, FiltersSecond, FiltersThird, FiltersFourth, Results };
 }
 const SearchHistory = () => {
     const rows = [
@@ -23,7 +23,6 @@ const SearchHistory = () => {
         createData('5', 'Keyword 4', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)'),
         createData('6', 'Keyword 5', 'Filter Name (#)', 'Filter Name (#)', 'Filter Name (#)', 'More (5)'),
     ];
-    const [open, setOpen] = useState(false);
     return (
         <Layout isFederal={false} isGovSearchProfessional={true}>
             <div className={`${Styles.container} ${"mr50"}`}>
@@ -48,68 +47,65 @@ const SearchHistory = () => {
                             </TableRow>
                         </TableHead>
                         <TableBody className={`${Styles.tableBody}  ${Styles.scrollWrapper}`}>
-                        <TableRow
-                                    className={` ${Styles.mb12} ${Styles.rowBgMain}`}
-                                >
-                                    <TableCell className={Styles.subjectMain} component="th" scope="row">
-                                        <Text variant="mlgText" color="darkGray" strong="strong6">
+                            <TableRow
+                                className={` ${Styles.mb12} ${Styles.rowBgMain}`}
+                            >
+                                <TableCell className={`${Styles.subjectMain} ${Styles.chiefOfficerCell}`} component="th" scope="row">
+                                    <Text variant="mlgText" color="darkGray" strong="strong6">
                                         “Chief Technology Officer”
-                                        </Text>
-                                    </TableCell>
-                                    <TableCell  align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
-                                        <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
-                                            Filter Name (#)                                        </Text>
-                                    </TableCell>
-                                    <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
-                                        <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
-                                            Filter Name (#)
-                                        </Text>
-                                    </TableCell>
-                                    <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
-                                        <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
-                                            Filter Name (#)                                        </Text>
-                                    </TableCell>
-                                    <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
-                                        <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
-                                            Filter Name (#)
-                                        </Text>
-                                    </TableCell>
-                                    <TableCell align="right" component="th" scope="row" className={`${Styles.border}`}>
-                                        <Text className={Styles.Results} variant="smText" strong="strong4" color="gray">
-                                            1000
-                                        </Text>
-                                    </TableCell>
-                                    <TableCell
-                                        className={Styles.border}
-                                        align="right"
-                                        component="th"
-                                        scope="row"
-                                    >
+                                    </Text>
+                                </TableCell>
+                                <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.chiefSubjectCell} ${Styles.descriptionMain}`}>
+                                    <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
+                                        Filter Name (#)                                        </Text>
+                                </TableCell>
+                                <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.chiefSubjectCell} ${Styles.descriptionMain}`}>
+                                    <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
+                                        Filter Name (#)
+                                    </Text>
+                                </TableCell>
+                                <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.chiefSubjectCell} ${Styles.descriptionMain}`}>
+                                    <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
+                                        Filter Name (#)                                        </Text>
+                                </TableCell>
+                                <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.chiefSubjectCell} ${Styles.descriptionMain}`}>
+                                    <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
+                                        Filter Name (#)
+                                    </Text>
+                                </TableCell>
+                                <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.chiefSubjectCell}`}>
+                                    <Text className={Styles.Results} variant="smText" strong="strong4" color="gray">
+                                        1000
+                                    </Text>
+                                </TableCell>
+                                <TableCell
+                                    className={`${Styles.chiefBorderCell} ${Styles.border}`}
+                                    align="right"
+                                    component="th"
+                                    scope="row"
+                                >
 
-                                        <IconButton
-                                            aria-label="expand row"
-                                            size="small"
-                                            onClick={() => setOpen(!open)}
-                                            style={{background: "unset", hover:"unset" }}
-                                        >
-                                            <Icon color={open ? "gray06" : "gray02"} type={"straightmore"} size="icon_xlarge" />
-                                        </IconButton>
-                                    </TableCell>
-                                    <TableCell
-                                        className={Styles.border}
-                                        align="right"
-                                        component="th"
-                                        scope="row"
+                                    <IconButton
+                                        aria-label="expand row"
+                                        size="small"
+                                        style={{ background: "unset", hover: "unset" }}
                                     >
-
-                                        <Collapse in={open} timeout="auto" unmountOnExit>
+                                        <Icon color={"gray02"} type={"straightmore"} size="icon_xlarge" />
+                                    </IconButton>
+                                </TableCell>
+                                <TableCell
+                                    className={Styles.border}
+                                    align="right"
+                                    component="th"
+                                    scope="row"
+                                >
+                                    {/* <Collapse in={open} timeout="auto" unmountOnExit>
                                             <TableCell className={Styles.deleteText}>
                                                 <Text variant="xllgText" color="darkGray" strong="strong7">Open </Text>
                                             </TableCell>
-                                        </Collapse>
-                                    </TableCell>
-
-                                </TableRow>
+                                        </Collapse> */}
+                                </TableCell>
+                            </TableRow>
                             {rows.map((row) => (
                                 <TableRow
                                     key={row.Keyword}
@@ -133,15 +129,15 @@ const SearchHistory = () => {
                                             {row.FiltersSecond}
                                         </Text>
                                         <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
-                                        {row.FiltersSecond}
+                                            {row.FiltersSecond}
                                         </Text>
                                     </TableCell>
                                     <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
                                         <Text className={`${Styles.filterText} ${"textCenter cursor mb10"}`} variant="smText" strong="strong4" color="gray">
                                             {row.FiltersThird}
                                         </Text>
-                                         <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
-                                         {row.FiltersThird}
+                                        <Text className={`${Styles.filterText} ${"textCenter cursor"}`} variant="smText" strong="strong4" color="gray">
+                                            {row.FiltersThird}
                                         </Text>
                                     </TableCell>
                                     <TableCell align="right" component="th" scope="row" className={`${Styles.border} ${Styles.descriptionMain}`}>
@@ -167,10 +163,9 @@ const SearchHistory = () => {
                                         <IconButton
                                             aria-label="expand row"
                                             size="small"
-                                            onClick={() => setOpen(!open)}
-                                            style={{background: "unset", hover:"unset" }}
+                                            style={{ background: "unset", hover: "unset" }}
                                         >
-                                            <Icon color={open ? "gray06" : "gray02"} type={"straightmore"} size="icon_xlarge" />
+                                            <Icon color={"gray02"} type={"straightmore"} size="icon_xlarge" />
                                         </IconButton>
                                     </TableCell>
                                     <TableCell
@@ -179,12 +174,11 @@ const SearchHistory = () => {
                                         component="th"
                                         scope="row"
                                     >
-
-                                        <Collapse in={open} timeout="auto" unmountOnExit>
+                                        {/* <Collapse in={open} timeout="auto" unmountOnExit>
                                             <TableCell className={Styles.deleteText}>
                                                 <Text variant="xllgText" color="darkGray" strong="strong7">Open </Text>
                                             </TableCell>
-                                        </Collapse>
+                                        </Collapse> */}
                                     </TableCell>
 
                                 </TableRow>

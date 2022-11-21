@@ -56,10 +56,12 @@
             max-width: 1300px;
             max-height: 470px;
 
+            @include xxlg {
+                max-height: 320px;
+            }
+
             @include xlmd {
                 max-width: 1200px;
-
-                max-height: 405px;
             }
 
             i {
@@ -91,21 +93,32 @@
                     }
 
                 }
+
                 .inputCell {
                     min-width: 900px;
                     border: none;
-                    .inputMain{
+
+                    .inputMain {
                         max-width: 674px;
                         max-height: 24px;
                         border-radius: 5px;
                     }
                 }
-               
+
                 .descriptionMain {
                     min-width: 243px;
                     text-align: center;
                     border: none;
 
+                }
+
+                .favroiteDescriptionSec {
+                    width: 15%;
+                    text-align: center;
+                    border: none;
+                    @include xxlg {
+                        width: 13.5%;
+                    }
                 }
 
                 .descriptionSec {
@@ -116,7 +129,7 @@
                     left: 0px;
 
                     @include md {
-                        left: -15px;
+                        // left: -15px;
                     }
                 }
 
@@ -132,14 +145,31 @@
                 }
             }
         }
-        
+
         .footerBgMain {
-            max-width: 1130px;
+            max-width: 1200px;
             background: $white;
             border-radius: 10px;
             display: block;
             border: none;
             position: relative;
+
+            @include xxlg {
+                max-width: 1255px;
+            }
+
+            @include xlg {
+                max-width: 1220px;
+            }
+
+            @include xlmd {
+                max-width: 1140px;
+            }
+
+            @include md {
+                max-width: 1120px;
+            }
+
             .subjectMain {
                 min-width: 700px;
                 cursor: pointer;
@@ -151,23 +181,27 @@
                 }
 
             }
+
             .inputCell {
                 min-width: 900px;
                 border: none;
-                .inputMain{
+
+                .inputMain {
                     max-width: 674px;
                     max-height: 24px;
                     border-radius: 5px;
+
                     &::placeholder {
                         color: $lightGray01;
                     }
                 }
             }
+
             .inputMoreIcon {
                 position: absolute;
                 left: -22px;
             }
-           
+
             .descriptionMain {
                 min-width: 243px;
                 text-align: center;
@@ -177,21 +211,28 @@
 
             .descriptionSec {
                 border: none;
+
+                @include xxlg {
+                    width: 10%;
+                }
             }
 
 
             .border {
                 width: 6%;
+
+                @include xxlg {
+                    width: 10%;
+                }
             }
 
             .borderSec {
                 width: 10%;
                 border: none;
                 text-align: right;
-
             }
         }
     }
-    
+
 
 }

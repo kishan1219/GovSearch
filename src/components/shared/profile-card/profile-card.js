@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './army-card.module.scss'
+import styles from './profile-card.module.scss'
 import Image from "../image/image";
 import Text from "../text/text";
 import Icon from "../icon";
 import propTypes from "prop-types";
-const ArmyCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsText, isVirgina, istopLacsText, imageSize, isContactIcon, isArlingtonText }) => {
+const ProfileCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsText, isVirgina, istopLacsText, imageSize, isContactIcon, isArlingtonText }) => {
     return (
         <div className={`${styles.cardContainer} ${"dFlex"}`}>
             {isGreenBorder
@@ -31,7 +31,7 @@ const ArmyCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsT
         </div>
     )
 }
-ArmyCard.defaultProps = {
+ProfileCard.defaultProps = {
     isGreenBorder: false,
     isContactIcon: true,
     isArlingtonText: true,
@@ -39,7 +39,7 @@ ArmyCard.defaultProps = {
     isVirgina: false,
     isDownLacsText: false,
 }
-ArmyCard.protoType = {
+ProfileCard.protoType = {
     isGreenBorder: propTypes.bool,
     isContactIcon: propTypes.bool,
     isArlingtonText: propTypes.bool,
@@ -48,4 +48,4 @@ ArmyCard.protoType = {
     isVirgina: propTypes.bool,
     imageSize: propTypes.string,
 }
-export default ArmyCard
+export default ProfileCard
