@@ -27,6 +27,9 @@
         margin: 3px 90px 0px 0px;
         display: grid;
         gap: 15px;
+        .DepartText{
+            @include xlmd{font-size: 11px;}
+        }
     }
 
     .titleNumber {

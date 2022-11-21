@@ -4,828 +4,294 @@
     min-height: 100vh;
     max-width: 100%;
     @include fonts-poppins;
-    @include md{
-        margin-left: 20px;
-    }
 
-    @include mo {
-        margin-left: 30px;
-    }
-    @include xxsm{
-        margin-left: 10px;
-    }
-
-    .licText {
-        @include iPad {
-            width: 73px;
-            text-align: center;
-        }
-        @include mo{
-            width: 69px;
-        }
-    }
-    .remainlicText{
-        @include mo{
-            font-size: 14px;
-        }
-        @include iPad{
-            font-size: 12px;
-            width:190px;
+    .mailBox{
+    
+        &::placeholder {
+            color: $gray;
         }
     }
 
-    .downText {
-        @include md {
-            font-size: 14px;
-        }
-
-        @include iPad {
-            font-size: 12px;
-        }
-
-        @include mo {
-            font-size: 11px;
-        }
-    }
-
-    .sendbtns {
-        // margin: 20px 20px 0px 0px;
-        @include mo{
-            height: 38px;
-            font-size: 16px;
-        }
-
-    }
-
-    .billinText {
-        margin-top: 12px;
-        color: $secondary;
-        @include mo{
-            font-size: 15px;
-        }
-    }
-
-    .cardDown {
-        display: flex;
-        flex-wrap: wrap;
+    .inputbox {
         width: 100%;
-        max-width: 900px;
+        height: 33px;
+        font-size: 13px;
+        margin-top: 5px;
 
-        .upBox {
-            width: 60%;
-            @include iPad{
-                width:50%;
-            }
-           
-
-            @include mo {
-                width: 100%;
-            }
-        }
-
-        .downBoxx {
-            margin-top: 18px;
-            margin-left: 20px;
-
-            @include md {
-                margin-left: 0px;
-            }
-            @include iPad{
-                margin-left: 24px;
-            }
-
-
-        }
-
-        .remainHead {
-            font-size: 24px;
-            font-weight: 300;
-            @include iPad{
-                font-size: 20px;
-            }
-
-            @include mo {
-                font-size: 18px;
-            }
-        }
-
-        .remainText {
-            font-size: 14px;
-            @include iPad{
-                font-size: 12px;
-            }
-
-            @include mo {
-                font-size: 12px;
-            }
-        }
-
-        .mainRemaining {
-            margin-top: 30px;
-            margin-left: 20px;
-
-            @include iPad {
-                margin-left: 0px;
-            }
-
-            @include mo {
-                margin-left: 0px;
-            }
-        }
 
 
     }
 
     .sendBtn {
-        display: flex;
-        justify-content: space-between;
-        background: #C4C4C4;
-    }
-
-    .textAreabox {
-        // width: 617px;
-        margin-top: 24px;
-
-        &::placeholder {
-            color: $gray;
-        }
-
-        @include xlmd {
-            max-width: 590px;
-            font-size: 18px;
-            height: 200px;
-        }
-
-        @include md {
-            max-width: 400px;
-            font-size: 18px;
-        }
-
-        @include iPad {
-            max-width: 364px;
-            font-size: 15px;
-            height: 97px;
-        }
-
-        @include mo {
-            width: 100%;
-        }
-
-        @include xxsm {
-            font-size: 12px;
-        }
-
-    }
-
-    .mainRemaining {
-        display: flex;
-        gap: 8px;
-    }
-
-    .savemainBtn {
-        @include md {
-            margin-top: 11px;
-        }
-
-        @include iPad {
-            height: 40px;
-            font-size: 15px;
-            margin-top: 20px;
-        }
-    }
-
-    .profileHead {
-        margin: 0px 0px 40px 20px;
-    }
-
-    .cardHead {
-        font-weight: 400;
-
-        @include xlmd {
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        @include md {
-            font-size: 14px;
-            font-weight: 400;
-
-        }
-
-        @include iPad {
-            font-size: 14px;
-            font-weight: 400;
-        }
-
-        @include mo {
-            font-size: 12px;
-            font-weight: 400;
-        }
-    }
-
-    .cardText {
-
-        @include xlmd {
-            font-size: 16px;
-            font-weight: 300;
-        }
-
-        @include md {
-            font-size: 14px;
-            font-weight: 300;
-        }
-
-        @include mo {
-            font-size: 12px;
-            font-weight: 300;
-        }
-
-        @include xsm {
-            font-size: 12px;
-        }
-
+        @include flexJustifyBetween;
+        max-width: 858px;
+        background-color: $lightGray;
     }
 
     .accountHead {
-        margin: 20px 0px 39px 20px;
-        color: $secondary;
-
-        @include md {
-            font-size: 30px;
-        }
-
         @include mo {
-            font-size: 25px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0px 43px;
         }
+          @include xxsm {width: 100px;}
+    }
+
+    .profileHead {
+        width: 100%;
+        max-width: 300px;
+        
+        @include mo{margin: 15px 43px; max-width: 169px;
+            font-size: 16px;}
+         @include xxsm { max-width: 100px; }
+    }
+
+    .mainCard {
+        width: 100%;
+        margin-top: 20px;
+        max-width: 868px;
+         @include mo { max-width: 380px; }
+         @include xxsm { max-width: 300px;}
     }
 
     .main {
+        .profileBox {
+            .mainCard {
+                .cardBox>div {
+                    width: 100%;
+                    max-width: 176px;
+                    margin: 10px;
+                    text-align: left;
+                    @include xlmd {max-width: 176px; margin: 5px 11px;}
+                    @include iPad {max-width: 160px;}
+                    @include mo { max-width: 170px; }
 
+                }
 
-        @include xlmd {
-            margin-left: 60px;
-        }
+                .cardBox {
+                    @include flexWrapBetween;
+                    padding: 26px 24px 15px 44px;
+                    @include mo { padding: 0px; }
+                    .urlBox {
+                        width: 100%;
+                        max-width: 573px;
+                        text-align: left;
+                        @include iPad {max-width: 300px;}
+                    }
 
-        @include xlmd {
-            margin-left: 0px;
-        }
+                    .editMain {
+                        text-align: right;
+                        @include mo { text-align: left;}
+                    }
+                }
 
-
-        @include iPad {
-            margin-left: 0px;
-        }
-
-       
-
-
-        .manageHead {
-            margin-top: 25px;
-            margin-bottom: 35px;
-
-            @include mo {
-                font-size: 18px;
             }
 
         }
 
         .mainCard {
-            width: 100%;
-            max-width: 868px;
-
-            @include xlmd {
-                width: 867px;
-            }
-
-            @include md {
-                width: 686px;
-            }
-
-            @include tab {
-                width: 686px;
-            }
-
-            @include iPad {
-                width: 530px;
-            }
-
-            @include mo {
-                width: 300px;
-            }
-
-
-            .cardBox>div {
-
-                width: 100px;
-                margin: 10px;
-                text-align: center;
-                line-height: 75px;
-
-
-                @include xlmd {
-                    width: 166px;
-                    margin: 0px 11px;
-                }
-
-                @include md {
-                    width: 122px;
-                    margin: 0px 10px;
-                }
-
-                @include mo {
-                    width: 222px;
-                    text-align: left;
-                }
-            }
-
-
-
-            .cardBox {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 20px 20px 20px 50px;
-                gap: 15px;
-                width: 100%;
-
-                @include iPad {
-                    padding: 20px 20px 20px 22px;
-                }
-
-                .editBtn {
-                    @include md {
-                        font-size: 14px;
-                        height: 44px;
-                    }
-
-                    @include iPad {
-                        font-size: 14px;
-                        height: 40px;
-                    }
-
-                    @include mo {
-                        margin: 0px 73px;
-                    }
-                }
-
-                .urlBox {
-                    @include xlmd {
-                        width: 558px;
-                        text-align: left;
-                        margin-left: 25px;
-                    }
-
-                    @include md {
-                        width: 437px;
-                        margin-left: 12px;
-                    }
-
-                    @include iPad {
-                        width: 260px;
-                        text-align: left;
-                        margin-left: 34px;
-                    }
-
-                    @include mo {
-                        width: 222px;
-                        text-align: left;
-                        margin-left: 10px;
-                    }
-                }
-
-
-            }
-
-
-            .textBox {
-
-                display: flex;
-                justify-content: space-evenly;
-                padding: 26px 0px 9px 0px;
-
-
-                .profileBox {
-                    display: grid;
-                    // gap: 10px;
-
-
-                    .numofEmp {
-                        margin-top: 5px;
-                    }
-                }
-
-
-            }
-
-            .btnMain {
-                display: flex;
-                justify-content: space-between;
-                padding: 0px 20px 20px 39px;
-            }
-
+            margin-top: 20px;
             .userManageBox {
-                display: flex;
+                @include flexJustifyAround;
                 flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                padding: 31px 24px 0px 22px;
-                @include xlmd{
-                    padding: 31px 24px 0px 33px;
+                @include mo {
+                    display: grid;
+                    justify-content: left;
+                    padding-left: 10px;
                 }
-                @include md{
-                    padding: 31px 24px 0px 31px;
-                }
-
-                .licText {
-                    @include iPad {
-                        font-size: 15px;
-                        width:219px;
-                    }
-
-                    @include mo {
-                        font-size: 13px;
-                    }
-                }
-
                 .inviteBtn {
-                    @include md {
-                        
-                        font-size: 14px;
-                        height: 44px;
-                    }
-
-                    @include iPad {
-                        font-size: 12px;
-                        height: 44px;
-                        width:255px;
-                    }
-
-                    @include mo {
-                        margin-top: 10px;
-                        font-size: 12px;
-                    }
-
-                    @include xsm {
-                        margin-top: 10px;
-                    }
-                    @include xxsm {
-                       width: 221px;
-                    }
+                    @include mo { margin-top: 5px; }
                 }
+            }
 
-                .updateBtn {
-                    @include md {
-                        font-size: 14px;
-                        height: 44px;
-                    }
-
-                    @include iPad {
-                        font-size: 12px;
-                        height: 47px;
-                    }
-
-                    @include mo {
-                        font-size: 12px;
-                        height: 30px;
-                    }
-                }
-
-
-
+            .licenseMain {
+                display: grid;
+                gap: 10px;
             }
 
             .secondCard {
-                display: flex;
+                @include flexJustifyAround;
                 flex-wrap: wrap;
-                justify-content: space-between;
-                padding: 47px 37px 0px 34px;
+                padding: 0px 10px;
 
-                .licenseMain {
+                @include mo {
+                    padding: 0px 10px 0px 10px;
                     display: grid;
-                    gap: 10px;
-
+                    justify-content: left;
+                    padding-left: 10px;
                 }
 
+            }
 
+            .assignedCard {
+                @include flexWrapBetween;
+                padding: 9px 37px 20px 34px;
+
+                @include mo {
+                    display: grid;
+                    justify-content: left;
+                    padding-left: 10px;
+                }
 
             }
 
+            .downText {
+                @include iPad { font-size: 16px; }
+                 @include mo { font-size: 14px;}
+            }
             .licenseHead {
                 text-align: center;
-                margin-top: 15px;
-                @include iPad { font-size: 17px;}
-                 @include mo { font-size: 13px;}
             }
         }
 
-        .assignedCard {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 9px 37px 20px 34px;
-        }
-
-        .userManage {
-            margin-top: 15px;
-        }
-    }
-
-    @include ScrollBar;
-
-    .scrollBar {
-        overflow-y: auto;
-    }
-
-    .scrollBar {
-        &::-webkit-scrollbar-track {
-            background: $white;
-        }
-    }
-
-    .scrollWrapper {
-        max-height: calc(95vh - 120px);
-        width: 78%;
-        @include xlmd {width: 89%;}
-        @include xxmd {width: 87%; } 
-        @include tab {width: 96%;}
-        @include mo { max-height: 100%; }
 
     }
 
     .editCard {
-        .scroll {
-            @include mo {overflow: transparent;}
-        }
-
-        .profileCard {
-            width: 100%;
-            max-width: 900px;
-            @include md { max-width: 700px;}
-            @include tab {  max-width: 610px;}
-            @include iPad { max-width: 535px; }
-            @include mo { max-width: 320px; }
-
+        .mainCard {
+            @include mo { max-width: 380px; }
+            @include xxsm { width: 280px; }
             .formBox>div {
+                width: 100%;
+                max-width: 182px;
                 @include xlmd { width: 182px; margin: 5px 10px; }
-                @include md { width: 202px; margin: 5px 10px;  }
-                @include iPad {width: 214px; margin: 5px 18px; }
-                @include mo { width: 100%; margin: 0px;}
-            }
-        }
-
-        .accountText {
-            @include xlmd { font-size: 16px; }
-            @include md { font-size: 14px; }
-
-     }
-
-        .profileHead {
-            color: $secondary;
-        }
-
-        .inputbox {
-            width: 170px;
-            height: 33px;
-            margin-top: 5px;
-            font-size: 17px;
-
-
-            @include md {
-                width: 189px;
-                font-size: 15px;
-            }
-              @include iPad { width: 215px; }
-              @include mo { width: 100%; }
-
-        }
-
-
-        .formBox {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 26px 44px 20px 45px;
-
-            @include md {
-                padding: 26px 12px 20px 20px;
+                @include md { width: 185px; margin: 5px 10px; }
+                @include iPad {width: 160px;margin: 5px 18px;}
+                @include mo { width: 100%; max-width: 400px;}
             }
 
-            .urlMain {
-               @include xlmd {width: 589px !important; }
-               @include md { width: 424px !important; }
-               @include iPad {  width: 214px !important;}
-                @include mo {  width: 100% !important; }
+            .formBox {
+                @include flexWrapBetween;
+                padding: 26px 14px 24px 26px;
+                @include mo {padding: 0px;}
+                .arrowInput {
+                    position: relative;
+                    margin-top: 5px;
+
+                    .empInput {
+                        width: 129px;
+                        border: 1px solid $lightGray01;
+                        height: 33px;
+                        padding-left: 10px;
+                        font-size: 18px;
+                        border-radius: 10px;
+                        margin-top: 5px;
+                        @include webkinborderNone;
+                        @include md { width: 130px;font-size: 15px;}
+                        @include tab {width: 90px;}
+                        @include tab {font-size: 11px;}
+                        @include iPad { width: 115px;}
+                        @include mo {width: 80%;}
+                    }
+                    .empmText {
+                        @include xlmd { width: 205px;font-size: 16px; }
+                    }
+
+                    .iconArrowDown {
+                        right: 7px;
+                        padding: 6px 5px 4px 5px;
+                        border: 1px solid $lightGray01;
+                        border-radius: 12px;
+                        top: 24px;
+                        font-size: 20px;
+                        position: absolute;
+                        @include md {right: 10px; }
+                        @include tab { right: 0; }
+                        @include mo { right: 6px; }
+                    }
+
+                }
+                .urlMain {
+                    @include xlmd { width: 500px !important;}
+                    @include md {width: 424px !important;}
+                    @include iPad { width: 214px !important;}
+                    @include mo { width: 100% !important;}
+                }
             }
             .saveBtn {
                 text-align: right;
-                @include xlmd {  margin-top: 20px !important;}
-                @include md { margin-top: 10px !important; }
-                @include mo { text-align: center; }
-            }
-            .SecBox {
-                margin-top: 5px;
-            }
-            .titleBox {
-                margin-top: 5px;
-            }
-        }
-
-        .empInputTwo {
-            width: 15px;
-            height: 14px;
-        }
-
-        .cardDown {
-            margin-left: 53px;
-            margin-right: 30px;
-            width: 868px;
-
-            .availableBox {
-                display: grid;
-                gap: 20px; }
-                @include xlmd {margin-left: 16px;margin-top: 18px; }
-                @include md {margin-left: 18px;}
-        }
-
-        .arrowInput {
-            position: relative;
-            margin-top: 5px;
-            .empmText {
-                @include xlmd { width: 205px; font-size: 16px;}
-                @include md {  font-size: 14px;}
-                @include iPad {font-size: 12px;}
-            }
-            .inputarrowBox {
-                width: 17px;
-                border: none;
-                margin-left: 7px;
-            }
-
-            .iconDown {
-                right: 7px;
-                padding: 6px 5px 4px 5px;
-                border: 1px solid $lightGray01;
-                border-radius: 12px;
-                top: 29px;
-                font-size: 20px;
-                position: absolute;
-                @include md {  right: 10px; }
-                @include iPad {  right: -2px; }
-                @include mo {right: 6px; }
-
-            }
-
-            .iconArrowDown {
-                right: 7px;
-                padding: 6px 5px 4px 5px;
-                border: 1px solid $lightGray01;
-                border-radius: 12px;
-                top: 29px;
-                font-size: 20px;
-                position: absolute;
-                @include md {right: 10px;}
-                @include tab {  right: 0;}
-                @include mo { right: 6px;}
-            }
-
-            .empInput {
-                width: 129px;
-                border: 1px solid $lightGray01;
-                height: 33px;
-                padding-left: 10px;
-                font-size: 18px;
-                border-radius: 10px;
-                margin-top: 5px;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                list-style: none;
-                text-indent: 1px;
-                text-overflow: '';
-
-                @include md {
-                width: 140px; font-size: 15px;}
-                @include tab { width: 90px; }
-                @include tab {font-size: 11px;}
-                @include iPad {  width: 170px;}
-                @include mo { width: 80%;}
-            }
-
-            .typeInput {
-                width: 434px;
-                max-height: 50px;
-                font-size: 18px;
-                color: $black;
-                box-shadow: $shadow02;
-                background-color: $white;
-                padding-left: 16px;
-                border-radius: 10px;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                list-style: none;
-                text-indent: 1px;
-                text-overflow: '';
-
-                @include md {
-                    max-width: 310px;
+                @include mo {text-align: center;}
+                .savemainBtn {
+                    margin-top: 15px;
                 }
+            }
 
+            @include flexWrap;
+            width: 100%;
+            max-width: 868px;
+        }
+        .upBox {
+            margin-top: 30px;
+            @include flexWrap;
+            max-width: 868px;
+            @include iPad { width: 100%;}
+            @include mo {  width: 380px;padding-left: 10px; }
+             @include xxsm {width: 285px;}
+            .downMainBox {
                 @include iPad {
-                    max-width: 206px;
-                    height: 38px;
-                    font-size: 12px;
+                    width: 100%;
                 }
-
-                @include mo {
-                    max-width: 225px;
-                    min-height: 38px;
-                    font-size: 12px;
-                }
-                 @include xxsm { max-width: 180px;}
             }
 
-            .typeBox {
-                width: 50px;
-                height: 50px;
-                margin-left: 23px;
+            .arrowInput {
+                position: relative;
+                margin-top: 5px;
+
+                .typeInput {
+                    width: 434px;
+                    max-height: 50px;
+                    font-size: 18px;
+                    color: $gray;
+                    box-shadow: $shadow02;
+                    background-color: $white;
+                    padding-left: 16px;
+                    border-radius: 10px;
+                    @include webkinborderNone;
+                    @include iPad { width: 517px;}
+                    @include mo {width: 285px;}
+                    @include xxsm { width: 220px;}
+                }
             }
 
             .iconType {
-                right: 0px;
+
                 background: $white;
-                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                box-shadow: $shadow04;
                 border-radius: 10px;
-                top: 0px;
+                right: 0px;
                 padding: 15px 12px 10px 15px;
                 font-size: 24px;
                 position: absolute;
+            }
 
-                @include md {
-                    right: 14px;
+            .downBoxx {
+                margin-top: 18px;
+                margin-left: 20px;
+
+                .mainRemaining {
+                    display: flex;
+                    gap: 40px;
+                    margin-top: 45px;
+
+                    .availableBox {
+                        display: grid;
+                        gap: 30px;
+                    }
+                }
+            }
+
+            .textAreabox {
+                @include xlmd {
+                    height: 200px;
                 }
 
-                @include iPad {
-                    padding: 12px 12px 10px 15px;
-                    font-size: 15px;
-                    right: 0px;
+                &::placeholder {
+                    color: $gray;
                 }
-
-                @include mo {right: 0px;}
-                @include msm {right: 7px; }
-                @include xxsm {right: 2px;}
             }
 
         }
 
-        .mailBox {
-            width: 522px;
-            margin-top: 24px;
-            font-size: 24px;
+           }
 
-            &::placeholder {
-                color: $gray;
-            }
-
-            @include xlmd {
-                font-size: 18px;
-                max-width: 580px;
-
-            }
-
-            @include md {
-                font-size: 18px;
-                max-width: 400px;
-            }
-
-            @include iPad {
-                max-width: 264px;
-                height: 36px;
-                font-size: 13px;
-            }
-
-            @include mo {
-                width: 100%;
-                max-width: 400px;
-                font-size: 12px;
-            }
-        }
-
-        .emailBox {
-            display: grid;
-            .commentBox {
-                height: 200px;
-                width: 617px;
-                margin-top: 25px;
-            }
-
-        }
-
-        .manageHead {
-            margin: 25px 0px 20px 0px;
-            color: $secondary;
-             @include iPad { font-size: 32px;}
-            @include iPad { font-size: 20px; }}
-    }
-
-    .nextBtn {
-        @include flexJustifyBetween;
-        padding: 0px 18px 26px 45px;
-        @include tab {padding-left: 24px;}
-    }
 }

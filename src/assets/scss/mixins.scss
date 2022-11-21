@@ -117,6 +117,17 @@
   align-items: center;
 }
 
+
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flexWrapBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 @mixin flexJustifyCenter {
   display: flex;
   align-items: center;
@@ -216,6 +227,13 @@
       border: 1px solid transparent;
     }
   }
+}
+@mixin webkinborderNone{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  list-style: none;
+  text-indent: 1px;
+  text-overflow: '';
 }
 
 @mixin notificationContainer {
@@ -375,83 +393,84 @@
   }
 }
 
-@mixin  latestDetail {
+@mixin latestDetail {
   .colMd4 {
     flex: 0 0 33.333333%;
     max-width: 730px;
 
     @include sm {
-        flex: 0 0 100%;
+      flex: 0 0 100%;
     }
 
     @include md {
-        flex: 0 0 30%;
-        padding: 0px;
-        margin-right: 10px;
+      flex: 0 0 30%;
+      padding: 0px;
+      margin-right: 10px;
     }
 
     @include tab {
-        flex: 0 0 100% !important;
-        order: 2;
-        margin-top: 50px;
+      flex: 0 0 100% !important;
+      order: 2;
+      margin-top: 50px;
 
     }
 
-}
-@include ScrollBar;
+  }
 
-.scrollBar {
-&::-webkit-scrollbar-track {
-    background: $white;
-}
+  @include ScrollBar;
 
-}
+  .scrollBar {
+    &::-webkit-scrollbar-track {
+      background: $white;
+    }
 
-.w60 {
-@include md {
-    flex: 0 0 30%;
-}
+  }
 
-@include sm {
-    flex: 0 0 100%;
-    margin: unset;
-}
-}
+  .w60 {
+    @include md {
+      flex: 0 0 30%;
+    }
 
-.cardHeading {
-font-size: 28px;
-text-align: center;
-display: block;
-margin-bottom: 35px;
+    @include sm {
+      flex: 0 0 100%;
+      margin: unset;
+    }
+  }
 
-@include xxmd {
-    font-size: 22px;
-}
-
-@include sm {
-    margin-bottom: 50px;
-}
-}
-
-.homeCard {
-max-height: 350px;
-word-break: break-word;
-
-@include xlg {
-    max-height: 340px;
-}
-
-@include sm {
-    max-height: 240px;
-    margin-bottom: 84px;
-}
-
-.pR30 {
-    padding-right: 30px;
+  .cardHeading {
+    font-size: 28px;
+    text-align: center;
+    display: block;
+    margin-bottom: 35px;
 
     @include xxmd {
-        padding-right: unset;
+      font-size: 22px;
     }
-}
-}
+
+    @include sm {
+      margin-bottom: 50px;
+    }
+  }
+
+  .homeCard {
+    max-height: 350px;
+    word-break: break-word;
+
+    @include xlg {
+      max-height: 340px;
+    }
+
+    @include sm {
+      max-height: 240px;
+      margin-bottom: 84px;
+    }
+
+    .pR30 {
+      padding-right: 30px;
+
+      @include xxmd {
+        padding-right: unset;
+      }
+    }
+  }
 }

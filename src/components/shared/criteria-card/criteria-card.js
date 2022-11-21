@@ -22,7 +22,7 @@ const CriteriaCard = () => {
             <Card className={Styles.criteriaBox}>
                 <div className={Styles.cardWrapper}>
                     <div className={Styles.imageBox} >
-                        <Image src="assets/images/armySeal.png" alt={"Logo"} />
+                        <Image className={Styles.armyImage} src="assets/images/armySeal.png" alt={"Logo"} />
                         <div className={Styles.contact}>
                             <Icon type="linkedIn" variant="primary" size="icon_xsmall01" strong="strong6" />
                             <Icon type="web" variant="primary" size="icon_xsmall01" />
