@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Styles from './search-result.module.scss'
-import { Button, Card, CheckBox, Icon, Layout, ProfileCard, Tables, Text } from '../../components/shared'
+import { Button, Card, CheckBox, Icon, Layout, ContactCard, Tables, Text } from '../../components/shared'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Tooltip } from '@mui/material';
@@ -47,38 +47,38 @@ const SearchResult = () => {
         {
             id: 1,
             selected: false,
-            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
-            cardTwo: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
         {
             id: 2,
             selected: false,
-            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
-            cardTwo: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
         {
             id: 3,
             selected: false,
-            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
-            cardTwo: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
         {
             id: 4,
             selected: false,
-            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
-            cardTwo: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
         {
             id: 5,
             selected: false,
-            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
-            cardTwo: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
         {
             id: 6,
             selected: false,
-            card: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
-            cardTwo: <ArmyCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
+            cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
 
     ]
@@ -284,19 +284,19 @@ const SearchResult = () => {
                         <Text className={`${Styles.cardHeading} ${'mt30'}`} color="darkGray" strong="strong3">Last Viewed</Text>
                         <div className={Styles.homeCard}>
                             <div className='mb12'>
-                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                                <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                             <div className='mb12'>
-                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                                <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                             <div className='mb12'>
-                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                                <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                             <div className='mb12'>
-                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                                <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                             <div className='mb12'>
-                                <ProfileCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                                <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
                         </div>
                     </div>

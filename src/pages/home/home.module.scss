@@ -1,18 +1,24 @@
 @import "../../assets/scss/mixins.scss";
 
-// .searchMain {
-//    @include flexJustifyCenter;
-//     margin-bottom: 120px;
+.searchMain {
+   @include flexJustifyCenter;
+    margin-bottom: 120px;
 
-//     @include xlg {
-//         margin-left: 50px;
-//     }
+    @include xxlg {
+        margin-left: 220px;
+    }
+    @include xlg {
+        margin-left: 80px;
+    }
 
-//     @include md {
-//         margin-left: 0px;
-//     }
+    @include xlmd {
+        margin-left: 40px;
+    }
+    @include md {
+        margin-left: 0px;
+    }
 
-// }
+}
 
 .newsContainer {
     @include md {

@@ -4,7 +4,7 @@ import Image from '../image';
 import Styles from './tables.module.scss';
 import Text from '../text'
 import CheckBox from "../checkbox/checkbox";
-import { TableContainer } from "@mui/material";
+import { TableBody, TableContainer, Table, TableRow, TableCell } from "@mui/material";
 
 const Items = [
     {
@@ -122,7 +122,7 @@ const Items = [
     },
 ];
 
-class Table extends React.Component {
+class Tables extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -178,37 +178,36 @@ class Table extends React.Component {
     render() {
         return (
             <TableContainer className={Styles.container}>
-                    <div className={Styles.scrollBar}>
-                        <table className={Styles.table}>
-                            <tbody>
-                                {this.state.List.map((user) => (
-                                    <tr key={user.id} className={user.selected ? "selected" : ""}>
-                                        <th scope="row">
-                                            <CheckBox
-                                                checked={user.selected}
-                                                className={`${"form-check-input"} ${Styles.tableCheckbox}`}
-                                                id="rowcheck{user.id}"
-                                                onChange={(e) => this.onItemCheck(e, user)}
-                                                variant="grayFill"
-                                            />
-                                        </th>
-                                        <tr className={`${Styles[user.vcb]} ${Styles.background}`}>
-                                            <th>  <td> <Image src="assets/images/OfficialArmySeal.png" alt="logo" /></td>
-                                                <td><Text variant="mlgText" className={Styles.size}>{user.name}</Text></td></th>
-                                            <th><td><Text variant="mlgText" className={Styles.size}>{user.value}</Text></td>
-                                                <td><Text variant="mlgText" className={Styles.phone}>{user.country}</Text></td></th>
-
-                                        </tr>
-                                        <td> <Icon type={"star"} /></td>
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
+                <div className={Styles.scrollBar}>
+                    <Table className={Styles.table}>
+                        <TableBody>
+                            {this.state.List.map((user) => (
+                                <TableRow key={user.id} className={user.selected ? "selected" : ""}>
+                                    <TableCell scope="row">
+                                        <CheckBox
+                                            checked={user.selected}
+                                            className={`${"form-check-input"} ${Styles.tableCheckbox}`}
+                                            id="rowcheck{user.id}"
+                                            onChange={(e) => this.onItemCheck(e, user)}
+                                            variant="grayFill"
+                                        />
+                                    </TableCell>
+                                    <TableCell className={`${Styles[user.vcb]} ${Styles.background}`}>
+                                        <Image src="assets/images/OfficialArmySeal.png" alt="logo" />
+                                        <Text variant="mlgText" className={Styles.size}>{user.name}</Text>
+                                        <Text variant="mlgText" className={Styles.size}>{user.value}</Text>
+                                        <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
+                                    </TableCell>
+                                    <TableCell> <Icon type={"star"} /></TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div>
             </TableContainer>
         );
     }
 }
 
-export default Table;
+export default Tables;
 

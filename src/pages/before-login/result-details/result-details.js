@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, CriteriaCard, Text, Icon, Card, CardItems, ArmyCard } from '../../../components/shared'
+import { Layout, CriteriaCard, Text, Icon, Card, CardItems, ContactCard } from '../../../components/shared'
 import Styles from './result-details.module.scss'
 import { Grid } from '@mui/material'
 
@@ -82,19 +82,19 @@ const ResultDetails = () => {
               <div className={Styles.armyMain}>
                 <Text className={Styles.recomendText} strong='strong3' variant={"smText"} color="gray">Recommendation</Text>
                 <div className={Styles.armyBox}>
-                  <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                  <ContactCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                 </div>
                 <div className={Styles.armyBox}>
-                  <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                  <ContactCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                 </div>
                 <div className={Styles.armyBox}>
-                  <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                  <ContactCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                 </div>
                 <div className={Styles.armyBox}>
-                  <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                  <ContactCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                 </div>
                 <div className={Styles.armyBox}>
-                  <ArmyCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
+                  <ContactCard src={"assets/images/OfficialArmySeal.png"} imageClass={"ml20 mr20"} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                 </div>
               </div>
             </Grid>
@@ -103,7 +103,7 @@ const ResultDetails = () => {
         </div>
 
       </div>
-    </Layout >
+    </Layout>
   )
 }
 

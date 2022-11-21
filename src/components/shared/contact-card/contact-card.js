@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from './profile-card.module.scss'
+import styles from './contact-card.module.scss'
 import Image from "../image/image";
 import Text from "../text/text";
 import Icon from "../icon";
 import propTypes from "prop-types";
-const ProfileCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsText, isVirgina, istopLacsText, imageSize, isContactIcon, isArlingtonText }) => {
+const ContactCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsText, isVirgina, istopLacsText, imageSize, isContactIcon, isArlingtonText }) => {
     return (
         <div className={`${styles.cardContainer} ${"dFlex"}`}>
             {isGreenBorder
@@ -31,7 +31,7 @@ const ProfileCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLa
         </div>
     )
 }
-ProfileCard.defaultProps = {
+ContactCard.defaultProps = {
     isGreenBorder: false,
     isContactIcon: true,
     isArlingtonText: true,
@@ -39,7 +39,7 @@ ProfileCard.defaultProps = {
     isVirgina: false,
     isDownLacsText: false,
 }
-ProfileCard.protoType = {
+ContactCard.protoType = {
     isGreenBorder: propTypes.bool,
     isContactIcon: propTypes.bool,
     isArlingtonText: propTypes.bool,
@@ -48,4 +48,4 @@ ProfileCard.protoType = {
     isVirgina: propTypes.bool,
     imageSize: propTypes.string,
 }
-export default ProfileCard
+export default ContactCard

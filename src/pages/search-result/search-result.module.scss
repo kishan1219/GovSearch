@@ -182,6 +182,15 @@
                 flex-direction: column;
             }
 
+            @include tab {
+                margin-left: 0px;
+            }
+
+            @include mo {
+                margin-top: 50px;
+            }
+
+
             .cardHeading {
                 min-width: 440px;
 
@@ -192,10 +201,6 @@
                 @include mo {
                     min-width: 200px;
                 }
-            }
-
-            @include mo {
-                margin-top: 50px;
             }
 
             .armyDepartmentTextMain {
@@ -213,13 +218,15 @@
                 @include xxsm {
                     margin: 3px 0px 0px 40px;
                 }
+            }
 
+            .lstViewedImage {
+                margin-right: 20px;
             }
         }
 
         .departmentArmyTab {
             margin: 0px 50px 0px 0px;
-
         }
 
         .tableBody {
@@ -239,6 +246,4 @@
             }
         }
     }
-
-
 }

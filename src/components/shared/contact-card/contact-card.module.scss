@@ -10,9 +10,8 @@
     @include flexJustifyBetween;
 
     @include xsm {
-        max-width: 300px;
+        min-width: 280px;
         display: block;
-        gap: 20px;
         text-align: center;
     }
 
@@ -44,7 +43,6 @@
         display: grid;
         gap: 15px;
 
-      
         @include xsm {
             margin: 3px 0px 0px 0px;
         }
@@ -54,12 +52,11 @@
         padding-top: 3px;
         display: grid;
         gap: 11px;
-     
+
         @include xsm {
             @include flexJustifyAround;
             padding: 10px 0px;
         }
-
 
         .vaText {
             margin-top: 30px;
