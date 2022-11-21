@@ -3,7 +3,12 @@
 .container {
     user-select: none;
     @include fonts-poppins;
-
+    @include md {
+        margin-left: 20px;
+    }
+    @include mo {
+        margin-left: 5px;
+    }
     .heading {
         font-size: $font-mdbig;
         margin: 80px 0px 10px 0px;

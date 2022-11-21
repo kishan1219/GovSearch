@@ -121,6 +121,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 @mixin flexWrapBetween {
   display: flex;
   flex-wrap: wrap;
@@ -227,7 +228,8 @@
     }
   }
 }
-@mixin webkinborderNone{
+
+@mixin webkinborderNone {
   -webkit-appearance: none;
   -moz-appearance: none;
   list-style: none;
@@ -239,6 +241,14 @@
   .container {
     user-select: none;
     @include fonts-poppins;
+
+    @include md {
+      margin-left: 20px;
+    }
+
+    @include mo {
+      margin-left: 5px;
+    }
 
     .heading {
       font-size: $font-mdbig;
