@@ -27,6 +27,18 @@
                 text-align: right;
                 margin-left: 11%;
                 border: none;
+
+                @include xxlg {
+                    margin-left: 0px;
+                }
+
+                @include xlg {
+                    margin-left: 3%;
+                }
+
+                @include xlmd {
+                    margin-left: 10%;
+                }
             }
 
             .borderHeadThird {
@@ -38,7 +50,15 @@
                 width: 18%;
                 border: none;
 
-                @include md {
+                @include xxlg {
+                    width: 21%;
+                }
+
+                @include xlg {
+                    width: 20%;
+                }
+
+                @include xlmd {
                     width: 17%;
                 }
             }
@@ -116,8 +136,9 @@
                     width: 15%;
                     text-align: center;
                     border: none;
+
                     @include xxlg {
-                        width: 13.5%;
+                        width: 14.5%;
                     }
                 }
 
@@ -128,8 +149,8 @@
                 .favoriteMoreIcon {
                     left: 0px;
 
-                    @include md {
-                        // left: -15px;
+                    @include xxlg {
+                        left: -15px;
                     }
                 }
 
@@ -163,11 +184,11 @@
             }
 
             @include xlmd {
-                max-width: 1140px;
+                max-width: 1135px;
             }
 
             @include md {
-                max-width: 1120px;
+                max-width: 1125px;
             }
 
             .subjectMain {
@@ -200,6 +221,17 @@
             .inputMoreIcon {
                 position: absolute;
                 left: -22px;
+
+                @include xlg {
+                    left: -12px;
+                }
+
+                @include xlmd {
+                    left: -17px;
+                }
+                @include md {
+                    left: -22px;
+                }
             }
 
             .descriptionMain {
@@ -222,7 +254,7 @@
                 width: 6%;
 
                 @include xxlg {
-                    width: 10%;
+                    width: 2%;
                 }
             }
 
