@@ -147,6 +147,9 @@ html {
 .dBlock {
   display: block;
 }
+.dGrid{
+  display:grid;
+}
 
 .dInBlock {
   display: inline-block;
@@ -309,9 +312,15 @@ html {
 .mr50 {
   margin-right: 50px;
 }
+.mt5{
+  margin-top: 5px;
+}
 
 .mt10 {
   margin-top: 10px;
+}
+.mt13{
+  margin-top: 13px;
 }
 .mt15 {
   margin-top: 10px;
@@ -335,6 +344,9 @@ html {
 
 .mt30 {
   margin-top: 30px;
+}
+.mt40 {
+  margin-top: 40px;
 }
 
 .mt50 {

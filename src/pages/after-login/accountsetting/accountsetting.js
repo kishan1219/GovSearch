@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Grid } from '@mui/material'
 import Styles from './accountsetting.module.scss'
 import { Heading, Card, Text, Button, Layout, Input, Icon } from '../../../components/shared/index'
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 const AccountSetting = () => {
@@ -30,7 +29,7 @@ const AccountSetting = () => {
   const [lname, setLname] = useState("Pinkston");
   const [address, setAddress] = useState("Pinkston");
   const [zipCode, setZipCode] = useState("344535");
-  const [email, setEmail] = useState("matth@gmail.com");
+  const [email, setEmail] = useState("matt@technomile.com");
   const [contact, setContact] = useState("83498585944");
   const [title, setTitle] = useState("Product Manager");
   const [company, setCompany] = useState("TechnoMile");
@@ -75,7 +74,7 @@ const AccountSetting = () => {
   };
 
 
- 
+
 
 
   const selectionChangeHandler = (event) => {
@@ -103,7 +102,7 @@ const AccountSetting = () => {
     setBuisType(false);
 
   };
-const showDetails = () => {
+  const showDetails = () => {
     setShow(false);
     setHide(true);
   }
@@ -118,77 +117,65 @@ const showDetails = () => {
     <Layout isSidebar={true} isFederal={false} isGovSearchProfessional={true}>
       <div className={Styles.wrapper}>
         <Heading className={Styles.accountHead} color={"secondary"} headingType={"h1"}> Account </Heading>
+        <Heading className={`${Styles.profileHead} ${'mt25 mb22'}`} color={"secondary"} headingType={"h2"}> Profile</Heading>
         {show && (
           <div className={`${Styles.main}`}>
-
-
             <div className={Styles.profileBox}>
-
-              <Heading className={Styles.profileHead} color={"secondary"} headingType={"h2"}> Profile</Heading>
+              {/* Profile Card Started Here */}
               <Grid container spacing={2}>
-
                 <Card className={Styles.mainCard}>
-
-
                   <div className={Styles.cardBox}>
                     <div>
-
-                      <Heading strong='strong3' className={Styles.cardHead}>First  Name</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{name}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>First  Name</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{name}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead} >Last Name</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{lname}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Last Name</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{lname}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>Address</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{address}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Address</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} strong='strong3'>{address}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>Zip Code</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{zipCode}</Text>
-                    </div>
-
-
-
-                    <div>
-                      <Heading className={Styles.cardHead}>Email</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{email}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Zip Code</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} strong='strong3'>{zipCode}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>Phone</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{contact}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Email</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{email}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>State</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{selectState}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Phone</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{contact}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>Country</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{licType}</Text>
-                    </div>
-
-
-
-                    <div>
-                      <Heading className={Styles.cardHead}>Title / Role</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{title}</Text>
-                    </div>
-                    <div >
-                      <Heading className={Styles.cardHead}>Company</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{company}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>State</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{selectState}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>Number of Employees</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{employeenum}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Country</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{licType}</Text>
                     </div>
                     <div>
-                      <Heading className={Styles.cardHead}>Type of Business</Heading>
-                      <Text className={Styles.cardText} variant={"mlgText"} strong='strong3'>{selectBuisType}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Title/Role</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{title}</Text>
+                    </div>
+                    <div>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Company</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{company}</Text>
+                    </div>
+                    <div>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>Number off Employees</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{employeenum}</Text>
+                    </div>
+                    <div>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>URL (website)</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} variant={"mdText"} strong='strong3'>{selectBuisType}</Text>
                     </div>
                     <div className={Styles.urlBox}>
-                      <Heading className={Styles.cardHead}>URL (website)</Heading>
-                      <Text variant={"mlgText"} className={Styles.cardText} strong='strong3'>{url}</Text>
+                      <Text className={Styles.cardHeadText} variant={"mdText"} strong='strong4'>URL (website)</Text>
+                      <Text className={`${Styles.cardText} ${'mt5'}`} strong='strong3'>{url}</Text>
                     </div>
                     <div className={Styles.editMain}>
                       <Button btnClass={Styles.editBtn} size={"xsm"} variant={"solidPrimary"} btnHandler={showDetails} >Edit</Button>
@@ -196,90 +183,83 @@ const showDetails = () => {
                   </div>
                 </Card>
               </Grid>
-
-
-
+              {/* Profile Card End Here  */}
 
             </div>
-            <Heading className={Styles.manageHead} color={"secondary"} headingType={"h2"}>User Management</Heading>
-            <div className={Styles.userManage}>
-              <Grid container spacing={2}>
-                <Card className={Styles.mainCard}>
-                  <div className={Styles.userManageBox}>
-
-                    <Text className={Styles.licText} variant={"xxxlText"} color={"primary01"} strong={"strong4"}>3</Text>
-                    <Text className={Styles.remainlicText} variant={"mlgText"} color={"gray"} strong={"strong4"}>Remaining License</Text>
-                    <Button btnClass={Styles.updateBtn} size={"xlsmlg"} variant={"solidPrimary"}>Update User Type</Button>
-                    <Button btnClass={Styles.inviteBtn} size={"xlmd"} variant={"solidPrimary"}>Invite Users</Button>
+            <Heading className={`${Styles.profileHead} ${'mT25 mb22'}`} color={"secondary"} headingType={"h2"}> User Management</Heading>
+            <Grid container spacing={2}>
+              {/* Assign  Card Stated Here  */}
+              <Card className={Styles.mainCard}>
+                <div className={`${Styles.userManageBox} ${'mT25 mb22'} `}>
+                  <Text className={Styles.licText} variant={"xxxlText"} color={"primary01"} strong={"strong4"}>3</Text>
+                  <Text className={Styles.remainlicText} variant={"mlgText"} color={"gray"} strong={"strong4"}>Remaining License</Text>
+                  <Button btnClass={Styles.updateBtn} size={"xlsmlg"} variant={"solidPrimary"}>Update User Type</Button>
+                  <Button btnClass={Styles.inviteBtn} size={"xlmd"} variant={"solidPrimary"}>Invite Users</Button>
+                </div>
+                <div className={`${Styles.secondCard} ${'mt40'}`}>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >Available Licenses</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>1</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>2</Text>
                   </div>
-                  <div className={Styles.secondCard}>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >Available Licenses</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>1</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>2</Text>
-                    </div>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >License Types</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>{selected}</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>GovSearch Defense</Text>
-                    </div>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Expriation Date</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>12/01/2022</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>12/01/2022</Text>
-                    </div>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Assigned Licenses</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>2</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>0</Text>
-                    </div>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >License Types</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>{selected}</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>GovSearch Defense</Text>
                   </div>
-
-
-                  <Heading className={Styles.licenseHead} headingType="h2" color="secondary">Assigned Users</Heading>
-                  <div className={Styles.assignedCard}>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >First Name</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Matt</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Hunter</Text>
-                    </div>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >Last Name</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Pinkston</Text>
-                      <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Cronier</Text>
-                    </div>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Email</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>matt@technomile.com</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>hunter@technomile.com</Text>
-                    </div>
-                    <div className={Styles.licenseMain}>
-                      <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Type</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>Gov Search Admin</Text>
-                      <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>Gov Search User</Text>
-                    </div>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Expriation Date</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>12/01/2022</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>12/01/2022</Text>
                   </div>
-                </Card>
-              </Grid>
-            </div>
-          </div >
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Assigned Licenses</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>2</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>0</Text>
+                  </div>
+                </div>
+                <Heading className={`${Styles.licenseHead} ${'mT25 mb22'}`} color={"secondary"} headingType={"h2"}>Assigned Users</Heading>
+                <div className={Styles.assignedCard}>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >First Name</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Matt</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Hunter</Text>
+                  </div>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' className={Styles.downText} variant={"mlgText"} >Last Name</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Pinkston</Text>
+                    <Text variant={"mlgText"} className={Styles.downText} strong='strong6'>Cronier</Text>
+                  </div>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Email</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>matt@technomile.com</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>hunter@technomile.com</Text>
+                  </div>
+                  <div className={Styles.licenseMain}>
+                    <Text strong='strong3' variant={"mlgText"} className={Styles.downText} >Type</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>Gov Search Admin</Text>
+                    <Text variant={"mlgText"} strong='strong6' className={Styles.downText}>Gov Search User</Text>
+                  </div>
+                </div>
+              </Card>
+              {/* Assigned Card End Here */}
+            </Grid>
+          </div>
         )}
-
-
-        {/* Edit Profile */}
+        {/* Edit Detail Box  Start  */}
         {hide && (
           <div className={`${Styles.editCard}  `}>
-            <Heading headingType={"h2"} className={Styles.profileHead}> Profile</Heading>
+
             <Grid container spacing={1}>
-              <Card className={Styles.profileCard}>
+              <Card className={Styles.mainCard}>
                 <div className={Styles.formBox}>
                   <div >
-                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>First Name</Text>
+                    <Text variant={"mdText"} className={Styles.accountText} strong='strong4'>First Name</Text>
                     <Input variant="border" className={Styles.inputbox} id="name" name="name" onChange={updateName} value={name} />
                   </div>
 
                   <div>
-                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>Last Name</Text>
+                    <Text variant={"mdText"} className={Styles.accountText} strong='strong4'>Last Name</Text>
                     <Input variant="border" className={Styles.inputbox}
                       id="lname"
                       name="lname"
@@ -288,7 +268,7 @@ const showDetails = () => {
                     />
                   </div>
                   <div>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Address</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>Address</Text>
                     <Input className={Styles.inputbox} variant="border"
                       id="address"
                       name="address"
@@ -296,7 +276,7 @@ const showDetails = () => {
                       value={address} />
                   </div>
                   <div>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Zip Code</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>Zip Code</Text>
                     <Input className={Styles.inputbox} variant="border"
                       id="zipcode"
                       name="zipcode"
@@ -304,11 +284,11 @@ const showDetails = () => {
                       value={zipCode} />
                   </div>
                   <div>
-                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>Email</Text>
+                    <Text variant={"mdText"} className={Styles.accountText} strong='strong4'>Email</Text>
                     <Input variant="border" className={Styles.inputbox} id="email" name="email" onChange={updateEmail} value={email} />
                   </div>
                   <div className={Styles.SecBox}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Phone</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>Phone</Text>
                     <Input className={Styles.inputbox} variant="border"
                       id="phone"
                       name="phone"
@@ -316,7 +296,7 @@ const showDetails = () => {
                       value={contact} />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>State</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>State</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -335,7 +315,7 @@ const showDetails = () => {
                     <Icon onClick={() => setState(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Country</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>Country</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -350,10 +330,10 @@ const showDetails = () => {
                     </Select>
 
 
-                    <Icon onClick={() => setShowData(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                    <Icon onClick={() => setShowData(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.titleBox}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Title / Role</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>Title / Role</Text>
                     <Input className={Styles.inputbox} variant="border"
                       id="title"
                       name="title"
@@ -361,7 +341,7 @@ const showDetails = () => {
                       value={title} />
                   </div>
                   <div className={Styles.titleBox}>
-                    <Text variant={"mlgText"} className={Styles.accountText} strong='strong4'>Company</Text>
+                    <Text variant={"mdText"} className={Styles.accountText} strong='strong4'>Company</Text>
                     <Input className={Styles.inputbox} variant="border"
                       id="company"
                       name="company"
@@ -369,7 +349,7 @@ const showDetails = () => {
                       value={company} />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text className={Styles.empmText} variant={"mlgText"} strong='strong4'>Number of Employees</Text>
+                    <Text className={Styles.empmText} variant={"mdText"} strong='strong4'>Number of Employees</Text>
                     <Select className={Styles.empInput} IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
                       value={employeenum} onChange={selectEmployeenumber} open={employee} >
@@ -383,7 +363,7 @@ const showDetails = () => {
                     <Icon onClick={() => setEmployee(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.arrowInput}>
-                    <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>Types of Business</Text>
+                    <Text className={Styles.accountText} variant={"mdText"} strong='strong4'>Types of Business</Text>
                     <Select className={Styles.empInput}
                       IconComponent={() => null}
                       sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
@@ -397,7 +377,7 @@ const showDetails = () => {
                     </Select>
 
 
-                    <Icon onClick={() => setBuisType(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                    <Icon onClick={() => setBuisType(true)} className={Styles.iconArrowDown} type='soliddownpolygon' variant='icon_xlarge' />
                   </div>
                   <div className={Styles.urlMain}>
                     <Text className={Styles.accountText} variant={"mlgText"} strong='strong4'>URL (website)</Text>
@@ -410,70 +390,56 @@ const showDetails = () => {
                   <div className={Styles.saveBtn}>
                     <Button btnClass={Styles.savemainBtn} size={"xsm"} variant={"solidPrimary"} btnHandler={saveDetails} >Save</Button>
                   </div>
-
                 </div>
               </Card>
             </Grid>
-            <Heading className={Styles.manageHead} headingType={"h2"}>User Management</Heading>
-            <Grid container spacing={2}>
-
-              <div className={Styles.cardDown}>
+            <Heading className={`${Styles.profileHead} ${'mT25 mb22'}`} color={"secondary"} headingType={"h2"}> User Management</Heading>
 
 
-                <div className={Styles.upBox}>
-                  <div className={Styles.arrowInput}>
+            <div className={Styles.upBox}>
+              <div className={Styles.downMainBox}>
+                <div className={Styles.arrowInput}>
+                  <Select className={Styles.typeInput}
+                    IconComponent={() => null}
+                    sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+                    value={selected} onChange={selectionChangeHandler}
+                    open={showselect}
 
+                  >
+                    <MenuItem value="GovSearch Proffesional">GovSearch Proffesional</MenuItem>
+                    <MenuItem value="GovSearch Defense">GovSearch Defense</MenuItem>
 
-                    <Select className={Styles.typeInput}
-                      IconComponent={() => null}
-                      sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
-                      value={selected} onChange={selectionChangeHandler}
-                      open={showselect}
-
-                    >
-                      <MenuItem value="GovSearch Proffesional">GovSearch Proffesional</MenuItem>
-                      <MenuItem value="GovSearch Defense">GovSearch Defense</MenuItem>
-
-                    </Select>
-
-
-                    <Icon onClick={() => setSelect(true)} className={Styles.iconType} type='soliddownpolygon' variant='icon_xlarge' />
-
-                  </div>
-                  <Input className={Styles.mailBox} type="email" placeholder="Enter Your Email" />
-                  <Input placeholder={"comments"} className={Styles.textAreabox} type="textarea" />
-                 
-
+                  </Select>
+                  <Icon onClick={() => setSelect(true)} className={Styles.iconType} type='soliddownpolygon' variant='icon_xlarge' />
+                 </div>
+                <Input className={`${Styles.mailBox} ${'mt25'}`} type="email" placeholder="Enter Your Email" />
+                <Input placeholder={"comments"} className={`${Styles.textAreabox} ${'mt25'}`} type="textarea" />
                 </div>
-                
-
-                <div className={Styles.downBoxx}>
-                  <Heading className={Styles.remainHead}>Remaining License</Heading>
-                  <div className={Styles.mainRemaining}>
-                    <div className={Styles.availableBox} >
-                      <Text className={Styles.remainText}>Available</Text>
-                      <Text className={Styles.remainText}>1</Text>
-                      <Text className={Styles.remainText}>2</Text>
-                    </div>
-                    <div className={Styles.availableBox}>
-                      <Text className={Styles.remainText}>License Type</Text>
-                      <Text className={Styles.remainText}>GovSearch Professional </Text>
-                      <Text className={Styles.remainText}>GovSearch Defense</Text>
-                    </div>
+              <div className={Styles.downBoxx}>
+                <Text className={Styles.remainHead} variant="xxxlText" strong={"strong3"}>Remaining License</Text>
+                <div className={Styles.mainRemaining}>
+                  <div className={Styles.availableBox} >
+                    <Text className={Styles.remainText}>Available</Text>
+                    <Text className={Styles.remainText}>1</Text>
+                    <Text className={Styles.remainText}>2</Text>
+                  </div>
+                  <div className={Styles.availableBox}>
+                    <Text className={Styles.remainText}>License Type</Text>
+                    <Text className={Styles.remainText}>GovSearch Professional </Text>
+                    <Text className={Styles.remainText}>GovSearch Defense</Text>
                   </div>
                 </div>
               </div>
-              
-             
-              
-            </Grid>
+            </div>
             <div className={Styles.sendBtn}>
-                    <Text variant={"xxlText"} className={Styles.billinText}>Billing</Text>
-                    <Button btnClass={Styles.sendbtns} size={"xsm"} variant={"solidPrimary"} >Send</Button>
-                  </div>
+              <Text variant={"xxlText"} className={Styles.billinText}>Billing</Text>
+              <Button btnClass={Styles.sendbtns} size={"xsm"} variant={"solidPrimary"} >Send</Button>
+            </div>
           </div>
         )}
 
+
+       
       </div >
 
     </Layout>

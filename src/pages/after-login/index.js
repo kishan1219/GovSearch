@@ -1,6 +1,6 @@
 import Notification from "./notification";
-import Account from "./account/account";
-import AccountSetting from "./accountsetting/accountsetting";
+import Account from "./account";
+import AccountSetting from "./accountsetting";
 import Download from "./download/download";
 import SearchHistory from "./search-history/search-history";
 import stats from "./stats";
@@ -13,5 +13,4 @@ export{
     SearchHistory,
     stats,
     Favorites,
-
 }

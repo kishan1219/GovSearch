@@ -33,7 +33,8 @@ const CardItems = ({
             }
             {/* Content Box End here */}
 
-            {isAssetsText && <div className={Styles.contentBox}>
+            {isAssetsText && 
+            <div className={Styles.contentBox}>
                 <Text className={Styles.assetsFirst} variant="smText" color={color1} strong={fontweight1}>{textFirst}</Text>
                 <Text className={Styles.assetsSecond} variant="smText" color={color2} strong={fontweight2}>{textSecond}</Text>
                 <Text className={Styles.assetsThird} variant="smText" color={color3} strong={fontweight3}>{textThird}</Text>

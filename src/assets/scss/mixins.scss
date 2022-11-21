@@ -116,6 +116,17 @@
   align-items: center;
 }
 
+
+@mixin flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flexWrapBetween {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 @mixin flexJustifyCenter {
   display: flex;
   align-items: center;
@@ -215,6 +226,13 @@
       border: 1px solid transparent;
     }
   }
+}
+@mixin webkinborderNone{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  list-style: none;
+  text-indent: 1px;
+  text-overflow: '';
 }
 
 @mixin notificationContainer {

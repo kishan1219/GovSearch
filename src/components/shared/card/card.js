@@ -15,7 +15,7 @@ const Card = ({
 }) => {
   return (
     <div className={`${Styles.card} ${[className]}`}>
-      <div>{children}</div>
+     <div> {children}</div>
     </div>
   )
 };

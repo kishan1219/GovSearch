@@ -1,0 +1,93 @@
+@import "../../../assets/scss/mixins.scss";
+.mainContainer {
+    width: 100%;
+    @include ScrollBar;
+    .cardBoxOne {
+        max-width: 554px;
+        padding: 24px 0px 20px 0px;
+        @include xlmd{max-width: 389px;}
+    }
+    .cardSecondBox{
+        max-width: 554px;
+        padding: 24px 0px 20px 0px;
+     
+    }
+    .scrollBar {
+         overflow: auto;
+        height: 212px;
+        @include xlmd {height: 224px;}
+    }
+    .searchCriteria {
+        width: 100%;
+        @include flexBetween;
+         @include mo { flex-wrap: wrap; }
+    }
+     .cardBox {
+       @include flexWrap;
+        width: 100%;
+
+        .detaisFirst {
+            width:100%;
+            max-width: 570px;
+            .updateBox {
+                display: flex;
+                align-items: center;
+                margin: 20px 0px 5px 0px;
+                @include xlmd {
+                  margin-bottom: 0px;
+                }
+
+                .updateText {
+                    width: 100%;
+                    max-width: 391px;
+                    @include xlmd {max-width: 243px; font-size: 12px;}
+                    @include md{max-width: 181px;font-size: 9px;}
+                    
+                    
+                }
+
+                .requestText {
+                    width: 100%;
+                    max-width: 142px;
+                    margin: 5px 0px;
+                    @include xlmd{font-size: 13px;max-width: 126px;}
+                        @include md{font-size: 9px;max-width: 84px;}
+                }
+            }
+        }
+
+        .trendingBox {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 97px;
+
+            .cardBox {
+                margin-left: 20px;
+                max-width: 554px;
+                padding: 24px 0px 20px 0px;
+            }
+
+            .cardthirdBox {
+                max-width: 554px;
+                padding: 24px 0px 20px 0px;
+            }
+
+            .secondText {
+              
+                margin:0px 0px 0px 52px;
+            }
+        }
+        .armyMain{
+            margin-left: 97px;
+            margin-top: 121px;
+            @include xlmd{ margin-left: 26px;}
+            .recomendText{
+                margin-bottom: 28px;
+                text-align: center;
+            }
+            .armyBox{
+                margin-top: 15px;
+            }
+        }
+    }
+}

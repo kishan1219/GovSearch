@@ -1,36 +1,64 @@
+@import "../../../assets/scss/mixins.scss";
 .cardContainer {
+
+    width:100%;
+    // .cardBox {
+    //     max-width: 553px;
 
     .contentBox {
         display: flex;
+        
 
         padding: 0px 24px 12px 24px;
 
         .textFirst {
             width: 100%;
             max-width: 207px;
+            @include xlmd{ font-size: 11px;  max-width: 120px;}
+            @include md{  font-size: 9px; max-width: 77px;}
         }
 
         .textSecond {
-            min-width: 217px;
+            width: 100%;
+            max-width: 217px;
+            @include xlmd{font-size: 11px;max-width: 186px;}
+            @include xlmd{font-size: 9px;}
+        }
+        .textThird {
+           
+            @include xlmd{ font-size: 11px; }
+            @include md{ font-size: 9px; }
         }
 
+
         .assetsFirst {
-           min-width:118px;
+            width:100%;
+           max-width:97px;
+           @include xlmd{font-size: 11px;}
+           @include md{font-size: 9px; max-width: 60px;}
         }
 
         .assetsSecond {
             width:100%;
             max-width:242px;
+            @include xlmd{font-size: 11px;max-width: 146px;}
+            @include md{font-size: 9px; max-width: 99px;}
+        }
+        .assetsThird{
+            @include xlmd{font-size: 11px;}
+            @include md{font-size: 9px;}
         }
        
         .childFirst{
             width: 100%;
             max-width:328px;
+            @include xlmd{font-size: 10px;}
         }
         .childSecond{
             width:100%;
             max-width: 162px;
             text-align: right;
+            @include xlmd{font-size: 10px;}
         }
     }
 

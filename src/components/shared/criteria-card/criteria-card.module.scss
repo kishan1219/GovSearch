@@ -7,16 +7,23 @@
     .criteriaBox {
         max-width: 554px;
         border-radius: 10px;
+        @include xlmd{max-width: 389px;}
 
         .cardWrapper {
             display: flex;
             padding: 24px 26px 25px 16px;
+            @include md{ padding-left: 12px;}
 
             .imageBox {
+                .armyImage{
+                    @include md{ width: 63px;height: 78px;}
+
+                }
                 .contact {
                     max-width: 74px;
                     letter-spacing: 16px;
                     margin: 0px 39px;
+                    @include md{margin:0px; letter-spacing: 12px;}
                 }
             }
 
@@ -26,13 +33,22 @@
                 margin-top: 22px;
                 display: grid;
                 gap: 12px;
+                @include xlmd { margin-left: 16px; }
+                @include md {  margin-left: 0px; margin-top: 11px; }
+
+
+                .identityText {
+                    @include xlmd {
+                        font-size: 10px;
+                    }
+                }
 
                 .starBox {
                     display: flex;
 
-                  
+
                     .starIcon {
-    
+
 
                         &:hover {
                             color: rgba(0, 0, 0, 0.3);
@@ -43,11 +59,19 @@
                     .mainHead {
                         width: 100%;
                         max-width: 309px;
+
+                        @include xlmd {
+                            font-size: 12px;
+                        }
                     }
                 }
 
                 .locationBox {
                     @include flex;
+
+                    @include xlmd {
+                        width: 184px;
+                    }
 
                     .userLocate {
                         font-size: 19px;
@@ -56,11 +80,19 @@
                     .locateText {
                         width: 100%;
                         max-width: 312px;
+
+                        @include xlmd {
+                            font-size: 10px;
+                            max-width: 159px;
+                        }
                     }
                 }
 
                 .descText {
                     color: rgba(0, 0, 0, 0.3);
+                    @include xlmd {
+                        font-size: 10px;
+                    }
                 }
 
                 .btnBox {

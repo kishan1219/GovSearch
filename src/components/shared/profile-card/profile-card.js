@@ -18,7 +18,7 @@ const ProfileCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLa
                 {isDownLacsText && <Text color="gray01" variant="smText" strong="strong6" >100,000</Text>}
             </div>
             <div className={styles.titleNumber}>
-                {istopLacsText && <Text className={"ml5"} color="gray" variant="smText">100,000</Text>}
+                {istopLacsText && <Text  className={"ml5"} color="gray" variant="smText">100,000</Text>}
                 {isContactIcon &&
                     <div>
                         <Icon type="linkedIn" variant="primary" size="icon_xsmall01" strong="strong6" />
