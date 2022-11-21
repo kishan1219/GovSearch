@@ -7,10 +7,6 @@
     overflow: auto;
 }
 
-
-
-
-
 .container {
 
     .tableCheckbox {
@@ -99,6 +95,11 @@
             color: $gray01;
             padding-right: 19px;
             padding-left: 5px;
+
+            &:hover {
+                font-weight: 500;
+                text-decoration: underline;
+            }
         }
 
         .phone {

@@ -5,7 +5,10 @@
     margin-bottom: 120px;
 
     @include xxlg {
-        margin-left: 513px;
+        margin-left: 360px;
+    }
+    @include xlg {
+        margin-left: 240px;
     }
     @include xlmd {
         margin-left: 180px;

@@ -164,19 +164,19 @@ const Sidebar = () => {
                         <ListItem>
                             <Icon onClick={toggle} className={Styles.burgerIcon} type='equal' color={"white"} variant='icon_xlarge' />
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); setShowContact(true); setHideContact(true); setShowfederalPlus(false) }} className={Styles.mt22}>
+                        <ListItem handleClick={() => { toggle(); setShowContact(true); setHideContact(true); setShowfederalPlus(false) }} className={"mt50 mb10"}>
                             <Icon type='multipleuser' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Contacts</Text>
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); setHideContact(false); setShowfederalPlus(true) }}>
+                        <ListItem className={"mb10"} handleClick={() => { toggle(); setHideContact(false); setShowfederalPlus(true) }}>
                             <Icon type='office' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Offices</Text>
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); vendorToggle(); setShowVendorNameContent(true); setHideContact(true); setShowfederalPlus(false) }}>
+                        <ListItem className={"mb10"} handleClick={() => { toggle(); vendorToggle(); setShowVendorNameContent(true); setHideContact(true); setShowfederalPlus(false) }}>
                             <Icon type='vendors' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Vendors</Text>
                         </ListItem>
-                        <ListItem handleClick={() => { toggle(); setShowLocation(true); setShowLocationType(true); setHideContact(true); setShowfederalPlus(false) }} >
+                        <ListItem className={"mb10"} handleClick={() => { toggle(); setShowLocation(true); setShowLocationType(true); setHideContact(true); setShowfederalPlus(false) }} >
                             <Icon type='locations' color={"white"} variant='icon_xlarge' />
                             <Text color={"white"} family="roboto" variant="mlgText">Locations</Text>
                         </ListItem>
@@ -201,7 +201,7 @@ const Sidebar = () => {
                             <Input className={Styles.searchInput} placeholder={"Search"} />
                             <Icon className={Styles.iconSearch} type='search' color={"black"} variant='icon_xlarge' />
                         </div>
-                        <div className={"ml30 fFlex flexColumn"}>
+                        <div className={"ml30 alignBetween"}>
                             <Icon onClick={SwitchToggle} className={"op5"} type='hierarchy' color={"black"} variant='icon_xlarge' />
                             <div>
                                 <SwitchUnstyled className={Styles.toggleSwitch} component={Root} {...label} />
