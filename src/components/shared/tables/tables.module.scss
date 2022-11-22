@@ -14,7 +14,7 @@
     }
 
     .table {
-        width: 100%;
+        width: 1063px;
         padding-right: 48px;
 
         @include md {
@@ -78,11 +78,10 @@
             justify-content: space-between;
             background: $white;
             position: relative;
-            padding: 0 13px;
+            padding: 5px 13px;
             border-radius: 10px;
 
             img {
-                padding-top: 8px;
                 margin-left: 18px;
             }
         }

@@ -4,7 +4,7 @@ import Image from '../image';
 import Styles from './tables.module.scss';
 import Text from '../text'
 import CheckBox from "../checkbox/checkbox";
-import { TableBody, TableContainer, Table, TableRow, TableCell } from "@mui/material";
+import { TableBody, TableContainer, Table, TableRow, TableCell, Collapse } from "@mui/material";
 
 const Items = [
     {
@@ -129,6 +129,8 @@ class Tables extends React.Component {
             List: Items,
             MasterChecked: false,
             SelectedList: [],
+            showFavorite: false,
+            color: 'black',
         };
     }
 
@@ -174,6 +176,9 @@ class Tables extends React.Component {
             SelectedList: this.state.List.filter((e) => e.selected),
         });
     }
+    handleClick() {
+        this.setState({ color: "blue" });
+      }
 
     render() {
         return (
@@ -193,12 +198,28 @@ class Tables extends React.Component {
                                         />
                                     </TableCell>
                                     <TableCell className={`${Styles[user.vcb]} ${Styles.background}`}>
-                                        <Image src="assets/images/OfficialArmySeal.png" alt="logo" />
-                                        <Text variant="mlgText" className={Styles.size}>{user.name}</Text>
-                                        <Text variant="mlgText" className={Styles.size}>{user.value}</Text>
-                                        <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
+                                        <div className="dFlex alignItemsCenter">
+                                            <Image className={"mr12"} src="assets/images/OfficialArmySeal.png" alt="logo" />
+                                            <Text variant="mlgText" className={Styles.size}>{user.name}</Text>
+                                        </div>
+                                        <div className="dFlex alignItemsCenter">
+                                            <Text variant="mlgText" className={Styles.size}>{user.value}</Text>
+                                            <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
+                                        </div>
                                     </TableCell>
-                                    <TableCell> <Icon type={"star"} /></TableCell>
+                                    <TableCell> <Icon onClick={this.handleClick.bind(this)} type={"star"} color={this.state.color} /></TableCell>
+                                    {/* <Collapse>
+                                    <TableCell className={`${Styles[user.vcb]} ${Styles.background}`}>
+                                        <div className="dFlex alignItemsCenter">
+                                            <Image className={"mr12"} src="assets/images/OfficialArmySeal.png" alt="logo" />
+                                            <Text variant="mlgText" className={Styles.size}>{user.name}</Text>
+                                        </div>
+                                        <div className="dFlex alignItemsCenter">
+                                            <Text variant="mlgText" className={Styles.size}>{user.value}</Text>
+                                            <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
+                                        </div>
+                                    </TableCell>
+                                    </Collapse> */}
                                 </TableRow>
                             ))}
                         </TableBody>

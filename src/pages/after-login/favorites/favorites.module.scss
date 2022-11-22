@@ -2,7 +2,6 @@
 @include notificationContainer;
 
 .container {
-    
 
     .tableContainer {
 
@@ -230,7 +229,6 @@
                 @include xlmd {
                     left: -17px;
                 }
-
                 @include md {
                     left: -22px;
                 }
