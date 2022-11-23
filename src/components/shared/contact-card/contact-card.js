@@ -21,7 +21,7 @@ const ContactCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLa
                 {istopLacsText && <Text  className={"ml5"} color="gray" variant="smText">100,000</Text>}
                 {isContactIcon &&
                     <div>
-                        <Icon type="linkedIn" variant="primary" size="icon_xsmall01" strong="strong6" />
+                        <Icon type="linkedIn" variant="primary" size="icon_xsmall01" />
                         <Icon className={"ml10 mr10"} type="web" variant="primary" size="icon_xsmall01" />
                         <Icon type="phone" variant="primary" size="icon_xsmall01" />
                     </div>}

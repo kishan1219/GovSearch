@@ -9,6 +9,10 @@
     padding: 0px 13px 0px 0px;
     @include flexJustifyBetween;
 
+    @include xlg {
+        max-width: 400px;
+    }
+
     @include xsm {
         min-width: 280px;
         display: block;
