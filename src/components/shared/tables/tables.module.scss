@@ -163,18 +163,6 @@
             padding: 12px 13px;
             margin-bottom: 15px;
             max-height: unset;
-            min-width: 1020px;
-
-            @include bxlg {
-                min-width: 900px;
-            }
-
-            @include blg {
-                min-width: 740px;
-            }
-            @include md {
-                min-width: 710px;
-            }
         }
 
         .bgCollapseText {
