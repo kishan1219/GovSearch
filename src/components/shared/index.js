@@ -21,6 +21,7 @@ import Cardtab from "./cardtab/cardtab";
 import ContactCard from "./contact-card/contact-card";
 import CriteriaCard from "./criteria-card/criteria-card";
 import CardItems from "./card-items/card-items";
+import ContactList from "./contact-list/contact-list";
 export {
   Icon,
   Input,
@@ -44,5 +45,6 @@ export {
   Cardtab,
   ContactCard,
   CriteriaCard,
-  CardItems
+  CardItems,
+  ContactList,
 };

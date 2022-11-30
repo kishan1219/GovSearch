@@ -1,0 +1,181 @@
+@import "../../../assets/scss/mixins.scss";
+@include ScrollBar;
+
+.scrollBar {
+    max-height: 615px;
+    width: 100%;
+    overflow: auto;
+    padding-right: 20px;
+}
+
+.container {
+    width: 100%;
+    @include flex;
+    margin-bottom: 24px;
+    padding-right: 30px;
+    min-width: 1139px;
+
+    .chackMain {
+        padding-bottom: 25px;
+        margin-right: 14px;
+    }
+
+    .green {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $green01;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 50px;
+            top: 0;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .greenSecond {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $green01;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .orange {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $yellow;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 50px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .orangeSecond {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $yellow;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .red {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $red1;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 50px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .redSecond {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $red1;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .background {
+        @include flexBetween;
+        background: $white;
+        position: relative;
+        padding: 5px 13px;
+        border-radius: 10px;
+        max-height: 50px;
+        min-width: 1062px;
+        margin-right: 12px;
+
+        @include bxlg {
+            min-width: 900px;
+        }
+
+        @include blg {
+            min-width: 700px;
+        }
+
+        @include xlmd {
+            min-width: 650px;
+        }
+
+        img {
+            margin-left: 18px;
+            object-fit: cover;
+        }
+    }
+
+    .backgroundCollapse {
+        padding: 12px 13px;
+        max-height: unset;
+        min-width: 1062px;
+
+        @include bxlg {
+            min-width: 900px;
+        }
+
+        @include blg {
+            min-width: 740px;
+        }
+
+        @include md {
+            min-width: 710px;
+        }
+    }
+
+    .bgCollapseText {
+        @include blg {
+            gap: 4px;
+            padding: 0px;
+        }
+    }
+
+    input {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .designationText{
+        min-width: 280px;
+    }
+    // .size {
+    //     padding-right: 19px;
+    //     padding-left: 5px;
+    // }
+
+    .iconYellow {
+        color: #FFC000;
+    }
+
+    .iconGray {
+        color: $gray02;
+    }
+}

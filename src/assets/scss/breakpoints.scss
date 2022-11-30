@@ -58,8 +58,18 @@
         @content;
     }
 }
+@mixin blg {
+    @media (max-width: #{$screen-blg}) {
+        @content;
+    }
+}
 @mixin xlg {
     @media (max-width: #{$screen-xlg}) {
+        @content;
+    }
+}
+@mixin bxlg {
+    @media (max-width: #{$screen-bxlg}) {
         @content;
     }
 }

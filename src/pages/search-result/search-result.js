@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import Styles from './search-result.module.scss'
-import { Button, Card, CheckBox, Icon, Layout, ContactCard, Tables, Text } from '../../components/shared'
+import { Button, Card, CheckBox, Icon, Layout, ContactCard, Tables, Text, ContactList } from '../../components/shared'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Tooltip } from '@mui/material';
-// import PropTypes from 'prop-types'
 const SearchResult = () => {
     const [office, setOffice] = useState(false);
     const [selectOffice, setSelectOffice] = useState("1");
@@ -18,7 +17,6 @@ const SearchResult = () => {
     const [gridTableShow, setGridTableShow] = useState(false);
     const [openPlusCard, setOpenPlusCard] = useState(false);
     const [openExportCard, setopenExportCard] = useState(false);
-
     const targetOffice = (e) => {
         setSelectOffice(e.target.value);
         setOffice(false);
@@ -80,8 +78,8 @@ const SearchResult = () => {
             card: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
             cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
-
     ]
+    
 
     const [checked, setChecked] = useState(false);
     const handleTextClick = () => {
@@ -97,12 +95,12 @@ const SearchResult = () => {
                             <div>
                                 <Text className={"mr24 cursor"} variant={"smText"} color="gray">Advanced</Text>
                             </div>
-                            </Tooltip>
+                        </Tooltip>
                         <Tooltip title="Currently, Click event is not developed">
                             <div>
                                 <Text className={"cursor"} variant={"smText"} color="gray">Save Search </Text>
                             </div>
-                            </Tooltip>
+                        </Tooltip>
                     </div>
                     <div className={Styles.trioIcon}>
                         <Icon onClick={tableToggle} color={"gray05"} type={tableHide ? "hierarchy" : "burger"} size="icon_xlarge" />
@@ -125,7 +123,6 @@ const SearchResult = () => {
                                         onChange={targetplusList}
                                         open={pluslist}
                                     >
-                                        
                                         <MenuItem value={"1"}><Text variant={"mdText"} >Existing List Name</Text></MenuItem>
                                         <MenuItem value={"2"}>list 1</MenuItem>
                                         <MenuItem value={"3"}>list 2</MenuItem>
@@ -150,7 +147,7 @@ const SearchResult = () => {
                             </Card>}
                     </div>
                 </div>
-                <Text className={`${Styles.resultText} ${"mt15 mb15"} `}strong='strong3' variant={"smText"} color="gray">Showing 100 results out of 1000</Text>
+                <Text className={`${Styles.resultText} ${"mt15 mb15"} `} strong='strong3' variant={"smText"} color="gray">Showing 100 results out of 1000</Text>
                 <div className={`${Styles.selectCriteria} ${"mB40"}`}>
                     <Text handleClick={handleTextClick} className={"cursor"} strong='strong3' variant={"smText"} color="gray">Select All</Text>
                     <Text className={"cursor"} strong='strong3' variant={"smText"} color="gray">Filters</Text>
@@ -168,11 +165,10 @@ const SearchResult = () => {
                             open={office}
                         >
                             <MenuItem value="1">Offices</MenuItem>
-                            <MenuItem value="2">Offices</MenuItem>
-                            <MenuItem value="3">Offices</MenuItem>
-                            <MenuItem value="4">Offices</MenuItem>
+                            <MenuItem value="2">Offices 2</MenuItem>
+                            <MenuItem value="3">Offices 3</MenuItem>
+                            <MenuItem value="4">Offices 4</MenuItem>
                         </Select>
-
                         <Icon className={Styles.straightIcon} type='straight' color={"gray01"} variant='icon_large' />
                         <Icon className={Styles.selectIcon} onClick={() => setOffice(true)} type='soliddownpolygon' color={"gray04"} variant='icon_large' />
                     </div>
@@ -188,14 +184,12 @@ const SearchResult = () => {
                             value={selectlocation}
                             onChange={targetLocation}
                             open={location}
-
                         >
                             <MenuItem value="1">Location</MenuItem>
-                            <MenuItem value="2">Location</MenuItem>
-                            <MenuItem value="3">Location</MenuItem>
-                            <MenuItem value="4">Location</MenuItem>
+                            <MenuItem value="2">Location 2</MenuItem>
+                            <MenuItem value="3">Location 3</MenuItem>
+                            <MenuItem value="4">Location 4</MenuItem>
                         </Select>
-
                         <Icon className={Styles.straightIcon} type='straight' color={"gray01"} variant='icon_large' />
                         <Icon className={Styles.selectIcon} onClick={() => setLocation(true)} type='soliddownpolygon' color={"gray04"} variant='icon_large' />
                     </div>
@@ -212,17 +206,42 @@ const SearchResult = () => {
                             onChange={targetOther}
                             open={other}
                         >
-                            <MenuItem value="1">Other</MenuItem>
-                            <MenuItem value="2">Other</MenuItem>
-                            <MenuItem value="3">Other</MenuItem>
-                            <MenuItem value="4">Other</MenuItem>
+                            <MenuItem value="1">other</MenuItem>
+                            <MenuItem value="2">other 2</MenuItem>
+                            <MenuItem value="3">other 3</MenuItem>
+                            <MenuItem value="4">other 4</MenuItem>
                         </Select>
                         <Icon className={Styles.straightIcon} type='straight' color={"gray01"} variant='icon_large' />
                         <Icon className={Styles.selectIcon} onClick={() => setOther(true)} type='soliddownpolygon' color={"gray04"} variant='icon_large' />
                     </div>
                 </div>
-                <div className={`${Styles.departmentTableMain} ${'alignBetween'}`}>
-                    {tableHide && <Tables />}
+                <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
+                        {(
+                            tableHide && <Tables />
+                        )}
+                        {/* {(
+                            tableHide && <Tables isAssistantSecretaryData={true} isDepartmentArmyData={false} />
+                        )} */}
+                        {/* {(
+                            tableHide && <Tables isDesignation={true} ismarkowitzData={true} isDepartmentArmyData={false} />
+                        )} */}
+                        {/* {(
+                            tableHide && <Tables isCioData={true} isDepartmentArmyData={false} isDesignation={true}/>
+                        )} */}
+                        
+                        {/* {DepartmentArmyData.map((data) => (
+                            tableHide &&  <ContactList listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                        {/* {AssistantSecretaryData.map((data) => (
+                            tableHide &&  <ContactList listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                        {/* {markowitzData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                        {/* {CioData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+
                     {gridTableShow &&
                         <TableContainer className={Styles.scrollBar}>
                             <Table aria-label="customized table" >
@@ -248,7 +267,6 @@ const SearchResult = () => {
                                                 <TableCell>
                                                     <Tooltip title="Currently, Click event is not developed">
                                                         <div>
-
                                                             <Icon type={"star"} size={"icon_large"} />
                                                         </div>
                                                     </Tooltip>
@@ -269,12 +287,10 @@ const SearchResult = () => {
                                                 </TableCell>
                                                 <TableCell><Tooltip title="Currently, Click event is not developed">
                                                     <div>
-
                                                         <Icon type={"star"} size={"icon_large"} />
                                                     </div>
                                                 </Tooltip></TableCell>
                                             </TableCell>
-
                                         </TableRow>
                                     ))}
                                 </TableBody>
@@ -300,16 +316,10 @@ const SearchResult = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </Layout>
     )
 }
-
-// SearchResult.propTypes = {
-
-// }
 
 export default SearchResult

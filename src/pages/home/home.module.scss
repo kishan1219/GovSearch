@@ -1,19 +1,25 @@
 @import "../../assets/scss/mixins.scss";
 
 .searchMain {
-   @include flexJustifyCenter;
+    @include flexJustifyCenter;
     margin-bottom: 120px;
 
     @include xxlg {
         margin-left: 220px;
     }
-    @include xlg {
-        margin-left: 80px;
+
+    @include bxlg {
+        margin-left: 170px;
+    }
+
+    @include blg {
+        margin-left: 110px;
     }
 
     @include xlmd {
-        margin-left: 40px;
+        margin-left: 60px;
     }
+
     @include md {
         margin-left: 0px;
     }
@@ -137,6 +143,7 @@
     @include md {
         max-width: 400px;
     }
+
     @include xsm {
         margin-left: 5px;
         flex: 0 0 95%;

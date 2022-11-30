@@ -43,6 +43,7 @@ const Icon = (props) => {
     <i
       className={`${returnIconClass(props)} ${props.color ? Styles[props.color] : ''} ${[props.className]} ${Styles[props.variant]} ${Styles[props.size]}`}
       onClick={onClick}
+      id={props.id}
       title={returnIconTitle(props)}
     ></i>
   )

@@ -9,7 +9,12 @@
 .container {
     width: 100%;
     min-height: 100vh;
-
+    @include md {
+        margin-left: 20px;
+    }
+    @include mo {
+        margin-left: 0px;
+    }
     .searchCriteria {
         width: 100%;
         @include flexBetween;
@@ -172,10 +177,18 @@
             margin-top: 30px;
         }
 
+        .tableScrollBar {
+            max-height: 620px;
+        }
+
         .colMd4 {
             margin-left: 70px;
             margin-top: 70px;
             @include latestDetail;
+
+            @include bxlg {
+                margin-left: 50px;
+            }
 
             @include md {
                 @include flexJustifyCenter;
@@ -194,8 +207,8 @@
             .cardHeading {
                 min-width: 440px;
 
-                @include md {
-                    max-width: 440px;
+                @include xlmd {
+                    min-width: 400px;
                 }
 
                 @include mo {
@@ -209,6 +222,7 @@
                 @include xlg {
                     margin: 3px 76px 0px 0px;
                 }
+
                 @include mo {
                     margin: 3px 40px 0px 0px;
                 }

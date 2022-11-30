@@ -32,8 +32,8 @@
         margin-left: 163px;
         margin-right: 45px;
 
-        @include xlg {
-            margin: 0px 45px 0px 120px;
+        @include bxlg {
+            margin: 0px 25px 0px 120px;
         }
 
         @include md {

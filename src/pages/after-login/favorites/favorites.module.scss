@@ -2,9 +2,9 @@
 @include notificationContainer;
 
 .container {
+    width: 100%;
 
     .tableContainer {
-
         .scrollBar {
             overflow: auto;
         }
@@ -62,7 +62,6 @@
                     width: 17%;
                 }
             }
-
         }
 
 
@@ -109,9 +108,7 @@
                     i {
                         top: 12px;
                         left: 105px;
-
                     }
-
                 }
 
                 .inputCell {
@@ -162,7 +159,6 @@
                     width: 10%;
                     border: none;
                     text-align: right;
-
                 }
             }
         }
@@ -183,12 +179,15 @@
                 max-width: 1220px;
             }
 
+            @include blg {
+                max-width: 1255px;
+            }
             @include xlmd {
-                max-width: 1135px;
+                max-width: 1155px;
             }
 
             @include md {
-                max-width: 1125px;
+                max-width: 1123px;
             }
 
             .subjectMain {
@@ -198,9 +197,7 @@
                 i {
                     top: 12px;
                     left: 105px;
-
                 }
-
             }
 
             .inputCell {
@@ -229,6 +226,7 @@
                 @include xlmd {
                     left: -17px;
                 }
+
                 @include md {
                     left: -22px;
                 }
@@ -238,7 +236,6 @@
                 min-width: 243px;
                 text-align: center;
                 border: none;
-
             }
 
             .descriptionSec {

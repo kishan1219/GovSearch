@@ -2,37 +2,41 @@
 @include ScrollBar;
 
 .scrollBar {
-    max-height: 620px;
+    max-height: 615px;
     width: 100%;
     overflow: auto;
+    padding-right: 20px;
 }
 
 .container {
+   
     .tableCheckbox {
         padding-bottom: 30px;
     }
 
     .table {
         width: 100%;
-        min-width: 1063px;
-        padding-right: 48px;
-
-        @include xxlg {
+        min-width: 1100px;
+        @include bxlg {
             min-width: 900px;
+        }
+
+        @include blg {
+            min-width: 830px;
         }
 
         @include xlmd {
             min-width: 760px;
             padding-right: 20px;
         }
+
         @include md {
-            min-width: 850px;
+            min-width: 830px;
         }
-
-        @include tab {
-            padding-right: 10px;
+        .checkCell{
+            max-width: 50px;
+            padding: 0;
         }
-
         td {
             border: none;
         }
@@ -132,6 +136,22 @@
             position: relative;
             padding: 5px 13px;
             border-radius: 10px;
+            max-height: 50px;
+            min-width: 1040px;
+            @include xxlg {
+                min-width: 1016px;
+            }
+            @include bxlg {
+                min-width: 885px;
+            }
+            @include blg {
+                min-width: 710px;
+            }
+            
+            @include xlmd {
+                min-width: 650px;
+            }
+            
 
             img {
                 margin-left: 18px;
@@ -142,6 +162,26 @@
         .backgroundCollapse {
             padding: 12px 13px;
             margin-bottom: 15px;
+            max-height: unset;
+            min-width: 1020px;
+
+            @include bxlg {
+                min-width: 900px;
+            }
+
+            @include blg {
+                min-width: 740px;
+            }
+            @include md {
+                min-width: 710px;
+            }
+        }
+
+        .bgCollapseText {
+            @include blg {
+                gap: 4px;
+                padding: 0px;
+            }
         }
 
         input {
@@ -161,7 +201,11 @@
                 text-decoration: underline;
             }
         }
-
+        .designationText{
+            @include xlmd {
+                font-weight: 500;
+            }
+        }
         .phone {
             color: $gray;
             font-weight: 400;
