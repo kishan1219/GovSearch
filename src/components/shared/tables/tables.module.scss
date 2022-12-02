@@ -9,7 +9,7 @@
 }
 
 .container {
-   
+
     .tableCheckbox {
         padding-bottom: 30px;
     }
@@ -17,6 +17,7 @@
     .table {
         width: 100%;
         min-width: 1100px;
+
         @include bxlg {
             min-width: 900px;
         }
@@ -33,10 +34,12 @@
         @include md {
             min-width: 830px;
         }
-        .checkCell{
+
+        .checkCell {
             max-width: 50px;
             padding: 0;
         }
+
         td {
             border: none;
         }
@@ -138,20 +141,23 @@
             border-radius: 10px;
             max-height: 50px;
             min-width: 1040px;
+
             @include xxlg {
                 min-width: 1016px;
             }
+
             @include bxlg {
                 min-width: 885px;
             }
+
             @include blg {
                 min-width: 710px;
             }
-            
+
             @include xlmd {
                 min-width: 650px;
             }
-            
+
 
             img {
                 margin-left: 18px;
@@ -189,11 +195,56 @@
                 text-decoration: underline;
             }
         }
-        .designationText{
-            @include xlmd {
-                font-weight: 500;
+
+        .officerName {
+            width: 25%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .designationMain {
+            max-width: 600px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            text-align: left;
+            @include blg {
+                max-width: 400px;
             }
         }
+
+        .designationText {
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            text-align: left;
+            @include blg {
+                width: 90px;
+            }
+            @include xlmd {
+                font-weight: 500;
+                width: 36px;
+            }
+            @include md {
+                width: 90px;
+            }
+        }
+
+        .assistText {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            @include blg {
+                max-width: 120px;
+            }
+        }
+
         .phone {
             color: $gray;
             font-weight: 400;

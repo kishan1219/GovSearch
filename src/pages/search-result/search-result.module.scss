@@ -9,12 +9,15 @@
 .container {
     width: 100%;
     min-height: 100vh;
+
     @include md {
         margin-left: 20px;
     }
+
     @include mo {
         margin-left: 0px;
     }
+
     .searchCriteria {
         width: 100%;
         @include flexBetween;
@@ -191,8 +194,9 @@
             }
 
             @include md {
-                @include flexJustifyCenter;
-                flex-direction: column;
+                // @include flexJustifyCenter;
+                // flex-direction: column;
+                margin-left: 0px;
             }
 
             @include tab {
@@ -210,9 +214,14 @@
                 @include xlmd {
                     min-width: 400px;
                 }
-
+                @include md {
+                    max-width: 200px;
+                }
                 @include mo {
-                    min-width: 200px;
+                    min-width: 375px;
+                }
+                @include xxsm {
+                    min-width: 285px;
                 }
             }
 

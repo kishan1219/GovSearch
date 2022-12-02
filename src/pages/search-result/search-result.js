@@ -41,6 +41,8 @@ const SearchResult = () => {
             setTableHide(false)
         }
     }
+
+  
     const ItemSecond = [
         {
             id: 1,
@@ -79,7 +81,7 @@ const SearchResult = () => {
             cardTwo: <ContactCard src={"assets/images/armySeal.png"} imageClass={"mt10 mr10 w75px"} departmentClass={Styles.departmentArmyTab} istopLacsText={false} isDownLacsText={true} isContactIcon={false} isGreenBorder={true} imageSize="imgLarge" />,
         },
     ]
-    
+
 
     const [checked, setChecked] = useState(false);
     const handleTextClick = () => {
@@ -216,29 +218,29 @@ const SearchResult = () => {
                     </div>
                 </div>
                 <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
-                        {(
-                            tableHide && <Tables />
-                        )}
-                        {/* {(
+                    {/* {(
+                        tableHide && <Tables />
+                    )} */}
+                    {/* {(
                             tableHide && <Tables isAssistantSecretaryData={true} isDepartmentArmyData={false} />
                         )} */}
-                        {/* {(
+                    {/* {(
                             tableHide && <Tables isDesignation={true} ismarkowitzData={true} isDepartmentArmyData={false} />
                         )} */}
-                        {/* {(
+                    {(
                             tableHide && <Tables isCioData={true} isDepartmentArmyData={false} isDesignation={true}/>
-                        )} */}
-                        
-                        {/* {DepartmentArmyData.map((data) => (
+                        )}
+
+                    {/* {DepartmentArmyData.map((data) => (
                             tableHide &&  <ContactList listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))} */}
-                        {/* {AssistantSecretaryData.map((data) => (
+                    {/* {AssistantSecretaryData.map((data) => (
                             tableHide &&  <ContactList listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))} */}
-                        {/* {markowitzData.map((data) => (
+                    {/* {markowitzData.map((data) => (
                             tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))} */}
-                        {/* {CioData.map((data) => (
+                    {/* {CioData.map((data) => (
                             tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))} */}
 

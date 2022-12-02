@@ -11,7 +11,7 @@ import {
 } from "../index";
 import propTypes from 'prop-types'
 
-export default function Search({ placeholder, onClick, inputclassName, iconclassName, size, iconColor,advanceBtnHandler}) {
+export default function Search({ placeholder,inputValue,onChange, onClick, inputclassName, iconclassName, size, iconColor,advanceBtnHandler}) {
     const [searchCode, setSearchcode] = React.useState('All');
 
     const handleChange = (event) => {
@@ -43,7 +43,9 @@ export default function Search({ placeholder, onClick, inputclassName, iconclass
                     </Select>
                     <div className={Styles.inSearch} onSubmit={handleSubmit(onSubmit)}>
                         <Input className={`${Styles.inputMain} ${inputclassName}`} placeholder={placeholder}
-                            name="search"
+                           onChange={onChange}
+                           value={inputValue}
+                         name="search"
                             reference={register("search", {
                                 required: true,
                                 pattern: {

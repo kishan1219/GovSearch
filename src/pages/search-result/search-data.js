@@ -452,10 +452,10 @@ export const CioData =
             vcb: "green",
             vcbSecond: "greenSecond",
             selected: false,
-            name: "Edward Teague",
+            name: "Vacant",
             designation: "Chief Information Officer",
-            assist: "US Military Academy at West Point",
-            country: "Montgomery, AL",
+            assist: "G6 / Chief Information Officer ",
+            country: "Huntsville, AL",
 
         },
         {
@@ -464,10 +464,10 @@ export const CioData =
             vcb: "green",
             vcbSecond: "greenSecond",
             selected: false,
-            name: "Natelie Deluca",
+            name: "Sherley Perkey",
             designation: "Chief Information Officer",
-            assist: "Program Executive Officer Missles &  S",
-            country: "Mobile, AL",
+            assist: "Assistanct Secretary of the Army for Acq",
+            country: "Huntsville, AL",
 
         },
         {

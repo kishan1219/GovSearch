@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { LatestDeatils, Layout, NewsCard, Search, Text } from '../../components/shared'
 import Styles from './home.module.scss'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -60,11 +60,12 @@ const Home = () => {
             place: "Arlington, VA",
         },
     ];
-
-    return (
+    const [searchValue, setSearchValue] = useState("");
+    const handleChange = e => setSearchValue(e.target.value);
+      return (
         <Layout isSearch={false} isFederal={false}>
             <div className={Styles.searchMain}>
-                <Search inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray04"} iconclassName={"icoClass"} />
+                <Search inputValue={searchValue} onChange={handleChange} inputclassName={Styles.searchBox} placeholder={"Contacts, Offices, Vendors, Contracts..."} size={"icon_large"} iconColor={"gray04"} iconclassName={"icoClass"} />
             </div>
             <div className={`${Styles.newsContainer} ${'alignBetween mt35'}`}>
                 <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>

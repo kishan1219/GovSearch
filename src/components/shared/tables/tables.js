@@ -198,7 +198,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                         ))}
                         {CioData.map((user, index) => (
                             isCioData && <TableRow key={user.id} className={user.selected ? "selected" : ""}>
-                                <TableCell scope="row">
+                                <TableCell  scope="row">
                                     <CheckBox
                                         checked={checkboxes[index]}
                                         className={`${"form-check-input"} ${Styles.tableCheckbox}`}
@@ -208,13 +208,13 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                     />
                                 </TableCell>
                                 {!rowExpand && <TableCell className={`${Styles[user.vcb]} ${Styles.background}`}>
-                                    <div className="dFlex alignItemsCenter">
+                                    <div className={`${Styles.officerName} ${"dFlex alignItemsCenter"}`}>
                                         <Image className={"mr12"} src="assets/images/OfficialArmySeal.png" alt="logo" />
-                                        <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"}`}>{user.name}</Text>
+                                        <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size}  ${"cursor"}`}>{user.name}</Text>
                                     </div>
-                                    {isDesignation && <div className="dFlex alignItemsCenter">
-                                        <Text color={"gray"} variant="mlgText" className={`${Styles.designationText} ${"op5 mr17"}`}>{user.designation}</Text>
-                                        <Text strong="strong6" variant="mlgText" >{user.assist}</Text>
+                                    {isDesignation && <div className={`${Styles.designationMain} ${"dFlex alignItemsCenter justifyContentEnd"}`}>
+                                        <Text color={"gray"} variant="mlgText" className={`${Styles.designationText} ${Styles.ass} ${"op5 mr17"}`}>{user.designation}</Text>
+                                        <Text strong="strong6" variant="mlgText" className={Styles.assistText} >{user.assist}</Text>
                                     </div>}
                                     <div className="dFlex alignItemsCenter">
                                         <Text variant="mlgText" className={Styles.size}>{user.value}</Text>
