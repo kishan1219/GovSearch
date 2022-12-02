@@ -8,7 +8,7 @@ import { TableBody, TableContainer, Table, TableRow, TableCell, } from "@mui/mat
 import { DepartmentArmyData, AssistantSecretaryData, markowitzData, CioData } from '../../../pages/search-result/search-data';
 import propTypes from "prop-types";
 
-export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData, ismarkowitzData, isCioData,isDesignation }) {
+export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData, ismarkowitzData, isCioData, isDesignation }) {
     const [iconFavorite, setIconFavorite] = useState();
     const [rowExpand, setRowExpand] = useState(false);
     const [checked, setChecked] = useState(false);
@@ -75,7 +75,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         </div>
                                         <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                                             <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
-                                            <div>
+                                            <div className="ml25">
                                                 <Icon type="linkedIn" variant="primary" size="icon_xl" />
                                                 <Icon className={"ml10 mr10"} type="web" variant="primary" size="icon_xl" />
                                                 <Icon type="phone" variant="primary" size="icon_xl" />
@@ -127,7 +127,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         </div>
                                         <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                                             <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
-                                            <div>
+                                            <div className="ml25">
                                                 <Icon type="linkedIn" variant="primary" size="icon_xl" />
                                                 <Icon className={"ml10 mr10"} type="web" variant="primary" size="icon_xl" />
                                                 <Icon type="phone" variant="primary" size="icon_xl" />
@@ -155,7 +155,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                     <div className="dFlex alignItemsCenter">
                                         <Image className={"mr12"} src="assets/images/OfficialArmySeal.png" alt="logo" />
                                         <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"}`}>{user.name}</Text>
-                                    </div> 
+                                    </div>
                                     {isDesignation && <div className="dFlex alignItemsCenter">
                                         <Text color={"gray"} variant="mlgText" className={`${Styles.designationText} ${"op5 mr17"}`}>{user.designation}</Text>
                                         <Text strong="strong6" variant="mlgText" className={Styles.designationText} >{user.assist}</Text>
@@ -183,7 +183,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         </div>
                                         <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                                             <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
-                                            <div>
+                                            <div className="ml25">
                                                 <Icon type="linkedIn" variant="primary" size="icon_xl" />
                                                 <Icon className={"ml10 mr10"} type="web" variant="primary" size="icon_xl" />
                                                 <Icon type="phone" variant="primary" size="icon_xl" />
@@ -198,7 +198,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                         ))}
                         {CioData.map((user, index) => (
                             isCioData && <TableRow key={user.id} className={user.selected ? "selected" : ""}>
-                                <TableCell  scope="row">
+                                <TableCell scope="row">
                                     <CheckBox
                                         checked={checkboxes[index]}
                                         className={`${"form-check-input"} ${Styles.tableCheckbox}`}
@@ -239,7 +239,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         </div>
                                         <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                                             <Text variant="mlgText" className={Styles.phone}>{user.country}</Text>
-                                            <div>
+                                            <div className="ml25">
                                                 <Icon type="linkedIn" variant="primary" size="icon_xl" />
                                                 <Icon className={"ml10 mr10"} type="web" variant="primary" size="icon_xl" />
                                                 <Icon type="phone" variant="primary" size="icon_xl" />

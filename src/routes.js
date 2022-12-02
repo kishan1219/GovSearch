@@ -1,4 +1,4 @@
-import { home, Styleguide, login, Notification, Account, AccountSetting, stats, SearchHistory, Download, Favorites, SearchResult, ResultDetails } from "./pages";
+import { home, Styleguide, login, Notification, Account, AccountSetting, stats, SearchHistory, Download, Favorites, SearchResult, ResultDetails, StateResult } from "./pages";
 
 export const routes = [
   {
@@ -59,6 +59,11 @@ export const routes = [
   {
     path: "/result-details",
     component: ResultDetails,
+    exact: false,
+  },
+  {
+    path: "/state-result",
+    component: StateResult,
     exact: false,
   },
 ]

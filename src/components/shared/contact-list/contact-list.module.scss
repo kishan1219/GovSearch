@@ -12,8 +12,8 @@
     width: 100%;
     @include flex;
     margin-bottom: 24px;
-    padding-right: 30px;
-    min-width: 1139px;
+    padding-right: 40px;
+    max-width: 1135px;
 
     .chackMain {
         padding-bottom: 25px;
@@ -114,18 +114,29 @@
         max-height: 50px;
         margin-right: 12px;
         min-width: 1040px;
+
         @include xxlg {
             min-width: 1016px;
         }
+
         @include bxlg {
             min-width: 885px;
         }
+
         @include blg {
-            min-width: 710px;
+            min-width: 740px;
         }
-        
+
         @include xlmd {
             min-width: 650px;
+        }
+
+        @include md {
+            min-width: 730px;
+        }
+
+        @include tab {
+            min-width: 520px;
         }
 
         img {
@@ -144,6 +155,14 @@
             gap: 4px;
             padding: 0px;
         }
+
+        @include xlmd {
+            max-width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            gap: 10px;
+        }
     }
 
     input {
@@ -151,13 +170,67 @@
         height: 20px;
         cursor: pointer;
     }
-    .designationText{
-        min-width: 280px;
+
+    .officerName {
+        min-width: 200px;
+
+        @include blg {
+            max-width: 200px;
+        }
     }
-    // .size {
-    //     padding-right: 19px;
-    //     padding-left: 5px;
-    // }
+
+    .designationMain {
+        min-width: 400px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include flexJustifyBetween;
+        text-align: left;
+
+        @include blg {
+            max-width: 400px;
+        }
+    }
+
+    .designationText {
+        max-width: 230px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        text-align: left;
+
+        @include blg {
+            width: 90px;
+        }
+
+        @include xlmd {
+            font-weight: 500;
+            width: 36px;
+        }
+    }
+
+    .assistText {
+        max-width: 230px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+
+        @include bxlg {
+            max-width: 200px;
+        }
+
+        @include blg {
+            max-width: 120px;
+        }
+    }
+
+    .size {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
     .iconYellow {
         color: #FFC000;

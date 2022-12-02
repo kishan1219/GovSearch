@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import Styles from './search-result.module.scss'
+import Styles from './state-result.module.scss'
 import { Button, Card, CheckBox, Icon, Layout, ContactCard, Tables, Text, ContactList } from '../../components/shared'
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Tooltip } from '@mui/material';
-const SearchResult = () => {
-    const [office, setOffice] = useState(false);
-    const [selectOffice, setSelectOffice] = useState("1");
-    const [location, setLocation] = useState(false);
-    const [selectlocation, setSelectlocation] = useState("1");
+import { CioData, DepartmentArmyData,MadisonCountyData } from '../search-result/search-data';
+import userEvent from '@testing-library/user-event';
+const StateResult = () => {
     const [other, setOther] = useState(false);
     const [selectOther, setSelectOther] = useState("1");
     const [pluslist, setPlusList] = useState(false);
@@ -17,14 +15,6 @@ const SearchResult = () => {
     const [gridTableShow, setGridTableShow] = useState(false);
     const [openPlusCard, setOpenPlusCard] = useState(false);
     const [openExportCard, setopenExportCard] = useState(false);
-    const targetOffice = (e) => {
-        setSelectOffice(e.target.value);
-        setOffice(false);
-    };
-    const targetLocation = (e) => {
-        setSelectlocation(e.target.value);
-        setLocation(false);
-    };
     const targetOther = (e) => {
         setSelectOther(e.target.value);
         setOther(false);
@@ -91,7 +81,7 @@ const SearchResult = () => {
         <Layout isFederal={false} isProfessional={true}>
             <div className={Styles.container}>
                 <div className={Styles.searchCriteria}>
-                    <Text variant={"mlgText"} color="darkGray">Search Criteria “ Department of the Army ”    </Text>
+                    <Text variant={"mlgText"} color="darkGray">Search Criteria “Madison County Alabama” </Text>
                     <div className='dFlex'>
                         <Tooltip title="Currently, Click event is not developed">
                             <div>
@@ -158,48 +148,6 @@ const SearchResult = () => {
                             <Icon className={Styles.closeIcon} color={"gray05"} type={"close"} size="icon_xsmall" />
                         </div>
                     </Tooltip>
-                    <div className={Styles.officeMain}>
-                        <Select className={Styles.officeSelect}
-                            IconComponent={() => null}
-                            sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 'none' } }}
-                            value={selectOffice}
-                            onChange={targetOffice}
-                            open={office}
-                        >
-                            <MenuItem value="1">Offices</MenuItem>
-                            <MenuItem value="2">Offices 2</MenuItem>
-                            <MenuItem value="3">Offices 3</MenuItem>
-                            <MenuItem value="4">Offices 4</MenuItem>
-                        </Select>
-                        <Icon className={Styles.straightIcon} type='straight' color={"gray01"} variant='icon_large' />
-                        <Icon className={Styles.selectIcon} onClick={() => setOffice(true)} type='soliddownpolygon' color={"gray04"} variant='icon_large' />
-                    </div>
-                    <Tooltip title="Currently, Click event is not developed">
-                        <div>
-                            <Icon className={Styles.closeIcon} color={"gray05"} type={"close"} size="icon_xsmall" />
-                        </div>
-                    </Tooltip>
-                    <div className={Styles.officeMain}>
-                        <Select className={Styles.officeSelect}
-                            IconComponent={() => null}
-                            sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 'none' } }}
-                            value={selectlocation}
-                            onChange={targetLocation}
-                            open={location}
-                        >
-                            <MenuItem value="1">Location</MenuItem>
-                            <MenuItem value="2">Location 2</MenuItem>
-                            <MenuItem value="3">Location 3</MenuItem>
-                            <MenuItem value="4">Location 4</MenuItem>
-                        </Select>
-                        <Icon className={Styles.straightIcon} type='straight' color={"gray01"} variant='icon_large' />
-                        <Icon className={Styles.selectIcon} onClick={() => setLocation(true)} type='soliddownpolygon' color={"gray04"} variant='icon_large' />
-                    </div>
-                    <Tooltip title="Currently, Click event is not developed">
-                        <div>
-                            <Icon className={Styles.closeIcon} color={"gray05"} type={"close"} size="icon_xsmall" />
-                        </div>
-                    </Tooltip>
                     <div className={`${Styles.officeMain} ${Styles.otherSelectMain}`}>
                         <Select className={Styles.officeSelect}
                             IconComponent={() => null}
@@ -218,22 +166,25 @@ const SearchResult = () => {
                     </div>
                 </div>
                 <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
-                    {/* home federal search result tables */}
-
-
-                    {/* {(
-                        tableHide && <Tables />
-                    )} */}
-                    {/* {(
-                            tableHide && <Tables isAssistantSecretaryData={true} isDepartmentArmyData={false} />
-                        )} */}
-                    {/* {(
-                            tableHide && <Tables isDesignation={true} ismarkowitzData={true} isDepartmentArmyData={false} />
-                        )} */}
-                    {(
-                        tableHide && <Tables isCioData={true} isDepartmentArmyData={false} isDesignation={true} />
-                    )}
-                    {/* home federal search result tables */}
+                    {/* state and local search tables */}
+                    <div className={Styles.scrollBar}>
+                       {MadisonCountyData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} expandSrcFirst={data.src} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))}
+                       {/* {CioData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                    {/* {AssistantSecretaryData.map((data) => (
+                            tableHide &&  <ContactList listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                    {/* {markowitzData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                    {/* {CioData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                        ))} */}
+                    </div>
+                    {/* state and local search tables */}
 
                     {gridTableShow &&
                         <TableContainer className={Styles.scrollBar}>
@@ -315,4 +266,4 @@ const SearchResult = () => {
     )
 }
 
-export default SearchResult
+export default StateResult

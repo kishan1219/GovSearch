@@ -6,7 +6,7 @@ import Text from '../text'
 import CheckBox from "../checkbox/checkbox";
 import propTypes from "prop-types";
 
-const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc,isDesignation,designation,assist }) => {
+const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc,isDesignation,designation,assist,expandSrcFirst }) => {
     const [iconFavorite, setIconFavorite] = useState();
     const [rowExpand, setRowExpand] = useState(false);
     const [checked, setChecked] = useState(false);
@@ -42,13 +42,13 @@ const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc,isDesig
             </div>
             {!rowExpand &&
                 <div className={`${Styles[vcb]} ${Styles.background} ${"dFlex alignItemsCenter"}`}>
-                    <div className="dFlex alignItemsCenter">
+                    <div className={`${Styles.officerName} ${"dFlex alignItemsCenter"}`}>
                         <Image width={40} height={40} className={"mr12"} src={listSrc} alt="logo" />
                         <Text strong="strong6" handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"}`}>{name} </Text>
                     </div>
-                    {isDesignation &&    <div className="dFlex alignItemsCenter">
+                    {isDesignation &&    <div className={`${Styles.designationMain} ${"dFlex alignItemsCenter justifyContentEnd"}`}>
                         <Text color={"gray"} variant="mlgText" className={`${Styles.designationText} ${"op5 mr17"}`}>{designation}</Text>
-                        <Text strong="strong6" variant="mlgText" >{assist}</Text>
+                        <Text strong="strong6" variant="mlgText" className={Styles.assistText} >{assist}</Text>
                     </div>}
                     <div className="dFlex alignItemsCenter">
                         <Text strong="strong6" variant="mlgText" className={"mr20"}>{value}</Text>
@@ -58,9 +58,9 @@ const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc,isDesig
             {rowExpand && (
                 <div className={`${Styles[vcbSecond]} ${Styles.background} ${Styles.backgroundCollapse}`}>
                     <div className="dFlex">
-                        <Image width={75} height={75} className={"mr5"} src="assets/images/ArmySeal.png" alt="logo" />
+                        <Image width={75} height={75} className={"mr5"} src={expandSrcFirst} alt="logo" />
                         <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
-                            <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={Styles.size}>Department of the Army </Text>
+                            <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={Styles.size}>{name}</Text>
                             <Text variant="mlgText" className={Styles.size}>100,000</Text>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc,isDesig
                     </div>
                     <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                         <Text variant="mlgText">{country}</Text>
-                        <div>
+                        <div className="ml25">
                             <Icon type="linkedIn" variant="primary" size="icon_xl" />
                             <Icon className={"ml10 mr10"} type="web" variant="primary" size="icon_xl" />
                             <Icon type="phone" variant="primary" size="icon_xl" />
