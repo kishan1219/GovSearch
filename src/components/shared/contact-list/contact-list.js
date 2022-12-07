@@ -44,6 +44,7 @@ const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc, isDesi
                 />
             </div>
             {!rowExpand &&
+            <div className={Styles.gridDevide}>
                 <div onClick={gotoResultDetail} className={`${Styles[vcb]} ${Styles.background} ${"dFlex alignItemsCenter cursor"}`}>
                         <Image width={40} height={40} className={`${Styles.contactImage} ${"mr12"}`} src={listSrc} alt="logo" />
                     <div className={`${Styles.officerName} ${"dFlex alignItemsCenter"}`}>
@@ -59,6 +60,22 @@ const ContactList = ({ id, vcbSecond, value, country, vcb, name, listSrc, isDesi
                         <Text variant="mlgText" className={`${Styles.country} ${"op5"}`}>{country}</Text>
                     </div>
                 </div>
+                <div onClick={gotoResultDetail} className={`${Styles[vcb]} ${Styles.background} ${"dFlex alignItemsCenter cursor"}`}>
+                        <Image width={40} height={40} className={`${Styles.contactImage} ${"mr12"}`} src={listSrc} alt="logo" />
+                    <div className={`${Styles.officerName} ${"dFlex alignItemsCenter"}`}>
+                        <Text strong="strong6" handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.officerName} ${"cursor"}`}>{name} </Text>
+                        <Text strong="strong6" variant="mlgText" className={`${Styles.officerName} ${"cursor"}`}>{value} </Text>
+                    </div>
+                    {isDesignation && <div className={`${Styles.designationMain} ${"dFlex alignItemsCenter justifyContentEnd"}`}>
+                        <Text color={"gray"} variant="mlgText" className={`${Styles.designationText} ${"op5 mr17"}`}>{designation}</Text>
+                        <Text strong="strong6" variant="mlgText" className={Styles.assistText} >{assist}</Text>
+                    </div>}
+                    <div className={`${Styles.valCountryMain} ${"dFlex alignItemsCenter"}`}>
+                        <Text strong="strong6" variant="mlgText" className={`${Styles.size} ${Styles.value} ${"mr20"}`}>{value}</Text>
+                        <Text variant="mlgText" className={`${Styles.country} ${"op5"}`}>{country}</Text>
+                    </div>
+                </div>
+            </div>
                 }
             {rowExpand && (
                 <div className={`${Styles[vcbSecond]} ${Styles.background} ${Styles.backgroundCollapse}`}>

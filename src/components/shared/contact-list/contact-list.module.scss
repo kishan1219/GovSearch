@@ -267,13 +267,17 @@
         color: $gray02;
     }
 }
-
+.gridDevide{
+    display: flex;
+    justify-content: space-between;
+    min-width: 1067px;
+}
 .Gridcontainer {
     width: 100%;
     @include flex;
     margin-bottom: 24px;
     padding-right: 40px;
-    max-width: 1135px;
+    
 
     .chackMain {
         padding-bottom: 25px;

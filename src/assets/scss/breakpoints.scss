@@ -67,15 +67,24 @@
     @media (max-width: #{$screen-xlg}) {
         @content;
     }
+    @media (max-height: #{$screen-xxsm}) {
+        @content;
+    }
 }
 @mixin bxlg {
     @media (max-width: #{$screen-bxlg}) {
+        @content;
+    }
+    @media (max-height: #{$screen-xxsm}) {
         @content;
     }
 }
 
 @mixin xxlg {
     @media (max-width: #{$screen-xxlg}) {
+        @content;
+    }
+    @media (max-height: #{$screen-xxsm}) {
         @content;
     }
 }
@@ -90,4 +99,5 @@
     @media (max-width: #{$screen-xxsm}) {
         @content;
     }
+ 
 }
