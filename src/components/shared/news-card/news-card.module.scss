@@ -36,6 +36,9 @@
             max-width: 197px;
             line-height: 28px;
 
+            @include blg {
+                font-size: $font-xxl;
+            }
             @include md {
                 max-width: 150px;
                 font-weight: 400;

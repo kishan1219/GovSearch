@@ -136,18 +136,72 @@
         }
 
         @include tab {
-            min-width: 520px;
+            min-width: 610px;
         }
 
-        img {
+        .contactImage {
             margin-left: 18px;
             object-fit: cover;
+        }
+
+        .designationMain {
+            min-width: 400px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include flexJustifyBetween;
+            text-align: left;
+
+            @include blg {
+                min-width: 300px;
+            }
+
+            @include xlmd {
+                min-width: 190px;
+            }
+        }
+
+        .designationText {
+            width: 230px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .assistText {
+            width: 290px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+
+        .valCountryMain {
+            min-width: 135px;
         }
     }
 
     .backgroundCollapse {
         padding: 12px 13px;
         max-height: unset;
+
+        @include bxlg {
+            min-width: 905px;
+        }
+
+        @include blg {
+            min-width: 740px;
+        }
+
+        @include xlmd {
+            min-width: 680px;
+        }
+
+        @include md {
+            min-width: 740px;
+        }
     }
 
     .bgCollapseText {
@@ -163,6 +217,18 @@
             text-overflow: ellipsis;
             gap: 10px;
         }
+
+        .contactIconLeftMain {
+            margin-left: 81px;
+        }
+    }
+
+    .bgCollapseText>div {
+        @include blg {
+            margin-top: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
     }
 
     input {
@@ -172,59 +238,20 @@
     }
 
     .officerName {
-        min-width: 200px;
+        min-width: 250px;
 
         @include blg {
             max-width: 200px;
         }
     }
 
-    .designationMain {
-        min-width: 400px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        @include flexJustifyBetween;
-        text-align: left;
 
-        @include blg {
-            max-width: 400px;
-        }
+
+    .expandImageTwo {
+        margin-left: 12px;
     }
 
-    .designationText {
-        max-width: 230px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: inline-block;
-        text-align: left;
 
-        @include blg {
-            width: 90px;
-        }
-
-        @include xlmd {
-            font-weight: 500;
-            width: 36px;
-        }
-    }
-
-    .assistText {
-        max-width: 230px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: inline-block;
-
-        @include bxlg {
-            max-width: 200px;
-        }
-
-        @include blg {
-            max-width: 120px;
-        }
-    }
 
     .size {
         white-space: nowrap;
@@ -238,5 +265,234 @@
 
     .iconGray {
         color: $gray02;
+    }
+}
+
+.Gridcontainer {
+    width: 100%;
+    @include flex;
+    margin-bottom: 24px;
+    padding-right: 40px;
+    max-width: 1135px;
+
+    .chackMain {
+        padding-bottom: 25px;
+        margin-right: 14px;
+    }
+
+    .green {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $green01;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .greenSecond {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $green01;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .orange {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $yellow;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .orangeSecond {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $yellow;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .red {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $red1;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .redSecond {
+        &:before {
+            content: "";
+            position: absolute;
+            background: $red1;
+            border-radius: 10px 0px 0px 10px;
+            display: block;
+            width: 20px;
+            height: 100px;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .background {
+        position: relative;
+        width: 100%;
+        background-color: $white;
+        max-width: 450px;
+        min-height: 100px;
+        border-radius: 10px;
+        padding: 0px 13px 0px 0px;
+        @include flexJustifyBetween;
+
+        .contactImage {
+            width: 75px;
+            height: 75px;
+            margin-left: 25px;
+            object-fit: cover;
+        }
+
+        .designationMain {
+            display: grid;
+            gap: 12px;
+            margin-left: 50px;
+            max-width: 300px;
+
+        }
+
+        .designationText {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            text-align: right;
+            order: 2;
+        }
+
+        .assistText {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+
+        // .valCountryMain {
+        //     display: none;
+        // }
+        .contactRightIconMain{
+            display: none;
+        }
+    }
+
+    .backgroundCollapse {
+        padding: 12px 13px;
+        max-height: unset;
+        min-width: 900px;
+
+        @include bxlg {
+            min-width: 905px;
+        }
+
+        @include blg {
+            min-width: 740px;
+        }
+
+        @include xlmd {
+            min-width: 680px;
+        }
+
+        @include md {
+            min-width: 740px;
+        }
+    }
+
+    .bgCollapseText {
+        gap: 5px;
+
+        @include blg {
+            gap: 4px;
+            padding: 0px;
+        }
+
+        @include xlmd {
+            max-width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            gap: 10px;
+        }
+
+        .contactIconLeftMain {
+            text-align: right;
+        }
+    }
+
+    .bgCollapseText>div {
+        @include blg {
+            margin-top: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+
+    input {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    .officerName {
+        display: grid;
+        gap: 10px;
+    }
+
+    .expandImageTwo {
+        margin-left: 12px;
+    }
+
+    .size {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .iconYellow {
+        color: #FFC000;
+        margin-left: 12px;
+    }
+
+    .iconGray {
+        color: $gray02;
+        margin-left: 12px;
     }
 }

@@ -26,7 +26,6 @@ const ContactCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLa
                         <Icon type="phone" variant="primary" size="icon_xsmall01" />
                     </div>}
                 {isArlingtonText && <Text className={styles.vaText} color="gray" variant="smText">Arlington, VA</Text>}
-
             </div>
         </div>
     )

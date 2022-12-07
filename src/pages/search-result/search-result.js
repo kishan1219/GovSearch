@@ -221,18 +221,18 @@ const SearchResult = () => {
                     {/* home federal search result tables */}
 
 
-                    {/* {(
+                    {(
                         tableHide && <Tables />
-                    )} */}
+                    )}
                     {/* {(
                             tableHide && <Tables isAssistantSecretaryData={true} isDepartmentArmyData={false} />
                         )} */}
                     {/* {(
                             tableHide && <Tables isDesignation={true} ismarkowitzData={true} isDepartmentArmyData={false} />
                         )} */}
-                    {(
+                    {/* {(
                         tableHide && <Tables isCioData={true} isDepartmentArmyData={false} isDesignation={true} />
-                    )}
+                    )} */}
                     {/* home federal search result tables */}
 
                     {gridTableShow &&
@@ -304,9 +304,9 @@ const SearchResult = () => {
                             <div className='mb12'>
                                 <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mb12'>
+                            {/* <div className='mb12'>
                                 <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

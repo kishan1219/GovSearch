@@ -183,11 +183,31 @@
 
     .scrollWrapper {
         max-height: 100vh;
+
+        @include xxlg {
+            max-height: 500px;
+        }
+        @include bxlg {
+            max-height: 410px;
+        }
+        @include blg {
+            max-height: 320px;
+        }
+        @include xlmd {
+            max-height: 450px;
+        }
+        @include tab {
+            max-height: 320px;
+        }
+        @include mo {
+            max-height: 350px;
+        }
     }
 
     .scrollWrapper1 {
         max-height: calc(62vh - 300px);
         max-width: 210px;
+
     }
 
     .primaryChipColor {

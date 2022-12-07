@@ -4,11 +4,14 @@
 .scrollBar {
     max-height: 600px;
     overflow: auto;
+    @include xxlg {
+        max-height: 515px;
+    }
 }
 
 .container {
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
 
     @include md {
         margin-left: 20px;
@@ -215,6 +218,9 @@
                 }
                 @include mo {
                     min-width: 375px;
+                }
+                @include xsm {
+                    min-width: 340px;
                 }
                 @include xxsm {
                     min-width: 285px;

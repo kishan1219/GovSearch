@@ -7,13 +7,14 @@ import CheckBox from "../checkbox/checkbox";
 import { TableBody, TableContainer, Table, TableRow, TableCell, } from "@mui/material";
 import { DepartmentArmyData, AssistantSecretaryData, markowitzData, CioData } from '../../../pages/search-result/search-data';
 import propTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData, ismarkowitzData, isCioData, isDesignation }) {
     const [iconFavorite, setIconFavorite] = useState();
     const [rowExpand, setRowExpand] = useState(false);
     const [checked, setChecked] = useState(false);
     const [checkboxes, setCheckboxes] = useState(false);
-
+const navigate = useNavigate();
     const handleCheck = (event) => {
         setChecked(event.target.checked);
     };
@@ -37,7 +38,8 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                 <Table className={Styles.table}>
                     <TableBody>
                         {DepartmentArmyData.map((user, index) => (
-                            isDepartmentArmyData && <TableRow key={user.id} className={user.selected ? "selected" : ""}>
+                            isDepartmentArmyData &&
+                            <TableRow key={user.id} className={user.selected ? "selected" : ""}>
                                 <TableCell scope="row">
                                     <CheckBox
                                         checked={checkboxes[index]}
@@ -47,7 +49,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         variant="grayFill"
                                     />
                                 </TableCell>
-                                {!rowExpand && <TableCell className={`${Styles[user.vcb]} ${Styles.background}`}>
+                                {!rowExpand && <TableCell onClick={()=>navigate("/result-details")} className={`${Styles[user.vcb]} ${Styles.background}`}>
                                     <div className="dFlex alignItemsCenter">
                                         <Image className={"mr12"} src="assets/images/OfficialArmySeal.png" alt="logo" />
                                         <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"}`}>{user.name}</Text>
@@ -62,7 +64,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         <div className="dFlex">
                                             <Image className={"mr5"} src="assets/images/ArmySeal.png" width={75} height={75} alt="logo" />
                                             <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
-                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={Styles.size}>Department of the Army </Text>
+                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"}`}>Department of the Army </Text>
                                                 <Text variant="mlgText" className={Styles.size}>100,000</Text>
                                             </div>
                                         </div>
@@ -114,7 +116,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         <div className="dFlex">
                                             <Image className={"mr5"} src="assets/images/ArmySeal.png" width={75} height={75} alt="logo" />
                                             <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
-                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={Styles.size}>Department of the Army </Text>
+                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"}`}>Department of the Army </Text>
                                                 <Text variant="mlgText" className={Styles.size}>100,000</Text>
                                             </div>
                                         </div>
@@ -170,7 +172,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         <div className="dFlex">
                                             <Image className={"mr5"} src="assets/images/ArmySeal.png" width={75} height={75} alt="logo" />
                                             <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
-                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={Styles.size}>Department of the Army </Text>
+                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"} `}>Department of the Army </Text>
                                                 <Text variant="mlgText" className={Styles.size}>100,000</Text>
                                             </div>
                                         </div>
@@ -226,7 +228,7 @@ export default function Tables({ isDepartmentArmyData, isAssistantSecretaryData,
                                         <div className="dFlex">
                                             <Image className={"mr5"} src="assets/images/ArmySeal.png" width={75} height={75} alt="logo" />
                                             <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
-                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={Styles.size}>Department of the Army </Text>
+                                                <Text handleClick={() => setRowExpand(!rowExpand)} variant="mlgText" className={`${Styles.size} ${"cursor"} `}>Department of the Army </Text>
                                                 <Text variant="mlgText" className={Styles.size}>100,000</Text>
                                             </div>
                                         </div>

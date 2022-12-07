@@ -4,8 +4,7 @@ import { Button, Card, CheckBox, Icon, Layout, ContactCard, Tables, Text, Contac
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import { Table, TableBody, TableCell, TableContainer, TableRow, Tooltip } from '@mui/material';
-import { CioData, DepartmentArmyData,MadisonCountyData } from '../search-result/search-data';
-import userEvent from '@testing-library/user-event';
+import { CioData, DaleStrongData, DepartmentArmyData,MadisonCommisionData,MadisonCountyData } from '../search-result/search-data';
 const StateResult = () => {
     const [other, setOther] = useState(false);
     const [selectOther, setSelectOther] = useState("1");
@@ -171,11 +170,11 @@ const StateResult = () => {
                        {MadisonCountyData.map((data) => (
                             tableHide &&  <ContactList isDesignation={true} expandSrcFirst={data.src} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))}
-                       {/* {CioData.map((data) => (
-                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                       {/* {DaleStrongData.map((data) => (
+                            tableHide &&  <ContactList isDesignation={true} expandSrcFirst={data.src} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))} */}
-                    {/* {AssistantSecretaryData.map((data) => (
-                            tableHide &&  <ContactList listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
+                    {/* {MadisonCommisionData.map((data) => (
+                            tableHide &&  <ContactList isLeftContactDetail={true} isDesignation={true} expandSrcFirst={data.src} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
                         ))} */}
                     {/* {markowitzData.map((data) => (
                             tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
@@ -255,9 +254,7 @@ const StateResult = () => {
                             <div className='mb12'>
                                 <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
                             </div>
-                            <div className='mb12'>
-                                <ContactCard departmentClass={Styles.armyDepartmentTextMain} src={"assets/images/OfficialArmySeal.png"} imageClass={`${Styles.lstViewedImage} ${"ml20"}`} isGreenBorder={false} istopLacsText={true} isArlingtonText={false} isVirgina={true} imageSize="imgLarge" />
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
