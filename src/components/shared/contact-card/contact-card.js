@@ -4,7 +4,7 @@ import Image from "../image/image";
 import Text from "../text/text";
 import Icon from "../icon";
 import propTypes from "prop-types";
-const ContactCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsText, isVirgina, istopLacsText, imageSize, isContactIcon, isArlingtonText }) => {
+const ContactCard = ({ src, imageClass, departmentClass, isGreenBorder, isDownLacsText, isVirgina, istopLacsText,  isContactIcon, isArlingtonText }) => {
     return (
         <div className={`${styles.cardContainer} ${"dFlex"}`}>
             {isGreenBorder
@@ -45,6 +45,5 @@ ContactCard.protoType = {
     istopLacsText: propTypes.bool,
     isDownLacsText: propTypes.bool,
     isVirgina: propTypes.bool,
-    imageSize: propTypes.string,
 }
 export default ContactCard

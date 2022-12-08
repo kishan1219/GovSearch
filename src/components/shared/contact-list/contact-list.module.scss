@@ -13,7 +13,7 @@
     @include flex;
     margin-bottom: 24px;
     padding-right: 40px;
-    max-width: 1135px;
+    max-width: 1130px;
 
     .chackMain {
         padding-bottom: 25px;
@@ -140,12 +140,11 @@
         }
 
         .contactImage {
-            margin-left: 18px;
             object-fit: cover;
         }
 
         .designationMain {
-            min-width: 400px;
+            min-width: 100px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -153,7 +152,9 @@
             text-align: left;
 
             @include blg {
-                min-width: 300px;
+                min-width: 240px;
+
+                margin-right: 20px;
             }
 
             @include xlmd {
@@ -168,6 +169,7 @@
             text-overflow: ellipsis;
             display: inline-block;
             text-align: left;
+
         }
 
         .assistText {
@@ -179,7 +181,30 @@
         }
 
         .valCountryMain {
-            min-width: 135px;
+            max-width: 350px;
+            text-align: right;
+
+            .value {
+                max-width: 100px;
+                text-align: left;
+
+                @include blg {
+                    max-width: 70px;
+                    margin-right: 20px;
+                }
+            }
+
+            .country {
+                min-width: 150px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+
+                @include blg {
+                    min-width: 50px;
+                }
+            }
         }
     }
 
@@ -221,6 +246,10 @@
         .contactIconLeftMain {
             margin-left: 81px;
         }
+
+        .country {
+            text-align: right;
+        }
     }
 
     .bgCollapseText>div {
@@ -245,13 +274,9 @@
         }
     }
 
-
-
     .expandImageTwo {
         margin-left: 12px;
     }
-
-
 
     .size {
         white-space: nowrap;
@@ -266,178 +291,160 @@
     .iconGray {
         color: $gray02;
     }
+
+    .gridDevide {
+        @include flexJustifyBetween;
+        min-width: 400px;
+    }
 }
-.gridDevide{
-    display: flex;
-    justify-content: space-between;
-    min-width: 1067px;
-}
+
+
 .Gridcontainer {
+    @extend .container;
     width: 100%;
     @include flex;
     margin-bottom: 24px;
     padding-right: 40px;
-    
-
-    .chackMain {
-        padding-bottom: 25px;
-        margin-right: 14px;
-    }
 
     .green {
         &:before {
-            content: "";
-            position: absolute;
-            background: $green01;
-            border-radius: 10px 0px 0px 10px;
-            display: block;
-            width: 20px;
             height: 100px;
-            top: 0;
-            left: 0;
-            top: 0;
-        }
-    }
-
-    .greenSecond {
-        &:before {
-            content: "";
-            position: absolute;
-            background: $green01;
-            border-radius: 10px 0px 0px 10px;
-            display: block;
-            width: 20px;
-            height: 100px;
-            top: 0;
-            left: 0;
         }
     }
 
     .orange {
         &:before {
-            content: "";
-            position: absolute;
-            background: $yellow;
-            border-radius: 10px 0px 0px 10px;
-            display: block;
-            width: 20px;
             height: 100px;
-            top: 0;
-            left: 0;
-        }
-    }
-
-    .orangeSecond {
-        &:before {
-            content: "";
-            position: absolute;
-            background: $yellow;
-            border-radius: 10px 0px 0px 10px;
-            display: block;
-            width: 20px;
-            height: 100px;
-            top: 0;
-            left: 0;
         }
     }
 
     .red {
         &:before {
-            content: "";
-            position: absolute;
-            background: $red1;
-            border-radius: 10px 0px 0px 10px;
-            display: block;
-            width: 20px;
             height: 100px;
-            top: 0;
-            left: 0;
         }
     }
 
-    .redSecond {
-        &:before {
-            content: "";
-            position: absolute;
-            background: $red1;
-            border-radius: 10px 0px 0px 10px;
-            display: block;
-            width: 20px;
-            height: 100px;
-            top: 0;
-            left: 0;
+    .gridMain {
+        @include flexJustifyBetween;
+        min-width: 400px;
+
+        @include blg {
+            min-width: 365px;
         }
+
+        @include xlmd {
+            min-width: 330px;
+        }
+        @include md {
+            min-width: 310px;
+        }
+        @include tab {
+            min-width: 360px;
+        }
+    }
+
+    .gridSecondMain {
+        margin-left: 60px;
     }
 
     .background {
-        position: relative;
-        width: 100%;
-        background-color: $white;
         max-width: 450px;
         min-height: 100px;
-        border-radius: 10px;
-        padding: 0px 13px 0px 0px;
         @include flexJustifyBetween;
+        min-width: unset;
+
+        @include bxlg {
+            max-width: 390px;
+        }
+
+        @include blg {
+            max-width: 300px;
+        }
+
+        @include xlmd {
+            max-width: 280px;
+        }
+
+        @include md {
+            max-width: 310px;
+        }
 
         .contactImage {
-            width: 75px;
-            height: 75px;
-            margin-left: 25px;
             object-fit: cover;
         }
 
         .designationMain {
             display: grid;
             gap: 12px;
-            margin-left: 50px;
+            margin-left: 30px;
             max-width: 300px;
+            min-width: unset;
 
+            @include blg {
+                margin-right: 5px;
+            }
+
+            @include xlmd {
+                margin-left: 20px;
+            }
         }
 
         .designationText {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: inline-block;
-            text-align: right;
-            order: 2;
+            width: 120px;
+
+            @include bxlg {
+                width: 110px;
+            }
+
+            @include blg {
+                width: 70px;
+            }
+
+            @include md {
+                width: 80px;
+            }
+            
         }
 
         .assistText {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: inline-block;
+            width: 100px;
+
+            @include blg {
+                width: 70px;
+            }
+
+            @include md {
+                width: 80px;
+            }
         }
 
-        // .valCountryMain {
-        //     display: none;
-        // }
-        .contactRightIconMain{
-            display: none;
-        }
-    }
-
-    .backgroundCollapse {
-        padding: 12px 13px;
-        max-height: unset;
-        min-width: 900px;
-
-        @include bxlg {
-            min-width: 905px;
+        .gridLogoSecond {
+            @include blg {
+                width: 50px;
+                height: 50px;
+            }
+            @include md {
+                width: 60px;
+                height: 60px;   
+            }
         }
 
-        @include blg {
-            min-width: 740px;
+        .gridLogoFirst {
+            @include blg {
+                width: 50px;
+                height: 50px;
+            }
+
+            @include xlmd {
+                margin-left: 20px;
+            }
+            @include md {
+                width: 60px;
+                height: 60px;   
+            }
         }
 
-        @include xlmd {
-            min-width: 680px;
-        }
 
-        @include md {
-            min-width: 740px;
-        }
     }
 
     .bgCollapseText {
@@ -476,8 +483,16 @@
     }
 
     .officerName {
+        min-width: 80px;
         display: grid;
-        gap: 10px;
+        gap: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include bxlg {
+            min-width: 30px;
+        }
     }
 
     .expandImageTwo {

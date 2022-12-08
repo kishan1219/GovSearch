@@ -1,5 +1,10 @@
 @import '../../../assets/scss/mixins.scss';
 
+.pseudoContainer {
+    @extend .container;
+    top: 0px !important;
+}
+
 .container {
     position: fixed;
     box-sizing: border-box;
@@ -7,23 +12,18 @@
     z-index: 1;
     top: 145px;
 
+    @include blg {
+        top: 120px;
+    }
+    @include md {
+        top: 95px;
+    }
+
     @include tab {
-        top: 270px;
-    }
-
-    @include sm {
-        top: 280px
-    }
-
-    @include iPad {
-        top: 280px
+        top: 110px;
     }
 
     @include mo {
-        top: 220px;
-    }
-
-    @include xsm {
         top: 100px;
     }
 
@@ -35,6 +35,10 @@
         background: $primary;
         border-radius: 0px 18px 18px 0px;
         min-height: 500px;
+
+        @include blg {
+            min-height: 50vh;
+        }
 
         @include md {
             min-height: 250px;
@@ -54,8 +58,6 @@
     }
 
     .sidebarFooter {
-        margin-top: 100px;
-
         i {
             &:hover {
                 color: $lightGray03;
@@ -91,13 +93,10 @@
 
         @include tab {
             padding-top: 15px;
-            min-height: 80vh;
         }
 
         @include mo {
-            min-height: 90vh;
             padding: 14px 10px 34px 17px;
-
         }
 
         & input {
@@ -185,22 +184,19 @@
         max-height: 100vh;
 
         @include xxlg {
+            max-height: 600px;
+        }
+
+        @include bxlg {
             max-height: 500px;
         }
-        @include bxlg {
-            max-height: 410px;
-        }
+
         @include blg {
-            max-height: 320px;
-        }
-        @include xlmd {
             max-height: 450px;
         }
-        @include tab {
-            max-height: 320px;
-        }
-        @include mo {
-            max-height: 350px;
+
+        @include xlmd {
+            max-height: 600px;
         }
     }
 
