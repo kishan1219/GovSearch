@@ -63,9 +63,11 @@
                 color: $lightGray03;
             }
         }
-
-        @include xxmd {
-            margin-top: 30px;
+        @include xxlg {
+            margin-top: 40px;
+        }
+        @include xlmd {
+            margin-top: 20px;
         }
 
         @include sm {
@@ -79,7 +81,7 @@
         }
 
         @include mo {
-            margin-top: 0px;
+            margin-top: 5px;
         }
     }
 

@@ -102,12 +102,12 @@
 }
 
 @mixin fonts-poppins {
-  font-family: 'poppins', 'sans-serif';
+  font-family: "poppins", "sans-serif";
   font-style: normal;
 }
 
 @mixin roboto {
-  font-family: 'roboto', 'sans-serif';
+  font-family: "roboto", "sans-serif";
   font-style: normal;
 }
 
@@ -115,7 +115,6 @@
   display: flex;
   align-items: center;
 }
-
 
 @mixin flexWrap {
   display: flex;
@@ -234,7 +233,7 @@
   -moz-appearance: none;
   list-style: none;
   text-indent: 1px;
-  text-overflow: '';
+  text-overflow: "";
 }
 
 @mixin notificationContainer {
@@ -387,7 +386,6 @@
         }
       }
     }
-
   }
 }
 
@@ -410,9 +408,7 @@
       flex: 0 0 100% !important;
       order: 2;
       margin-top: 50px;
-
     }
-
   }
 
   @include ScrollBar;
@@ -421,7 +417,6 @@
     &::-webkit-scrollbar-track {
       background: $white;
     }
-
   }
 
   .w60 {
@@ -471,4 +466,33 @@
       }
     }
   }
+}
+
+// contact-list tab sideBorder color Mixin
+@mixin leftborderColor {
+  content: "";
+  position: absolute;
+  border-radius: 10px 0px 0px 10px;
+  display: block;
+  width: 20px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  top: 0;
+}
+@mixin leftExpandRowBorderColor {
+  content: "";
+  position: absolute;
+  border-radius: 10px 0px 0px 10px;
+  display: block;
+  width: 20px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+//  contact-list tab sideBorder color Mixin
+@mixin textEllipse {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
