@@ -115,7 +115,20 @@
         min-width: 190px;
       }
     }
-
+    .designationRightText{
+      max-width: 190px;
+      line-height: 33px;
+      @include blg {
+        line-height: 27px;
+      }
+      @include xlmd {
+        @include textEllipse;
+      }
+      @include tab {
+        max-width: 90px;
+        @include textEllipse;
+      }
+    }
     .designationText {
       width: 230px;
       @include textEllipse;
@@ -188,6 +201,7 @@
 
     @include blg {
       min-width: 740px;
+      gap: 10px;
     }
 
     @include xlmd {
@@ -213,6 +227,9 @@
       max-width: 120px;
       @include textEllipse;
       gap: 10px;
+    }
+    @include tab {
+      max-width: 90px;
     }
 
     & > div {
@@ -256,7 +273,7 @@
 
   .size {
     @include textEllipse;
-    max-width: 300px;
+    max-width: 100px;
   }
 
   .iconYellow {
@@ -341,58 +358,46 @@
       @include md {
         max-width: 320px;
       }
-
+      .officerName {
+        min-width: 90px;
+        display: grid;
+        gap: 12px;
+        @include textEllipse;
+        @include bxlg {
+          min-width: 75px;
+        }
+      }
       .designationMain {
         display: grid;
         gap: 12px;
         margin-left: 30px;
         max-width: 300px;
         min-width: unset;
-
-        @include blg {
-          margin-right: 5px;
-        }
-
-        @include xlmd {
+        @include bxlg {
           margin-left: 20px;
+        }
+        @include blg {
+          margin-left: 5px;
+          margin-right: 5px;
         }
       }
 
       .designationText {
         width: 125px;
-
         @include bxlg {
-          width: 115px;
+          width: 90px;
         }
-
         @include blg {
-          width: 80px;
-        }
-
-        @include xlmd {
           width: 75px;
         }
-        @include tab {
-          font-size: 15px;
-        }
-      }
-
-      .assistText {
-        width: 125px;
-
-        @include bxlg {
-          width: 115px;
-        }
-
-        @include blg {
-          width: 80px;
-        }
-
         @include xlmd {
-          width: 75px;
+          width: 50px;
+        }
+        @include md {
+          width: 55px;
         }
         @include tab {
-          font-size: 15px;
+          width: 80px;
         }
       }
 
@@ -402,8 +407,14 @@
         margin-left: 0px;
         max-width: 113px;
         min-width: unset;
+        @include bxlg {
+          max-width: 77px;
+        }
         @include blg {
-          max-width: 80px;
+          max-width: 20px;
+        }
+        @include xxsm {
+          max-width: 30px;
         }
       }
 
@@ -414,20 +425,20 @@
           @include bxlg {
             width: 115px;
           }
-          @include blg {
-            width: 90px;
-          }
-          @include md {
+          @include xlmd {
             width: 95px;
+          }
+          @include xlmd {
+            width: 110px;
           }
         }
       }
 
       .gridLogoSecond {
         margin-left: 8px;
-        margin-right: 12px;
 
         @include blg {
+          margin-left: unset;
           width: 50px;
           height: 50px;
         }
@@ -460,17 +471,6 @@
           width: 50px;
           height: 50px;
         }
-      }
-    }
-
-    .officerName {
-      min-width: 80px;
-      display: grid;
-      gap: 12px;
-      @include textEllipse;
-
-      @include bxlg {
-        min-width: 30px;
       }
     }
   }

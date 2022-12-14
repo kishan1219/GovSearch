@@ -12,6 +12,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,0000",
+    designationRight: "Department of Defense",
   },
   {
     id: 2,
@@ -26,6 +28,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,0000",
+    designationRight: "Department of Defense",
   },
   {
     id: 3,
@@ -40,6 +44,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "550",
+    designationRight: "Department of Defense",
   },
   {
     id: 4,
@@ -54,6 +60,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1500",
+    designationRight: "Department of Defense",
   },
   {
     id: 5,
@@ -68,6 +76,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "15,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 6,
@@ -82,6 +92,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "2350",
+    designationRight: "Department of Defense",
   },
   {
     id: 7,
@@ -96,6 +108,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "250,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 8,
@@ -110,6 +124,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "250,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 9,
@@ -124,6 +140,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "3,050",
+    designationRight: "Department of Defense",
   },
   {
     id: 10,
@@ -138,6 +156,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "50,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 11,
@@ -152,6 +172,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "50,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 12,
@@ -166,6 +188,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "60,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 13,
@@ -180,6 +204,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "10,000",
+    designationRight: "Department of Defense",
   },
   {
     id: 14,
@@ -194,6 +220,8 @@ export const DepartmentArmyData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "15,000",
+    designationRight: "Department of Defense",
   },
 ];
 export const AssistantSecretaryData = [
@@ -210,6 +238,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,0000",
+    designationRight: "Department of the Army",
   },
   {
     id: 2,
@@ -224,6 +254,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,0000",
+    designationRight: "Department of the Army",
   },
   {
     id: 3,
@@ -238,6 +270,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1000",
+    designationRight: "Department of the Army",
   },
   {
     id: 4,
@@ -252,6 +286,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000",
+    designationRight: "Department of the Army",
   },
   {
     id: 5,
@@ -266,6 +302,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,050",
+    designationRight: "Department of the Army",
   },
   {
     id: 6,
@@ -280,6 +318,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,350",
+    designationRight: "Department of the Army",
   },
   {
     id: 7,
@@ -294,6 +334,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,00",
+    designationRight: "Department of the Army",
   },
   {
     id: 8,
@@ -308,6 +350,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,00",
+    designationRight: "Department of the Army",
   },
   {
     id: 9,
@@ -322,6 +366,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,00",
+    designationRight: "Department of the Army",
   },
   {
     id: 10,
@@ -336,6 +382,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000",
+    designationRight: "Department of the Army",
   },
   {
     id: 11,
@@ -350,6 +398,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,00",
+    designationRight: "Department of the Army",
   },
   {
     id: 12,
@@ -364,6 +414,8 @@ export const AssistantSecretaryData = [
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     gridlogoSecond: "",
+    exapndRowRightValue: "1,000,00",
+    designationRight: "Department of the Army",
   },
 ];
 
@@ -381,6 +433,7 @@ export const markowitzData = [
     expandlogoSecond: "assets/images/ArmySeal.png",
     value: "",
     gridlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 2,
@@ -392,6 +445,7 @@ export const markowitzData = [
     value: "1,000,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 3,
@@ -403,6 +457,7 @@ export const markowitzData = [
     value: "500",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 4,
@@ -414,6 +469,7 @@ export const markowitzData = [
     value: "1,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 5,
@@ -425,6 +481,7 @@ export const markowitzData = [
     value: "10,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 6,
@@ -436,6 +493,7 @@ export const markowitzData = [
     value: "2,300",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 7,
@@ -447,6 +505,7 @@ export const markowitzData = [
     value: "200,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 8,
@@ -458,6 +517,7 @@ export const markowitzData = [
     value: "200,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 9,
@@ -469,6 +529,7 @@ export const markowitzData = [
     value: "3,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 10,
@@ -480,6 +541,7 @@ export const markowitzData = [
     value: "10,000",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     country: "Arlington, VA",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 11,
@@ -491,6 +553,7 @@ export const markowitzData = [
     value: "10,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 12,
@@ -502,6 +565,7 @@ export const markowitzData = [
     value: "10,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 13,
@@ -513,6 +577,7 @@ export const markowitzData = [
     value: "10,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 14,
@@ -524,6 +589,7 @@ export const markowitzData = [
     value: "10,000",
     country: "Arlington, VA",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
 ];
 export const CioData = [
@@ -537,6 +603,8 @@ export const CioData = [
     designation: "Chief Information Officer",
     assist: "Assistanct Secretary of the Army for Acq",
     country: "Huntsville, AL",
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 2,
@@ -548,6 +616,8 @@ export const CioData = [
     designation: "Chief Information Officer",
     assist: "G6 / Chief Information Officer ",
     country: "Huntsville, AL",
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 3,
@@ -559,6 +629,8 @@ export const CioData = [
     designation: "Chief Information Officer",
     assist: "Assistanct Secretary of the Army for Acq",
     country: "Huntsville, AL",
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 4,
@@ -570,6 +642,8 @@ export const CioData = [
     designation: "Chief Information Officer",
     assist: "Army Material Command",
     country: "Huntsville, AL",
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 5,
@@ -581,6 +655,8 @@ export const CioData = [
     designation: "Chief Information Officer",
     assist: "G6 / Chief Information Officer ",
     country: "Huntsville, AL",
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",
   },
   {
     id: 6,
@@ -591,7 +667,8 @@ export const CioData = [
     name: "U.S Army Chief Information Officer",
     value: "10,000",
     country: "Arlington, VA ",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer", },
   {
     id: 7,
     src: "assets/images/OfficialArmySeal.png",
@@ -601,7 +678,8 @@ export const CioData = [
     name: "G-6 / Chief Information Officer",
     value: "2300",
     country: "Arlington, VA ",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer", },
   {
     id: 8,
     src: "assets/images/daleStrong.png",
@@ -612,7 +690,8 @@ export const CioData = [
     designation: "Chief Information Officer",
     assist: " Officer / CIO	G6 / Corporate Information C",
     country: "Huntsville, AL",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer", },
   {
     id: 9,
     src: "assets/images/daleStrong.png",
@@ -623,7 +702,8 @@ export const CioData = [
     designation: "CIO",
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer",  },
   {
     id: 10,
     src: "assets/images/daleStrong.png",
@@ -634,7 +714,8 @@ export const CioData = [
     designation: "CIO",
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer", },
   {
     id: 11,
     src: "assets/images/daleStrong.png",
@@ -645,7 +726,8 @@ export const CioData = [
     designation: "CIO",
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer", },
   {
     id: 12,
     src: "assets/images/daleStrong.png",
@@ -656,7 +738,8 @@ export const CioData = [
     designation: "CIO",
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
-  },
+    expandlogoSecond: "assets/images/ContactsandSeals.png",
+    designationRight: "U.S Army Chief Information Officer", },
 ];
 function createData(
   id,

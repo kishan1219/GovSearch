@@ -9,11 +9,17 @@ import {
   ContactCard,
   Text,
   ContactList,
+  CardItems,
 } from "../../components/shared";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Tooltip } from "@mui/material";
-import { AssistantSecretaryData, DepartmentArmyData, markowitzData } from "./search-data";
+import {
+  AssistantSecretaryData,
+  CioData,
+  DepartmentArmyData,
+  markowitzData,
+} from "./search-data";
 import { useNavigate } from "react-router-dom";
 const SearchResult = () => {
   const [office, setOffice] = useState(false);
@@ -59,6 +65,37 @@ const SearchResult = () => {
   const gotoResultDetail = () => {
     navigate("/result-details");
   };
+  const CardItems = [
+    {
+      id: 1,
+      logo: "assets/images/OfficialArmySeal.png",
+      heading: "Department of the Army",
+      country: "Virginia",
+      value: "100,000",
+    },
+    {
+      id: 2,
+      logo: "assets/images/OfficialArmySeal.png",
+      heading: "Department of the Army",
+      country: "Virginia",
+      value: "100,000",
+    },
+    {
+      id: 3,
+      logo: "assets/images/OfficialArmySeal.png",
+      heading: "Department of the Army",
+      country: "Virginia",
+      value: "100,000",
+    },
+    {
+      id: 4,
+      logo: "assets/images/OfficialArmySeal.png",
+      heading: "Department of the Army",
+      country: "Virginia",
+      value: "100,000",
+    },
+  ];
+
   return (
     <Layout isFederal={false} isProfessional={true}>
       <div className={Styles.container}>
@@ -382,7 +419,8 @@ const SearchResult = () => {
                 vcbSecond={data.vcbSecond}
                 value={data.value}
                 country={data.country}
-              />
+                designationRight={data.designationRight}
+             exapndRowRightValue={data.exapndRowRightValue} />
             ))} */}
             {/* {AssistantSecretaryData.map((data) => (
               <ContactList
@@ -402,11 +440,13 @@ const SearchResult = () => {
                 vcbSecond={data.vcbSecond}
                 value={data.value}
                 country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue} 
               />
             ))} */}
-            {markowitzData.map((data) => (
+            {/* {markowitzData.map((data) => (
               <ContactList
-               isLeftContactDetail={true}
+                isLeftContactDetail={true}
                 imageClick={gotoResultDetail}
                 isGrid={!tableHide ? true : false}
                 isList={!gridTableShow ? true : false}
@@ -423,6 +463,31 @@ const SearchResult = () => {
                 vcbSecond={data.vcbSecond}
                 value={data.value}
                 country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue} 
+              />
+            ))} */}
+            {CioData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue} 
               />
             ))}
           </div>
@@ -437,54 +502,22 @@ const SearchResult = () => {
               Last Viewed
             </Text>
             <div className={Styles.homeCard}>
-              <div className="mb12">
-                <ContactCard
-                  departmentClass={Styles.armyDepartmentTextMain}
-                  src={"assets/images/OfficialArmySeal.png"}
-                  imageClass={`${Styles.lstViewedImage} ${"ml20"}`}
-                  isGreenBorder={false}
-                  istopLacsText={true}
-                  isArlingtonText={false}
-                  isVirgina={true}
-                  imageSize="imgLarge"
-                />
-              </div>
-              <div className="mb12">
-                <ContactCard
-                  departmentClass={Styles.armyDepartmentTextMain}
-                  src={"assets/images/OfficialArmySeal.png"}
-                  imageClass={`${Styles.lstViewedImage} ${"ml20"}`}
-                  isGreenBorder={false}
-                  istopLacsText={true}
-                  isArlingtonText={false}
-                  isVirgina={true}
-                  imageSize="imgLarge"
-                />
-              </div>
-              <div className="mb12">
-                <ContactCard
-                  departmentClass={Styles.armyDepartmentTextMain}
-                  src={"assets/images/OfficialArmySeal.png"}
-                  imageClass={`${Styles.lstViewedImage} ${"ml20"}`}
-                  isGreenBorder={false}
-                  istopLacsText={true}
-                  isArlingtonText={false}
-                  isVirgina={true}
-                  imageSize="imgLarge"
-                />
-              </div>
-              <div className="mb12">
-                <ContactCard
-                  departmentClass={Styles.armyDepartmentTextMain}
-                  src={"assets/images/OfficialArmySeal.png"}
-                  imageClass={`${Styles.lstViewedImage} ${"ml20"}`}
-                  isGreenBorder={false}
-                  istopLacsText={true}
-                  isArlingtonText={false}
-                  isVirgina={true}
-                  imageSize="imgLarge"
-                />
-              </div>
+              {CardItems.map((data) => (
+                <div className="mb12">
+                  <ContactCard
+                    departmentClass={Styles.armyDepartmentTextMain}
+                    imageClass={`${Styles.lstViewedImage} ${"ml20"}`}
+                    isGreenBorder={false}
+                    istopLacsText={true}
+                    isArlingtonText={false}
+                    isVirgina={true}
+                    src={data.logo}
+                    heading={data.heading}
+                    paraOne={data.country}
+                    paraTwo={data.value}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

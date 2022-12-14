@@ -7,14 +7,45 @@
     min-height: 80px;
     border-radius: 10px;
     padding: 0px 13px 0px 0px;
-    @include flexJustifyBetween;
-
-
-    @include xsm {
-        min-width: 280px;
-        display: block;
-        text-align: center;
+    // @include flexJustifyBetween;
+    display: flex;
+    align-items: center;
+    @include bxlg{min-height: 70px;}
+    @include lg{min-height: 63px;}
+    @include xxmd{min-height: 63px;}
+    @include md{min-height: 52px;}
+    @include iPad{max-width: 553px; min-height: 65px;}
+    .cardImage{@include md{margin-right: 0px; margin-left: 8px;}}
+     .cardHeading {
+       font-size: 12px;
+        @include xlmd{font-size: 12px;}
+        @include xxmd{font-size: 11px;}
+        @include md{font-size: 8px;}
+        @include iPad{font-size: 14px;}
+        @include mo{font-size: 12px;}
+        @include xxsm{font-size: 8px;}
+      
+        &:hover {
+            font-weight: 500;
+            text-decoration: underline;
+        }
     }
+    .cityText{
+        @include lg{font-size: 12px;}
+        @include xlmd{font-size: 12px;}
+        @include xmd{font-size: 10px;}
+        @include md{font-size: 10px;}
+        @include iPad{font-size: 12px;}
+        @include xxsm{font-size: 8px;}
+    }
+    .countText{
+        @include xlmd{font-size: 12px;}
+        @include xmd{font-size: 10px;}
+        @include md{font-size: 10px;margin-left: 16px;}
+        @include iPad{font-size: 12px; margin-left: 10px;}
+        @include mo{font-size: 12px;margin-left: 11px;}
+        @include xxsm{font-size: 8px;margin-left: 25px;}
+}
 
     .greenBorder {
         min-width: 15px;
@@ -26,6 +57,8 @@
     }
 
     .cardImage {
+        @include xlmd{margin-right: 0px;}
+        @include xmd{margin-right: 0px;}
         @include xsm {
             margin-top: 8px;
         }
@@ -33,25 +66,45 @@
 
     .titleMain {
         max-width: 188px;
+        width: 100%;
         margin: 3px 90px 0px 0px;
         display: grid;
         gap: 15px;
+        @include xxlg{margin-right: 40px;}
+        @include lg{margin-right: 0px; }
+        @include xlmd{margin-right:0px; margin-left: 10px;}
+        @include xxmd{margin-right: 0px; margin-left: 10px;   
+            max-width: 140px;}
+        @include xmd{margin-right: 0px;}
+        @include md{margin-right:0px;}
+        @include iPad{margin-right: 33%; }
+        @include mo {margin-right: 35px;}
+        @include xsm {margin: 3px 0px 0px 0px;}
 
-        @include xsm {
-            margin: 3px 0px 0px 0px;
-        }
+     
     }
 
     .titleNumber {
+        width: 100%;
+        text-align: right;
+        max-width: 104px;
         padding-top: 3px;
         display: grid;
         gap: 11px;
+        @include xxlg{max-width: 125px;}
+        @include bxlg{max-width: 120px;}
+        @include lg{max-width: 120px;}
+        @include xxmd{max-width:105px;}
+        @include xmd{max-width: 94px;} 
 
-        @include xsm {
-            @include flexJustifyAround;
-            padding: 10px 0px;
-        }
-
+        // @include xsm {
+        //     @include flexJustifyAround;
+        //     padding: 10px 0px;
+        // }
+       .iconBox{
+        text-align: right;
+       }
+     
         .vaText {
             margin-top: 30px;
         }
