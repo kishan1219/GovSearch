@@ -1,0 +1,467 @@
+@import "../../../assets/scss/mixins.scss";
+
+.Container {
+    width: 100%;
+    min-height: 100vh;
+    @include ScrollBar;
+
+    @include iPad {
+        padding-left: 14px;
+    }
+
+    @include mo {
+        padding: 0px 5px 0px 5px;
+    }
+
+    .requestText {
+        @include iPad {
+            margin-left: 0px;
+        }
+    }
+
+    .criterBox {
+        @include md {
+            margin-top: 25px;
+        }
+
+        @include mo {
+            margin-top: 40px;
+        }
+    }
+
+    .criteriaBox {
+        @include criteriaProperty;
+        max-width: 64%;
+        min-height: 400px;
+        display: block;
+        background-color: $white;
+        justify-content: center;
+        outline: 20px solid $white;
+
+        @include xxlg {
+            height: 75%;
+        }
+
+        @include bxlg {
+            height: 75%;
+        }
+
+        @include lg {
+            max-width: 63%;
+            height: 71%;
+        }
+
+        @include xlmd {
+            max-width: 62%;
+            height: 68%;
+        }
+
+        @include xxmd {
+            max-width: 63%;
+            height: 67%;
+        }
+
+        @include md {
+            max-width: 62%;
+            height: 57%;
+        }
+
+        @include iPad {
+            max-width: 82%;
+            margin-top: 40px;
+        }
+
+        .screenIcon {
+            position: absolute;
+            top: 20px;
+            right: 60px;
+
+            @include iPad {
+                right: 25px;
+            }
+
+            .sliderValue {
+                color: $gray;
+            }
+
+            .boxIcon {
+                margin-left: 8%;
+            }
+        }
+    }
+
+    .criteriaSecBox {
+        @include criteriaProperty;
+        min-height: 80%;
+        background-color: $white;
+        outline: 20px solid $white;
+
+        @include xxlg {
+            height: 80%;
+        }
+
+        @include bxlg {
+            height: 80%;
+        }
+
+        .screenIcon {
+            position: absolute;
+            top: 20px;
+            right: 60px;
+
+            .sliderValue {
+                color: $gray;
+            }
+        }
+    }
+
+    .cardBoxOne {
+        max-width: 554px;
+        padding: 17px 0px 5px 0px;
+
+        @include iPad {
+            max-width: 554px;
+        }
+    }
+
+    .cardSecondBox {
+        max-width: 554px;
+        padding: 24px 0px 20px 0px;
+    }
+
+    .scrollBar {
+        overflow: auto;
+        // height: 174px;
+
+        @include xxlg {
+            height: 222px;
+        }
+       
+
+        @include bxlg {
+            height: 255px;
+        }
+
+        @include lg {
+            height: 247px;
+        }
+
+        @include xlmd {
+            height: 226px;
+        }
+
+        @include xxmd {
+            height: 247px;
+        }
+
+        @include md {
+            height: 175px;
+        }
+
+        @include iPad {
+            min-height: 254px;
+        }
+
+        @include mo {
+            height: 100%;
+        }
+
+        @include xxsm {
+            height: 100%;
+        }
+    }
+
+    .searchCriteria {
+        width: 100%;
+        @include flexBetween;
+        align-items: center;
+
+        @include iPad {
+            max-width: 90%;
+        }
+
+        @include mo {
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+
+        .departHead {
+            @include iPad {
+                font-size: 12px;
+            }
+        }
+
+        .plusIcon {
+            @include iPad {
+                margin: 0px 15px;
+                font-size: 25px;
+            }
+        }
+
+        .headIcon {
+            @include iPad {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .cardBox {
+        @include flexWrap;
+        width: 100%;
+
+        .detaisFirst {
+            width: 100%;
+            max-width: 570px;
+
+            .updateBox {
+                @include flex;
+                margin: 20px 0px 5px 0px;
+
+                @include xlmd {
+                    margin-bottom: 0px;
+                }
+
+                .updateText {
+                    width: 100%;
+                    max-width: 391px;
+
+                    @include xlmd {
+                        max-width: 285px;
+                        font-size: 12px;
+                    }
+
+                    @include md {
+                        max-width: 181px;
+                        font-size: 9px;
+                    }
+
+                    @include iPad {
+                        max-width: 80%;
+                    }
+                }
+
+                .requestText {
+                    width: 100%;
+                    max-width: 142px;
+                    margin: 5px 0px;
+
+                    @include xlmd {
+                        font-size: 13px;
+                        max-width: 126px;
+                    }
+
+                    @include xmd {
+                        font-size: 12px;
+                        max-width: 114px;
+                    }
+
+                    @include md {
+                        font-size: 9px;
+                        max-width: 84px;
+                    }
+
+                    @include iPad {
+                        margin-left: 0px;
+                    }
+                }
+            }
+        }
+
+        .trendingBox {
+            width: 100%;
+            margin-left: 20px;
+            max-width: 600px;
+            margin-top: 50px;
+
+            @include xxlg {
+                margin-top: 54px;
+            }
+
+            @include lg {
+                margin-top: 54px;
+            }
+
+            @include xlmd {
+                margin-top: 50px;
+            }
+
+            @include xxmd {
+                margin-top: 50px;
+            }
+
+            @include iPad {
+                margin-top: 12px;
+                margin-left: 0px;
+            }
+
+            .cardBox {
+                margin-left: 20px;
+                max-width: 554px;
+                padding: 24px 0px 20px 0px;
+            }
+
+            .cardthirdBox {
+                max-width: 554px;
+                padding: 24px 0px 20px 0px;
+            }
+
+            .secondText {
+                margin: 0px 0px 0px 30px;
+
+                @include md {
+                    margin-left: 19px;
+                }
+
+                @include iPad {
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        .armyMain {
+            margin-left: 97px;
+            margin-top: 121px;
+
+            @include xlmd {
+                margin-left: 74px;
+            }
+
+            @include md {
+                margin-left: 55px;
+            }
+
+            @include iPad {
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+
+            .recomendText {
+                margin-bottom: 28px;
+                text-align: center;
+
+                @include iPad {
+                    text-align: left;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.profileModel {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+
+    .profileCard {
+        max-width: 590px;
+
+        @include xlmd {
+            max-width: 500px;
+        }
+
+        @include xxmd {
+            max-width: 500px;
+        }
+
+        .modalContentBox {
+            padding: 40px 50px;
+
+            .modalHeading {
+                font-size: 38px;
+                margin-top: 40px;
+                font-weight: 600px;
+                text-align: center;
+
+                @include lg {
+                    font-size: 32px;
+                    margin-top: 5px;
+                }
+            }
+
+            .emailText {
+                margin-top: 40px;
+                margin-left: 45px;
+
+                @include lg {
+                    font-size: 22px;
+                    margin-left: 72px;
+                }
+
+                @include xlmd {
+                    font-size: 22px;
+                    margin-left: 50px;
+                }
+
+                @include xxmd {
+                    margin-left: 50px;
+                }
+            }
+
+            .nameText {
+                text-decoration: underline;
+                margin-top: 15px;
+                margin-left: 45px;
+
+                @include lg {
+                    font-size: 22px;
+                    margin-left: 72px;
+                }
+
+                @include xlmd {
+                    font-size: 22px;
+                    margin-left: 50px;
+                }
+
+                @include xxmd {
+                    margin-left: 50px;
+                    margin-top: 15px;
+                    font-size: 20px;
+                }
+            }
+
+            .modalBtn {
+                text-align: center;
+                display: grid;
+
+                .mainBtn {
+
+                    margin-top: 30px;
+                    margin-left: 50px;
+                    max-width: 305px;
+                    font-size: 18px;
+
+                    @include xxlg {
+                        max-width: 372px;
+                        margin-left: 55px;
+                    }
+
+                    @include xlmd {
+                        margin-left: 50px;
+                        max-width: 305px;
+                    }
+
+                }
+            }
+
+            .textAreabox {
+                border: 1px solid $black;
+                max-width: 88%;
+                margin-left: 30px;
+
+                @include lg {
+                    max-width: 85%;
+                    margin-left: 32px;
+                }
+
+                &::placeholder {
+                    color: $black;
+                    font-weight: 600;
+                }
+
+            }
+        }
+    }
+}

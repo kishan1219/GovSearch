@@ -5,6 +5,7 @@ import { Notification,Account,AccountSetting,Download,SearchHistory,stats,Favori
 import SearchResult from "./search-result/search-result";
 import ResultDetails from "./before-login/result-details";
 import StateResult from "./state-result/state-result";
+import ContactDetail from "./before-login/contact-detail";
 export {
     home,
     Styleguide,
@@ -18,6 +19,7 @@ export {
     Favorites,
     SearchResult,
     ResultDetails,
+    ContactDetail,
     StateResult,
 
 }

@@ -1,10 +1,5 @@
 @import '../../../assets/scss/mixins.scss';
 
-.pseudoContainer {
-    @extend .container;
-    top: 0px !important;
-}
-
 .container {
     position: fixed;
     box-sizing: border-box;
@@ -12,18 +7,23 @@
     z-index: 1;
     top: 145px;
 
-    @include blg {
-        top: 120px;
-    }
-    @include md {
-        top: 95px;
+    @include tab {
+        top: 270px;
     }
 
-    @include tab {
-        top: 110px;
+    @include sm {
+        top: 280px
+    }
+
+    @include iPad {
+        top: 280px
     }
 
     @include mo {
+        top: 220px;
+    }
+
+    @include xsm {
         top: 100px;
     }
 
@@ -35,10 +35,6 @@
         background: $primary;
         border-radius: 0px 18px 18px 0px;
         min-height: 500px;
-
-        @include blg {
-            min-height: 50vh;
-        }
 
         @include md {
             min-height: 250px;
@@ -58,16 +54,16 @@
     }
 
     .sidebarFooter {
+        margin-top: 100px;
+
         i {
             &:hover {
                 color: $lightGray03;
             }
         }
-        @include xxlg {
-            margin-top: 40px;
-        }
-        @include xlmd {
-            margin-top: 20px;
+
+        @include xxmd {
+            margin-top: 30px;
         }
 
         @include sm {
@@ -81,7 +77,7 @@
         }
 
         @include mo {
-            margin-top: 5px;
+            margin-top: 0px;
         }
     }
 
@@ -95,10 +91,13 @@
 
         @include tab {
             padding-top: 15px;
+            min-height: 80vh;
         }
 
         @include mo {
+            min-height: 90vh;
             padding: 14px 10px 34px 17px;
+
         }
 
         & input {
@@ -184,28 +183,11 @@
 
     .scrollWrapper {
         max-height: 100vh;
-
-        @include xxlg {
-            max-height: 600px;
-        }
-
-        @include bxlg {
-            max-height: 500px;
-        }
-
-        @include blg {
-            max-height: 450px;
-        }
-
-        @include xlmd {
-            max-height: 600px;
-        }
     }
 
     .scrollWrapper1 {
         max-height: calc(62vh - 300px);
         max-width: 210px;
-
     }
 
     .primaryChipColor {

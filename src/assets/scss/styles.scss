@@ -41,6 +41,9 @@
 .mb0 {
   margin-bottom: 0px;
 }
+.mB5 {
+  margin-bottom: 5px;
+}
 
 .mB8 {
   margin-bottom: 8px;
@@ -66,9 +69,6 @@
   margin-right: 17px;
 }
 
-.mB24 {
-  margin-bottom: 24px;
-}
 .mB28 {
   margin-bottom: 28px;
 }
@@ -201,12 +201,13 @@ html {
 .pt20 {
   padding-top: 20px;
 }
+.pt24 {
+  padding-top: 24px;
+}
+
 
 .pr10 {
   padding-right: 10px;
-}
-.pr40 {
-  padding-right: 40px;
 }
 
 .pb20 {
@@ -221,6 +222,7 @@ html {
 .mlAuto {
   margin-left: auto;
 }
+
 
 .mT25 {
   margin-top: 25px;
@@ -447,10 +449,6 @@ html {
 .flexWrap {
   flex-wrap: wrap;
 }
-.flexCenter {
-  display: flex;
-  align-items: center;
-}
 
 .flexRow {
   flex-direction: row;
@@ -538,9 +536,4 @@ html {
 }
 .mw280 {
   max-width: 280px;
-}
-.textEllipse {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

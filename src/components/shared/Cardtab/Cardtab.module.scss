@@ -1,4 +1,4 @@
-@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
 
 .tab {
     width: 100%;
@@ -8,7 +8,12 @@
     border-radius: 10px;
     padding-left: 13px;
     display: flex;
-
+    @include mo{max-width: 240px;}
+   
+    
+      &.enable {
+        background-color:$gray09;
+      }
     .tabWrapper {
         display: flex;
         align-items: center;
@@ -23,17 +28,25 @@
     }
 
     .titleMain {
-        margin: 22px 41px 0px 12px;
+        margin: 22px 9px 0px 36px;
+        @include mo{margin-right: 0px;}
+        .tagName{
+            width:121px;
+            @include mo{width:53px;}
+            @include xxsm{font-size: 8px;}
+        }
+        
 
         .titleNumber {
             display: flex;
-            align-items: center;
             margin-top: 9px;
             line-height: 0px;
 
             .contect {
                 letter-spacing: 8px;
-                margin: 0px 0px 5px 75px;
+                margin: 0px 0px 5px 0px;
+                @include mo{margin-left:50px ;}
+                @include xxsm{margin-left:16px ;}
 
             }
         }

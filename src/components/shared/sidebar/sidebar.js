@@ -157,7 +157,7 @@ const Sidebar = () => {
     );
     const label = { slotProps: { input: { 'aria-label': 'Demo switch' } } };
     return (
-        <div className={sidebarContentHide ? Styles.pseudoContainer : Styles.container}>
+        <div className={Styles.container}>
             {sidebarHide &&
                 <div>
                     <ListGroup className={Styles.menu}>

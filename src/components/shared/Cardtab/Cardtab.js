@@ -4,17 +4,19 @@ import Image from "../image/image";
 import CheckBox from "../checkbox/checkbox";
 import Text from "../text/text";
 import Icon from "../icon";
-const Cardtab = () => {
+const Cardtab = ({variant,heading,number,src}) => {
     return (
-        <div className={styles.tab}>
+         <div className={`${styles.tab} ${styles[variant]}`} >
             <div className={styles.tabWrapper}>
-                <CheckBox variant="grayFill" size="" className={styles.CheckBox} />
-                <Image src="assets/images/OfficialArmySeal.png" alt="armySeal" className={styles.imgFluid} />
+                <CheckBox variant="grayFill"  className={styles.CheckBox} />
+                <Image src={src} alt="army" className={styles.imgFluid} />
+                {/* <Image src="assets/images/baeShortImage.png" alt="armySeal" className={styles.imgFluid} /> */}
             </div>
             <div className={styles.titleMain}>
-                <Text color="gray01" variant="xsText" strong="strong6" className={styles.tagName}>Department of the Army</Text>
+
+                <Text color="gray01" variant="xsText" strong="strong6" >{heading}</Text>
                 <div className={styles.titleNumber}>
-                    <Text color="gray01" variant="xsText" strong="strong6">100,000</Text>
+                    <Text className={styles.tagName} color="gray01" variant="xsText" strong="strong6">{number}</Text>
                     <div className={styles.contect}>
                         <Icon type="linkedIn" variant="primary" size="icon_xsmall01" strong="strong6" />
                         <Icon type="web" variant="primary" size="icon_xsmall01" />
