@@ -2,6 +2,7 @@
 .mainContainer {
     width: 100%;
     min-height: 100vh;
+    margin-bottom: 30px;
     @include ScrollBar;
     @include iPad{padding-left: 14px;}
     @include mo{padding:0px 5px 0px 5px;}

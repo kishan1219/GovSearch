@@ -10,7 +10,7 @@
         .locateText{
             font-size: 12px;
             width: 100%;
-            @include xxlg{max-width: 298px;}
+            @include xxlg{max-width: 314px; font-size: 10px;}
             @include bxlg{max-width:282px;}
             @include lg{max-width: 220px;}
              @include xlmd{max-width: 232px;}
@@ -240,7 +240,7 @@
                         max-width: 279px;
                         @include xxlg{max-width:16vw;}
                         @include bxlg{max-width: 273px;}
-                        @include lg{max-width:210px; font-size: 12px;}
+                        @include lg{max-width:214px; font-size: 12px;}
                         @include xlmd {font-size: 10px;max-width: 230px;}
                         @include xxmd {font-size: 10px;max-width: 204px;}
                         @include xmd {font-size: 10px;max-width: 195px;}

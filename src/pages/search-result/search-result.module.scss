@@ -188,14 +188,14 @@
             margin-left: 70px;
             margin-top: 70px;
             @include latestDetail;
+// @include xxlg {
 
+// }
             @include bxlg {
                 margin-left: 50px;
             }
 
             @include md {
-                // @include flexJustifyCenter;
-                // flex-direction: column;
                 margin-left: 0px;
             }
 

@@ -320,18 +320,18 @@ const ResultDetails = () => {
                     <Text className={Styles.requestText} strong='strong3' variant={"smText"} color="gray">request an update</Text>
                     <Icon type={"refresh"} color={"black"} size={"icon_small"} />
                   </div>
-                  {/* <CriteriaCard src={"assets/images/armySeal.png"} isCriteriaSecond={false}
+                  <CriteriaCard src={"assets/images/armySeal.png"} isCriteriaSecond={false}
                    heading={"Secretary of the Army"} textFirst={"Madison County Courthouse"} 
                    textSec={"100 Northside SQ, Huntsville, AL "} hideTxtFst={"https://army.mil"} 
                    hideTxtSec={"100,000"} hideTxtThd={"703-695-4311"} paraTwo={"703-697-8036"}
                     paraOne={"https://www.madisoncounty.gov/"} paraThree={"702-888-8036"} paraFour={"# of Employees --"} 
-                    paraFive={"Description --"} /> */}
-                  <CriteriaCard src={"assets/images/baeImage.png"} heading={"BAE Systems, Inc"}
+                    paraFive={"Description --"} />
+                  {/* <CriteriaCard src={"assets/images/baeImage.png"} heading={"BAE Systems, Inc"}
                 isCriteriaSecond={false}  textFirst={"Madison County Courthouse"} 
                 textSec={"100 Northside SQ, Huntsville, AL "} hideTxtFst={"https://army.mil"}
                  hideTxtSec={"100,000"} hideTxtThd={"703-695-4311"} isClassiicationText={true} paraTwo={"703-697-8036"}
                   paraOne={"https://bae.com"} paraThree={"702-888-8036"} paraFour={"# of Employees --"}
-                   paraFive={"Description --"}/>
+                   paraFive={"Description --"}/> */}
                   <Text className={`${Styles.requestText} ${'mt5 mB5 ml15'}`} strong='strong3' variant={"smText"} color="gray">Lastest Contacts </Text>
                   <Card className={Styles.cardBoxOne} >
                     {latestList.map((data) => (
