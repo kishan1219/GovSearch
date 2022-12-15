@@ -8,17 +8,27 @@
     max-width:1680px;
     height:100%;
     min-height:660px;
-    background-color:$lightGray02;
     display:block;
     justify-content: center;
-    padding: 57px 0px 0px 74px;
-    outline: 20px solid $white;
+    padding: 25px 0px 0px 25px;
     border-radius: 10px;
     position: relative;
+    @include mo{padding-left: 0px;}
+    .screenIcon{
+        position: absolute;
+        top: 20px;
+        right: 60px;
+        .sliderValue{
+            color:$black
+        }
+        
+    }
+   
     
     .tab{
         margin-bottom:125px;
         position: relative;
+       
         .tabIcon{
            margin-top:-14px;
            margin-left: 120px;

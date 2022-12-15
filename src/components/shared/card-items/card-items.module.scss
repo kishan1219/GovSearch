@@ -1,33 +1,58 @@
 @import "../../../assets/scss/mixins.scss";
 .cardContainer {
-
-    width:100%;
-    // .cardBox {
-    //     max-width: 553px;
-
-    .contentBox {
+     width:100%;
+     .listIcon{
+        @include md{font-size: 10px;letter-spacing: 5px;}
+        @include iPad{font-size: 12px ;letter-spacing: 8px;}
+        }
+   .contentBox {
         display: flex;
-        
-
         padding: 0px 24px 12px 24px;
+        @include md{padding: 0px 15px 12px 15px;}
 
         .textFirst {
             width: 100%;
             max-width: 207px;
-            @include xlmd{ font-size: 11px;  max-width: 120px;}
-            @include md{  font-size: 9px; max-width: 77px;}
+            white-space: nowrap;
+             overflow: hidden;
+            text-overflow: ellipsis;
+            @include bxlg{max-width: 170px;}
+            @include lg{max-width: 155px;}
+            @include xlmd{ font-size: 11px;  max-width: 135px;}
+            @include xxmd{max-width:125px;}
+            @include md{  font-size: 9px; max-width: 90px;}
+            @include iPad {max-width: 207px; font-size: 11px;}
+            @include mo{max-width: 120px; font-size: 10px;}
+            @include xxsm{font-size: 10px;max-width: 94px;}
+
         }
 
         .textSecond {
             width: 100%;
             max-width: 217px;
-            @include xlmd{font-size: 11px;max-width: 186px;}
-            @include xlmd{font-size: 9px;}
+            white-space: nowrap;
+             overflow: hidden;
+            text-overflow: ellipsis;
+            @include bxlg{max-width: 220px;}
+            @include lg{max-width: 188px;}
+            @include xlmd{font-size: 11px;max-width: 190px;}
+            @include xxmd{max-width:165px;}
+            @include xmd{max-width:145px;}
+            @include md{ font-size: 9px; max-width: 120px; }
+            @include iPad {max-width: 217px; font-size: 11px;}
+            @include mo{font-size: 10px; max-width:148px;}
+            @include xxsm{font-size: 10px;}
         }
         .textThird {
-           
+            white-space: nowrap;
+             overflow: hidden;
+            text-overflow: ellipsis;
             @include xlmd{ font-size: 11px; }
             @include md{ font-size: 9px; }
+            @include iPad{font-size: 11px;}
+            @include mo{font-size: 10px;}
+            @include xxsm{font-size: 10px;}
+            
         }
 
 
@@ -35,32 +60,117 @@
             width:100%;
            max-width:97px;
            @include xlmd{font-size: 11px;}
-           @include md{font-size: 9px; max-width: 60px;}
+           @include xmd{max-width: 79px;}
+           @include md{font-size: 9px; max-width: 67px;}
+           @include iPad {max-width: 207px; font-size: 11px;}
+           @include mo{max-width: 99px;font-size: 10px;}
+           @include xxsm{max-width: 80px;font-size: 10px;}
         }
 
         .assetsSecond {
             width:100%;
-            max-width:242px;
-            @include xlmd{font-size: 11px;max-width: 146px;}
-            @include md{font-size: 9px; max-width: 99px;}
+            max-width:215px;
+            @include lg{max-width: 150px;}
+            @include xlmd{font-size: 11px;max-width: 160px;}
+            @include xxmd{font-size: 11px;max-width: 150px;}
+            @include xmd{max-width: 130px;}
+            @include md{font-size: 9px; max-width: 108px;}
+            @include iPad {max-width: 200px; font-size: 11px;}
+            @include mo{max-width: 131px;font-size: 10px;}
+            @include xxsm{font-size: 10px;}
         }
         .assetsThird{
+            // width:100%;
             @include xlmd{font-size: 11px;}
             @include md{font-size: 9px;}
+            @include iPad{font-size: 11px;}
+            @include mo{ width: 100%;
+            text-align:right;font-size: 10px;}
+            @include xxsm{font-size: 10px;}
         }
        
         .childFirst{
             width: 100%;
             max-width:328px;
             @include xlmd{font-size: 10px;}
+            @include md{font-size: 8px;}
+            @include iPad{font-size: 11px; max-width: 80%;}
+            @include mo{font-size: 10px;}
+            @include xxsm{font-size: 8px;}
+          
         }
         .childSecond{
             width:100%;
             max-width: 162px;
             text-align: right;
-            @include xlmd{font-size: 10px;}
+            @include lg{max-width: 114px;}
+            @include xlmd{font-size: 10px; max-width: 130px;}
+            @include xmd{max-width: 100px;}
+            @include md{max-width:65px; font-size: 8px;}
+            @include iPad{font-size: 11px; max-width: 100px;}
+            @include mo{font-size: 10px;}
+            @include xxsm{font-size: 8px;}
+        }
+        .accountfirst{
+            width: 100%;
+            max-width: 140px;
+            @include lg{font-size: 14px;}
+            @include xlmd{font-size: 12px;max-width: 100px;}
+            @include md{font-size: 9px;}
+            @include iPad{font-size: 12px;max-width: 175px;}
+            @include mo{max-width: 130px;}
+            @include xxsm{font-size: 10px; }
+        }
+        .accountSec{
+            width: 100%;
+            max-width: 200px;
+            @include lg{font-size: 14px;}
+            @include xlmd{font-size: 12px;}
+            @include md{font-size: 9px;}
+            @include iPad{font-size: 12px; max-width: 175px;}
+            @include xxsm{font-size: 10px; }
+        }
+        .accountThird{
+            width: 150px;
+            text-align: right;
+            letter-spacing: 10px;
+            @include md{letter-spacing: 2px;}
+        }
+        .posTextOne{
+            width: 100%;
+            max-width: 112px;
+            font-size: 12px;
+            @include xxlg{max-width:165px;}
+            @include xlg{max-width: 140px;}
+            @include xmd{font-size: 10px;}
+            @include md{font-size:9px;}
+            @include iPad{font-size:12px; max-width: 188px;}
+            @include mo{font-size: 10px;}
+            @include xxsm{font-size: 10px;}
+        }
+        .posTextSec{
+            width: 100%;
+            max-width: 200px;
+            font-size: 12px;
+            @include xxlg{max-width:175px;}
+            @include xxmd{max-width:125px;}
+            @include xmd{font-size: 10px;}
+            @include md{font-size:9px;}
+            @include iPad{font-size:12px; max-width: 175px;}
+            @include mo{font-size: 10px;}
+            @include xxsm{font-size: 10px;}
+        }
+        .posTextThd{
+            width: 150px;
+            text-align: right;
+            font-size: 12px;
+            @include xmd{font-size: 10px;}
+            @include md{font-size:9px;}
+            @include iPad{font-size:12px;}
+            @include mo{font-size: 10px;}
+            @include xxsm{font-size: 10px;}
         }
     }
 
-    // }
+    
 }

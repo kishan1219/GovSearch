@@ -21,7 +21,7 @@
         @include xlmd{font-size: 12px;}
         @include xxmd{font-size: 11px;}
         @include md{font-size: 8px;}
-        @include iPad{font-size: 14px;}
+        @include iPad{font-size: 12px;}
         @include mo{font-size: 12px;}
         @include xxsm{font-size: 8px;}
       
@@ -34,14 +34,14 @@
         @include lg{font-size: 12px;}
         @include xlmd{font-size: 12px;}
         @include xmd{font-size: 10px;}
-        @include md{font-size: 10px;}
+        @include md{font-size: 8px;}
         @include iPad{font-size: 12px;}
         @include xxsm{font-size: 8px;}
     }
     .countText{
         @include xlmd{font-size: 12px;}
         @include xmd{font-size: 10px;}
-        @include md{font-size: 10px;margin-left: 16px;}
+        @include md{font-size: 8px;}
         @include iPad{font-size: 12px; margin-left: 10px;}
         @include mo{font-size: 12px;margin-left: 11px;}
         @include xxsm{font-size: 8px;margin-left: 25px;}
@@ -77,9 +77,10 @@
             max-width: 140px;}
         @include xmd{margin-right: 0px;}
         @include md{margin-right:0px;}
-        @include iPad{margin-right: 33%; }
+        @include iPad{margin-right: 40%; }
         @include mo {margin-right: 35px;}
         @include xsm {margin: 3px 0px 0px 0px;}
+        @include mo{margin-right:65px;}
 
      
     }
@@ -96,6 +97,8 @@
         @include lg{max-width: 120px;}
         @include xxmd{max-width:105px;}
         @include xmd{max-width: 94px;} 
+        @include md{max-width:74px;}
+        @include iPad{max-width: 120px;}
 
         // @include xsm {
         //     @include flexJustifyAround;

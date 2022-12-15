@@ -73,6 +73,11 @@
         @content;
     }
 }
+@mixin blmxg {
+    @media(max-width:#{$screen-blmxg}) {
+        @content;
+    }
+}
 
 @mixin xxlg {
     @media (max-width: #{$screen-xxlg}) {

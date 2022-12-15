@@ -1,106 +1,283 @@
 @import "../../../assets/scss/mixins.scss";
-
 .cardContainer {
-    font-family: 'Poppins';
-    font-style: normal;
-
+    @include fonts-poppins;
+    .critLocBox{
+        width: 100%;
+        @include flex;
+        .userLocate{
+            font-size: 14px;
+        }
+        .locateText{
+            font-size: 12px;
+            width: 100%;
+            @include xxlg{max-width: 314px; font-size: 10px;}
+            @include bxlg{max-width:282px;}
+            @include lg{max-width: 220px;}
+             @include xlmd{max-width: 232px;}
+            @include xxmd{max-width: 204px;}
+            @include xmd{max-width: 192px;}
+            @include md{font-size: 8px; max-width: 124px;}
+            @include iPad{font-size: 12px;max-width: 300px;}
+            @include mo{max-width: 172px; font-size: 10px;}
+            @include xxsm{font-size: 8px; max-width: 132px;}
+        }
+    }
+    .infoText{
+        padding:5px 20px 17px 20px;
+        font-size: 12px;
+        line-height: 18px;
+        @include xxlg{font-size: 18px; line-height: 26px;}
+        @include bxlg{font-size: 16px; line-height: 20px;}
+        @include lg{font-size: 14px;line-height: 17px;}
+        @include xlmd{font-size: 14px; line-height:17px;}
+        @include xxmd{font-size: 12px;line-height:14px;}
+        @include md{font-size: 9px; line-height: 13px;}
+        @include iPad{font-size: 14px; line-height: 14px;}
+        @include mo{font-size: 10px;}
+    }
     .criteriaBox {
         max-width: 554px;
         border-radius: 10px;
-        @include xlmd{max-width: 389px;}
-
-        .cardWrapper {
+        @include iPad{max-width: 554px;}
+        .cardMain{
             display: flex;
-            padding: 24px 26px 25px 16px;
+            padding: 24px 26px 0px 16px;
             @include md{ padding-left: 12px;}
-
-            .imageBox {
-                .armyImage{
-                    @include md{ width: 63px;height: 78px;}
-
+           @include iPad {padding: 24px 0px 0px 26px;}
+           @include xxsm{padding-left: 15px;} 
+           .contactSec{
+                 margin-left: 14px;
+                 letter-spacing: 10px;
+                }
+           .contentBox{
+             margin:25px 0px 0px 20px;
+             @include xxlg{display:grid; gap:5px}
+             @include bxlg{display:grid;gap:10px;margin-top: 15px;}
+             @include lg{gap:8px; margin-top: 15px;}
+             @include xxmd{gap:8px;}
+           }
+           .contIcon{font-size: 10px;}
+           .identityText{
+            font-size: 12px;
+            @include xxlg{font-size: 16px;}
+            @include bxlg{font-size: 16px;}
+            @include xxmd{font-size: 11px;}
+            @include md{font-size: 8px;}
+            @include iPad{font-size: 12px;}
+            @include xxsm{font-size: 8px;}
+           }
+           .armyImage{
+            height: 80px;
+            width: 80px;
+           }
+           .mainHead{
+            font-size: 12px;
+            @include xxlg{font-size:18px;}
+            @include bxlg{font-size: 18px;}
+            @include lg{font-size: 14px;}
+            @include xxmd{font-size: 12px;}
+            @include md{font-size: 8px;}
+            @include iPad{font-size: 14px;}
+            @include mo{font-size: 11px;}
+            @include xxsm{font-size: 8px;}
+           }
+          
+           .locationBox{
+            @include flex;
+            @include xxlg{font-size: 16px;}
+            @include bxlg{font-size: 16px;}
+            @include xxsm{width: 147px; font-size: 8px;}
+            
+           .mainText{
+                font-size: 12px;
+                width:215px;
+                @include xxlg{font-size: 16px; width: 250px;}
+                @include bxlg{font-size: 16px;width: 264px;}
+                @include lg{font-size:14px;max-width: 206px;}
+                @include xlmd{font-size: 14px;width: 209px;}
+                @include xxmd{font-size: 11px;width: 172px;}
+                @include md{font-size: 8px; max-width: 120px;}
+                @include iPad{font-size: 12px; max-width: 274px;}
+                @include mo{font-size: 11px;max-width: 159px;}
+                @include xxsm{font-size: 8px; max-width: 120px;}
+            }
+        }
+    }
+    .cardWrapper {
+            display: flex;
+            padding: 24px 26px 15px 16px;
+            @include md{ padding-left: 12px;}
+            @include iPad {padding: 24px 0px 26px 26px;}
+            @include xxsm{padding-left: 15px;}
+            .classificText{
+                font-size: 14px;
+                @include md{font-size: 10px;}
+                @include iPad{font-size: 12px;}
+            }
+             .infoImageBox{
+                 width:50%;
+            @include iPad{width:35%;}
+            .contIcon{
+                @include md{font-size: 10px;}
+                @include iPad{font-size: 14px;}
+            }
+            .armyImage{
+                height: 100px;
+                width:100px;
+                    @include md{ height: 60px; width:60px;}
+                    @include iPad{height: 130px;width: 130px;}
+                    @include mo{height: 100px; width: 100px;}
+                }
+            .contactSec{
+                margin:0px 0px 0px 17px;
+                letter-spacing:15px;
+                @include xmd{margin-right: 17px;}
+                @include md{margin-left: 14px; letter-spacing: 4px;}
+                @include iPad{margin-left: 22px; letter-spacing: 22px;}
+                @include mo{margin-left: 16px; letter-spacing: 14px;}
+             
+            }
+        }
+         .imageBox {
+            text-align: center;
+                @include xlmd{max-width: 38%;}
+              
+               .armyImage{
+                    @include xxmd{width: 130px;}
+                    @include xlmd{height: 115px;width: 115px;}
+                    @include xmd{height: 100px; width: 100px;}
+                    @include md{height: 89px;width: 89px;}
+                    @include iPad{width: 125px;height:125px}
+                    @include mo{width:100px;height:100px}
+                    @include xxsm{width:80px;height:80px}
                 }
                 .contact {
                     max-width: 74px;
                     letter-spacing: 16px;
-                    margin: 0px 39px;
-                    @include md{margin:0px; letter-spacing: 12px;}
+                    width: 100%;
+    margin: 0px 9px;
+    max-width: 136px;
+    text-align: center;
+    letter-spacing: 16px;
+                    
+                
+                }
+                .contactSec{
+                    max-width: 70px;
+                    letter-spacing: 12px;
+                    margin: 0px 28px;
+                    @include xlmd{margin:0px 40px 0px 20px; letter-spacing: 8px;}
+                    @include md{margin:0px 17px 0px 14px; letter-spacing: 8px;}
+                    @include iPad{margin:0px 0px 0px 23px;}
+                    @include mo{margin-left: 16px;}
+                    @include xxsm{margin-left: 6px;}
+                    .mainIcon{@include xmd{font-size: 10px;}
+                    @include iPad{font-size: 12px;}
+                }
+
                 }
             }
-
             .contentBox {
                 width: 100%;
-                margin-left: 25px;
+                margin-left: 20px;
                 margin-top: 22px;
                 display: grid;
                 gap: 12px;
-                @include xlmd { margin-left: 16px; }
-                @include md {  margin-left: 0px; margin-top: 11px; }
-
-
+                @include lg{gap:8px;}
+                @include xlmd { margin-left:15px;gap:6px;}
+                @include xxmd{margin-left: 20px; gap:6px;}
+                @include xmd{margin-left: 15px;}
+                @include md {  margin-left: 10px; margin-top: 11px; gap:0px; }
+                @include iPad{margin-left: 25px;}
+                @include mo{margin-left: 15px;}
+                @include xxsm{margin-left: 13px;}
                 .identityText {
-                    @include xlmd {
-                        font-size: 10px;
-                    }
+                    font-size: 15px;
+                    @include lg{font-size: 11px;}
+                    @include xlmd {font-size: 12px;}
+                    @include xxmd{font-size: 11px;}
+                    @include md {font-size: 7px;}
+                    @include iPad {font-size:12px;}
+                    @include mo{font-size: 9px;}
+                    @include xxsm{font-size: 8px;}
                 }
-
                 .starBox {
                     display: flex;
 
-
                     .starIcon {
-
-
-                        &:hover {
-                            color: rgba(0, 0, 0, 0.3);
+                        @include xxsm{font-size: 22px;}
+                         &:hover {
+                            color:$darkBeforeColor;
                             transition: 0.5s;
                         }
                     }
-
                     .mainHead {
                         width: 100%;
                         max-width: 309px;
-
-                        @include xlmd {
-                            font-size: 12px;
-                        }
+                        font-size: 14px;
+                        @include xxlg{font-size:18px;}
+                        @include lg { font-size: 14px;}
+                        @include xlmd { font-size: 12px;}
+                        @include xmd{max-width: 200px;}
+                        @include md {font-size: 10px;max-width: 126px;}
+                        @include iPad{max-width: 293px;font-size:16px;}
+                        @include mo{max-width: 166px; font-size: 12px;}
+                        @include xxsm{ max-width: 128px;font-size: 10px;}
                     }
                 }
 
                 .locationBox {
+                    width: 100%;
                     @include flex;
-
-                    @include xlmd {
-                        width: 184px;
-                    }
-
-                    .userLocate {
-                        font-size: 19px;
-                    }
-
+                    // @include xlmd { width: 230px; }
+                    @include iPad{ width:327px;}
+                    @include mo{ width: 100%;}
+                    @include xxsm{width: 95%;}
+                    .userLocate {font-size: 19px;}
                     .locateText {
                         width: 100%;
-                        max-width: 312px;
-
-                        @include xlmd {
-                            font-size: 10px;
-                            max-width: 159px;
-                        }
+                        font-size: 15px;
+                        max-width: 279px;
+                        @include xxlg{max-width:16vw;}
+                        @include bxlg{max-width: 273px;}
+                        @include lg{max-width:214px; font-size: 12px;}
+                        @include xlmd {font-size: 10px;max-width: 230px;}
+                        @include xxmd {font-size: 10px;max-width: 204px;}
+                        @include xmd {font-size: 10px;max-width: 195px;}
+                        @include md {font-size: 8px; max-width: 129px;}
+                        @include iPad{font-size: 12px; max-width:297px; }
+                        @include mo{ font-size: 9px;max-width: 135px;}
+                        @include xxsm{ font-size: 8px; max-width:129px; }
                     }
                 }
 
                 .descText {
-                    color: rgba(0, 0, 0, 0.3);
-                    @include xlmd {
-                        font-size: 10px;
+                    color: $darkBeforeColor;
+                    @include bxlg{font-size:16px;}
+                    @include lg{font-size: 12px;}
+                    @include xlmd {font-size: 10px;}
+                    @include xxmd{font-size: 12px;}
+                    @include md{font-size: 10px;}
+                    @include iPad{font-size: 12px;}
+                }
+                .btnBox {
+                    @include flexJustifyBetween;
+                    @include md{max-width:146px;}
+                    @include iPad{max-width:330px;}
+                    @include mo{max-width: 185px;}
+                    @include xxsm{max-width:149px;}
+                    .callBtnBox{
+                        width: 100%;
+                        text-align: right;
+                    }
+                    .moreBtn{
+                        @include md{font-size: 10px; min-width: 50px;max-height: 26px;}
+                        @include iPad{ font-size: 18px;min-width: 78px;max-height: 30px; }
+                        @include mo{font-size: 10px;min-width: 45px;max-height: 22px;}
+                        @include xxsm{font-size: 10px; min-width: 45px;max-height: 22px;}
                     }
                 }
-
-                .btnBox {
-                    display: flex;
-                    justify-content: space-between;
-                }
-            }
-
+             }
         }
     }
 }
