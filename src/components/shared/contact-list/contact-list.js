@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Icon from "../icon";
 import Image from "../image";
 import Styles from "./contact-list.module.scss";

@@ -9,7 +9,6 @@ import {
   ContactCard,
   Text,
   ContactList,
-  CardItems,
 } from "../../components/shared";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";

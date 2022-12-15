@@ -3,7 +3,11 @@
 
 .scrollBar {
     max-height: 600px;
-    overflow: auto;
+  overflow: auto;
+
+  @include xxlg {
+    max-height: 560px;
+  }
 }
 
 .container {

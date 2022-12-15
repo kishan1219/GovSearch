@@ -2,7 +2,7 @@
 @include ScrollBar;
 
 .scrollBar {
-  max-height: 615px;
+  max-height: 600px;
   width: 100%;
   overflow: auto;
   padding-right: 20px;
@@ -115,7 +115,7 @@
         min-width: 190px;
       }
     }
-    .designationRightText{
+    .designationRightText {
       max-width: 190px;
       line-height: 33px;
       @include blg {
