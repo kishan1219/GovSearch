@@ -100,7 +100,30 @@
     .contactImage {
       object-fit: cover;
     }
-
+    .centerExpand {
+      min-width: 300px;
+      margin: 0px 10px;
+      @include blg {
+        min-width: 250px;
+      }
+      .designationleftText {
+        min-width: 54px;
+      }
+    }
+    .expandDesignation {
+      width: 100%;
+      min-width: 200px;
+      text-align: right;
+      @include blg {
+        min-width: 130px;
+      }
+      @include xlmd {
+        min-width: 100px;
+      }
+      @include tab {
+        min-width: 70px;
+      }
+    }
     .designationMain {
       min-width: 100px;
       @include textEllipse;
@@ -119,7 +142,7 @@
       max-width: 190px;
       line-height: 33px;
       @include blg {
-        line-height: 27px;
+        line-height: 24px;
       }
       @include xlmd {
         @include textEllipse;
@@ -166,8 +189,7 @@
         text-align: left;
 
         @include blg {
-          max-width: 70px;
-          margin-right: 20px;
+          max-width: 100px;
         }
       }
 
@@ -219,28 +241,21 @@
 
   .bgCollapseText {
     @include blg {
-      gap: 4px;
       padding: 0px;
     }
 
     @include xlmd {
       max-width: 120px;
       @include textEllipse;
-      gap: 10px;
     }
     @include tab {
-      max-width: 90px;
+      max-width: 110px;
     }
 
     & > div {
       @include blg {
+        font-size: 16px;
         margin-top: 5px;
-        font-size: 14px;
-      }
-      i {
-        @include tab {
-          font-size: 14px;
-        }
       }
     }
     .contactIconLeftMain {
@@ -273,7 +288,7 @@
 
   .size {
     @include textEllipse;
-    max-width: 100px;
+    min-width: 150px;
   }
 
   .iconYellow {

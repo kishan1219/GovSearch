@@ -327,6 +327,7 @@ const StateResult = () => {
                 vcbSecond={data.vcbSecond}
                 value={data.value}
                 country={data.country}
+                designationRight={data.designationRight}
               />
             ))}
             {/* {DaleStrongData.map((data) => (

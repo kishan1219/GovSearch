@@ -73,7 +73,7 @@ const ContactList = ({
               <div
                 className={`${Styles[vcb]} ${
                   Styles.background
-                } ${"dFlex alignItemsCenter cursor"}`}
+                } ${"dFlex alignItemsCenter"}`}
               >
                 <div
                   className={`${
@@ -84,7 +84,7 @@ const ContactList = ({
                     onClick={imageClick}
                     width={40}
                     height={40}
-                    className={`${Styles.contactImage} ${"mr12 ml25"}`}
+                    className={`${Styles.contactImage} ${"mr12 ml25 cursor"}`}
                     src={listSrc}
                     alt="logo"
                   />
@@ -124,13 +124,13 @@ const ContactList = ({
                     Styles.valCountryMain
                   } ${"dFlex alignItemsCenter"}`}
                 >
-                  <Text
+               {id && designation ? "" :   <Text
                     strong="strong6"
                     variant="mlgText"
-                    className={`${Styles.size} ${Styles.value}`}
+                    className={`${"textEllipse"} ${Styles.value}`}
                   >
                     {value}
-                  </Text>
+                  </Text>}
                   <Text
                     variant="mlgText"
                     className={`${Styles.country} ${"op5"}`}
@@ -402,6 +402,7 @@ const ContactList = ({
             <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
               <Text
                 handleClick={tabListToggle}
+                strong="strong6"
                 variant="mlgText"
                 className={`${"cursor textEllipse"} ${Styles.size}`}
               >
@@ -416,11 +417,13 @@ const ContactList = ({
               )}
             </div>
           </div>
-          <div className="dFlex">
-            {id && designation && (
+          <div className={`${Styles.centerExpand} ${"dFlex"}`}>
+            {id && designation ? (
               <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                 <Text
-                  className={`${"op5 mw190"} ${Styles.size}`}
+                  className={`${"op5 textEllipse"} ${Styles.size} ${
+                    Styles.expandDesignation
+                  }`}
                   variant="mlgText"
                 >
                   {designation}
@@ -436,6 +439,8 @@ const ContactList = ({
                   <Icon type="linkedIn" variant="primary" size="icon_xl" />
                 </div>
               </div>
+            ) : (
+              <div className={Styles.designationleftText} />
             )}
             <Image
               width={75}

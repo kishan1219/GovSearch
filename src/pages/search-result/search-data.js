@@ -605,6 +605,7 @@ export const CioData = [
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
   },
   {
     id: 2,
@@ -618,6 +619,7 @@ export const CioData = [
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
   },
   {
     id: 3,
@@ -631,6 +633,7 @@ export const CioData = [
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
   },
   {
     id: 4,
@@ -644,6 +647,7 @@ export const CioData = [
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
   },
   {
     id: 5,
@@ -657,6 +661,7 @@ export const CioData = [
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
     designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
   },
   {
     id: 6,
@@ -668,7 +673,8 @@ export const CioData = [
     value: "10,000",
     country: "Arlington, VA ",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer", },
+    designationRight: "U.S Army Chief Information Officer",
+  },
   {
     id: 7,
     src: "assets/images/OfficialArmySeal.png",
@@ -679,7 +685,8 @@ export const CioData = [
     value: "2300",
     country: "Arlington, VA ",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer", },
+    designationRight: "U.S Army Chief Information Officer",
+  },
   {
     id: 8,
     src: "assets/images/daleStrong.png",
@@ -691,7 +698,9 @@ export const CioData = [
     assist: " Officer / CIO	G6 / Corporate Information C",
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer", },
+    designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
+  },
   {
     id: 9,
     src: "assets/images/daleStrong.png",
@@ -703,7 +712,9 @@ export const CioData = [
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer",  },
+    designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
+  },
   {
     id: 10,
     src: "assets/images/daleStrong.png",
@@ -715,7 +726,9 @@ export const CioData = [
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer", },
+    designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
+  },
   {
     id: 11,
     src: "assets/images/daleStrong.png",
@@ -727,7 +740,9 @@ export const CioData = [
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer", },
+    designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
+  },
   {
     id: 12,
     src: "assets/images/daleStrong.png",
@@ -739,7 +754,9 @@ export const CioData = [
     assist: "G6 / Information Management (DOIM) Di",
     country: "Huntsville, AL",
     expandlogoSecond: "assets/images/ContactsandSeals.png",
-    designationRight: "U.S Army Chief Information Officer", },
+    designationRight: "U.S Army Chief Information Officer",
+    gridlogoSecond: "assets/images/ContactsandSeals.png",
+  },
 ];
 function createData(
   id,
@@ -753,9 +770,10 @@ function createData(
   value,
   country,
   expandlogoSecond,
-  gridlogoSecond
-) {
-  return {
+  gridlogoSecond,
+  designationRight,
+  ) {
+    return {
     id,
     src,
     vcb,
@@ -768,6 +786,7 @@ function createData(
     country,
     expandlogoSecond,
     gridlogoSecond,
+    designationRight,
   };
 }
 export const MadisonCountyData = [
@@ -783,7 +802,8 @@ export const MadisonCountyData = [
     "200,000",
     "Arlington, VA",
     "assets/images/ContactsandSeals.png",
-    ""
+    "",
+    "U.S Army Chief Information Officer",
   ),
   createData(
     2,
@@ -797,8 +817,9 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
-  ),
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
+    ),
   createData(
     3,
     "assets/images/ContactsandSealsProfile.png",
@@ -811,7 +832,8 @@ export const MadisonCountyData = [
     "",
     "Montgomery, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Congress - District 2",
   ),
   createData(
     4,
@@ -825,7 +847,8 @@ export const MadisonCountyData = [
     "",
     "Mobile, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Sr. IT Specialist",
   ),
   createData(
     5,
@@ -835,11 +858,12 @@ export const MadisonCountyData = [
     false,
     "Dale Steven",
     "Base Commander ",
-    "Army Material Command ",
+    "Army Material Command",
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Army Material Command",
   ),
   createData(
     6,
@@ -853,7 +877,8 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
   ),
   createData(
     7,
@@ -867,7 +892,8 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
   ),
   createData(
     8,
@@ -881,7 +907,8 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
   ),
   createData(
     9,
@@ -895,7 +922,8 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
   ),
   createData(
     10,
@@ -909,7 +937,8 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
   ),
   createData(
     11,
@@ -923,7 +952,8 @@ export const MadisonCountyData = [
     "",
     "Huntsville, AL",
     "assets/images/ContactsandSeals.png",
-    "assets/images/ContactsandSeals.png"
+    "assets/images/ContactsandSeals.png",
+    "Madison County Commission",
   ),
 ];
 export const DaleStrongData = [
