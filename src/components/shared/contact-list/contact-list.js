@@ -72,7 +72,7 @@ const ContactList = ({
             <div className={Styles.gridDevide}>
               <div
                 className={`${Styles[vcb]} ${
-                  Styles.background
+                  id && vcb === "gray" ? Styles.bgDisable : Styles.background
                 } ${"dFlex alignItemsCenter"}`}
               >
                 <div
@@ -80,19 +80,22 @@ const ContactList = ({
                     Styles.officerName
                   } ${"dFlex alignItemsCenter"}`}
                 >
-                  <Image
-                    onClick={imageClick}
-                    width={40}
-                    height={40}
-                    className={`${Styles.contactImage} ${"mr12 ml25 cursor"}`}
-                    src={listSrc}
-                    alt="logo"
-                  />
+                  {id && vcb === "gray" ? (
+                    ""
+                  ) : (
+                    <Image
+                      onClick={imageClick}
+                      width={40}
+                      className={`${Styles.contactImage} ${"mr12 ml25 cursor"}`}
+                      src={listSrc}
+                      alt="logo"
+                    />
+                  )}
                   <Text
                     strong="strong6"
                     handleClick={tabListToggle}
                     variant="mlgText"
-                    className={`${Styles.officerName} ${"cursor textEllipse"}`}
+                    className={` ${"cursor minw130 textEllipse"}`}
                   >
                     {name}
                   </Text>
@@ -124,13 +127,17 @@ const ContactList = ({
                     Styles.valCountryMain
                   } ${"dFlex alignItemsCenter"}`}
                 >
-               {id && designation ? "" :   <Text
-                    strong="strong6"
-                    variant="mlgText"
-                    className={`${"textEllipse"} ${Styles.value}`}
-                  >
-                    {value}
-                  </Text>}
+                  {id && designation ? (
+                    ""
+                  ) : (
+                    <Text
+                      strong="strong6"
+                      variant="mlgText"
+                      className={`${"textEllipse"} ${Styles.value}`}
+                    >
+                      {value}
+                    </Text>
+                  )}
                   <Text
                     variant="mlgText"
                     className={`${Styles.country} ${"op5"}`}
@@ -155,19 +162,25 @@ const ContactList = ({
                 </div>
                 <div
                   className={`${Styles[vcb]} ${
-                    Styles.background
+                    id && vcb === "gray"
+                      ? Styles.bgCollapseDisable
+                      : Styles.background
                   } ${"dFlex alignItemsCenter cursor"}`}
                 >
-                  <Image
-                    onClick={imageClick}
-                    width={75}
-                    height={75}
-                    className={`${Styles.contactImage} ${
-                      Styles.gridLogoFirst
-                    } ${"mr12 ml20"}`}
-                    src={listSrc}
-                    alt="logo"
-                  />
+                  {id && vcb === "gray" ? (
+                    ""
+                  ) : (
+                    <Image
+                      onClick={imageClick}
+                      width={75}
+                      height={75}
+                      className={`${Styles.contactImage} ${
+                        Styles.gridLogoFirst
+                      } ${"mr12 ml20"}`}
+                      src={listSrc}
+                      alt="logo"
+                    />
+                  )}
                   <div
                     className={`${
                       Styles.officerName
@@ -222,13 +235,17 @@ const ContactList = ({
                         </Text>
                       </div>
                       {id && gridLogoSecond ? (
-                        <Image
-                          width={75}
-                          height={75}
-                          className={`${Styles.gridLogoSecond} ${"mr20"}`}
-                          src={gridLogoSecond}
-                          alt="logo"
-                        />
+                        id && vcb === "gray" ? (
+                          ""
+                        ) : (
+                          <Image
+                            width={75}
+                            height={75}
+                            className={`${Styles.gridLogoSecond} ${"mr20"}`}
+                            src={gridLogoSecond}
+                            alt="logo"
+                          />
+                        )
                       ) : (
                         <div className={`${Styles.valCountryMain}`}>
                           <Text
@@ -275,19 +292,25 @@ const ContactList = ({
                 </div>
                 <div
                   className={`${Styles[vcb]} ${
-                    Styles.background
+                    id && vcb === "gray"
+                      ? Styles.bgCollapseDisable
+                      : Styles.background
                   } ${"dFlex alignItemsCenter cursor"}`}
                 >
-                  <Image
-                    onClick={imageClick}
-                    width={75}
-                    height={75}
-                    className={`${Styles.contactImage} ${
-                      Styles.gridLogoFirst
-                    } ${"mr12 ml20"}`}
-                    src={listSrc}
-                    alt="logo"
-                  />
+                  {id && vcb === "gray" ? (
+                    ""
+                  ) : (
+                    <Image
+                      onClick={imageClick}
+                      width={75}
+                      height={75}
+                      className={`${Styles.contactImage} ${
+                        Styles.gridLogoFirst
+                      } ${"mr12 ml20"}`}
+                      src={listSrc}
+                      alt="logo"
+                    />
+                  )}
                   <div
                     className={`${
                       Styles.officerName
@@ -338,13 +361,17 @@ const ContactList = ({
                         </Text>
                       </div>
                       {id && gridLogoSecond ? (
-                        <Image
-                          width={75}
-                          height={75}
-                          className={`${Styles.gridLogoSecond} ${"mr20"}`}
-                          src={gridLogoSecond}
-                          alt="logo"
-                        />
+                        id && vcb === "gray" ? (
+                          ""
+                        ) : (
+                          <Image
+                            width={75}
+                            height={75}
+                            className={`${Styles.gridLogoSecond} ${"mr20"}`}
+                            src={gridLogoSecond}
+                            alt="logo"
+                          />
+                        )
                       ) : (
                         <div className={`${Styles.valCountryMain}`}>
                           <Text
@@ -391,7 +418,7 @@ const ContactList = ({
               : Styles.backgroundCollapse
           }`}
         >
-          <div className="dFlex">
+          <div className={`${Styles.expandLeftMain} ${"dFlex"}`}>
             <Image
               width={75}
               height={75}
@@ -404,14 +431,17 @@ const ContactList = ({
                 handleClick={tabListToggle}
                 strong="strong6"
                 variant="mlgText"
-                className={`${"cursor textEllipse"} ${Styles.size}`}
+                className={`${"cursor textEllipse"} `}
               >
                 {name}
               </Text>
               {id && designation ? (
                 ""
               ) : (
-                <Text variant="mlgText" className={Styles.size}>
+                <Text
+                  variant="mlgText"
+                  className={`${"cursor textEllipse"} ${Styles.value}`}
+                >
                   {value}
                 </Text>
               )}
@@ -421,7 +451,7 @@ const ContactList = ({
             {id && designation ? (
               <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
                 <Text
-                  className={`${"op5 textEllipse"} ${Styles.size} ${
+                  className={`${"op5 textEllipse"}  ${
                     Styles.expandDesignation
                   }`}
                   variant="mlgText"
@@ -461,16 +491,18 @@ const ContactList = ({
               >
                 {designationRight}
               </Text>
-              <Text variant="mlgText" className={Styles.size}>
+              <Text variant="mlgText" className={"textEllipse mw190"}>
                 {exapndRowRightValue}
               </Text>
             </div>
           </div>
-          <div className={`${Styles.bgCollapseText} ${"dGrid pt10"}`}>
+          <div className={`${Styles.expandRightMain} ${"dGrid pt10"}`}>
             <Text variant="mlgText" className={Styles.country}>
               {country}
             </Text>
-            <div className={`${Styles.contactRightIconMain} ${"textRight ml25"}`}>
+            <div
+              className={`${Styles.contactRightIconMain} ${"textRight ml25"}`}
+            >
               <Icon type="linkedIn" variant="primary" size="icon_xl" />
               <Icon
                 className={"ml10 mr10"}

@@ -1,27 +1,43 @@
-import { home, Styleguide, login, Notification, Account, AccountSetting, stats, SearchHistory, Download, Favorites, SearchResult, ResultDetails, StateResult, ContactDetail } from "./pages";
+import {
+  home,
+  Styleguide,
+  login,
+  Notification,
+  Account,
+  AccountSetting,
+  stats,
+  SearchHistory,
+  Download,
+  Favorites,
+  SearchResult,
+  ResultDetails,
+  StateResult,
+  ContactDetail,
+  VendorResult,
+} from "./pages";
 
 export const routes = [
   {
     path: "/",
     component: home,
-    exact: true
+    exact: true,
   },
   {
     path: "/style-guide",
     component: Styleguide,
-    exact: false
+    exact: false,
   },
   {
     path: "/login",
     component: login,
-    exact: false
+    exact: false,
   },
   {
     path: "/notification",
     component: Notification,
     exact: false,
-  }, 
-   {
+  },
+  {
     path: "/account",
     component: Account,
     exact: false,
@@ -48,7 +64,7 @@ export const routes = [
   },
   {
     path: "/favorites",
-    component:Favorites,
+    component: Favorites,
     exact: false,
   },
   {
@@ -71,7 +87,9 @@ export const routes = [
     component: ContactDetail,
     exact: false,
   },
-]
-
-
-
+  {
+    path: "/vendor-result",
+    component: VendorResult,
+    exact: false,
+  },
+];

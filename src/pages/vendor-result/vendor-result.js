@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "./state-result.module.scss";
+import Styles from "./vendor-result.module.scss";
 import {
   Button,
   Card,
@@ -7,21 +7,19 @@ import {
   Icon,
   Layout,
   ContactCard,
-  Tables,
   Text,
   ContactList,
 } from "../../components/shared";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Tooltip } from "@mui/material";
-import {
-  DaleStrongData,
-  JanPublicData,
-  MadisonCommisionData,
-  MadisonCountyData,
-} from "../search-result/search-data";
+import { BaeSystemsData } from "../search-result/search-data";
 import { useNavigate } from "react-router-dom";
-const StateResult = () => {
+const VendorResult = () => {
+  const [office, setOffice] = useState(false);
+  const [selectOffice, setSelectOffice] = useState("1");
+  const [location, setLocation] = useState(false);
+  const [selectlocation, setSelectlocation] = useState("1");
   const [other, setOther] = useState(false);
   const [selectOther, setSelectOther] = useState("1");
   const [pluslist, setPlusList] = useState(false);
@@ -31,12 +29,17 @@ const StateResult = () => {
   const [openPlusCard, setOpenPlusCard] = useState(false);
   const [openExportCard, setopenExportCard] = useState(false);
   const navigate = useNavigate();
+  const targetOffice = (e) => {
+    setSelectOffice(e.target.value);
+    setOffice(false);
+  };
+  const targetLocation = (e) => {
+    setSelectlocation(e.target.value);
+    setLocation(false);
+  };
   const targetOther = (e) => {
     setSelectOther(e.target.value);
     setOther(false);
-  };
-  const gotoResultDetail = () => {
-    navigate("/result-details");
   };
   const targetplusList = (e) => {
     setSelectPlusList(e.target.value);
@@ -49,10 +52,12 @@ const StateResult = () => {
       setTableHide(false);
     }
   };
-
   const [checked, setChecked] = useState(false);
   const handleTextClick = () => {
     setChecked(!checked);
+  };
+  const gotoResultDetail = () => {
+    navigate("/result-details");
   };
   const CardItems = [
     {
@@ -90,7 +95,7 @@ const StateResult = () => {
       <div className={Styles.container}>
         <div className={Styles.searchCriteria}>
           <Text variant={"mlgText"} color="darkGray">
-            Search Criteria “Madison County Alabama”{" "}
+          Search Criteria “ BAE Systems ” 
           </Text>
           <div className="dFlex">
             <Tooltip title="Currently, Click event is not developed">
@@ -103,7 +108,7 @@ const StateResult = () => {
             <Tooltip title="Currently, Click event is not developed">
               <div>
                 <Text className={"cursor"} variant={"smText"} color="gray">
-                  Save Search{" "}
+                  Save Search
                 </Text>
               </div>
             </Tooltip>
@@ -273,6 +278,88 @@ const StateResult = () => {
               />
             </div>
           </Tooltip>
+          <div className={Styles.officeMain}>
+            <Select
+              className={Styles.officeSelect}
+              IconComponent={() => null}
+              sx={{
+                boxShadow: "none",
+                ".MuiOutlinedInput-notchedOutline": { border: "none" },
+              }}
+              value={selectOffice}
+              onChange={targetOffice}
+              open={office}
+            >
+              <MenuItem value="1">Offices</MenuItem>
+              <MenuItem value="2">Offices 2</MenuItem>
+              <MenuItem value="3">Offices 3</MenuItem>
+              <MenuItem value="4">Offices 4</MenuItem>
+            </Select>
+            <Icon
+              className={Styles.straightIcon}
+              type="straight"
+              color={"gray01"}
+              variant="icon_large"
+            />
+            <Icon
+              className={Styles.selectIcon}
+              onClick={() => setOffice(true)}
+              type="soliddownpolygon"
+              color={"gray04"}
+              variant="icon_large"
+            />
+          </div>
+          <Tooltip title="Currently, Click event is not developed">
+            <div>
+              <Icon
+                className={Styles.closeIcon}
+                color={"gray05"}
+                type={"close"}
+                size="icon_xsmall"
+              />
+            </div>
+          </Tooltip>
+          <div className={Styles.officeMain}>
+            <Select
+              className={Styles.officeSelect}
+              IconComponent={() => null}
+              sx={{
+                boxShadow: "none",
+                ".MuiOutlinedInput-notchedOutline": { border: "none" },
+              }}
+              value={selectlocation}
+              onChange={targetLocation}
+              open={location}
+            >
+              <MenuItem value="1">Location</MenuItem>
+              <MenuItem value="2">Location 2</MenuItem>
+              <MenuItem value="3">Location 3</MenuItem>
+              <MenuItem value="4">Location 4</MenuItem>
+            </Select>
+            <Icon
+              className={Styles.straightIcon}
+              type="straight"
+              color={"gray01"}
+              variant="icon_large"
+            />
+            <Icon
+              className={Styles.selectIcon}
+              onClick={() => setLocation(true)}
+              type="soliddownpolygon"
+              color={"gray04"}
+              variant="icon_large"
+            />
+          </div>
+          <Tooltip title="Currently, Click event is not developed">
+            <div>
+              <Icon
+                className={Styles.closeIcon}
+                color={"gray05"}
+                type={"close"}
+                size="icon_xsmall"
+              />
+            </div>
+          </Tooltip>
           <div className={`${Styles.officeMain} ${Styles.otherSelectMain}`}>
             <Select
               className={Styles.officeSelect}
@@ -306,10 +393,11 @@ const StateResult = () => {
           </div>
         </div>
         <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
-          {/* state and local search tables */}
+          {/* home vendor search result tables */}
           <div className={Styles.scrollBar}>
-            {/* {MadisonCountyData.map((data) => (
+            {BaeSystemsData.map((data) => (
               <ContactList
+                isLeftContactDetail={true}
                 imageClick={gotoResultDetail}
                 isGrid={!tableHide ? true : false}
                 isList={!gridTableShow ? true : false}
@@ -327,74 +415,11 @@ const StateResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
-              />
-            ))} */}
-            {/* {DaleStrongData.map((data) => (
-              <ContactList
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
-              />
-            ))} */}
-            {/* {MadisonCommisionData.map((data) => (
-              <ContactList
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
-                isDisable={data.isDisable} />
-            ))} */}
-            {JanPublicData.map((data) => (
-              <ContactList
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
               />
             ))}
-            </div>
-      
-          {/* state and local search tables */}
+          </div>
+          {/* home vendor search result tables */}
 
           <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
             <Text
@@ -429,4 +454,4 @@ const StateResult = () => {
   );
 };
 
-export default StateResult;
+export default VendorResult;

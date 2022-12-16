@@ -1,74 +1,81 @@
 @import "../../../assets/scss/mixins.scss";
 @include ScrollBar;
-
 .scrollBar {
   max-height: 600px;
   width: 100%;
   overflow: auto;
   padding-right: 20px;
 }
-
 .container {
   width: 100%;
   max-width: 1130px;
-
   @include tab {
     min-width: 750px;
   }
-
   .chackMain {
     padding-bottom: 25px;
     margin-right: 14px;
   }
-
   .green {
     &:before {
       @include leftborderColor;
       background: $green01;
     }
   }
-
   .greenSecond {
     &:before {
       @include leftExpandRowBorderColor;
       background: $green01;
     }
   }
-
   .orange {
     &:before {
       @include leftborderColor;
       background: $yellow;
     }
   }
-
   .orangeSecond {
     &:before {
       @include leftExpandRowBorderColor;
       background: $yellow;
     }
   }
-
+  .gray {
+    &:before {
+      @include leftborderColor;
+      background: $lightGray01;
+    }
+  }
+  .graySecond {
+    &:before {
+      @include leftExpandRowBorderColor;
+      background: $lightGray01;
+    }
+  }
   .red {
     &:before {
       @include leftborderColor;
       background: $red1;
     }
   }
-
   .redSecond {
     &:before {
       @include leftExpandRowBorderColor;
       background: $red1;
     }
   }
-
+  .bgDisable {
+    @extend .background;
+    background: $gray09 !important;
+    min-height: 50px;
+  }
   .background {
     @include flexBetween;
     background: $white;
     position: relative;
     padding: 5px 13px;
     border-radius: 10px;
+    min-height: 50px;
     max-height: 50px;
     margin-right: 12px;
     min-width: 1040px;
@@ -76,7 +83,6 @@
     @include xxlg {
       min-width: 1016px;
     }
-
     @include bxlg {
       min-width: 885px;
     }
@@ -84,44 +90,69 @@
     @include blg {
       min-width: 740px;
     }
-
     @include xlmd {
       min-width: 650px;
     }
-
     @include md {
       min-width: 730px;
     }
-
     @include tab {
       min-width: 610px;
     }
-
     .contactImage {
       object-fit: cover;
     }
     .centerExpand {
-      min-width: 300px;
+      min-width: 40%;
       margin: 0px 10px;
-      @include blg {
-        min-width: 250px;
+      @include xlmd {
+        min-width: 37%;
       }
       .designationleftText {
-        min-width: 54px;
+        min-width: 35%;
+        @include bxlg {
+          min-width: 37%;
+        }
+        @include blg {
+          min-width: 35%;
+        }
+        @include xlmd {
+          min-width: 31%;
+        }
+        @include md {
+          min-width: 28%;
+        }
+        @include tab {
+          min-width: 29%;
+        }
       }
     }
+    .expandRightMain {
+      min-width: 20%;
+    }
     .expandDesignation {
-      width: 100%;
-      min-width: 200px;
+      max-width: 170px;
+      min-width: 160px;
       text-align: right;
       @include blg {
-        min-width: 130px;
+        max-width: 170px;
+        min-width: 120px;
       }
       @include xlmd {
-        min-width: 100px;
+        min-width: 90px;
+        max-width: 90px;
+      }
+    }
+    .expandLeftMain {
+      min-width: 35%;
+      @include blg {
+        min-width: 32%;
+      }
+      @include xlmd {
+        min-width: 35%;
       }
       @include tab {
-        min-width: 70px;
+        min-width: 32%;
       }
     }
     .designationMain {
@@ -133,24 +164,28 @@
         min-width: 240px;
         margin-right: 20px;
       }
-
       @include xlmd {
         min-width: 190px;
       }
+      @include tab {
+        min-width: 160px;
+      }
     }
     .designationRightText {
-      max-width: 190px;
-      line-height: 33px;
+      max-width: 170px;
+      min-width: 150px;
+      @include textEllipse;
       @include blg {
-        line-height: 20px;
-        font-weight: 500;
+        max-width: 170px;
+        min-width: 100px;
       }
       @include xlmd {
+        max-width: 100px;
+        min-width: 80px;
         @include textEllipse;
       }
       @include tab {
         max-width: 90px;
-        @include textEllipse;
       }
     }
     .designationText {
@@ -158,62 +193,40 @@
       @include textEllipse;
       display: inline-block;
     }
-
     .assistText {
       width: 290px;
       @include textEllipse;
       display: inline-block;
     }
-
     .valCountryMain {
+      min-width: 15%;
       max-width: 350px;
-      text-align: right;
 
       @include blg {
-        max-width: 207px;
+        min-width: 21%;
+        max-width: 300px;
       }
-
-      @include xlmd {
-        max-width: 190px;
-      }
-
-      @include md {
-        max-width: 205px;
-      }
-
-      @include tab {
-        max-width: 150px;
-      }
-
       .value {
-        max-width: 100px;
-        text-align: left;
+        min-width: 50%;
 
         @include blg {
-          max-width: 100px;
+          min-width: 30%;
+          margin-right: 20px;
         }
       }
-
       .country {
         width: 150px;
-
-        @include blg {
-          width: 115;
-        }
-
-        @include tab {
-          font-size: 15px;
-          width: 150px;
+        @include textEllipse;
+        @include bxlg {
+          text-align: right;
         }
       }
-
       .gridCountry {
         @include textEllipse;
         display: inline-block;
       }
     }
   }
-
   .backgroundCollapse {
     padding: 12px 13px;
     max-height: unset;
@@ -221,33 +234,23 @@
     @include bxlg {
       min-width: 905px;
     }
-
     @include blg {
       min-width: 740px;
       gap: 10px;
     }
-
     @include xlmd {
       min-width: 680px;
     }
-
     @include md {
       min-width: 740px;
     }
-
     @include tab {
       min-width: 630px;
     }
   }
-
   .bgCollapseText {
     @include blg {
       padding: 0px;
-    }
-
-    @include xlmd {
-      max-width: 120px;
-      @include textEllipse;
     }
     @include tab {
       max-width: 110px;
@@ -262,44 +265,35 @@
     .contactIconLeftMain {
       margin-left: 81px;
     }
-
-    .country {
-      text-align: right;
-      opacity: 0.5;
-    }
   }
-
+  .country {
+    text-align: right;
+  }
   input {
     width: 20px;
     height: 20px;
     cursor: pointer;
   }
-
   .officerName {
     min-width: 250px;
-
     @include blg {
-      max-width: 200px;
+      max-width: 300px;
+      min-width: 275px;
     }
   }
-
   .expandImageTwo {
     margin-left: 12px;
   }
-
   .size {
     @include textEllipse;
     min-width: 150px;
   }
-
   .iconYellow {
     color: $yellow;
   }
-
   .iconGray {
     color: $gray02;
   }
-
   .gridDevide {
     @include flexJustifyBetween;
     min-width: 400px;
@@ -309,25 +303,26 @@
     @include flex;
     margin-bottom: 24px;
     padding-right: 40px;
-
     .green {
       &:before {
         height: 100px;
       }
     }
-
     .orange {
       &:before {
         height: 100px;
       }
     }
-
+    .gray {
+      &:before {
+        height: 100px;
+      }
+    }
     .red {
       &:before {
         height: 100px;
       }
     }
-
     .gridMain {
       @include flexJustifyBetween;
       min-width: 430px;
@@ -335,42 +330,52 @@
       @include blg {
         min-width: 365px;
       }
-
       @include xlmd {
         min-width: 330px;
       }
-
       @include md {
         min-width: 310px;
       }
-
       @include tab {
         min-width: 360px;
       }
     }
-
     .gridSecondMain {
       margin-left: 60px;
     }
-
+    .bgCollapseDisable {
+      border-radius: 10px;
+      background: $gray09;
+      min-height: 100px;
+      min-width: 460px;
+      margin-right: 12px;
+      @include bxlg {
+        min-width: 400px;
+      }
+      @include blg {
+        min-width: 320px;
+      }
+      @include xlmd {
+        min-width: 290px;
+      }
+      @include md {
+        min-width: 320px;
+      }
+    }
     .background {
       max-width: 460px;
       min-height: 100px;
       @include flexJustifyBetween;
       min-width: unset;
-
       @include bxlg {
         max-width: 400px;
       }
-
       @include blg {
         max-width: 315px;
       }
-
       @include xlmd {
         max-width: 290px;
       }
-
       @include md {
         max-width: 320px;
       }
@@ -397,7 +402,6 @@
           margin-right: 5px;
         }
       }
-
       .designationText {
         width: 125px;
         @include bxlg {
@@ -416,7 +420,6 @@
           width: 80px;
         }
       }
-
       .gridDesignation {
         display: grid;
         gap: unset;
@@ -433,11 +436,9 @@
           max-width: 30px;
         }
       }
-
       .valCountryMain {
         .country {
           width: 125px;
-
           @include bxlg {
             width: 115px;
           }
@@ -449,16 +450,13 @@
           }
         }
       }
-
       .gridLogoSecond {
         margin-left: 8px;
-
         @include blg {
           margin-left: unset;
           width: 50px;
           height: 50px;
         }
-
         @include md {
           width: 60px;
           height: 60px;
@@ -468,17 +466,14 @@
           height: 50px;
         }
       }
-
       .gridLogoFirst {
         @include blg {
           width: 50px;
           height: 50px;
         }
-
         @include xlmd {
           margin-left: 20px;
         }
-
         @include md {
           width: 60px;
           height: 60px;

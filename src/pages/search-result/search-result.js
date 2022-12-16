@@ -100,7 +100,7 @@ const SearchResult = () => {
       <div className={Styles.container}>
         <div className={Styles.searchCriteria}>
           <Text variant={"mlgText"} color="darkGray">
-            Search Criteria “ Department of the Army ”{" "}
+            Search Criteria “ Department of the Army ”
           </Text>
           <div className="dFlex">
             <Tooltip title="Currently, Click event is not developed">
@@ -113,7 +113,7 @@ const SearchResult = () => {
             <Tooltip title="Currently, Click event is not developed">
               <div>
                 <Text className={"cursor"} variant={"smText"} color="gray">
-                  Save Search{" "}
+                  Save Search
                 </Text>
               </div>
             </Tooltip>
