@@ -400,7 +400,7 @@ const SearchResult = () => {
         <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
           {/* home federal search result tables */}
           <div className={Styles.scrollBar}>
-            {/* {DepartmentArmyData.map((data) => (
+            {DepartmentArmyData.map((data) => (
               <ContactList
                 imageClick={gotoResultDetail}
                 isGrid={!tableHide ? true : false}
@@ -419,8 +419,10 @@ const SearchResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
-             exapndRowRightValue={data.exapndRowRightValue} />
-            ))} */}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))}
             {/* {AssistantSecretaryData.map((data) => (
               <ContactList
                 imageClick={gotoResultDetail}
@@ -440,7 +442,8 @@ const SearchResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
-                exapndRowRightValue={data.exapndRowRightValue} 
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo} 
               />
             ))} */}
             {/* {markowitzData.map((data) => (
@@ -464,9 +467,10 @@ const SearchResult = () => {
                 country={data.country}
                 designationRight={data.designationRight}
                 exapndRowRightValue={data.exapndRowRightValue} 
+                gridLogo={data.gridLogo}
               />
             ))} */}
-            {CioData.map((data) => (
+            {/* {CioData.map((data) => (
               <ContactList
                 isLeftContactDetail={true}
                 imageClick={gotoResultDetail}
@@ -487,8 +491,8 @@ const SearchResult = () => {
                 country={data.country}
                 designationRight={data.designationRight}
                 exapndRowRightValue={data.exapndRowRightValue} 
-              />
-            ))}
+                gridLogo={data.gridLogo} />
+            ))} */}
           </div>
           {/* home federal search result tables */}
 

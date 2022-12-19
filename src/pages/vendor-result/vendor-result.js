@@ -13,7 +13,7 @@ import {
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Tooltip } from "@mui/material";
-import { BaeSystemsData } from "../search-result/search-data";
+import { BaeSystemsData, BrianBaeData, CioBaeData, DyneticsData } from "../search-result/search-data";
 import { useNavigate } from "react-router-dom";
 const VendorResult = () => {
   const [office, setOffice] = useState(false);
@@ -395,7 +395,7 @@ const VendorResult = () => {
         <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
           {/* home vendor search result tables */}
           <div className={Styles.scrollBar}>
-            {BaeSystemsData.map((data) => (
+            {/* {BaeSystemsData.map((data) => (
               <ContactList
                 isLeftContactDetail={true}
                 imageClick={gotoResultDetail}
@@ -416,6 +416,79 @@ const VendorResult = () => {
                 country={data.country}
                 designationRight={data.designationRight}
                 exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
+            {/* {BrianBaeData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
+            {/* {CioBaeData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
+            {DyneticsData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
               />
             ))}
           </div>

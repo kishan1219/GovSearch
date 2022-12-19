@@ -308,7 +308,7 @@ const StateResult = () => {
         <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
           {/* state and local search tables */}
           <div className={Styles.scrollBar}>
-            {/* {MadisonCountyData.map((data) => (
+            {MadisonCountyData.map((data) => (
               <ContactList
                 imageClick={gotoResultDetail}
                 isGrid={!tableHide ? true : false}
@@ -327,8 +327,9 @@ const StateResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
+                gridLogo={data.gridLogo}
               />
-            ))} */}
+            ))}
             {/* {DaleStrongData.map((data) => (
               <ContactList
                 imageClick={gotoResultDetail}
@@ -348,6 +349,7 @@ const StateResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
+                gridLogo={data.gridLogo}
               />
             ))} */}
             {/* {MadisonCommisionData.map((data) => (
@@ -369,9 +371,10 @@ const StateResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
-                isDisable={data.isDisable} />
+                isDisable={data.isDisable} 
+                gridLogo={data.gridLogo} />
             ))} */}
-            {JanPublicData.map((data) => (
+            {/* {JanPublicData.map((data) => (
               <ContactList
                 imageClick={gotoResultDetail}
                 isGrid={!tableHide ? true : false}
@@ -390,10 +393,11 @@ const StateResult = () => {
                 value={data.value}
                 country={data.country}
                 designationRight={data.designationRight}
+                gridLogo={data.gridLogo}
               />
-            ))}
-            </div>
-      
+            ))} */}
+          </div>
+
           {/* state and local search tables */}
 
           <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>

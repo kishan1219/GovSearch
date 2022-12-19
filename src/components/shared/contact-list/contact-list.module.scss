@@ -104,26 +104,27 @@
     }
     .centerExpand {
       min-width: 40%;
+      max-width: 40%;
       margin: 0px 10px;
       @include xlmd {
         min-width: 37%;
       }
       .designationleftText {
-        min-width: 35%;
+        min-width: 40%;
         @include bxlg {
-          min-width: 37%;
+          min-width: 44%;
         }
         @include blg {
-          min-width: 35%;
+          min-width: 41%;
         }
         @include xlmd {
-          min-width: 31%;
+          min-width: 34%;
         }
         @include md {
-          min-width: 28%;
+          min-width: 30%;
         }
         @include tab {
-          min-width: 29%;
+          min-width: 31%;
         }
       }
     }
@@ -144,15 +145,19 @@
       }
     }
     .expandLeftMain {
-      min-width: 35%;
+      min-width: 30%;
+      max-width: 30%;
       @include blg {
-        min-width: 32%;
+        min-width: 26%;
+        max-width: 28%;
       }
       @include xlmd {
         min-width: 35%;
+        max-width: 35%;
       }
       @include tab {
         min-width: 32%;
+        max-width: 32%;
       }
     }
     .designationMain {
@@ -181,7 +186,7 @@
       }
       @include xlmd {
         max-width: 100px;
-        min-width: 80px;
+        min-width: 82px;
         @include textEllipse;
       }
       @include tab {
@@ -199,13 +204,8 @@
       display: inline-block;
     }
     .valCountryMain {
-      min-width: 15%;
-      max-width: 350px;
-
-      @include blg {
-        min-width: 21%;
-        max-width: 300px;
-      }
+      min-width: 25%;
+      max-width: 25%;
       .value {
         min-width: 50%;
 
@@ -215,7 +215,7 @@
         }
       }
       .country {
-        width: 150px;
+        width: 245px;
         @include textEllipse;
         @include bxlg {
           text-align: right;
@@ -275,10 +275,12 @@
     cursor: pointer;
   }
   .officerName {
-    min-width: 250px;
+    min-width: 300px;
+    max-width: 300px;
+    margin-right: 20px;
     @include blg {
-      max-width: 300px;
-      min-width: 275px;
+      max-width: 275px;
+      min-width: 246px;
     }
   }
   .expandImageTwo {
@@ -345,6 +347,7 @@
     }
     .bgCollapseDisable {
       border-radius: 10px;
+      position: relative;
       background: $gray09;
       min-height: 100px;
       min-width: 460px;
@@ -387,18 +390,20 @@
         @include bxlg {
           min-width: 75px;
         }
+        @include xlmd {
+          min-width: 60px;
+        }
       }
       .designationMain {
         display: grid;
         gap: 12px;
-        margin-left: 30px;
+        margin-left: 10px;
         max-width: 300px;
         min-width: unset;
         @include bxlg {
-          margin-left: 20px;
+          margin-left: 0px;
         }
         @include blg {
-          margin-left: 5px;
           margin-right: 5px;
         }
       }
@@ -408,7 +413,7 @@
           width: 90px;
         }
         @include blg {
-          width: 75px;
+          width: 60px;
         }
         @include xlmd {
           width: 50px;
@@ -420,33 +425,39 @@
           width: 80px;
         }
       }
-      .gridDesignation {
-        display: grid;
-        gap: unset;
-        margin-left: 0px;
-        max-width: 113px;
-        min-width: unset;
-        @include bxlg {
-          max-width: 77px;
-        }
-        @include blg {
-          max-width: 20px;
-        }
-        @include xxsm {
-          max-width: 30px;
-        }
-      }
       .valCountryMain {
+        min-width: 15%;
+        max-width: 350px;
+
+        @include blg {
+          min-width: 21%;
+          max-width: 300px;
+        }
+        .value {
+          min-width: 50%;
+
+          @include blg {
+            min-width: 30%;
+            margin-right: 20px;
+          }
+        }
         .country {
-          width: 125px;
+          margin-top: 35px;
+          width: 215px;
           @include bxlg {
+            width: 175px;
+          }
+          @include blg {
             width: 115px;
           }
           @include xlmd {
-            width: 95px;
-          }
-          @include xlmd {
             width: 110px;
+          }
+          @include md {
+            width: 125px;
+          }
+          @include tab {
+            width: 135px;
           }
         }
       }

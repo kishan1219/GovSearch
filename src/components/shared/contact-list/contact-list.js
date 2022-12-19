@@ -25,6 +25,7 @@ const ContactList = ({
   gridLogoSecond,
   designationRight,
   exapndRowRightValue,
+  gridLogo,
 }) => {
   const [iconFavorite, setIconFavorite] = useState();
   const [rowTab, setRowTab] = useState(true);
@@ -173,11 +174,10 @@ const ContactList = ({
                     <Image
                       onClick={imageClick}
                       width={75}
-                      height={75}
                       className={`${Styles.contactImage} ${
                         Styles.gridLogoFirst
                       } ${"mr12 ml20"}`}
-                      src={listSrc}
+                      src={gridLogo}
                       alt="logo"
                     />
                   )}
@@ -212,13 +212,7 @@ const ContactList = ({
                     <div
                       className={` ${"dFlex alignItemsCenter justifyContentEnd"}`}
                     >
-                      <div
-                        className={
-                          id && gridLogoSecond
-                            ? Styles.designationMain
-                            : Styles.gridDesignation
-                        }
-                      >
+                     {id && gridLogoSecond ? <div className={Styles.designationMain}>
                         <Text
                           color={"gray"}
                           variant="mlgText"
@@ -233,14 +227,13 @@ const ContactList = ({
                         >
                           {assist}
                         </Text>
-                      </div>
+                      </div> : ""}
                       {id && gridLogoSecond ? (
                         id && vcb === "gray" ? (
                           ""
                         ) : (
                           <Image
                             width={75}
-                            height={75}
                             className={`${Styles.gridLogoSecond} ${"mr20"}`}
                             src={gridLogoSecond}
                             alt="logo"
@@ -303,11 +296,10 @@ const ContactList = ({
                     <Image
                       onClick={imageClick}
                       width={75}
-                      height={75}
                       className={`${Styles.contactImage} ${
                         Styles.gridLogoFirst
                       } ${"mr12 ml20"}`}
-                      src={listSrc}
+                      src={gridLogo}
                       alt="logo"
                     />
                   )}
@@ -338,35 +330,32 @@ const ContactList = ({
                     <div
                       className={` ${"dFlex alignItemsCenter justifyContentEnd"}`}
                     >
-                      <div
-                        className={
-                          id && gridLogoSecond
-                            ? Styles.designationMain
-                            : Styles.gridDesignation
-                        }
-                      >
-                        <Text
-                          color={"gray"}
-                          variant="mlgText"
-                          className={`${Styles.designationText} ${"op5"}`}
-                        >
-                          {designation}
-                        </Text>
-                        <Text
-                          strong="strong6"
-                          variant="mlgText"
-                          className={Styles.designationText}
-                        >
-                          {assist}
-                        </Text>
-                      </div>
+                      {id && gridLogoSecond ? (
+                        <div className={Styles.designationMain}>
+                          <Text
+                            color={"gray"}
+                            variant="mlgText"
+                            className={`${Styles.designationText} ${"op5"}`}
+                          >
+                            {designation}
+                          </Text>
+                          <Text
+                            strong="strong6"
+                            variant="mlgText"
+                            className={Styles.designationText}
+                          >
+                            {assist}
+                          </Text>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                       {id && gridLogoSecond ? (
                         id && vcb === "gray" ? (
                           ""
                         ) : (
                           <Image
                             width={75}
-                            height={75}
                             className={`${Styles.gridLogoSecond} ${"mr20"}`}
                             src={gridLogoSecond}
                             alt="logo"
@@ -497,7 +486,7 @@ const ContactList = ({
             </div>
           </div>
           <div className={`${Styles.expandRightMain} ${"dGrid pt10"}`}>
-            <Text variant="mlgText" className={Styles.country}>
+            <Text variant="mlgText" className={`${"textEllipse"} ${Styles.country}`}>
               {country}
             </Text>
             <div
