@@ -261,7 +261,7 @@ const Styleguide = () => {
       <div>
         <Tables />
       </div>
-      {/ LatestDeatils /}
+      {/* {/ LatestDeatils /} */}
       <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
         <Text
           className={`${Styles.cardHeading}`}
@@ -285,7 +285,7 @@ const Styleguide = () => {
           ))}
         </div>
       </div>
-      {/ LatestDeatils /}
+      {/* {/ LatestDeatils /} */}
       <div className={Styles.List}>
         <ListGroup>
           <ListItem children={"List"} />
@@ -310,7 +310,7 @@ const Styleguide = () => {
       <div className="mt30 mb50">
         <Cardtab />
       </div>
-      {/ Army car /}
+      {/*  Army card */}
       <div className="mt40 mb50">
         <ContactCard
           src={"assets/images/OfficialArmySeal.png"}
@@ -334,7 +334,7 @@ const Styleguide = () => {
           imageSize="imgLarge"
         />
       </div>
-      {/ army card /}
+      {/* {/ army card /} */}
       <div className="mt40 mb50">
         <Criteria />
       </div>
@@ -347,11 +347,6 @@ const Styleguide = () => {
           isContactText={false}
           accountOne={"2021-2021"}
           accountTwo={"Tom Jones"}
-          icon1={"linkedIn"}
-          icon2={"envelope"}
-          icon3={"phone"}
-          icon4={"userinfo"}
-          color1="lightGray01"
         />
         <CardItems
           isPosition={true}
@@ -360,11 +355,6 @@ const Styleguide = () => {
           isContactText={false}
           accountOne={"2021-2021"}
           accountTwo={"Jeff Koons"}
-          icon1={"linkedIn"}
-          icon2={"envelope"}
-          icon3={"phone"}
-          icon4={"userinfo"}
-          color1="lightGray01"
         />
         <CardItems
           isPosition={true}
@@ -373,11 +363,6 @@ const Styleguide = () => {
           isContactText={false}
           accountOne={"2021-2021"}
           accountTwo={"Dale Strong"}
-          icon1={"linkedIn"}
-          icon2={"envelope"}
-          icon3={"phone"}
-          icon4={"userinfo"}
-          color1="lightGray01"
         />
         <CardItems
           isPosition={true}
@@ -386,11 +371,6 @@ const Styleguide = () => {
           isContactText={false}
           accountOne={"2021-2021"}
           accountTwo={"Janice Yellen"}
-          icon1={"linkedIn"}
-          icon2={"envelope"}
-          icon3={"phone"}
-          icon4={"userinfo"}
-          color1="lightGray01"
         />
         <CardItems
           isPosition={true}
@@ -399,11 +379,6 @@ const Styleguide = () => {
           isContactText={false}
           accountOne={"2021-2021"}
           accountTwo={"William Ford"}
-          icon1={"linkedIn"}
-          icon2={"envelope"}
-          icon3={"phone"}
-          icon4={"userinfo"}
-          color1="lightGray01"
         />
         <CardItems
           isPosition={true}
@@ -412,11 +387,6 @@ const Styleguide = () => {
           isContactText={false}
           accountOne={"2021-2021"}
           accountTwo={"Tom Jones"}
-          icon1={"linkedIn"}
-          icon2={"envelope"}
-          icon3={"phone"}
-          icon4={"userinfo"}
-          color1="lightGray01"
         />
       </Card>
     </div>
