@@ -15,9 +15,8 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Tooltip } from "@mui/material";
 import {
-  CioData,
   DaleStrongData,
-  DepartmentArmyData,
+  JanPublicData,
   MadisonCommisionData,
   MadisonCountyData,
 } from "../search-result/search-data";
@@ -327,21 +326,78 @@ const StateResult = () => {
                 vcbSecond={data.vcbSecond}
                 value={data.value}
                 country={data.country}
+                designationRight={data.designationRight}
+                gridLogo={data.gridLogo}
               />
             ))}
             {/* {DaleStrongData.map((data) => (
-                            tableHide &&  <ContactList isDesignation={true} expandSrcFirst={data.src} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
-                        ))} */}
+              <ContactList
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
             {/* {MadisonCommisionData.map((data) => (
-                            tableHide &&  <ContactList isLeftContactDetail={true} isDesignation={true} expandSrcFirst={data.src} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
-                        ))} */}
-            {/* {markowitzData.map((data) => (
-                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
-                        ))} */}
-            {/* {CioData.map((data) => (
-                            tableHide &&  <ContactList isDesignation={true} designation={data.designation} assist={data.assist} listSrc={data.src} id={data.id} name={data.name} vcb={data.vcb} vcbSecond={data.vcbSecond} value={data.value} country={data.country}/>
-                        ))} */}
+              <ContactList
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                isDisable={data.isDisable} 
+                gridLogo={data.gridLogo} />
+            ))} */}
+            {/* {JanPublicData.map((data) => (
+              <ContactList
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
           </div>
+
           {/* state and local search tables */}
 
           <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>

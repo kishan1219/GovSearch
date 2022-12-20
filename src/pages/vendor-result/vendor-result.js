@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "./search-result.module.scss";
+import Styles from "./vendor-result.module.scss";
 import {
   Button,
   Card,
@@ -13,14 +13,9 @@ import {
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Tooltip } from "@mui/material";
-import {
-  AssistantSecretaryData,
-  CioData,
-  DepartmentArmyData,
-  markowitzData,
-} from "./search-data";
+import { BaeSystemsData, BrianBaeData, CioBaeData, DyneticsData } from "../search-result/search-data";
 import { useNavigate } from "react-router-dom";
-const SearchResult = () => {
+const VendorResult = () => {
   const [office, setOffice] = useState(false);
   const [selectOffice, setSelectOffice] = useState("1");
   const [location, setLocation] = useState(false);
@@ -100,7 +95,7 @@ const SearchResult = () => {
       <div className={Styles.container}>
         <div className={Styles.searchCriteria}>
           <Text variant={"mlgText"} color="darkGray">
-            Search Criteria “ Department of the Army ”
+          Search Criteria “ BAE Systems ” 
           </Text>
           <div className="dFlex">
             <Tooltip title="Currently, Click event is not developed">
@@ -398,10 +393,83 @@ const SearchResult = () => {
           </div>
         </div>
         <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
-          {/* home federal search result tables */}
+          {/* home vendor search result tables */}
           <div className={Styles.scrollBar}>
-            {DepartmentArmyData.map((data) => (
+            {/* {BaeSystemsData.map((data) => (
               <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
+            {/* {BrianBaeData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
+            {/* {CioBaeData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
+                imageClick={gotoResultDetail}
+                isGrid={!tableHide ? true : false}
+                isList={!gridTableShow ? true : false}
+                isDesignation={true}
+                expandSrcFirst={data.src}
+                expandSrcSecond={data.expandlogoSecond}
+                gridLogoSecond={data.gridlogoSecond}
+                designation={data.designation}
+                assist={data.assist}
+                listSrc={data.src}
+                id={data.id}
+                name={data.name}
+                vcb={data.vcb}
+                vcbSecond={data.vcbSecond}
+                value={data.value}
+                country={data.country}
+                designationRight={data.designationRight}
+                exapndRowRightValue={data.exapndRowRightValue}
+                gridLogo={data.gridLogo}
+              />
+            ))} */}
+            {DyneticsData.map((data) => (
+              <ContactList
+                isLeftContactDetail={true}
                 imageClick={gotoResultDetail}
                 isGrid={!tableHide ? true : false}
                 isList={!gridTableShow ? true : false}
@@ -423,78 +491,8 @@ const SearchResult = () => {
                 gridLogo={data.gridLogo}
               />
             ))}
-            {/* {AssistantSecretaryData.map((data) => (
-              <ContactList
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
-                exapndRowRightValue={data.exapndRowRightValue}
-                gridLogo={data.gridLogo} 
-              />
-            ))} */}
-            {/* {markowitzData.map((data) => (
-              <ContactList
-                isLeftContactDetail={true}
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
-                exapndRowRightValue={data.exapndRowRightValue} 
-                gridLogo={data.gridLogo}
-              />
-            ))} */}
-            {/* {CioData.map((data) => (
-              <ContactList
-                isLeftContactDetail={true}
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
-                exapndRowRightValue={data.exapndRowRightValue} 
-                gridLogo={data.gridLogo} />
-            ))} */}
           </div>
-          {/* home federal search result tables */}
+          {/* home vendor search result tables */}
 
           <div className={`${Styles.colMd4} ${Styles.pLr12} $ ${Styles.w60}`}>
             <Text
@@ -528,4 +526,5 @@ const SearchResult = () => {
     </Layout>
   );
 };
-export default SearchResult;
+
+export default VendorResult;
