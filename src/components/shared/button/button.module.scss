@@ -20,9 +20,10 @@
         font-size: $font-xxl;
     }
 
-    &.F {
+    &.xmsm {
         min-width: 97px;
-        font-size: $font-xxl;
+        min-height: 40px;
+        font-size: $font-mlg;
     }
 
     &.xlsm {
@@ -38,7 +39,7 @@
     &.xmd {
         min-width: 131px;
         max-height: 40px;
-        font-size: $font-md;
+        font-size: $font-mlg;
     }
 
     &.md {
@@ -107,7 +108,7 @@
     &.xlsmlg {
 
         min-width: 213px;
-        min-height: 44px;
+        min-height: 40px;
         font-size: $font-mlg;
     }
 
@@ -119,6 +120,17 @@
 
 
     // variant
+    &.primaryWhite {
+        color: $white;
+        background: $white02;
+
+        &:hover {
+            color: $white;
+            background-color: $white03;
+            transition: 0.3s;
+        }
+
+    }
     &.solidPrimary {
         color: $white;
         background: $primary;
@@ -172,6 +184,17 @@
         &:hover {
             color: $white;
             background-color: $red;
+            transition: 0.3s;
+        }
+    }
+    &.solidBlack {
+        color: $white;
+        background:$gray;
+        opacity:0.5;
+
+        &:hover {
+            color: $white;
+            // background-color: $red;
             transition: 0.3s;
         }
     }

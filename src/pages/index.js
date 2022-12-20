@@ -6,6 +6,9 @@ import SearchResult from "./search-result/search-result";
 import ResultDetails from "./before-login/result-details";
 import StateResult from "./state-result/state-result";
 import ContactDetail from "./before-login/contact-detail";
+import News from "./before-login/news/news";
+import TmAdmin from "./tm-admin/tm-admin";
+
 export {
     home,
     Styleguide,
@@ -21,5 +24,8 @@ export {
     ResultDetails,
     ContactDetail,
     StateResult,
+    News,
+    TmAdmin
+ 
 
 }

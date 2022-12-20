@@ -1,5 +1,5 @@
 import React from 'react'
-import { CheckBox, Card, Icon, Input, Button, NewsCard, Heading, Text, Tables, ListGroup, ListItem, LatestDeatils, Search, ContactCard, CriteriaCard, CardItems, } from '../../components/shared/index'
+import { CheckBox, Card, Icon, Input, Button, NewsCard, Heading, Text, Tables, ListGroup, ListItem, LatestDeatils, Search, ContactCard,  CardItems, } from '../../components/shared/index'
 import Styles from './styleguide.module.scss'
 import SearchBar from '../../components/common/searchbar'
 import BarChart from '../../components/shared/barchart/barchart'
@@ -200,7 +200,7 @@ const Styleguide = () => {
             </Card>
             
           
-           
+        
 
       
 

@@ -1,0 +1,28 @@
+@import "../../../assets/scss/mixins.scss";
+
+.mainContainer{
+    .newsHead{
+        text-align: center;
+    }
+    .mainBtn{
+        margin: 40px 0px 20px 0px;
+        display: flex;
+        justify-content: space-around;
+        @include mo{display: grid; gap:10px;}
+    }
+    .newsCardBox{
+
+       margin-top: 40px;
+       margin-bottom: 20px;
+       .cardBox{
+        display: flex;
+       justify-content: center;
+       }
+    }
+    .btnFirst{
+        @include md{min-width: 250px;}
+        @include iPad{min-width: 182px;}
+        @include mo{min-width:339px;}
+        @include xxsm{min-width:275px;}
+    }
+}

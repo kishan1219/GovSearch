@@ -1,4 +1,4 @@
-import { home, Styleguide, login, Notification, Account, AccountSetting, stats, SearchHistory, Download, Favorites, SearchResult, ResultDetails, StateResult, ContactDetail } from "./pages";
+import { home, Styleguide, login, Notification, Account, AccountSetting, stats, SearchHistory, Download, Favorites, SearchResult, ResultDetails, StateResult, ContactDetail,News,TmAdmin} from "./pages";
 
 export const routes = [
   {
@@ -71,6 +71,17 @@ export const routes = [
     component: ContactDetail,
     exact: false,
   },
+  {
+    path: "/news",
+    component: News,
+    exact: false,
+  },
+  {
+    path: "/tm-admin",
+    component: TmAdmin,
+    exact: false,
+  },
+
 ]
 
 

@@ -1,0 +1,133 @@
+@import "../../assets/scss/mixins.scss";
+.container {
+  
+  .headingBox {
+    display: flex;
+    justify-content: space-between;
+    .searchBox {
+      width: 100%;
+      max-width: 235px;
+      background-color: $gray07;
+    }
+    .mainSearchBox{
+        display: flex;
+        align-items: center;
+    }
+  }
+  .multipleBtn{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+}
+.profileModel{
+ width: 100%;
+ max-width: 500px;
+ margin:10% auto;
+
+ .resetHead{
+  text-align: center;
+ }
+ .resetText{
+  margin-top: 25px;
+ }
+ .resetHeadText{
+  margin-top: 25px;
+ }
+  
+  .profileCard{
+    margin-top: 45px;
+    width: 100%;
+    max-width: 500px;
+    padding:17px 0px 28px 24px;
+  }
+  .btnMain{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.mainModal{
+  max-width: 800px;
+  height:100vh;
+}
+
+.addUserModel{
+ 
+  margin:10% auto;
+    width: 100%;
+    max-width: 800px;
+    .SecondInput {
+      margin-left: 30px;
+      .accountInfoBox{
+        display: grid;
+        gap:20px;
+      }
+  }
+    .Infoinput{
+      width: 100%;
+    max-width: 375px;
+    }
+    .inputHolder {
+      display: flex;
+      .accountInfoBox{
+        display:grid;
+      gap:20px;
+          }
+      
+    }
+    .arrowInput {
+      text-align: left;
+      display: flex;
+      position: relative;
+       .empInputTwo {
+          height: 55px;
+
+          .menuItem {
+              margin-left: 100px;
+          }
+      }
+   
+
+
+      .iconDown {
+          right: 0px;
+          top: 0px;
+          color: $gray07;
+          position: absolute;
+          background: $white03;
+          border-radius: 12px;
+          height: 42px;
+          padding: 3px 9px 0px 6px;
+          
+      }
+  }
+
+    .empInput{
+      width: 282px;
+      background: $white03;
+      font-size: 18px;
+      height: 55px;
+      border-radius: 10px;
+      padding: 14px;
+      text-indent: 1px;
+      text-overflow: '';
+    }
+    .resetHead{
+      text-align: center;
+     }
+  .addAccountCard{
+    max-width: 800px;
+    margin-top: 45px;
+    padding:24px 28px 26px 24px;
+  }
+  .btnMain{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+

@@ -1,65 +1,162 @@
-@import '../../../assets/scss/variables.scss';
-@import '../../../assets/scss/mixins.scss';
-@import '../../../assets/scss/styles.scss';
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins.scss";
+@import "../../../assets/scss/styles.scss";
 
 .wrapper {
-    width: 100%;
-    max-width: 476px;
-    min-height: 343px;
-    background: $white01;
+  width: 100%;
+  max-width: 476px;
+  min-height: 343px;
+  background: $white01;
 
+  .newsCardMain {
+    display: flex;
+
+    @include xsm {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .cardImage {
+      max-width: 250px;
+      margin-right: 24px;
+      object-fit: cover;
+
+      @include md {
+        max-width: 150px;
+        margin-right: 15px;
+      }
+
+      @include xsm {
+        max-width: 250px;
+        margin-right: 0px;
+      }
+    }
+
+    .textPrimary {
+      max-width: 197px;
+      line-height: 28px;
+
+      @include blg {
+        font-size: $font-xxl;
+      }
+
+      @include md {
+        max-width: 150px;
+        font-weight: 400;
+      }
+
+      @include tab {
+        max-width: 200px;
+        font-weight: 600;
+      }
+
+      @include xsm {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .textSecond {
+    max-width: 472px;
+    margin-top: 34px;
+  }
+}
+
+.newCardBox {
+  width: 100%;
+  @include xxlg {
+    max-width: 77vw;
+  }
+  @include bxlg {
+    max-width: 81vw;
+  }
+  @include lg {
+    max-width: 82vw;
+  }
+  @include xlmd {
+    max-width: 83vw;
+  }
+  @include xxmd {
+    max-width: 84vw;
+  }
+  @include xmd {
+    max-width: 85vw;
+  }
+
+  .secondMain {
+    padding: 40px 50px;
+    @include mo{padding:25px 25px;}
     .newsCardMain {
-        display: flex;
-
-        @include xsm {
-            flex-wrap: wrap;
-            gap: 10px;
+      display: flex;
+      @include mo {
+        display: grid;
+      }
+      .cardImage {
+        width: 100%;
+          max-width: 145px;
+        @include mo {
+          min-width: 100%;
+       
         }
-
-        .cardImage {
-            max-width: 250px;
-            margin-right: 24px;
-            object-fit: cover;
-
-            @include md {
-                max-width: 150px;
-                margin-right: 15px;
-            }
-
-            @include xsm {
-                max-width: 250px;
-                margin-right: 0px;
-            }
+        @include iPad {
+          width: 100%;
+          max-width: 145px;
+          max-height: 218px;
         }
+      }
 
+      .cardText {
+        margin-left: 45px;
+        @include mo {
+          margin-left: 0px;
+        }
         .textPrimary {
-            max-width: 197px;
-            line-height: 28px;
-
-            @include blg {
-                font-size: $font-xxl;
-            }
-            @include md {
-                max-width: 150px;
-                font-weight: 400;
-            }
-
-            @include tab {
-                max-width: 200px;
-                font-weight: 600;
-            }
-
-            @include xsm {
-                font-weight: 400;
-
-            }
+          font-size: 26px;
+          @include lg{font-size: 24px;}
+          @include xlmd {
+            font-size: 22px;
+          }
+          @include xxmd {
+            font-size: 20px;
+          }
+          @include md {
+            font-size: 14px;
+          }
+          @include iPad {
+            font-size: 12px;
+          }
+          @include iPad {
+            font-size: 12px;
+          }
+          @include mo{
+            margin-top: 15px;
+            line-height: 18px;
+          }
         }
+        .childText {
+          margin-top: 45px;
+          font-size: 18px;
+          line-height: 30px;
+           @include bxlg{
+            font-size: 16px;
+           }
+          @include xlmd {
+            margin-top: 25px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+          @include md {
+            line-height: 22px;
+            margin-top: 20px;
+          }
+          @include iPad {
+            font-size: 10px;
+            line-height: 18px;
+            margin-top: 20px;
+          }
+          
+        }
+      }
     }
-
-    .textSecond {
-        max-width: 472px;
-        margin-top: 34px;
-    }
-
-
+  }
 }

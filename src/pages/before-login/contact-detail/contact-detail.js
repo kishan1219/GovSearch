@@ -13,8 +13,8 @@ import Slider from '@mui/material/Slider';
 import { MapInteractionCSS } from 'react-map-interaction';
 import { Modal } from "@material-ui/core";
 const ContactDetail = () => {
-  const handleOpen = () => setShow(true);
-  const handleClose = () => setShow(false);
+  // const handleOpen = () => setShow(true);
+  // const handleClose = () => setShow(false);
   const [showHierarchy, setShowHierarchy] = useState(false);
   const [hideHierarchy, setHierarchyHide] = useState(true);
   const [show, setShow] = useState(false)
@@ -51,7 +51,8 @@ const ContactDetail = () => {
           </div>
           <div>
             <Icon className={Styles.headIcon} onClick={() => showHierarchyDetails(!hideHierarchy)} color={"gray05"} type={"hierarchy"} size="icon_xlarge" />
-            <Icon onClick={handleOpen} className={`${Styles.plusIcon} ${'ml40 mr50'}`} color={"gray05"} type={"pluscircle"} size="icon_xlarge" />
+            {/* onClick={handleOpen} */}
+            <Icon  className={`${Styles.plusIcon} ${'ml40 mr50'}`} color={"gray05"} type={"pluscircle"} size="icon_xlarge" />
             <Icon className={Styles.headIcon} color={"gray05"} type={"ExportButton"} size="icon_xlarge" />
           </div>
         </div>
@@ -156,7 +157,7 @@ const ContactDetail = () => {
             )}
           </Grid>
         </div>
-        <Modal
+        {/* <Modal
           open={show}
           onClose={handleClose}
           style={{ backdropFilter: "blur(2px)" }}>
@@ -174,7 +175,7 @@ const ContactDetail = () => {
               </div>
             </Card>
           </div>
-        </Modal>
+        </Modal> */}
       </div>
     </Layout>
   )
