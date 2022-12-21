@@ -3,6 +3,7 @@ import {
   listItems,
   listValue,
   items,
+  contactCard,
 } from "../contact-detail/contact-detaildata";
 import {
   Layout,
@@ -125,20 +126,30 @@ const ContactDetail = () => {
                       size={"icon_small"}
                     />
                   </div>
-                  <CriteriaCard
-                    src={"assets/images/contactSeal.png"}
-                    isCriteriaFirst={false}
-                    isCriteriaSecond={true}
-                    heading={"David Markowitz"}
-                    textFirst={"Chief Data Officer"}
-                    textSec={"Public Affairs@mc-ala.org"}
-                    paraOne={"Office email--"}
-                    paraTwo={"Personal Phones--"}
-                    paraThree={"Other Position--"}
-                    textThird={"334-832-2533"}
-                    textFour={"100 S Lawrence St. Montgomery"}
-                    addrs={"County Administration Building"}
-                  />
+                  {contactCard.map((data) => {
+                    const { davidMarkoData,
+                    DaleStrong,
+                    janHeller,travisGarriss,brainMackey
+                     } = data;
+                    return (
+                      <div key={davidMarkoData}>
+                        <CriteriaCard
+                          src={davidMarkoData.logo}
+                          isCriteriaFirst={false}
+                          isCriteriaSecond={true}
+                          heading={davidMarkoData.heading}
+                          textFirst={davidMarkoData.designation}
+                          textSec={davidMarkoData.webAddress}
+                          paraOne={davidMarkoData.emailText}
+                          paraTwo={davidMarkoData.phoneText}
+                          paraThree={davidMarkoData.positionText}
+                          textThird={davidMarkoData.contact}
+                          textFour={davidMarkoData.addrsSecond}
+                          addrs={davidMarkoData.addrsFirst}
+                        />
+                      </div>
+                    );
+                  })}
                   <Text
                     className={`${Styles.requestText} ${"mt5 mB5 ml15"}`}
                     strong="strong3"
@@ -211,21 +222,26 @@ const ContactDetail = () => {
               <>
                 <Grid item lg={4} sm={12} md={4} xs={12}>
                   <div className={Styles.trendingBox}>
-                    <div>
-                      <CriteriaCard
-                        src={"assets/images/armySeal.png"}
-                        isCriteriaInfo={true}
-                        isCriteriaFirst={false}
-                        isCriteriaSecond={false}
-                        heading={"U.S Army Chief Information Officer"}
-                        textFirst={"100 S Lawrence St. Huntsville."}
-                        textSec={"https://www.army.gov/"}
-                        textThird={"334-832-2533"}
-                        paraText={
-                          "Here at the Montgomery County Commission we believe in an open, transparent government and strong, civic engagement. Our hope for the Montgomery County portal is to enhance both transparency and citizen participation. Welcome to the Montgomery County portal where you can learn about meetings, search for documents, view reports, and more! "
-                        }
-                      />
-                    </div>
+                    {contactCard.map((data) => {
+                      const { ArmyChiefDescription,
+                        madisonDescription,baeDescription
+                        } = data;
+                      return (
+                        <div key={ArmyChiefDescription}>
+                          <CriteriaCard
+                            src={ArmyChiefDescription.logo}
+                            isCriteriaInfo={true}
+                            isCriteriaFirst={false}
+                            isCriteriaSecond={false}
+                            heading={ArmyChiefDescription.heading}
+                            textFirst={ArmyChiefDescription.address}
+                            textSec={ArmyChiefDescription.webAddress}
+                            textThird={ArmyChiefDescription.contact}
+                            paraText={ArmyChiefDescription.description}
+                          />
+                        </div>
+                      );
+                    })}
                     <div>
                       <Text
                         className={`${Styles.requestText} ${"mt5 mB5 ml15"}`}
