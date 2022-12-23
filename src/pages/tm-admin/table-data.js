@@ -1,7 +1,7 @@
+
 import * as React from 'react';
 import Styles from "./tm-admin.module.scss";
-import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
+import {Link} from "react-router-dom";
 import Box from '@mui/material/Box';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,23 +11,16 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
-// import DeleteIcon from '@mui/icons-material/Delete';
-// import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import {useState} from "react";
+import { Heading,Modal,Card,Text,Button } from '../../components/shared';
 
-// import { Icon } from "../../../components/shared";
 
-function createData(name, user, active, users, expiration, createDate, licenseTypes, action, userAccount, email, phone, accountID) {
+function createData(id,name, user, active, users, expiration, createDate, licenseTypes, action, userAccount, email, phone, accountID) {
   return {
+    id,
     name,
     user,
     active,
@@ -44,26 +37,26 @@ function createData(name, user, active, users, expiration, createDate, licenseTy
 }
 
 const rows = [
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
-  createData('Donut', 'Tom Smith', 25.0, 51, 4.9),
-  createData('Donut', 'Tom Smith', 25.0, 51, 4.9),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Honeycomb', 408, 3.2, 87, 6.5),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Jelly Bean', 375, 0.0, 94, 0.0),
-  createData('KitKat', 518, 26.0, 65, 7.0),
-  createData('Lollipop', 392, 0.2, 98, 0.0),
-  createData('Marshmallow', 318, 0, 81, 2.0),
-  createData('Nougat', 360, 19.0, 9, 37.0),
-  createData('Oreo', 437, 18.0, 63, 4.0),
+  createData(1, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(2, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(3, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(4, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(5, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(6, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(7, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(8, 'BAE Systems', 'Tom Smith', 'Yes', '----', '1/4/2023', '1/3/2022', 'Proffesional', 'Reset Password', 'Core Admin', 'mailto:hunter@technomile.com', '334 320 6666', '8675309'),
+  createData(9, 'Donut', 'Tom Smith', 25.0, 51, 4.9),
+  createData(10, 'Donut', 'Tom Smith', 25.0, 51, 4.9),
+  createData(11, 'Eclair', 262, 16.0, 24, 6.0),
+  createData(12, 'Gingerbread', 356, 16.0, 49, 3.9),
+  createData(13, 'Honeycomb', 408, 3.2, 87, 6.5),
+  createData(14, 'Ice cream sandwich', 237, 9.0, 37, 4.3),
+  createData(15, 'Jelly Bean', 375, 0.0, 94, 0.0),
+  createData(16, 'KitKat', 518, 26.0, 65, 7.0),
+  createData(17, 'Lollipop', 392, 0.2, 98, 0.0),
+  createData(18, 'Marshmallow', 318, 0, 81, 2.0),
+  createData(19, 'Nougat', 360, 19.0, 9, 37.0),
+  createData(20, 'Oreo', 437, 18.0, 63, 4.0),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -168,17 +161,21 @@ const headCells = [
     disablePadding: false,
     label: 'User/Account ID',
   },
+  {
+id: 'enterprise',
+numeric:true,
+disablePadding:false,
+label:"Enterprise",
+  },
 ];
 
 function EnhancedTableHead(props) {
-  const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
+  const {  order, orderBy, } =
     props;
-  const createSortHandler = (property) => (event) => {
-    onRequestSort(event, property);
-  };
+    
 
   return (
-    <TableHead className={Styles.tabHead} >
+    <TableHead>
       <TableRow sx={{
                       backgroundColor: "#F5F5F5",
                       borderBottom: 0,
@@ -190,21 +187,21 @@ function EnhancedTableHead(props) {
          
         </TableCell>
         {headCells.map((headCell) => (
-          <TableCell
+          <TableCell className={Styles.tableHead}
             key={headCell.id}
-            align={headCell.numeric ? 'right' : 'left'}
+            // align={headCell.numeric ? 'right' : 'left'}
             padding={headCell.disablePadding ? 'none' : 'normal'}
             sortDirection={orderBy === headCell.id ? order : false}
           >
             <TableSortLabel
               active={orderBy === headCell.id}
-              direction={orderBy === headCell.id ? order : 'asc'}
-              onClick={createSortHandler(headCell.id)}
+              // direction={orderBy === headCell.id ? order : 'asc'}
+              // onClick={createSortHandler(headCell.id)}
             >
               {headCell.label}
               {orderBy === headCell.id ? (
                 <Box component="span" sx={visuallyHidden}>
-                  {order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                  {/* {order === 'desc' ? 'sorted descending' : 'sorted ascending'} */}
                 </Box>
               ) : null}
             </TableSortLabel>
@@ -227,8 +224,18 @@ export default function AdminData({setdesable}) {
   const [page, setPage] = React.useState(0);
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [enable,setEnable] = useState();
-  // const [desable,setdesable] = useState();
+  // const [enable,setEnable] = useState();
+  const[showReset,setShowReset]=useState(false);
+  const[showCheck,setShowCheck]=useState(false);
+ 
+
+  const handleMouseOver = () => {
+    setShowCheck(true);
+  };
+
+  const handleMouseOut = () => {
+    setShowCheck(false);
+  };
 
 
   const handleRequestSort = (event, property) => {
@@ -280,16 +287,14 @@ export default function AdminData({setdesable}) {
   };
 
   const isSelected = (name) => selected.indexOf(name) !== -1;
-
-  // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   return (
     <Box sx={{ width: '100%' }}>
       <Paper sx={{ width: '100%', mb: 2 }}>
-        {/* <EnhancedTableToolbar numSelected={selected.length} />  */}
-        <TableContainer>
+       
+        <TableContainer className={Styles.scrollBar} >
           <Table
             sx={{ minWidth: 750 }}
             aria-labelledby="tableTitle"
@@ -303,9 +308,8 @@ export default function AdminData({setdesable}) {
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
             />
-            <TableBody>
-              {/* if you don't need to support IE11, you can replace the `stableSort` call with:
-                 rows.slice().sort(getComparator(order, orderBy)) */}
+            <TableBody onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            
               {stableSort(rows, getComparator(order, orderBy))
                 .slice(page *rowsPerPage, page *rowsPerPage + rowsPerPage)
                 .map((row, index) => {
@@ -336,7 +340,7 @@ export default function AdminData({setdesable}) {
                           onChange={(check)}
                         />
                       </TableCell>
-                      <TableCell
+                      <TableCell className={Styles.user}
                         // component="th"
                         // id={labelId}
                         scope="row"
@@ -344,24 +348,43 @@ export default function AdminData({setdesable}) {
                       >
                         {row.name}
                       </TableCell>
-                      <TableCell align="right">{row.user}</TableCell>
-                      <TableCell align="right">{row.active}</TableCell>
-                      <TableCell align="right">{row.users}</TableCell>
-                      <TableCell align="right">{row.expiration}</TableCell>
-                      <TableCell align="right">{row.createDate}</TableCell>
-                      <TableCell align="right">{row.licenseTypes}</TableCell>
-                      <TableCell align="right">{row.action}</TableCell>
-                      <TableCell align="right">{row.userAccount}</TableCell>
-                      <TableCell align="right">{row.email}</TableCell>
-                      <TableCell align="right">{row.phone}</TableCell>
-                      <TableCell align="right">{row.accountID}</TableCell>
-                      <TableCell padding="checkbox">
-                        {/* <Checkbox
+                      <TableCell className={Styles.user} align="left">{row.user}</TableCell>
+                      <TableCell align="left">{row.active}</TableCell>
+                      <TableCell align="left">{row.users}</TableCell>
+                      <TableCell align="left">{row.expiration}</TableCell>
+                      <TableCell align="left">{row.createDate}</TableCell>
+                      <TableCell align="left">{row.licenseTypes}</TableCell>
+                      <TableCell align="left" ><Link onClick={() => setShowReset(!showReset)} style={{ color: "black" }} >{row.action}</Link></TableCell>
+                      <TableCell align="left">{row.userAccount}</TableCell>
+                      <TableCell align="left">{row.email}</TableCell>
+                      <TableCell align="left" className={Styles.user}>{row.phone}</TableCell>
+                      <TableCell align="left">{row.accountID}</TableCell>
+                      <TableCell padding="checkbox" align="center">
+                      
+                        {/* <Checkbox className={Styles.check}
                           color="primary"
                           inputProps={{
                             'aria-label': 'select all desserts',
                           }}
                         /> */}
+                
+                    { row.id &&  showCheck  &&
+                        <Checkbox 
+                          color="primary"
+                          inputProps={{
+                            'aria-label': 'select all desserts',
+                          }}
+                        />
+                }
+
+                        {/* { row.id === showCheck ? "" :  
+                        <Checkbox 
+                          color="primary"
+                          inputProps={{
+                            'aria-label': 'select all desserts',
+                          }}
+                        />
+                } */}
                       </TableCell>
                     </TableRow>
                   );
@@ -377,7 +400,7 @@ export default function AdminData({setdesable}) {
               )}
             </TableBody>
           </Table>
-        </TableContainer>
+        </TableContainer >
         <TablePagination
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
@@ -388,11 +411,29 @@ export default function AdminData({setdesable}) {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Paper>
-      {/* <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="Dense padding"
-      /> */}
+      { showReset && 
+      <Modal className={Styles.mainModal}>
+            <div className={Styles.profileModel}>
+                <div>
+              <Heading headingType={"h1"} color={"secondary"} className={Styles.resetHead}>Reset password</Heading>
+              <Card className={Styles.profileCard}>
+                <Text strong={"strong6"}  >Email</Text>
+                <Text  className={Styles.resetText}>hunter@technomile.com</Text>
+                <Text strong={"strong6"} className={Styles.resetHeadText} >Account</Text>
+                <Text  className={Styles.resetText}>BAE Systems</Text>
+                <Text strong={"strong6"} className={Styles.resetHeadText} >Password</Text>
+                <Text className={Styles.resetText}>GovSearch123_2022</Text>
+              </Card>
+              </div>
+              <div className={Styles.btnMain}>
+              <Button size={"xmd"} variant={"solidPrimary"} btnHandler={() => setShowReset(false)}>Cancle</Button>
+              <Button size={"xmd"} variant={"solidPrimary"}>Reset</Button>
+              </div>
+            </div>
+            </Modal>
+            }
     </Box>
+    
   );
 }
 

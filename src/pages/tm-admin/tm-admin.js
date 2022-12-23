@@ -20,12 +20,35 @@ import {
 } from "../../components/shared";
 const TmAdmin = () => {
   const [show, setShow] = useState(false);
+  const [showAccount, setShowAccount] = useState(false);
+  // const[showReset,setShowReset]=useState(false);
+  
+
+
   const [showselect, setSelect] = useState(false);
-  const [selected, setSelected] = useState("# No of Employee");
+  const [selected, setSelected] = useState("1");
+
+  const [showLisence, setShowLisence] = useState(false);
+  const [selectedLisence, setSelectedLisence] = useState("1");
+
+  const [showUser, setShowUser] = useState(false);
+  const [selectedUser, setSelectedUser] = useState("1");
+
+ 
   const selectionChangeHandler = (event) => {
     setSelected(event.target.value);
     setSelect(false);
-    
+
+  };
+  const selectionLisence = (event) => {
+    setSelectedLisence(event.target.value);
+    setShowLisence(false);
+
+  };
+  const selectUserType = (event) => {
+    setSelectedUser(event.target.value);
+    setShowUser(false);
+
   };
 
   return (
@@ -58,13 +81,14 @@ const TmAdmin = () => {
             <Button size={"xlmd"} variant="primaryWhite">
               Delete
             </Button>
-            <Button size={"xlmd"} variant="solidPrimary">
+            <Button btnHandler={() => setShowAccount(!show)} size={"xlmd"} variant="solidPrimary">
               Add Account
             </Button>
             <Button btnHandler={() => setShow(!show)} size={"xlmd"} variant="solidPrimary">
               Add User
             </Button>
-            <Button size={"xmsm"}  variant="solidBlack">
+            <Button size={"xmsm"} variant="solidBlack">
+            {/* btnHandler={() => setShowReset(!showReset)} */}
               Save
             </Button>
           </div>
@@ -72,93 +96,173 @@ const TmAdmin = () => {
           <EnhancedTable />
         </div>
       </Layout>
-      {/* <Modal
-            open={show}
-            onClose={handleClose}
-            style={{ backdropFilter: "blur(2px)" }}
-          >
-            <div className={Styles.profileModel}>
-                <div>
-              <Heading headingType={"h1"} className={Styles.resetHead}>Reset password</Heading>
-              <Card className={Styles.profileCard}>
-                <Text strong={"strong6"}  >Email</Text>
-                <Text  className={Styles.resetText}>hunter@technomile.com</Text>
-                <Text strong={"strong6"} className={Styles.resetHeadText} >Account</Text>
-                <Text  className={Styles.resetText}>BAE Systems</Text>
-                <Text strong={"strong6"} className={Styles.resetHeadText} >Password</Text>
-                <Text className={Styles.resetText}>GovSearch123_2022</Text>
-              </Card>
+    
+          
+
+          {/* Modal Second  */}
+      {show &&
+        <Modal className={Styles.mainModal}>
+          <div className={Styles.addUserModel}>
+            <Heading headingType={"h1"} color={"secondary"} className={Styles.resetHead}>
+              Add User
+            </Heading>
+            <Card className={Styles.addAccountCard}>
+
+
+              <div className={Styles.inputHolder}>
+                <div className={Styles.accountInfoBox}>
+                  <Input className={Styles.Infoinput} placeholder="First  Name" variant="grey" />
+                  <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
+                  <Input className={Styles.Infoinput} placeholder="Title / Role" variant="grey" />
+
+                  <div className={Styles.arrowInput}>
+                    <Select className={Styles.empInput}
+                      IconComponent={() => null}
+                      sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+                      value={selected} onChange={selectionChangeHandler}
+                      open={showselect}>
+                      <MenuItem className={Styles.mList} value="1">Lisence</MenuItem>
+                      <MenuItem value="2">2</MenuItem>
+                      <MenuItem value="3">3</MenuItem>
+                      <MenuItem value="4">4</MenuItem>
+                    </Select>
+                    <Icon onClick={() => setSelect(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                  </div>
+                </div>
+
+
+                <div className={Styles.SecondInput}>
+                  <div className={Styles.accountInfoBox}>
+                    <Input className={Styles.Infoinput} placeholder="Last Name" variant="grey" />
+                    <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
+                    <div className={Styles.arrowInput}>
+                      <Select className={Styles.empInput}
+                        IconComponent={() => null}
+                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+
+                        value={selectedLisence} onChange={selectionLisence}
+                        open={showLisence}  >
+                        <MenuItem value="1">Company</MenuItem>
+                        <MenuItem value="2">2</MenuItem>
+                        <MenuItem value="3">3</MenuItem>
+                        <MenuItem value="4">4</MenuItem>
+                      </Select>
+                      <Icon onClick={() => setShowLisence(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                    </div>
+                    <div className={Styles.arrowInput}>
+                      <Select className={Styles.empInput}
+                        IconComponent={() => null}
+                        sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+
+                        value={selectedUser} 
+                        onChange={selectUserType}
+                        open={showUser}  >
+                        <MenuItem value="1">User Type</MenuItem>
+                        <MenuItem value="2">2</MenuItem>
+                        <MenuItem value="3">3</MenuItem>
+                        <MenuItem value="4">4</MenuItem>
+                      </Select>
+                      <Icon onClick={() => setShowUser(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className={Styles.btnMain}>
-              <Button size={"xmd"} variant={"solidPrimary"}>Cancle</Button>
-              <Button size={"xmd"} variant={"solidPrimary"}>Reset</Button>
-              </div>
+            </Card>
+            <div className={Styles.btnMain}>
+              <Button size={"xlmd"} variant={"solidPrimary"} btnHandler={() => setShow(false)} >
+                Cancle
+              </Button>
+              <Button size={"xlsmlg"} variant={"solidPrimary"}>
+                Send Confirmation
+              </Button>
             </div>
-          </Modal> */}
-          {show && 
-      <Modal className={Styles.mainModal}>
-        <div className={Styles.addUserModel}>
-          <Heading headingType={"h1"} className={Styles.resetHead}>
-            Add Account
-          </Heading>
-          <Card className={Styles.addAccountCard}>
-           
-
-     <div className={Styles.inputHolder}>
-    <div className={Styles.accountInfoBox}>
-        <Input className={Styles.Infoinput} placeholder="First  Name" variant="grey" />
-        <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
-        <Input className={Styles.Infoinput} placeholder="Title / Role" variant="grey" />
-
-        <div className={Styles.arrowInput}>
-            <Select className={Styles.empInput}
-             IconComponent = { ()  => null }
-             sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
-            
-             value={selected} onChange={selectionChangeHandler}
-            open={showselect} 
-            
-            
-            // labelId="demo-simple-select-helper-label"
-
-              >
-            <MenuItem  value="1">1</MenuItem>
-                <MenuItem value="2">2</MenuItem>
-                <MenuItem value="3">3</MenuItem>
-                <MenuItem value="4">4</MenuItem>
-            </Select>
-            
-
-            {/* <Input className={Styles.empInputTwo} variant="grey" /> */}
-            <Icon onClick={() => setSelect(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
-        </div>
-    </div>
-    <div className={Styles.SecondInput}>
-        <div className={Styles.accountInfoBox}>
-            <Input className={Styles.Infoinput} placeholder="Last Name" variant="grey" />
-            <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
-            <Input className={Styles.Infoinput} placeholder="Company" variant="grey" />
-            <Input className={Styles.Infoinput} placeholder="Company URL" variant="grey" />
-        </div>
-    </div>
-</div>
-
-
-
-
-
-          </Card>
-          <div className={Styles.btnMain}>
-            <Button size={"xlmd"} variant={"solidPrimary"} btnHandler={() => setShow(false)} >
-              Cancle
-            </Button>
-            <Button size={"xlsmlg"} variant={"solidPrimary"}>
-              Send Confirmation
-            </Button>
           </div>
-        </div>
-      </Modal>
-}
+        </Modal>
+      }
+         {/* // Modal Third */}
+         {showAccount && 
+              
+                <Modal className={Styles.mainModal}>
+                  <div className={Styles.addUserModel}>
+                    <Heading headingType={"h1"} color={"secondary"} className={Styles.resetHead}>
+                      Add Account
+                    </Heading>
+                    <Card className={Styles.addAccountCard}>
+        
+        
+                      <div className={Styles.inputHolder}>
+                        <div className={Styles.accountInfoBox}>
+                          <Input className={Styles.Infoinput} placeholder="First  Name" variant="grey" />
+                          <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
+                          <Input className={Styles.Infoinput} placeholder="Title / Role" variant="grey" />
+        
+                          <div className={Styles.arrowInput}>
+                            <Select className={Styles.empInput}
+                              IconComponent={() => null}
+                              sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+                              value={selected} onChange={selectionChangeHandler}
+                              open={showselect}>
+                              <MenuItem className={Styles.mList} value="1"># Of Employees</MenuItem>
+                              <MenuItem value="2">2</MenuItem>
+                              <MenuItem value="3">3</MenuItem>
+                              <MenuItem value="4">4</MenuItem>
+                            </Select>
+                            <Icon onClick={() => setSelect(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                          </div>
+                          <div className={Styles.arrowInput}>
+                              <Select className={Styles.empInput}
+                                IconComponent={() => null}
+                                sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+        
+                                value={selectedLisence} onChange={selectionLisence}
+                                open={showLisence}  >
+                                <MenuItem value="1">Professional</MenuItem>
+                                <MenuItem value="2">2</MenuItem>
+                                <MenuItem value="3">3</MenuItem>
+                                <MenuItem value="4">4</MenuItem>
+                              </Select>
+                              <Icon onClick={() => setShowLisence(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                            </div>
+                        </div>
+        
+        
+                        <div className={Styles.SecondInput}>
+                          <div className={Styles.accountInfoBox}>
+                            <Input className={Styles.Infoinput} placeholder="Last Name" variant="grey" />
+                            <Input className={Styles.Infoinput} placeholder="Phone" variant="grey" />
+                            <Input className={Styles.Infoinput} placeholder="Company" variant="grey" />
+                            <Input className={Styles.Infoinput} placeholder="Company Url" variant="grey" />
+                            <div className={Styles.arrowInput}>
+                              <Select className={Styles.empInput}
+                                IconComponent={() => null}
+                                sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+        
+                                value={selectedUser} 
+                                onChange={selectUserType}
+                                open={showUser}  >
+                                <MenuItem value="1">User Type</MenuItem>
+                                <MenuItem value="2">2</MenuItem>
+                                <MenuItem value="3">3</MenuItem>
+                                <MenuItem value="4">4</MenuItem>
+                              </Select>
+                              <Icon onClick={() => setShowUser(true)} className={Styles.iconDown} type='soliddownpolygon' variant='icon_xlarge' />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Card>
+                    <div className={Styles.btnMain}>
+                      <Button size={"xlmd"} variant={"solidPrimary"} btnHandler={() => setShowAccount(false)} >
+                        Cancle
+                      </Button>
+                      <Button size={"xlsmlg"} variant={"solidPrimary"}>
+                        Send Confirmation
+                      </Button>
+                    </div>
+                  </div>
+                </Modal>
+         }
+
     </div>
   );
 };
