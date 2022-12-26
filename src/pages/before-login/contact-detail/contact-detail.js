@@ -138,14 +138,14 @@ const ContactDetail = () => {
                           isCriteriaFirst={false}
                           isCriteriaSecond={true}
                           heading={davidMarkoData.heading}
-                          textFirst={davidMarkoData.designation}
-                          textSec={davidMarkoData.webAddress}
-                          paraOne={davidMarkoData.emailText}
-                          paraTwo={davidMarkoData.phoneText}
-                          paraThree={davidMarkoData.positionText}
-                          textThird={davidMarkoData.contact}
-                          textFour={davidMarkoData.addrsSecond}
-                          addrs={davidMarkoData.addrsFirst}
+                          designation={davidMarkoData.designation}
+                          webAddress={davidMarkoData.webAddress}
+                          emailText={davidMarkoData.emailText}
+                          phoneText={davidMarkoData.phoneText}
+                          positionText={davidMarkoData.positionText}
+                          contact={davidMarkoData.contact}
+                          addrsSecond={davidMarkoData.addrsSecond}
+                          addrsFirst={davidMarkoData.addrsFirst}
                         />
                       </div>
                     );
@@ -166,9 +166,9 @@ const ContactDetail = () => {
                         isAssetsText={data.isAssetsText}
                         isChildText={data.isChildText}
                         isContactText={data.isContactText}
-                        paraFirst={data.paraFirst}
-                        paraSecond={data.paraSecond}
-                        paraThird={data.paraThird}
+                        personposition={data.personposition}
+                        personname={data.personname}
+                        year={data.year}
                         fontweightOne={data.fontweightOne}
                         fontweightTwo={data.fontweightTwo}
                         colorThree={data.colorThree}
@@ -234,10 +234,10 @@ const ContactDetail = () => {
                             isCriteriaFirst={false}
                             isCriteriaSecond={false}
                             heading={ArmyChiefDescription.heading}
-                            textFirst={ArmyChiefDescription.address}
-                            textSec={ArmyChiefDescription.webAddress}
-                            textThird={ArmyChiefDescription.contact}
-                            paraText={ArmyChiefDescription.description}
+                            designation={ArmyChiefDescription.address}
+                            webAddress={ArmyChiefDescription.webAddress}
+                            contact={ArmyChiefDescription.contact}
+                            description={ArmyChiefDescription.description}
                           />
                         </div>
                       );
@@ -261,8 +261,8 @@ const ContactDetail = () => {
                             isAssetsText={data.isAssetsText}
                             isChildText={data.isChildText}
                             isContactText={data.isContactText}
-                            accountOne={data.accountOne}
-                            accountTwo={data.accountTwo}
+                            year={data.year}
+                            personname={data.personname}
                           />
                         ))}
                       </Card>
@@ -284,8 +284,8 @@ const ContactDetail = () => {
                         <ContactCard
                           src={item.src}
                           heading={item.heading}
-                          paraOne={item.paraOne}
-                          paraTwo={item.paraTwo}
+                          cityname={item.cityname}
+                          count={item.count}
                           isVirgina={item.isVirgina}
                           isArlingtonText={item.isArlingtonText}
                           imageClass={item.imageClass}
