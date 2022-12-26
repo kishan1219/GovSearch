@@ -15,7 +15,19 @@ import {
   ContactDetail,
   VendorResult,
   News,
-  TmAdmin
+  TmAdmin,
+  FederaleDepartment,
+  FederaleMarkowitz,
+  FederaleAcquisition,
+  FederaleCio,
+  StateMadison,
+  StateCommision,
+  StateDale,
+  StateJanPublic,
+  VendorBae,
+  VendorBrian,
+  VendorCio,
+  VendorDynetics,
 } from "./pages";
 
 export const routes = [
@@ -100,13 +112,69 @@ export const routes = [
     exact: false,
   },
   {
-  path: "/vendor-result",
-  component: VendorResult,
-  exact: false,
-},
+    path: "/vendor-result",
+    component: VendorResult,
+    exact: false,
+  },
+  {
+    path: "/federale-department",
+    component: FederaleDepartment,
+    exact: false,
+  },
+  {
+    path: "/federale-markowitz",
+    component: FederaleMarkowitz,
+    exact: false,
+  },
+  {
+    path: "/federale-acquisition",
+    component: FederaleAcquisition,
+    exact: false,
+  },
+  {
+    path: "/federale-cio",
+    component: FederaleCio,
+    exact: false,
+  },
+  {
+    path: "/state-madison",
+    component: StateMadison,
+    exact: false,
+  },
+  {
+    path: "/state-madison",
+    component: StateCommision,
 
-]
-
-
-
-
+    exact: false,
+  },
+  {
+    path: "/state-madison",
+    component: StateDale,
+    exact: false,
+  },
+  {
+    path: "/state-madison",
+    component: StateJanPublic,
+    exact: false,
+  },
+  {
+    path: "/vendor-dynetics",
+    component: VendorDynetics,
+    exact: false,
+  },
+  {
+    path: "/vendor-bae",
+    component: VendorBae,
+    exact: false,
+  },
+  {
+    path: "/vendor-brian",
+    component: VendorBrian,
+    exact: false,
+  },
+  {
+    path: "/vendor-cio",
+    component: VendorCio,
+    exact: false,
+  },
+];

@@ -109,6 +109,10 @@
       @include xlmd {
         min-width: 37%;
       }
+      @include xlmd {
+        min-width: 37%;
+        max-width: 45%;
+      }
       .designationleftText {
         min-width: 40%;
         @include bxlg {
