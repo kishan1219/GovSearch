@@ -417,6 +417,11 @@ const Login = () => {
                             type="fullname"
                             name="fullname"
                             placeholder="First  Name"
+                              variant="grey"/>
+                      {/* <Input
+                            type="fullname"
+                            name="fullname"
+                            placeholder="First  Name"
                               variant="grey"
                             reference={register("fullname", {
                                 required: true,
@@ -440,14 +445,14 @@ const Login = () => {
                             )}
 
 
-                        </div>
+                        </div> */}
                      
-                        {/* <Input
+                        <Input
                           className={Styles.Infoinput}
                           placeholder="Phone"
                           variant="grey"
-                        /> */}
-                        <Input
+                        />
+                        {/* <Input
                                
                                className={Styles.Infoinput}
                                placeholder="Phone"
@@ -470,14 +475,14 @@ const Login = () => {
                                 {errors?.phone?.type === "pattern" && (
                                     <p>Please enter valid 10 digit number</p>
                                 )}
-                            </div>
+                            </div> */}
                         
-                        {/* <Input
+                        <Input
                           className={Styles.Infoinput}
                           placeholder="Title / Role"
                           variant="grey"
-                        /> */}
-                          <Input 
+                        />
+                          {/* <Input 
                            className={Styles.Infoinput}
                            placeholder="Title / Role"
                            variant="grey"
@@ -500,7 +505,7 @@ const Login = () => {
                             {errors?.username?.type === "pattern" && (
                                 <p>space not allow</p>
                             )}
-                        </div>
+                        </div> */}
 
                         <div className={Styles.arrowInput}>
                           <Select
@@ -532,6 +537,10 @@ const Login = () => {
                         <Input  
                          className={Styles.Infoinput}
                          placeholder="Last Name"
+                         variant="grey"/>
+                        {/* <Input  
+                         className={Styles.Infoinput}
+                         placeholder="Last Name"
                          variant="grey"
                           
                            reference={register("name", {
@@ -554,47 +563,24 @@ const Login = () => {
                         })} /> 
                         <div className={Styles.errorMsg}>
                             {errors.name ? <div>{errors.name.message}</div> : null}
-                        </div>
+                        </div> */}
                           {/* <Input
                             className={Styles.Infoinput}
                             placeholder="Last Name"
                             variant="grey"
                           /> */}
-                          {/* <Input
+                          <Input
                             className={Styles.Infoinput}
                             placeholder="Phone"
                             variant="grey"
-                          /> */}
-                           <Input
-                               
-                               className={Styles.Infoinput}
-                               placeholder="Phone"
-                               variant="grey"
-                                type="text"
-                                name="phone"
-                                reference={register("phone", {
-                                    required: true,
-                                    pattern: {
-                                        value: /^\d{10}$/
-
-                                    },
-                                })}
-                            />
-                             <div className={Styles.errorMsg}>
-                                {errors?.phone?.type === "required" && (
-                                    <p>*This field is required</p>
-                                )}
-
-                                {errors?.phone?.type === "pattern" && (
-                                    <p>Please enter valid 10 digit number</p>
-                                )}
-                            </div>
-                          {/* <Input
+                          />
+                         
+                          <Input
                             className={Styles.Infoinput}
                             placeholder="Company"
                             variant="grey"
-                          /> */}
-                            <Input 
+                          />
+                            {/* <Input 
                             className={Styles.Infoinput}
                             placeholder="Company"
                             variant="grey"
@@ -617,13 +603,13 @@ const Login = () => {
                             {errors?.company?.type === "pattern" && (
                                 <p>space not allow</p>
                             )}
-                        </div>
-                          {/* <Input
+                        </div> */}
+                          <Input
                             className={Styles.Infoinput}
                             placeholder="Company URL"
                             variant="grey"
-                          /> */}
-                           <Input 
+                          />
+                           {/* <Input 
                            className={Styles.Infoinput}
                            placeholder="Company URL"
                            variant="grey"
@@ -646,7 +632,7 @@ const Login = () => {
                             {errors?.companyUrl?.type === "pattern" && (
                                 <p>space not allow</p>
                             )}
-                        </div>
+                        </div> */}
                         </div>
                       </div>
                     </div>
