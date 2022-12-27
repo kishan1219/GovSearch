@@ -9,6 +9,18 @@ import {
   SearchHistory,
   stats,
   Favorites,
+  FederaleDepartment,
+  FederaleMarkowitz,
+  FederaleAcquisition,
+  FederaleCio,
+  StateMadison,
+  StateCommision,
+  StateDale,
+  StateJanPublic,
+  VendorBae,
+  VendorBrian,
+  VendorCio,
+  VendorDynetics,
 } from "./after-login";
 import SearchResult from "./search-result/search-result";
 import ResultDetails from "./before-login/result-details";
@@ -17,28 +29,34 @@ import ContactDetail from "./before-login/contact-detail";
 import News from "./before-login/news/news";
 import TmAdmin from "./tm-admin/tm-admin";
 import VendorResult from "./vendor-result/vendor-result";
-
-
 export {
-    home,
-    Styleguide,
-    login,
-    Notification,
-    Account,
-    AccountSetting,
-    stats,
-    SearchHistory,
-    Download,
-    Favorites,
-    SearchResult,
-    ResultDetails,
-    ContactDetail,
-    StateResult,
-    VendorResult,
-    News,
-    TmAdmin
- 
-
-}
-
-
+  home,
+  Styleguide,
+  login,
+  Notification,
+  Account,
+  AccountSetting,
+  stats,
+  SearchHistory,
+  Download,
+  Favorites,
+  SearchResult,
+  ResultDetails,
+  ContactDetail,
+  StateResult,
+  VendorResult,
+  News,
+  TmAdmin,
+  FederaleDepartment,
+  FederaleMarkowitz,
+  FederaleAcquisition,
+  FederaleCio,
+  StateMadison,
+  StateCommision,
+  StateDale,
+  StateJanPublic,
+  VendorBae,
+  VendorBrian,
+  VendorCio,
+  VendorDynetics,
+};

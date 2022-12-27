@@ -25,6 +25,9 @@ import Switch from "@mui/material/Switch";
 import Header from "../../components/common/header/header";
 import Cardtab from "../../components/shared/cardtab/cardtab";
 import Criteria from "../criteria/criteria";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 const Styleguide = () => {
   const views = [
     {
@@ -82,6 +85,29 @@ const Styleguide = () => {
       place: "Arlington, VA",
     },
   ];
+  const [searchValue, setSearchValue] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(
+    (e) => {
+      // let location = window.location.pathname;
+      // if (location === "hello") {
+      //     navigate("/federale-department");
+
+      // }
+      if (searchValue === "hello") {
+        setSearchValue(e.target.searchValue);
+      } else {
+        return
+      }
+    },
+    
+  );
+  const handleClick = () => {
+    // navigate(`/federale-department/ ${searchValue}`);
+    navigate(`/federale-department ${searchValue}`)
+  };
+
   return (
     <div className={Styles.wrapper}>
       <div>
@@ -389,6 +415,16 @@ const Styleguide = () => {
           accountTwo={"Tom Jones"}
         />
       </Card>
+      <div>
+        <Input
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.searchValue)}
+        />
+        <Button btnHandler={handleClick} size={"xlg"} variant={"solidPrimary"}>
+          {" "}
+          Demo{" "}
+        </Button>
+      </div>
     </div>
   );
 };

@@ -196,6 +196,7 @@
                         gap: 24px;
                         @include mo{margin-top: 20px;}
                         .Infoinput {
+                         
                            width:100%;
                            @include xxlg{max-width: 366px; min-width: 349px;}
                            @include lg{max-width:288px; min-width: 280px;max-height: 40px;}

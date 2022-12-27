@@ -10,9 +10,9 @@
         .locateText{
             font-size: 12px;
             width: 100%;
-            @include xxlg{max-width: 314px; font-size: 10px;}
-            @include bxlg{max-width:282px;}
-            @include lg{max-width: 220px;}
+            @include xxlg{max-width: 314px; font-size: 12px;}
+            @include bxlg{max-width:310px;}
+            @include lg{max-width: 266px;}
              @include xlmd{max-width: 232px;}
             @include xxmd{max-width: 204px;}
             @include xmd{max-width: 192px;}
