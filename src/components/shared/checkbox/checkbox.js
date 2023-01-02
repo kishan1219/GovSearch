@@ -25,7 +25,7 @@ const CheckBox = ({
            defaultChecked ={checked}
             type="checkbox"
             onChange={onChange}
-            reference={reference}
+            {...reference}
             name={checkBoxName}
             value={value}
             disabled={disabled}
