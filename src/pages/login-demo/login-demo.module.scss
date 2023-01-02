@@ -1,0 +1,418 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins.scss";
+@import "../../assets/scss/breakpoints.scss";
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+
+  .technoMile {
+    width: 100%;
+    max-width: 800px;
+    background: $white04;
+    padding-top: 53px;
+    text-align: center;
+    @include bxlg {
+      max-width: 675px;
+    }
+
+    .multifactorMainBox {
+      width: 592px;
+
+      .mainHead {
+        @include fonts-poppins;
+      }
+    }
+    .confirmInformationBody {
+      width: 85%;
+    }
+    .factorBox {
+      width: 590px;
+    }
+
+    .transparent {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .factorContent {
+      padding: 55px 42px 38px 50px;
+      @include fonts-poppins;
+
+      .factorText {
+        margin-top: 30px;
+      }
+
+      .nextBtn {
+        margin-top: 24px;
+      }
+    }
+
+    .mt30Box {
+      width: 68px;
+      height: 85px;
+    }
+
+    .cardBox {
+      display: flex;
+      margin-top: 198px;
+      @include xxlg {
+        justify-content: space-around;
+      }
+
+      .cardOne {
+        width: 100%;
+        max-width: 665px;
+        @include xxlg {
+          max-width: 827px;
+        }
+        @include xmd {
+          margin-left: 30px;
+        }
+
+        .cardMainBox {
+          width: 100%;
+          max-width: 630px;
+          margin-top: 25px;
+          margin-left: 40px;
+          @include xxlg {
+            max-width: 812px;
+          }
+          @include xlmd {
+            max-width: 630px;
+          }
+          @include xmd {
+            max-width: 597px;
+          }
+
+          .publinCard {
+            max-width: 562px;
+          }
+
+          .checboxMain {
+            display: flex;
+            margin-top: 20px;
+            // margin-bottom: 20px;
+            margin-left: 20px;
+            .instructionText {
+              // @include xlmd {
+                font-size: 11px;
+              // }
+            }
+          }
+
+          .buttonMain {
+            text-align: right;
+          }
+
+          .tncText {
+            margin-left: 26px;
+            margin-top: 3px;
+          }
+
+          .fieldText {
+            text-align: right;
+            margin-top: 24px;
+          }
+        }
+
+        .accountHead {
+          text-align: left;
+          margin-left: 50px;
+        }
+
+        .inputHolder {
+          display: flex;
+          padding: 23px 24px;
+          @include xmd {
+            padding: 23px 15px;
+          }
+
+          .SecondInput {
+            margin-left: 30px;
+          }
+
+          .accountInfoBox {
+            display: grid;
+            gap: 24px;
+
+            .Infoinput {
+              width: 357px;
+
+              @include xlmd {
+                width: 280px;
+              }
+
+              @include xlmd {
+                height: 40px;
+              }
+              @include xmd {
+                width: 270px;
+              }
+            }
+
+            .empInput {
+              width: 282px;
+              background: $white03;
+              font-size: 18px;
+              height: 55px;
+              border-radius: 10px;
+              padding: 14px;
+              text-indent: 1px;
+              text-overflow: "";
+
+              @include xlmd {
+                width: 213px;
+              }
+
+              @include xlmd {
+                height: 40px;
+              }
+            }
+
+            .empInputTwo {
+              width: 286px;
+              // margin-left: 29px;
+              background: $white03;
+              outline: none;
+              overflow: hidden;
+              border: none;
+            }
+
+            .arrowInput {
+              text-align: left;
+              display: flex;
+              position: relative;
+              .empInputTwo {
+                height: 55px;
+
+                .menuItem {
+                  margin-left: 100px;
+                }
+              }
+
+              .iconDown {
+                right: 0px;
+                top: 0px;
+                color: $gray07;
+                position: absolute;
+                background: $white03;
+                border-radius: 12px;
+                height: 42px;
+                padding: 3px 9px 0px 6px;
+                @include xlmd {
+                  font-size: 27px;
+                }
+                @include xlmd {
+                  padding: 8px 9px 0px 9px;
+                }
+                @include xxlg {
+                  padding: 11px 9px 0px 9px;
+                  height: 54px;
+                }
+                @include xmd {
+                  padding: 11px 9px 0px 9px;
+                }
+                @include xxlg {
+                  height: 54px;
+                }
+                @include xlmd {
+                  height: 40px;
+                }
+                @include xlmd {
+                  padding: 8px 7px 0px 7px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .secondMainCard {
+        margin-left: 79px;
+        margin-top: 48px;
+        @include xmd {
+          margin-left: 35px;
+        }
+        @include xxlg {
+          margin-left: 0px;
+        }
+
+        .accountHead {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .inputBox {
+      display: flex;
+      gap: 10px;
+      margin-left: 10px;
+      max-width: 99px;
+      margin-top: 27px;
+      padding: 0px 35px;
+    }
+
+    .inputMainBox {
+      margin-left: 82px;
+      margin-top: 40px;
+
+      .inputTab {
+        // padding:16px;
+        font-size: 40px;
+      }
+
+      .numInput {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+      }
+
+      input[type="text" i] {
+        margin-left: 13px;
+        height: 85px;
+        background: $white03;
+        width: 68px !important;
+        border: none;
+        font-size: 30px;
+      }
+    }
+
+    .forgotBox {
+      padding: 85px 30px 85px 30px;
+
+      .forgotText {
+        margin: 30px 0px 0px 0px;
+      }
+    }
+
+    .enterText {
+      margin-top: 27px;
+    }
+
+    .secText {
+      margin-top: 27px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .secTwoText {
+      margin: 21px 0px 22px 0px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .inptBox {
+      width: 408px;
+      margin: 25px auto;
+    }
+
+    .btnMain {
+      margin-top: 48px;
+    }
+
+    .continueBtn {
+      margin-top: 28px;
+    }
+
+    .authenticHeading {
+      margin: 33px 0px 0px 0px;
+
+      .autoHead {
+        margin-top: 10px;
+      }
+    }
+
+    .mainBox {
+      padding: 37px 57px 48px 57px;
+
+      .mainHead {
+        @include fonts-poppins;
+      }
+
+      .inputMainBox {
+        display: flex;
+
+        .inputBox {
+          width: 50px;
+        }
+      }
+
+      .errorMsg {
+        color: $red1;
+        text-align: left;
+      }
+    }
+
+    .imageBox {
+      margin-left: 60px;
+    }
+
+    .mainCard {
+      box-sizing: border-box;
+      display: inline-block;
+      border-radius: 8px;
+      background: $white;
+      width: 100%;
+      max-width: 520px;
+      margin: 20px 0px 0px 40px;
+
+      .mainText {
+        margin-top: 25px;
+      }
+
+      .forgotText {
+        text-align: right;
+        margin-top: 9px;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .inputMain {
+        width: 408px;
+        margin-top: 20px;
+
+        .passText {
+          margin-top: 25px;
+        }
+      }
+
+      .inputMainBox {
+        display: flex;
+      }
+
+      .btnMain {
+        margin-top: 30px;
+      }
+
+      .secText {
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .resourCes {
+    width: 100%;
+    max-width: 952px;
+    background: $white;
+
+    .resourCesBox {
+      text-align: center;
+      margin-top: 35px;
+
+      .firstImgBox {
+        margin: 45px 0px;
+      }
+    }
+  }
+  .errorMsg {
+    margin: 0px;
+  }
+  .checkError {
+    margin: 7px 0px 10px 20px;
+  }
+  .otpError {
+    margin: 20px 0px 0px 0px;
+  }
+}

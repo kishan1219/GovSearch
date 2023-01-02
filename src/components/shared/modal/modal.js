@@ -55,7 +55,7 @@ Modal.propTypes = {
     isIcon: PropTypes.bool,
     modalHeading: PropTypes.string,
     bodyVariant: PropTypes.string,
-    children: PropTypes.string,
+    children: PropTypes.any,
 }
 
 export default Modal

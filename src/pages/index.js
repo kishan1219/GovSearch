@@ -29,6 +29,7 @@ import ContactDetail from "./before-login/contact-detail";
 import News from "./before-login/news/news";
 import TmAdmin from "./tm-admin/tm-admin";
 import VendorResult from "./vendor-result/vendor-result";
+import LoginDemo from "./login-demo/login-demo";
 export {
   home,
   Styleguide,
@@ -59,4 +60,5 @@ export {
   VendorBrian,
   VendorCio,
   VendorDynetics,
+  LoginDemo,
 };

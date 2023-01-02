@@ -28,6 +28,7 @@ import {
   VendorBrian,
   VendorCio,
   VendorDynetics,
+  LoginDemo,
 } from "./pages";
 
 export const routes = [
@@ -142,18 +143,18 @@ export const routes = [
     exact: false,
   },
   {
-    path: "/state-madison",
+    path: "/state-commision",
     component: StateCommision,
 
     exact: false,
   },
   {
-    path: "/state-madison",
+    path: "/state-dale",
     component: StateDale,
     exact: false,
   },
   {
-    path: "/state-madison",
+    path: "/state-jan",
     component: StateJanPublic,
     exact: false,
   },
@@ -175,6 +176,11 @@ export const routes = [
   {
     path: "/vendor-cio",
     component: VendorCio,
+    exact: false,
+  },
+  {
+    path: "/login-demo",
+    component: LoginDemo,
     exact: false,
   },
 ];

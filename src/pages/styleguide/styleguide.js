@@ -14,7 +14,7 @@ import {
   LatestDeatils,
   Search,
   ContactCard,
-  CriteriaCard,
+  // CriteriaCard,
   CardItems,
 } from "../../components/shared/index";
 import Styles from "./styleguide.module.scss";
@@ -27,7 +27,6 @@ import Cardtab from "../../components/shared/cardtab/cardtab";
 import Criteria from "../criteria/criteria";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 const Styleguide = () => {
   const views = [
     {
@@ -87,26 +86,21 @@ const Styleguide = () => {
   ];
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
-
-  useEffect(
-    (e) => {
-      // let location = window.location.pathname;
-      // if (location === "hello") {
-      //     navigate("/federale-department");
-
-      // }
-      if (searchValue === "hello") {
-        setSearchValue(e.target.searchValue);
-      } else {
-        return
-      }
-    },
-    
-  );
-  const handleClick = () => {
-    // navigate(`/federale-department/ ${searchValue}`);
-    navigate(`/federale-department ${searchValue}`)
+  const handleSearchInputChanges = (e) => {
+    setSearchValue(e.target.value);
   };
+  const handleSearch = () => {
+    setSearchValue("");
+  };
+
+  const callSearchFunction = (e) => {
+    e.preventDefault();
+    if (searchValue === "hello") {
+      handleSearch();
+      navigate(`/federale-department`); //navigate to the searched value
+    }
+  };
+  console.log(searchValue);
 
   return (
     <div className={Styles.wrapper}>
@@ -415,16 +409,18 @@ const Styleguide = () => {
           accountTwo={"Tom Jones"}
         />
       </Card>
-      <div>
-        <Input
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.searchValue)}
-        />
-        <Button btnHandler={handleClick} size={"xlg"} variant={"solidPrimary"}>
+      <form>
+        <Input value={searchValue} onChange={handleSearchInputChanges} />
+        <Button
+          type={"submit"}
+          btnHandler={callSearchFunction}
+          size={"xlg"}
+          variant={"solidPrimary"}
+        >
           {" "}
           Demo{" "}
         </Button>
-      </div>
+      </form>
     </div>
   );
 };

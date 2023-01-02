@@ -25,7 +25,7 @@ const CheckBox = ({
            defaultChecked ={checked}
             type="checkbox"
             onChange={onChange}
-            reference={reference}
+            {...reference}
             name={checkBoxName}
             value={value}
             disabled={disabled}
@@ -49,7 +49,7 @@ const CheckBox = ({
     defaultChecked: PropTypes.bool,
     reference: PropTypes.any,
     checkBoxName: PropTypes.string,
-    labelName: PropTypes.string,
+    labelName: PropTypes.any,
     value: PropTypes.any,
     disabled: PropTypes.bool,
     checked: PropTypes.bool,

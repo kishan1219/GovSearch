@@ -43,8 +43,8 @@ ModalHeader.propTypes = {
     modalHeading: PropTypes.string,
     iconHandler: PropTypes.func,
     handler: PropTypes.func,
-    headShow: PropTypes.bool,
-    isIcon: PropTypes.bool,
+    headShow: PropTypes.any,
+    isIcon: PropTypes.any,
     className: PropTypes.string,
 
 }

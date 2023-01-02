@@ -13,9 +13,7 @@ import {
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import { Tooltip } from "@mui/material";
-import {
-  DepartmentArmyData,
-} from "../../../search-result/search-data";
+import { DepartmentArmyData } from "../../../search-result/search-data";
 import { useNavigate } from "react-router-dom";
 const FederaleDepartment = () => {
   const [office, setOffice] = useState(false);
@@ -30,6 +28,7 @@ const FederaleDepartment = () => {
   const [gridTableShow, setGridTableShow] = useState(false);
   const [openPlusCard, setOpenPlusCard] = useState(false);
   const [openExportCard, setopenExportCard] = useState(false);
+  const [searchResult, setsearchResult] = useState([]);
   const navigate = useNavigate();
   const targetOffice = (e) => {
     setSelectOffice(e.target.value);
@@ -91,7 +90,7 @@ const FederaleDepartment = () => {
       value: "100,000",
     },
   ];
-
+ 
   return (
     <Layout isFederal={false} isProfessional={true}>
       <div className={Styles.container}>
@@ -397,29 +396,34 @@ const FederaleDepartment = () => {
         <div className={`${Styles.departmentTableMain} ${"alignBetween"}`}>
           {/* home federal search result tables */}
           <div className={Styles.scrollBar}>
-            {DepartmentArmyData.map((data) => (
-              <ContactList
-                imageClick={gotoResultDetail}
-                isGrid={!tableHide ? true : false}
-                isList={!gridTableShow ? true : false}
-                isDesignation={true}
-                expandSrcFirst={data.src}
-                expandSrcSecond={data.expandlogoSecond}
-                gridLogoSecond={data.gridlogoSecond}
-                designation={data.designation}
-                assist={data.assist}
-                listSrc={data.src}
-                id={data.id}
-                name={data.name}
-                vcb={data.vcb}
-                vcbSecond={data.vcbSecond}
-                value={data.value}
-                country={data.country}
-                designationRight={data.designationRight}
-                exapndRowRightValue={data.exapndRowRightValue}
-                gridLogo={data.gridLogo}
-              />
-            ))}
+            {DepartmentArmyData.length > 0 &&
+              DepartmentArmyData.map((data,id) => {
+                return (
+                  <div key={id}>
+                    <ContactList
+                      imageClick={gotoResultDetail}
+                      isGrid={!tableHide ? true : false}
+                      isList={!gridTableShow ? true : false}
+                      isDesignation={true}
+                      expandSrcFirst={data.src}
+                      expandSrcSecond={data.expandlogoSecond}
+                      gridLogoSecond={data.gridlogoSecond}
+                      designation={data.designation}
+                      assist={data.assist}
+                      listSrc={data.src}
+                      id={data.id}
+                      name={data.name}
+                      vcb={data.vcb}
+                      vcbSecond={data.vcbSecond}
+                      value={data.value}
+                      country={data.country}
+                      designationRight={data.designationRight}
+                      exapndRowRightValue={data.exapndRowRightValue}
+                      gridLogo={data.gridLogo}
+                    />
+                  </div>
+                );
+              })}
           </div>
           {/* home federal search result tables */}
 
@@ -456,10 +460,3 @@ const FederaleDepartment = () => {
   );
 };
 export default FederaleDepartment;
-
-
-
-
-
-
-

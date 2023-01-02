@@ -1,220 +1,219 @@
-@import '../../../assets/scss/mixins.scss';
+@import "../../../assets/scss/mixins.scss";
 
 .container {
-    position: fixed;
-    box-sizing: border-box;
-    min-height: 100vh;
-    z-index: 1;
-    top: 145px;
+  position: fixed;
+  box-sizing: border-box;
+  min-height: 100vh;
+  z-index: 1;
+  top: 145px;
+
+  @include tab {
+    top: 270px;
+  }
+
+  @include sm {
+    top: 280px;
+  }
+
+  @include iPad {
+    top: 280px;
+  }
+
+  @include mo {
+    top: 90px;
+  }
+
+  @include xsm {
+    top: 100px;
+  }
+
+  .menu {
+    display: grid;
+    padding: 15px 10px;
+    text-align: center;
+    max-width: 100px;
+    background: $primary;
+    border-radius: 0px 18px 18px 0px;
+    min-height: 500px;
+
+    @include md {
+      min-height: 250px;
+    }
 
     @include tab {
-        top: 270px;
+      min-height: 300px;
+    }
+
+    & li {
+      cursor: pointer;
+    }
+
+    .burgerIcon {
+      transition: 0.3s ease;
+    }
+  }
+
+  .sidebarFooter {
+    margin-top: 100px;
+
+    i {
+      &:hover {
+        color: $lightGray03;
+      }
+    }
+
+    @include xxmd {
+      margin-top: 30px;
     }
 
     @include sm {
-        top: 280px
+      margin-top: 10px;
     }
 
-    @include iPad {
-        top: 280px
+    i {
+      @include tab {
+        margin-left: 25px;
+      }
     }
 
     @include mo {
-        top: 220px;
+      margin-top: 10px;
+    }
+  }
+
+  .sidebarMain {
+    padding: 14px 10px 34px 48px;
+    width: 100%;
+    max-width: 428px;
+    min-height: 100vh;
+    background: $white01;
+    border-right: 6px solid $primary;
+
+    @include tab {
+      padding-top: 15px;
+      min-height: 80vh;
     }
 
-    @include xsm {
-        top: 100px;
+    @include mo {
+      min-height: 90vh;
+      padding: 14px 10px 34px 17px;
     }
 
-    .menu {
-        display: grid;
-        padding: 15px 10px;
-        text-align: center;
-        max-width: 100px;
-        background: $primary;
-        border-radius: 0px 18px 18px 0px;
-        min-height: 500px;
+    & input {
+      background: $white;
 
-        @include md {
-            min-height: 250px;
-        }
-
-        @include tab {
-            min-height: 300px;
-        }
-
-        & li {
-            cursor: pointer;
-        }
-
-        .burgerIcon {
-            transition: 0.3s ease;
-        }
+      &::placeholder {
+        @include fonts-poppins;
+        color: $white02;
+      }
     }
 
-    .sidebarFooter {
-        margin-top: 100px;
+    & input:focus {
+      border: 1px solid $white02;
+    }
 
-        i {
-            &:hover {
-                color: $lightGray03;
-            }
-        }
+    .advanceSearchText {
+      @include flexJustifyBetween;
+      margin-right: 15px;
+    }
 
-        @include xxmd {
-            margin-top: 30px;
-        }
+    @include ScrollBar;
 
-        @include sm {
-            margin-top: 10px;
-        }
+    .scrollBar {
+      &::-webkit-scrollbar-track {
+        background: $white;
+      }
+    }
 
-        i {
-            @include tab {
-                margin-left: 25px;
-            }
+    @include ScrollBarTransparent;
+
+    .scrollBarTransparent {
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    }
+
+    .burgerIcon {
+      transition: 1s ease-in-out;
+    }
+
+    .inputMain {
+      width: 100%;
+      @include flexJustifyBetween;
+      position: relative;
+
+      .searchInput {
+        min-width: 260px;
+
+        &::placeholder {
+          @include fonts-poppins;
+          font-size: $font-xllg;
         }
 
         @include mo {
-            margin-top: 0px;
-        }
-    }
-
-    .sidebarMain {
-        padding: 14px 10px 34px 48px;
-        width: 100%;
-        max-width: 428px;
-        min-height: 100vh;
-        background: $white01;
-        border-right: 6px solid $primary;
-
-        @include tab {
-            padding-top: 15px;
-            min-height: 80vh;
+          min-width: 200px;
         }
 
-        @include mo {
-            min-height: 90vh;
-            padding: 14px 10px 34px 17px;
-
-        }
-
-        & input {
-            background: $white;
-
-            &::placeholder {
-                @include fonts-poppins;
-                color: $white02;
-            }
-        }
-
-        & input:focus {
-            border: 1px solid $white02;
-        }
-
-        .advanceSearchText {
-            @include flexJustifyBetween;
-            margin-right: 15px
-        }
-
-        @include ScrollBar;
-
-        .scrollBar {
-            &::-webkit-scrollbar-track {
-                background: $white;
-            }
-        }
-
-        @include ScrollBarTransparent;
-
-        .scrollBarTransparent {
-            &::-webkit-scrollbar-track {
-                background: transparent;
-            }
-        }
-
-        .burgerIcon {
-            transition: 1s ease-in-out;
-        }
-
-        .inputMain {
-            width: 100%;
-            @include flexJustifyBetween;
-            position: relative;
-
-            .searchInput {
-                min-width: 260px;
-
-                &::placeholder {
-                    @include fonts-poppins;
-                    font-size: $font-xllg;
-                }
-
-                @include mo {
-                    min-width: 200px;
-                }
-
-                @include xsm {
-                    min-width: 190px;
-                }
-            }
-
-            .iconSearch {
-                position: absolute;
-                top: 4px;
-                right: 10px;
-            }
-        }
-
-        .toggleSwitch {
-            margin: 0px;
-        }
-
-        .textBoldMain {
-            max-width: 277px;
-
-            @include xsm {
-                max-width: 250px;
-
-            }
-        }
-    }
-
-    .scrollWrapper {
-        max-height: 100vh;
-    }
-
-    .scrollWrapper1 {
-        max-height: calc(62vh - 300px);
-        max-width: 210px;
-    }
-
-    .primaryChipColor {
-        background: $primary;
-        color: $white;
-        padding: 2px 7px;
-    }
-
-    .primarySwitchColor {
-        color: $white;
-    }
-
-    .searchBtnMain {
         @include xsm {
-            justify-content: unset;
-            flex-wrap: wrap;
-            gap: 30px;
+          min-width: 190px;
         }
+      }
+
+      .iconSearch {
+        position: absolute;
+        top: 4px;
+        right: 10px;
+      }
     }
 
-    .sidebarMainFooter div {
-        @include md {
-            margin-top: 40px;
-        }
-
-        @include tab {
-            margin-top: 20px;
-        }
+    .toggleSwitch {
+      margin: 0px;
     }
+
+    .textBoldMain {
+      max-width: 277px;
+
+      @include xsm {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .scrollWrapper {
+    max-height: 100vh;
+  }
+
+  .scrollWrapper1 {
+    max-height: calc(62vh - 300px);
+    max-width: 210px;
+  }
+
+  .primaryChipColor {
+    background: $primary;
+    color: $white;
+    padding: 2px 7px;
+  }
+
+  .primarySwitchColor {
+    color: $white;
+  }
+
+  .searchBtnMain {
+    @include xsm {
+      justify-content: unset;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+
+  .sidebarMainFooter div {
+    @include md {
+      margin-top: 40px;
+    }
+
+    @include tab {
+      margin-top: 20px;
+    }
+   
+  }
 }

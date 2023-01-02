@@ -69,9 +69,18 @@ const Home = () => {
   ];
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
-  const handleInputChange = () => {
-    if (searchValue === "Department of the Army") {
-      navigate(`${"/federale-department"} ${searchValue}`);
+ const handleSearchInputChanges = (e) => {
+    setSearchValue(e.target.value);
+  };
+  const handleSearch = () => {
+    setSearchValue("");
+  };
+
+  const callSearchFunction = (e) => {
+    // e.preventDefault();
+    if (searchValue === "hello") {
+      handleSearch();
+      navigate(`/federale-department`); //navigate to the searched value
     }
   };
   return (
@@ -79,13 +88,13 @@ const Home = () => {
       <div className={Styles.searchMain}>
         <Search
           inputValue={searchValue}
-          onChange={(e) => setSearchValue(e.target.searchValue)}
+          onChange={handleSearchInputChanges}
           inputclassName={Styles.searchBox}
           placeholder={"Contacts, Offices, Vendors, Contracts..."}
           size={"icon_large"}
           iconColor={"gray04"}
           iconclassName={"icoClass"}
-          searchHandler={handleInputChange}
+          searchHandler={callSearchFunction}
         />
       </div>
       <div className={`${Styles.newsContainer} ${"alignBetween mt35"}`}>

@@ -128,7 +128,7 @@
           min-width: 30%;
         }
         @include tab {
-          min-width: 31%;
+          min-width: 35%;
         }
       }
     }
@@ -153,7 +153,7 @@
       max-width: 30%;
       @include blg {
         min-width: 26%;
-        max-width: 28%;
+        max-width: 26%;
       }
       @include xlmd {
         min-width: 35%;
