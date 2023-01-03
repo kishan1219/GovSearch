@@ -614,7 +614,7 @@ const AccountSetting = () => {
                       className={Styles.inputbox}
                       id="fname"
                       onChange={updateName}
-                      value={name}
+                      // value={name}
                       reference={register("firstName", {
                         required: "required",
                         minLength: {
@@ -653,7 +653,7 @@ const AccountSetting = () => {
                       id="lname"
                       name="lname"
                       onChange={updateLastName}
-                      value={lname}
+                      // value={lname}
                       reference={register("lastName", {
                         required: "required",
                         minLength: {
@@ -691,7 +691,7 @@ const AccountSetting = () => {
                       id="address"
                       name="address"
                       onChange={updateAddress}
-                      value={address}
+                      // value={address}
                       reference={register("address", {
                         required: "required",
                         minLength: {
@@ -728,7 +728,7 @@ const AccountSetting = () => {
                       id="zipcode"
                       name="zipcode"
                       onChange={updateZipCode}
-                      value={zipCode}
+                      // value={zipCode}
                     />
                   </div>
                   <div>
@@ -745,7 +745,7 @@ const AccountSetting = () => {
                       id="email"
                       name="email"
                       onChange={updateEmail}
-                      value={email}
+                      // value={email}
                       reference={register("email", {
                         required: "*Please enter email address.",
                         validate: (value) => {
@@ -775,7 +775,7 @@ const AccountSetting = () => {
                       id="phone"
                       name="phone"
                       onChange={updateContact}
-                      value={contact}
+                      // value={contact}
                       reference={register("Phone", {
                         required: "required",
                         minLength: {
@@ -875,7 +875,7 @@ const AccountSetting = () => {
                       id="title"
                       name="title"
                       onChange={updateTitle}
-                      value={title}
+                      // value={title}
                       reference={register("title", {
                         required: "required",
                         minLength: {
@@ -913,7 +913,7 @@ const AccountSetting = () => {
                       id="company"
                       name="company"
                       onChange={updateCompany}
-                      value={company}
+                      // value={company}
                       reference={register("Company", {
                         required: "required",
                         minLength: {
@@ -1112,23 +1112,20 @@ const AccountSetting = () => {
                   className={`${Styles.textAreabox} ${"mt25"}`}
                   type="textarea"
                   reference={register("comment", {
-                          required: "*required",
-                          minLength: {
-                            value: 10,
-                            message: "must be 10 chars only",
-                          },
-                          maxLength: {
-                            value: 100,
-                            message: "must be 100 chars only",
-                          },
-            
-                        })}
-                      />
-                      <div className={Styles.errorMsg}>
-                        {errors.comment ? (
-                          <div>{errors.comment.message}</div>
-                        ) : null}
-                      </div>
+                    required: "*required",
+                    minLength: {
+                      value: 10,
+                      message: "must be 10 chars only",
+                    },
+                    maxLength: {
+                      value: 100,
+                      message: "must be 100 chars only",
+                    },
+                  })}
+                />
+                <div className={Styles.errorMsg}>
+                  {errors.comment ? <div>{errors.comment.message}</div> : null}
+                </div>
               </div>
               <div className={Styles.downBoxx}>
                 <Text

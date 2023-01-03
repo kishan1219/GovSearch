@@ -3,6 +3,7 @@
 .wrapper {
     min-height: 100vh;
     max-width: 100%;
+    margin-left: 20px;
     @include fonts-poppins;
 
     .mailBox{
@@ -188,7 +189,7 @@
                     }
 
                     .iconArrowDown {
-                        right: 7px;
+                        right: 0px;
                         padding: 6px 5px 4px 5px;
                         border: 1px solid $lightGray01;
                         border-radius: 12px;

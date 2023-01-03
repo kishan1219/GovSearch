@@ -28,20 +28,12 @@ import {
   VendorBrian,
   VendorCio,
   VendorDynetics,
-} from "./pages";
-import {
-  FederalPublicDetail,
-  FederalContactDetail,
-} from "./pages/after-login/home-federal";
+  FederalPublicDetail,FederalContactDetail ,
+  StatePublicdetail,StateContactdetail,
+  VendorContactDetail, VendorOfficeDetail ,
 
-import {
-  StatePublicdetail,
-  StateContactdetail,
-} from "./pages/after-login/home-state";
-import {
-  VendorContactDetail,
-  VendorOfficeDetail,
-} from "./pages/after-login/home-vendor";
+} from "./pages";
+
 
 export const routes = [
   {

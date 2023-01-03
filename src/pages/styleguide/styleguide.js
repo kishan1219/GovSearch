@@ -16,6 +16,7 @@ import {
   ContactCard,
   // CriteriaCard,
   CardItems,
+  Criteria,
 } from "../../components/shared/index";
 import Styles from "./styleguide.module.scss";
 import SearchBar from "../../components/common/searchbar";
@@ -24,7 +25,7 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
 import Header from "../../components/common/header/header";
 import Cardtab from "../../components/shared/cardtab/cardtab";
-import Criteria from "../criteria/criteria";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Styleguide = () => {

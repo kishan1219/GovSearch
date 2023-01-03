@@ -21,15 +21,21 @@ import {
   VendorBrian,
   VendorCio,
   VendorDynetics,
+  VendorContactDetail,
+  VendorOfficeDetail,
+  StateContactdetail,
+  StatePublicdetail,
+  FederalContactDetail,
+  FederalPublicDetail,
+
 } from "./after-login";
 import SearchResult from "./search-result/search-result";
 import ResultDetails from "./before-login/result-details";
 import StateResult from "./state-result/state-result";
 import ContactDetail from "./before-login/contact-detail";
-import News from "./before-login/news/news";
+import News from "./after-login/news/news";
 import TmAdmin from "./tm-admin/tm-admin";
 import VendorResult from "./vendor-result/vendor-result";
-import LoginDemo from "./login-demo/login-demo";
 export {
   home,
   Styleguide,
@@ -60,5 +66,10 @@ export {
   VendorBrian,
   VendorCio,
   VendorDynetics,
-  LoginDemo,
+  VendorContactDetail,
+  VendorOfficeDetail,
+  StateContactdetail,
+  StatePublicdetail,
+  FederalContactDetail,
+  FederalPublicDetail
 };

@@ -10,19 +10,27 @@ import {
   StateCommision,
   StateDale,
   StateJanPublic,
+  StateContactdetail,
+  StatePublicdetail,
 } from "./home-state";
 import {
   FederaleDepartment,
   FederaleMarkowitz,
   FederaleAcquisition,
   FederaleCio,
+  FederalContactDetail,
+  FederalPublicDetail,
+
 } from "./home-federal";
 import {
   VendorBae,
   VendorBrian,
   VendorCio,
   VendorDynetics,
+  VendorContactDetail,
+  VendorOfficeDetail,
 } from "./home-vendor";
+
 export {
   Notification,
   Account,
@@ -43,4 +51,10 @@ export {
   VendorBrian,
   VendorCio,
   VendorDynetics,
+  VendorContactDetail,
+  VendorOfficeDetail,
+  StateContactdetail,
+  StatePublicdetail,
+  FederalContactDetail,
+  FederalPublicDetail
 };

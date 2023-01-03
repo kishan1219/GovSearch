@@ -22,6 +22,7 @@ import ContactCard from "./contact-card/contact-card";
 import CriteriaCard from "./criteria-card/criteria-card";
 import CardItems from "./card-items/card-items";
 import ContactList from "./contact-list/contact-list";
+import Criteria from "./criteria/criteria";
 export {
   Icon,
   Input,
@@ -47,4 +48,5 @@ export {
   CriteriaCard,
   CardItems,
   ContactList,
+  Criteria
 };

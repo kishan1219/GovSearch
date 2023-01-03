@@ -13,13 +13,13 @@ import {
   Card,
   CardItems,
   ContactCard,
+  Criteria
   // Button,
   // Heading,
   // Input,
 } from "../../../../components/shared";
 import Styles from "./federal-contactdetail.module.scss";
 import { Grid } from "@mui/material";
-import Criteria from "../../../criteria/criteria";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
