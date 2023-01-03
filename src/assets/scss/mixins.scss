@@ -102,12 +102,12 @@
 }
 
 @mixin fonts-poppins {
-  font-family: 'poppins', 'sans-serif';
+  font-family: "poppins", "sans-serif";
   font-style: normal;
 }
 
 @mixin roboto {
-  font-family: 'roboto', 'sans-serif';
+  font-family: "roboto", "sans-serif";
   font-style: normal;
 }
 
@@ -115,7 +115,6 @@
   display: flex;
   align-items: center;
 }
-
 
 @mixin flexWrap {
   display: flex;
@@ -234,7 +233,7 @@
   -moz-appearance: none;
   list-style: none;
   text-indent: 1px;
-  text-overflow: '';
+  text-overflow: "";
 }
 
 @mixin notificationContainer {
@@ -387,7 +386,6 @@
         }
       }
     }
-
   }
 }
 
@@ -410,9 +408,7 @@
       flex: 0 0 100% !important;
       order: 2;
       margin-top: 50px;
-
     }
-
   }
 
   @include ScrollBar;
@@ -421,7 +417,6 @@
     &::-webkit-scrollbar-track {
       background: $white;
     }
-
   }
 
   .w60 {
@@ -434,7 +429,6 @@
       margin: unset;
     }
   }
- 
 
   .cardHeading {
     font-size: 28px;
@@ -472,11 +466,10 @@
       }
     }
   }
-
 }
 @mixin criteriaProperty {
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   border-radius: 2px;
   position: relative;
   padding: 25px 0px 0px 25px;
@@ -515,15 +508,14 @@
 
 // search-result css start
 @mixin SearchResultContent {
-  
   .container {
     width: 100%;
     max-height: 100vh;
-  
+
     @include md {
       margin-left: 20px;
     }
-  
+
     @include mo {
       margin-left: 0px;
     }
@@ -532,7 +524,7 @@
     .scrollBar {
       max-height: 600px;
       overflow: auto;
-    
+
       @include xxlg {
         max-height: 560px;
       }
@@ -540,17 +532,17 @@
     .searchCriteria {
       width: 100%;
       @include flexBetween;
-  
+
       @include tab {
         flex-wrap: wrap;
         gap: 20px;
       }
-  
+
       @include mo {
         margin: 0px 5px;
       }
     }
-  
+
     .plusIconCard {
       z-index: 1;
       position: absolute;
@@ -558,24 +550,24 @@
       right: 0px;
       min-width: 250px;
       padding: 25px;
-  
+
       @include xsm {
         right: -85px;
       }
-  
+
       .plusListMain {
         background: $gray;
         position: relative;
         max-width: 160px;
         max-height: 30px;
-  
+
         .listSelect {
           max-width: 250px;
           max-height: 30px;
           color: $paua;
           font-size: $font-xl;
         }
-  
+
         .listIcon {
           position: absolute;
           top: 0px;
@@ -584,7 +576,7 @@
           padding: 1px;
         }
       }
-  
+
       .addToBtn {
         font-size: $font-lg;
         max-height: 40px;
@@ -592,142 +584,142 @@
         margin-left: 87px;
       }
     }
-  
+
     .trioIcon {
       position: relative;
-  
+
       @include tab {
         margin-left: 70%;
       }
-  
+
       @include mo {
         margin-left: 0px;
       }
-  
+
       & i:hover {
         color: $gray02;
       }
-  
+
       .plusIconMain {
         @include mo {
           margin: 0px 30px;
         }
       }
     }
-  
+
     .resultText {
       @include mo {
         margin-left: 5px;
       }
     }
-  
+
     .selectCriteria {
       max-width: 800px;
       @include flexJustifyBetween;
-  
+
       @include md {
         max-width: 700px;
       }
-  
+
       @include tab {
         flex-wrap: wrap;
         gap: 14px;
       }
-  
+
       @include mo {
         max-width: 400px;
         margin: 0px 5px;
         gap: 14px;
       }
-  
+
       @include xsm {
         gap: 10px;
       }
     }
-  
+
     .closeIcon {
       border: 1px solid $gray06;
       border-radius: 50px;
       padding: 5px;
       cursor: pointer;
     }
-  
+
     .otherSelectMain {
       @include tab {
         margin-right: 73%;
       }
-  
+
       @include mo {
         margin-right: 0px;
       }
-  
+
       @include xxsm {
         margin-right: 28%;
       }
     }
-  
+
     .officeMain {
       background: $white;
       border-radius: 24px;
       position: relative;
-  
+
       .officeSelect {
         min-width: 152px;
         max-height: 40px;
       }
-  
+
       .straightIcon {
         position: absolute;
         top: 6px;
         right: 40px;
       }
-  
+
       .selectIcon {
         position: absolute;
         top: 8px;
         right: 14px;
       }
     }
-  
+
     .departmentTableMain {
       @include md {
         display: block;
       }
-  
+
       @include mo {
         margin-top: 30px;
       }
-  
+
       .tableScrollBar {
         max-height: 620px;
       }
-  
+
       .colMd4 {
         margin-left: 70px;
         margin-top: 70px;
         @include latestDetail;
         // @include xxlg {
-  
+
         // }
         @include bxlg {
           margin-left: 50px;
         }
-  
+
         @include md {
           margin-left: 0px;
         }
-  
+
         @include tab {
           margin-left: 0px;
         }
-  
+
         @include mo {
           margin-top: 50px;
         }
-  
+
         .cardHeading {
           min-width: 440px;
-  
+
           @include xlmd {
             min-width: 400px;
           }
@@ -741,37 +733,50 @@
             min-width: 285px;
           }
         }
-  
+
         .lstViewedImage {
           margin-right: 20px;
         }
       }
-  
+
       .departmentArmyTab {
         margin: 0px 50px 0px 0px;
       }
-  
+
       .tableBody {
         tr {
           border: none;
           max-width: 1200px;
         }
-  
+
         td {
           padding: 5px;
           border: none;
         }
-  
+
         .tableCheckbox {
           padding-bottom: 20px;
         }
       }
     }
   }
-  
 }
 // search-result css end
+@mixin iconDownProperty {
+  right: 0px;
+  top: 0px;
+  color: $gray07;
+  position: absolute;
+  background: $white03;
+  border-radius: 12px;
+  height: 42px;
+  padding: 3px 9px 0px 6px;
+}
 
+@mixin textProperty{
+  cursor: pointer;
+  text-decoration: underline;
+}
 // state result css start
 
  @mixin stateResult{

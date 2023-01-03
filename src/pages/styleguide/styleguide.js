@@ -210,15 +210,12 @@ const Styleguide = () => {
 
       <div className={Styles.buttonMain}>
         <Button size={"xlg"} variant={"solidPrimary"}>
-          {" "}
-          Demo{" "}
+          Demo
         </Button>
         <Button size={"xlg"} variant={"disaled"}>
-          {" "}
           Demo
         </Button>
         <Button size={"xlg"} variant={"solidPrimary"}>
-          {" "}
           Demo
         </Button>
         <Button size={"sm"} variant={"solidSecondary"}>
@@ -417,8 +414,7 @@ const Styleguide = () => {
           size={"xlg"}
           variant={"solidPrimary"}
         >
-          {" "}
-          Demo{" "}
+          Demo
         </Button>
       </form>
     </div>

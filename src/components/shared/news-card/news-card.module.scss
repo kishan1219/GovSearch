@@ -134,11 +134,16 @@
           }
         }
         .childText {
-          margin-top: 45px;
+          margin-top: 30px;
           font-size: 18px;
           line-height: 30px;
            @include bxlg{
             font-size: 16px;
+            margin-top: 35px;
+           }
+           @include lg{
+            font-size: 14px;
+            margin-top: 30px;
            }
           @include xlmd {
             margin-top: 25px;

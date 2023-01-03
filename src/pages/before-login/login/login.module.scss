@@ -1,13 +1,43 @@
-@import "../../../assets/scss/variables.scss";
 @import "../../../assets/scss/mixins.scss";
-@import "../../../assets/scss/breakpoints.scss";
 
 .container {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    @include mo{display: grid;}
+    .forgat{
+        @include mo{font-size: 12px;}
+    }
+    .check{
+        @include iPad{margin-top: 22px;}
+    }
+    
+    .btnMain {
+        margin-top: 40px;
+    }
+    .mainNextBtn{
+        @include mo{font-size: 14px;min-height: 35px;
+            min-width: 76px;}
+    }
+    
+        .continueBtn{
+             min-width: 388px;
+            @include lg{min-width:384px;}
+            @include xlmd{min-width:380px ; max-height: 48px;}
+            @include xxmd{min-width: 375px;}
+            @include md{min-width:306px ;}
+            @include iPad{min-width: 285px; max-height:38px;}
+            @include mo{max-height:38px;}
+            @include xxsm{min-width: 236px;}
 
+        }
 
+    
+
+     .cnfBtn{
+        @include iPad{min-width: 100px;
+            font-size: 14px;}
+     }
 
     .technoMile {
         width: 100%;
@@ -17,7 +47,19 @@
         text-align: center;
 
         .multifactorMainBox {
-            width: 592px;
+            width:100%;
+            max-width: 592px;
+
+            @include lg{
+                max-width: 490px;
+            }
+            @include iPad{
+                margin-top: 10%;
+            }
+            @include mo{
+                max-width: 344px;
+            }
+            @include xxsm{max-width: 300px;}
 
             .mainHead {
                 @include fonts-poppins;
@@ -36,9 +78,21 @@
         .factorContent {
             padding: 55px 42px 38px 50px;
             @include fonts-poppins;
+            @include mo{padding: 16px 26px 25px 26px;}
+            .accountHead{
+                @include md{font-size: 26px;}
+                @include iPad{font-size:20px;}
+               
+            }
+            .nextButon{
+                @include mo{font-size: 14px;max-height: 35px;
+                min-width: 76px;}}
+
 
             .factorText {
                 margin-top: 30px;
+                @include md{font-size: 20px;}
+                @include iPad{font-size: 16px;}
             }
 
             .nextBtn {
@@ -46,7 +100,6 @@
             }
 
         }
-
         .mt30Box {
             width: 68px;
             height: 85px;
@@ -54,24 +107,35 @@
 
         .cardBox {
             display: flex;
-             margin-top: 198px;
-             @include xxlg{justify-content: space-around;}
-            
-
-            .cardOne {
+            justify-content: space-evenly;
+            margin-top: 6%;
+        @include xxlg{margin-top: 0%;}
+          @include bxlg{margin-top: 3%;}
+          @include lg{margin-top: 8%;}
+          @include xlmd{margin-top: 10%;}
+          @include xxmd{margin-top: 5%;}
+          @include md{margin-top: 10%;}
+          @include mo{display: grid;margin-top: 100%; }
+          .cardOne {
                 width: 100%;
                 max-width: 665px;
                 @include xxlg{max-width: 827px;}
                 @include xmd{ margin-left: 30px;}
+                @include lg{max-width: 665px;}
+                @include md{max-width: 512px; margin-left: 0px;}
+                @include iPad{margin-left: 0px;max-width: 370px;}
+                @include mo{margin-left: 0px;max-width: 300px; margin-top:96%;}
 
                 .cardMainBox {
                     width: 100%;
-                    max-width: 630px;
                     margin-top: 25px;
-                    margin-left: 40px;
-                    @include xxlg{max-width: 812px;}
+                    @include xxlg{max-width: 850px;}  
+                    @include bxlg{max-width:800px;}
                     @include xlmd{max-width: 630px;}
                     @include xmd{max-width: 597px;}
+                    @include md{max-width: 492px;}
+                    @include iPad{max-width: 378px;}
+                    @include mo{max-width: 294px;}
 
                     .publinCard {
                         max-width: 562px;
@@ -82,8 +146,14 @@
                         margin-top: 20px;
                         margin-bottom: 20px;
                         margin-left: 20px;
+                        @include iPad{margin:0px 0px 0px 0px;}
+                       
                         .instructionText{
+                            @include lg{font-size: 12px;}
                             @include xlmd{font-size: 11px;}
+                            @include md{ font-size:9px; margin:0px 0px 0px 0px;}
+                            @include iPad{font-size: 13px; margin:10px 0px 10px 0px;}
+                            @include mo{font-size: 10px;}
                         }
 
                     }
@@ -95,6 +165,7 @@
                     .tncText {
                         margin-left: 26px;
                         margin-top: 3px;
+                        @include md{margin-left: 0px;}
                     }
 
                     .fieldText {
@@ -108,27 +179,31 @@
                 .accountHead {
                     text-align: left;
                     margin-left: 50px;
+                    @include md{font-size: 22px;}
+                    @include iPad{margin-left: 0px; font-size:18px;}
+                    @include mo{font-size: 18px;}
+                  
                 }
 
                 .inputHolder {
                     display: flex;
+                    justify-content: space-around;
                     padding: 23px 24px;
                     @include xmd{ padding: 23px 15px;}
-
-                    .SecondInput {
-                        margin-left: 30px;
-                    }
-
-
+                    @include mo{display: grid;}
                     .accountInfoBox {
                         display: grid;
                         gap: 24px;
-
+                        @include mo{margin-top: 20px;}
                         .Infoinput {
-                            width: 357px;
-                           
-
-                            @include xlmd {
+                         
+                           width:100%;
+                           @include xxlg{max-width: 366px; min-width: 349px;}
+                           @include lg{max-width:288px; min-width: 280px;max-height: 40px;}
+                           @include xlmd{min-width: 270px;}
+                           @include md{max-width:216px;min-width:216px; font-size: 14px;}
+                           @include iPad{max-width: 158px; min-width: 129px;}
+                           @include xlmd {
                                 width: 280px;
                             }
 
@@ -138,25 +213,37 @@
                             @include xmd{
                                 width: 270px;
                             }
+                            @include mo{max-width: 100%;}
 
                         }
 
                         .empInput {
-                            width: 282px;
+                            width: 212px;
                             background: $white03;
-                            font-size: 18px;
+                            font-size: 20px;
                             height: 55px;
                             border-radius: 10px;
-                            padding: 14px;
                             text-indent: 1px;
                             text-overflow: '';
-
-                            @include xlmd {
-                                width: 213px;
+                            @include xxlg{
+                                width: 248px;
                             }
-
-                            @include xlmd {
+                            @include lg {
+                              height: 40px; 
+                              width: 212px;
+                            }
+                             @include xlmd {
                                 height: 40px;
+                            }
+                            @include md{
+                                width:160px;
+                                font-size: 14px;
+                            }
+                            @include iPad{
+                                width:106px;
+                            }
+                             @include mo{
+                                width:198px;
                             }
 
                         }
@@ -164,7 +251,6 @@
 
                         .empInputTwo {
                             width: 286px;
-                            // margin-left: 29px;
                             background: $white03;
                             outline: none;
                             overflow: hidden;
@@ -185,27 +271,13 @@
 
 
                             .iconDown {
-                                right: 0px;
-                                top: 0px;
-                                color: $gray07;
-                                position: absolute;
-                                background: $white03;
-                                border-radius: 12px;
-                                height: 42px;
-                                padding: 3px 9px 0px 6px;
-                                @include xlmd{font-size: 27px;}
-                                @include xlmd{padding:8px 9px 0px 9px;}
+                                @include iconDownProperty;
                                 @include xxlg{padding:11px 9px 0px 9px;height:54px;}
-                                @include xmd{padding:11px 9px 0px 9px;}
-                                @include xxlg{height:54px;}
-                                @include xlmd{height: 40px;}
+                                @include lg{height: 40px;font-size: 27px;padding:8px 7px 0px 7px}
+                                @include xlmd{font-size: 27px;height: 40px;}
                                 @include xlmd{padding:8px 7px 0px 7px}
-                                
-                            }
-                        }
-
-
-                    }
+                               @include xmd{padding:11px 9px 0px 9px;} }
+                        } }
                 }
             }
 
@@ -214,16 +286,21 @@
              margin-top: 48px;
              @include xmd{ margin-left: 35px;}
              @include xxlg{margin-left: 0px;}
+             .ImageCard{
+                @include md{max-width:74%; min-height: 390px;}
+                @include iPad{max-width: 100%;}
+             }
+             .technoMileImg{
+                 @include lg{max-height: 56vh;}
+                @include xlmd{max-height: 56vh;}
+                @include md{max-height: 60vh; max-width: 86%;margin-top: 35px;}
+                @include iPad{max-height: 40vh; }
+             }
 
              .accountHead{
                 margin-top: 20px;
-             }
-                
-
-                
-                    
-            
-            }
+                @include md{font-size:16px;}
+            } }
 
         }
 
@@ -237,41 +314,47 @@
         }
 
         .inputMainBox {
-            margin-left: 82px;
             margin-top: 40px;
 
             .inputTab {
-                // padding:16px;
                 font-size: 40px;
-
             }
 
             .numInput {
                 display: flex;
-                justify-content: space-around;
-                width: 400px;
-
+                justify-content: space-evenly;
             }
-
-
             input[type="text" i] {
-                margin-left: 13px;
-                height: 85px;
-                background: $white03;
-                width: 68px !important;
-                border: none;
-                font-size: 30px;
+               
+                    right: 0px;
+                    top: 0px;
+                    color: $gray07;
+
+                    background: $white03;
+                    border-radius: 12px;
+                    height: 56px;
+                    width:45px !important;
+                    padding: 3px 9px 0px 6px;
+                
+                @include iPad{height:70px;}
+                @include mo{width: 40px !important;height:56px;}
 
             }
         }
-
-
         .forgotBox {
-
-            padding: 85px 30px 85px 30px;
+             padding: 85px 30px 85px 30px;
+         .inputEmail{
+               @include mo{max-height:32px; 
+                font-size: 16px;} 
+            }
 
             .forgotText {
                 margin: 30px 0px 0px 0px;
+                @include mo{font-size: 11px;}
+               
+            }
+            .nextBtn{
+                font-size: 10px;
             }
         }
 
@@ -281,58 +364,51 @@
 
         .secText {
             margin-top: 27px;
-            cursor: pointer;
-            text-decoration: underline;
+          @include textProperty;
         }
 
         .secTwoText {
             margin: 21px 0px 22px 0px;
-            cursor: pointer;
-            text-decoration: underline;
+            @include textProperty;
 
         }
 
         .inptBox {
-            width: 408px;
-            margin: 25px auto;
-
-        }
+             margin: 25px auto;
+         }
 
         .btnMain {
             margin-top: 48px;
+            @include iPad{margin-top: 25px;}
         }
-
-        .continueBtn {
-            margin-top: 28px;
-        }
-
-
-
-
-
-
         .authenticHeading {
             margin: 33px 0px 0px 0px;
 
             .autoHead {
-                margin-top: 10px;
+                width: 100%;
+                max-width: 300px;
+                margin: 0px auto;
+                line-height: 28px;
+              @include mo{font-size: 24px;}
             }
 
         }
-
-
         .mainBox {
             padding: 37px 57px 48px 57px;
-
-
-
+            @include xlmd{padding:37px 35px 48px 35px;}
+            @include iPad{
+                padding:37px 25px 48px 25px;
+            }
             .mainHead {
                 @include fonts-poppins;
+                @include xlmd{font-size: 28px;}
+                @include md{font-size: 26px;}
+                @include xxsm{font-size: 22px;}
             }
 
             .inputMainBox {
-                display: flex;
-
+               display:flex;
+ 
                 .inputBox {
                     width: 50px;
                 }
@@ -345,7 +421,18 @@
         }
 
         .imageBox {
-            margin-left: 60px;
+            width: 100%;
+            max-width: 68%;
+            margin: 0px auto;
+            @include xxsm{max-width: 100%;}
+
+           
+            .logoImage{
+                width: 100%;
+                max-width:65%;
+                @include md{max-width: 90%;}
+                @include xxsm{max-width: 75%;}
+            }
         }
 
 
@@ -355,52 +442,63 @@
             border-radius: 8px;
             background: $white;
             width: 100%;
-            max-width: 520px;
-            margin: 20px 0px 0px 40px;
+            max-width: 500px;
+            @include xlmd{max-width: 450px;}
+            @include md{max-width: 375px;}
+            @include iPad{max-width: 335px; margin-left:0px;}
+            @include mo{ margin:20px 0px 20px 0px;}
+            @include xxsm{max-width:284px;}
 
             .mainText {
-                margin-top: 25px;
+                margin-top:30px;
+                @include lg{margin-top: 20px;}
+                @include md{font-size: 14px;}
+                @include xxsm{font-size: 11px;}
             }
 
             .forgotText {
                 text-align: right;
                 margin-top: 9px;
-                text-decoration: underline;
-                cursor: pointer;
+                @include textProperty;
+               
+            }
+            .pswBox{
+                margin-top: 25px;
+            }
+            .pswContinueBtn{
+                margin-top: 25px;
             }
 
             .inputMain {
-                width: 408px;
+                width:100%;
+                max-width: 408px;
                 margin-top: 20px;
-
-                .passText {
-                    margin-top: 25px;
+               
+                & input::placeholder{
+                    color:$black;
+                 font-size: 20px;
+                 @include iPad{font-size: 14px;}
+               
                 }
-            }
+                .inputEmail{
+                 
+                    max-height: 44px;
+                    padding:0px 0px 4px 11px;
+                    @include iPad{
+                        max-height: 36px;
+                        padding: 0px 0px 6px 10px;
+                    }
+                }
+             }
 
             .inputMainBox {
                 display: flex;
             }
-
-            .btnMain {
-                margin-top: 30px;
-
-            }
-
             .secText {
-                text-align: center;
-                text-decoration: underline;
+                @include textProperty;
             }
-
-
-
-
-
         }
-
     }
-
-
     .resourCes {
         width: 100%;
         max-width: 952px;
@@ -409,9 +507,28 @@
         .resourCesBox {
             text-align: center;
             margin-top: 35px;
+            .featured{
+                @include xxlg{font-size: 40px;}
+                @include lg{font-size: 34px;}
+                @include xlmd{font-size: 32px;}
+                @include md{font-size: 28px;}
+            }
 
             .firstImgBox {
                 margin: 45px 0px;
+                @include xxlg{margin-top: 70px;}
+                @include xxmd{margin:30px 0px;}
+                .rightImages{
+                    width:100%;
+                    max-width: 50%;
+                    @include xxlg{max-width: 35%;}
+                    @include xlmd{max-width:42%;}
+                    @include md{max-width: 50%;}
+                    @include iPad{max-width:250px;}
+                }
+                .righSecImage{
+                    margin-top: 45px;
+                }
             }
         }
     }

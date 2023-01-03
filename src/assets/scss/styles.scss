@@ -41,6 +41,9 @@
 .mb0 {
   margin-bottom: 0px;
 }
+.mB5 {
+  margin-bottom: 5px;
+}
 
 .mB8 {
   margin-bottom: 8px;
@@ -129,6 +132,7 @@ html {
 }
 
 .errorMsg {
+
   margin: 8px 0;
   color: $red;
   font-size: $font-xs;
@@ -427,7 +431,9 @@ html {
 .mt0 {
   margin-top: 0px;
 }
-
+.pl0{
+  padding-left:0px;
+}
 // postion
 .relative {
   position: relative;

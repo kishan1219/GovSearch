@@ -48,8 +48,8 @@ const ResultDetails = () => {
       id: 1,
       heading: "Secretary of the Army",
       imageClass: "ml20 mr20",
-      paraOne: "Virginia",
-      paraTwo: "10000",
+      cityname: "Virginia",
+      count: "10000",
       src: "assets/images/OfficialArmySeal.png",
       isGreenBorder: false,
       istopLacsText: true,
@@ -60,8 +60,8 @@ const ResultDetails = () => {
       id: 2,
       heading: "Secretary of the Army",
       imageClass: "ml20 mr20",
-      paraOne: "Virginia",
-      paraTwo: "10000",
+      cityname: "Virginia",
+      count: "10000",
       src: "assets/images/OfficialArmySeal.png",
       isVirgina: true,
       isBorderColor: false,
@@ -72,8 +72,8 @@ const ResultDetails = () => {
       id: 3,
       heading: "Dale Strong (R)",
       imageClass: "ml20 mr20",
-      paraOne: "Virginia",
-      paraTwo: "Madison County",
+      cityname: "Virginia",
+      count: "Madison County",
       src: "assets/images/contactSealsm.png",
       isVirgina: true,
       isBorderColor: false,
@@ -83,9 +83,9 @@ const ResultDetails = () => {
     {
       id: 4,
       heading: "Secretary of the Army",
-      paraOne: "Virginia",
+      cityname: "Virginia",
       imageClass: "ml20 mr20",
-      paraTwo: "10000",
+      count: "10000",
       src: "assets/images/OfficialArmySeal.png",
       isVirgina: true,
       isBorderColor: false,
@@ -95,9 +95,9 @@ const ResultDetails = () => {
     {
       id: 5,
       heading: "Dale Strong (R)",
-      paraOne: "Commission Chairman",
+      cityname: "Commission Chairman",
       imageClass: "ml20 mr20",
-      paraTwo: "Madison County",
+      count: "Madison County",
       src: "assets/images/contactSealsm.png",
       isVirgina: true,
       isBorderColor: false,
@@ -109,177 +109,181 @@ const ResultDetails = () => {
   const latestList = [
     {
       id: 1,
-      textFirst: "Jerry Reimers",
-      textSecond: "Defense Intelligence S",
-      textThird: "New",
-      colorThree: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Jerry Reimers",
+      companyname: "Defense Intelligence S",
+      position: "New",
+      grayThirdRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
     },
     {
       id: 2,
-      textFirst: "Gary Hausman",
-      textSecond: "Commandant",
-      textThird: "Update",
-      colorThree: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Gary Hausman",
+      companyname: "Commandant",
+      position: "Update",
+      grayThirdRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
     },
     {
       id: 3,
-      textFirst: "Stephanie Kelley",
-      textSecond: "Assistant Comman",
-      textThird: "New",
-      colorThree: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Stephanie Kelley",
+      companyname: "Assistant Comman",
+      position: "New",
+      grayThirdRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
     },
     {
       id: 4,
-      textFirst: "Thomas Donehue",
-      textSecond: "Command Surgent",
-      textThird: "Update",
-      colorThree: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Thomas Donehue",
+      companyname: "Command Surgent",
+      position: "Update",
+      grayThirdRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
     },
     {
       id: 5,
-      textFirst: "Steven Collins",
-      textSecond: "Chief of Staff",
-      textThird: "New",
-      colorThree: "lightGray01",
-      fontweightOne: "strong7",
-      fontweightTwo: "strong7",
+      updates: "Steven Collins",
+      companyname: "Chief of Staff",
+      position: "New",
+      grayThirdRow: "lightGray01",
+      strongFirst: "strong7",
+      strongSecond: "strong7",
     },
   ];
 
   const trendingList = [
     {
       id: 1,
-      textFirst: "Contact",
-      textSecond: "Adam Stanley",
-      textThird: "Commander",
-      colorOne: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Contact",
+      companyname: "Adam Stanley",
+      position: "Commander",
+      grayFirstRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
+      strongThird: "",
     },
     {
       id: 2,
-      textFirst: "Contact",
-      textSecond: "Gary Hausman",
-      textThird: "Chief of Staff",
-      colorOne: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Contact",
+      companyname: "Gary Hausman",
+      position: "Chief of Staff",
+      grayFirstRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
+      strongThird: "",
     },
     {
       id: 3,
-      textFirst: "Contact",
-      textSecond: "Commandant",
-      textThird: "Vacant",
-      colorOne: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Contact",
+      companyname: "Commandant",
+      position: "Vacant",
+      grayFirstRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
+      strongThird: "",
     },
     {
       id: 4,
-      textFirst: "Contact",
-      textSecond: "Office Name",
-      textThird: "Top Level Office",
-      colorOne: "lightGray01",
-      fontweightOne: "",
-      fontweightTwo: "",
+      updates: "Contact",
+      companyname: "Office Name",
+      position: "Top Level Office",
+      grayFirstRow: "lightGray01",
+      strongFirst: "",
+      strongSecond: "",
+      strongThird: "",
     },
     {
       id: 5,
-      textFirst: "Contact",
-      textSecond: "XVIII Airborne Corps",
-      textThird: "1st Infantry Divisio",
-      colorOne: "lightGray01",
-      fontweightTwo: "",
-      fontweightThree: "",
+      updates: "Contact",
+      companyname: "XVIII Airborne Corps",
+      position: "1st Infantry Divisio",
+      grayFirstRow: "lightGray01",
+      strongSecond: "",
+      strongThird: "",
     },
     {
       id: 6,
-      textFirst: "Contact",
-      textSecond: "Chief of Staff",
-      textThird: "Commandant",
-      colorOne: "lightGray01",
-      fontweightTwo: "strong7",
-      fontweightThree: "strong7",
+      updates: "Contact",
+      companyname: "Chief of Staff",
+      position: "Commandant",
+      grayFirstRow: "lightGray01",
+      strongSecond: "strong7",
+      strongThird: "strong7",
     },
   ];
 
   const childList = [
     {
       id: 1,
-      textFirst: "Office of the Asistant to Secretary of",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Office of the Asistant to Secretary of",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 2,
-      textFirst: "Office of the Asistant to Secretary of",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Office of the Asistant to Secretary of",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 3,
-      textFirst: "Auditor General   US Army Audit Agency",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Auditor General   US Army Audit Agency",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 4,
-      textFirst: "Chief of staff",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Chief of staff",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 5,
-      textFirst: "General Counsel",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "General Counsel",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 6,
-      textFirst: "Contact",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Contact",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 7,
-      textFirst: "Contact",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Contact",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
     },
     {
       id: 8,
-      textFirst: "Contact",
-      textSecond: "Arlington, VA",
-      fontweightOne: "strong7",
+      updates: "Contact",
+      companyname: "Arlington, VA",
+      strongFirst: "strong7",
       isAssetsText: false,
       isChildText: true,
       isContactText: false,
@@ -367,22 +371,22 @@ const ResultDetails = () => {
                           src={baeSystem.logo}
                           isCriteriaSecond={false}
                           heading={baeSystem.heading}
-                          textFirst={baeSystem.addressFirst}
-                          textSec={baeSystem.addressSecond}
+                          addrsFirst={baeSystem.addressFirst}
+                          addrsSecond={baeSystem.addressSecond}
                           // hideTxtFst={"https://army.mil"}
                           // hideTxtSec={"100,000"}
-                          hideTxtThd={baeSystem.value}
-                          paraTwo={baeSystem.contactNumberFirst}
-                          paraOne={baeSystem.webAddress}
-                          paraThree={baeSystem.contactNumberSecond}
-                          paraFour={baeSystem.employee}
-                          paraFive={baeSystem.description}
+                         
+                          contactFirst={baeSystem.contactNumberFirst}
+                          webAddress={baeSystem.webAddress}
+                          contactSecond={baeSystem.contactNumberSecond}
+                          employee={baeSystem.employee}
+                          description={baeSystem.description}
                         />
                       </div>
                     );
                   })}
                   {/* <CriteriaCard src={"assets/images/baeImage.png"} heading={"BAE Systems, Inc"}
-                isCriteriaSecond={false}  textFirst={"Madison County Courthouse"} 
+                isCriteriaSecond={false}  updates={"Madison County Courthouse"} 
                 textSec={"100 Northside SQ, Huntsville, AL "} hideTxtFst={"https://army.mil"}
                  hideTxtSec={"100,000"} hideTxtThd={"703-695-4311"} isClassiicationText={true} paraTwo={"703-697-8036"}
                   paraOne={"https://bae.com"} paraThree={"702-888-8036"} paraFour={"# of Employees --"}
@@ -398,10 +402,12 @@ const ResultDetails = () => {
                   <Card className={Styles.cardBoxOne}>
                     {latestList.map((data) => (
                       <CardItems
-                        textFirst={data.textFirst}
-                        textSecond={data.textSecond}
-                        textThird={data.textThird}
-                        colorThree={data.colorThree}
+                        updates={data.updates}
+                        companyname={data.companyname}
+                        position={data.position}
+                        grayThirdRow={data.grayThirdRow}
+                        strongFirst={data.strongFirst}
+                        strongSecond={data.strongSecond}
                       />
                     ))}
                   </Card>
@@ -462,14 +468,14 @@ const ResultDetails = () => {
                         Trending Assets
                       </Text>
                       <Card className={Styles.cardBoxOne}>
-                        {trendingList.map((item) => (
+                        {trendingList.map((item) => ( 
                           <CardItems
-                            textFirst={item.textFirst}
-                            textSecond={item.textSecond}
-                            textThird={item.textThird}
-                            colorThree={item.colorThree}
-                            fontweightOne={item.fontweightOne}
-                            fontweightTwo={item.fontweightTwo}
+                            updates={item.updates}
+                            companyname={item.companyname}
+                            position={item.position}
+                            grayFirstRow={item.grayFirstRow}
+                            strongSecond={item.strongSecond}
+                            strongThird={item.strongThird}
                           />
                         ))}
                       </Card>
@@ -490,11 +496,8 @@ const ResultDetails = () => {
                       >
                         {childList.map((value) => (
                           <CardItems
-                            textFirst={value.textFirst}
-                            textSecond={value.textSecond}
-                            colorThree={value.colorThree}
-                            fontweightOne={value.fontweightOne}
-                            fontweightThree={value.fontweightThree}
+                            updates={value.updates}
+                            companyname={value.companyname}
                             isAssetsText={value.isAssetsText}
                             isChildText={value.isChildText}
                             isContactText={value.isContactText}
@@ -519,8 +522,8 @@ const ResultDetails = () => {
                         <ContactCard
                           src={item.src}
                           heading={item.heading}
-                          paraOne={item.paraOne}
-                          paraTwo={item.paraTwo}
+                          cityname={item.cityname}
+                          count={item.count}
                           isVirgina={item.isVirgina}
                           isArlingtonText={item.isArlingtonText}
                           imageClass={item.imageClass}

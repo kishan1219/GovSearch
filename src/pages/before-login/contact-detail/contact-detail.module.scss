@@ -132,7 +132,6 @@
 
     .scrollBar {
         overflow: auto;
-        // height: 174px;
 
         @include xxlg {
             height: 222px;
@@ -140,19 +139,19 @@
        
 
         @include bxlg {
-            height: 255px;
+            height: 276px;
         }
 
         @include lg {
-            height: 247px;
+            height: 264px;
         }
 
         @include xlmd {
-            height: 226px;
+            height: 242px;
         }
 
         @include xxmd {
-            height: 247px;
+            height: 264px;
         }
 
         @include md {

@@ -69,13 +69,12 @@ const Home = () => {
   ];
   const [searchValue, setSearchValue] = useState("");
   const navigate = useNavigate();
- const handleSearchInputChanges = (e) => {
+  const handleSearchInputChanges = (e) => {
     setSearchValue(e.target.value);
   };
   const handleSearch = () => {
     setSearchValue("");
   };
-
   const callSearchFunction = (e) => {
     // e.preventDefault();
     if (searchValue === "hello") {
@@ -83,8 +82,13 @@ const Home = () => {
       navigate(`/federale-department`); //navigate to the searched value
     }
   };
+
+  console.log(searchValue);
   return (
-    <Layout isSearch={false} isFederal={false}>
+    <Layout
+      isSearch={false}
+      isFederal={false}
+    >
       <div className={Styles.searchMain}>
         <Search
           inputValue={searchValue}

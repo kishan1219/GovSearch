@@ -4,6 +4,8 @@ import { Icon, Cardtab } from "../../components/shared";
 const Criteria = ({ isCriteriaFirst, isCriteriaSecond,isCriteriaThird }) => {
     const [show, setShow] = useState(false);
     const [show01, setShow01] = useState(false);
+
+    
     return (
         <div className={styles.criteria}>
             {isCriteriaFirst &&

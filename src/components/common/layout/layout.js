@@ -6,7 +6,7 @@ import Header from '../header';
 
 
 
-const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal,isGovSearchProfessional,isProfessional }) => {
+const Layout = ({ children, layoutClass, isHeader, isTechnomile, isAccount, isAccountSetting, isSidebar,isSearch,isFederal,isGovSearchProfessional,isProfessional,sidebarMenuOpen,sidebarMenuClose }) => {
     return (
         <div className={`${Styles.layoutMain} ${Styles.scrollBar} ${Styles.scrollWrapper}`} >
             {isHeader && <Header isSearch={isSearch} isFederal={isFederal} isGovSearchProfessional={isGovSearchProfessional} isProfessional={isProfessional}/>}

@@ -45,7 +45,7 @@ const FederaleMarkowitz = () => {
     setChecked(!checked);
   };
   const gotoResultDetail = () => {
-    navigate("/result-details");
+    navigate("/federal-contactdetail");
   };
   const CardItems = [
     {

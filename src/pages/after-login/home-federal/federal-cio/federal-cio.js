@@ -16,10 +16,6 @@ import { Tooltip } from "@mui/material";
 import { CioData } from "../../../search-result/search-data";
 import { useNavigate } from "react-router-dom";
 const FederaleCio = () => {
-  const [office, setOffice] = useState(false);
-  const [selectOffice, setSelectOffice] = useState("1");
-  const [location, setLocation] = useState(false);
-  const [selectlocation, setSelectlocation] = useState("1");
   const [other, setOther] = useState(false);
   const [selectOther, setSelectOther] = useState("1");
   const [pluslist, setPlusList] = useState(false);
@@ -29,14 +25,6 @@ const FederaleCio = () => {
   const [openPlusCard, setOpenPlusCard] = useState(false);
   const [openExportCard, setopenExportCard] = useState(false);
   const navigate = useNavigate();
-  const targetOffice = (e) => {
-    setSelectOffice(e.target.value);
-    setOffice(false);
-  };
-  const targetLocation = (e) => {
-    setSelectlocation(e.target.value);
-    setLocation(false);
-  };
   const targetOther = (e) => {
     setSelectOther(e.target.value);
     setOther(false);

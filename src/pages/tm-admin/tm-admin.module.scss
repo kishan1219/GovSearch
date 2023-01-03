@@ -1,17 +1,34 @@
 @import "../../assets/scss/mixins.scss";
 .container {
-  
+
+  @include iPad{margin-right: 0px;}
+  @include xxsm{padding:0px 15px;}
+  .heading{
+    @include md{font-size:20px;}
+    @include iPad{font-size:24px; text-align: center;}
+    @include mo{font-size: 18px;}
+    @include xxsm{font-size: 14px;}
+  }
   .headingBox {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    @include iPad{display: grid;}
+    @include mo{display: grid; justify-content: center;}
+   
     .searchBox {
       width: 100%;
       max-width: 235px;
       background-color: $gray07;
+      @include iPad{min-width: 488px;}
+      @include mo{min-width: 220px;}
+      @include xxsm{min-width:158px;}
     }
     .mainSearchBox{
         display: flex;
         align-items: center;
+        @include iPad{margin-top: 15px;}
+        @include mo{margin-top:10px;}
     }
   }
   .multipleBtn{
@@ -20,6 +37,9 @@
     justify-content: right;
     gap: 10px;
     margin-bottom: 45px;
+    @include iPad{display:flex; justify-content:left;}
+    @include mo{display: grid;justify-content: revert;}
+
 }
 }
 .profileModel{
@@ -50,17 +70,24 @@
   }
 }
 .mainModal{
-  max-width: 800px;
+  width:100vw;
   height:100vh;
+  background: transparent;
 }
-
+.mList{
+  padding-left: 0px !important;
+}
 .addUserModel{
  
-  margin:10% auto;
+  margin:7% auto;
     width: 100%;
     max-width: 800px;
+    @include xlmd{max-width:725px;}
+    @include iPad{
+padding-right: 10px;
+    }
     .SecondInput {
-      margin-left: 30px;
+      // margin-left: 30px;
       .accountInfoBox{
         display: grid;
         gap:20px;
@@ -69,12 +96,18 @@
     .Infoinput{
       width: 100%;
     max-width: 375px;
+    max-height: 40px;
     }
     .inputHolder {
       display: flex;
+      justify-content: space-around;
+      @include mo{
+        display: grid;
+      }
       .accountInfoBox{
         display:grid;
       gap:20px;
+      @include mo{margin-top:20px;}
           }
       
     }
@@ -99,19 +132,19 @@
           position: absolute;
           background: $white03;
           border-radius: 12px;
-          height: 42px;
-          padding: 3px 9px 0px 6px;
+          height: 40px;
+          font-size: 20px;
+          padding: 10px 9px 0px 8px;
           
       }
   }
 
     .empInput{
-      width: 282px;
+      width: 228px;
       background: $white03;
       font-size: 18px;
-      height: 55px;
+      height: 40px;
       border-radius: 10px;
-      padding: 14px;
       text-indent: 1px;
       text-overflow: '';
     }
@@ -121,7 +154,9 @@
   .addAccountCard{
     max-width: 800px;
     margin-top: 45px;
-    padding:24px 28px 26px 24px;
+    // padding:24px 28px 26px 24px;
+    padding: 24px 0px 26px 0px;
+    @include xlmd{max-width: 725px;}
   }
   .btnMain{
     margin-top: 25px;
@@ -129,5 +164,42 @@
     justify-content: space-between;
   }
 }
+@include ScrollBar;
 
+// .user{
+// min-width:200px;
+// max-width: 200px;
+// }
+// table{
+//   th{
+//     font-size: 10px;
+//     background-color: red;
+    
+//   }
+// }
+.user{
+  min-width:125px;
+  max-width: 130px;
+
+}
+
+table{
+  th{
+    min-width:100px;
+    max-width:135px;
+    @include textEllipse;
+  }
+    tr{
+.check{
+  visibility: hidden;
+
+}
+& :hover{
+  .check{
+    visibility: show;
+  }
+}
+    
+  }
+}
 

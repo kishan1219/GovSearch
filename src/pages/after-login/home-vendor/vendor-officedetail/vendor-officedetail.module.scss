@@ -1,0 +1,150 @@
+@import "../../../../assets/scss/mixins.scss";
+.mainContainer {
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 30px;
+    @include ScrollBar;
+    @include iPad{padding-left: 14px;}
+    @include mo{padding:0px 5px 0px 5px;}
+    .requestText{
+        @include iPad{
+            margin-left: 0px;
+        }
+    }
+    .criterBox{
+        @include md{margin-top: 25px;}
+        @include mo{margin-top: 40px;}
+
+    }
+    .criteriaBox{
+      @include criteriaProperty;
+      display:block;
+      justify-content: center;
+      max-width:64%;
+      min-height:400px;
+      outline: 20px solid $white;
+      @include xxlg{height:76%}
+      @include bxlg{height: 75%;}
+      @include lg {max-width: 63%;height:71%;}
+      @include xlmd{max-width:62%; height: 69%;}
+      @include xxmd { max-width: 63%; height: 69%;}
+      @include md{max-width: 62%; height: 57%;}
+      @include iPad{max-width: 82%; margin-top: 40px;}
+        .screenIcon{
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            @include iPad{right: 25px;}
+            .sliderValue{color:$gray;}
+            .boxIcon{margin-left: 8%;}
+        }
+    }
+    .criteriaSecBox{
+       @include criteriaProperty;
+        height:80%;
+        background-color: $lightGray02;
+        outline: 20px solid $white;
+        
+        .screenIcon{
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            .sliderValue{color:$gray;}
+        }
+    }
+    .cardBoxOne {
+        max-width: 554px;
+        padding: 24px 0px 20px 0px;
+        @include iPad{max-width: 554px;}
+     }
+    .cardSecondBox{
+        max-width: 554px;
+        padding: 24px 0px 20px 0px;
+    }
+    .scrollBar {
+         overflow: auto;
+        
+         @include xxlg{height: 34vh;}
+         @include bxlg{height: 36vh;}
+         @include lg{height:40vh;}
+         @include xlmd {height:38vh;}
+         @include xxmd{height:41vh;}
+         @include md {height: 198px;}
+         @include iPad{min-height:254px;}
+         @include mo{height:100%;}
+         @include xxsm{height:100%;}
+    }
+    .searchCriteria {
+        width: 100%;
+        @include flexBetween;
+        align-items: center;
+        @include iPad{max-width: 90%;}
+         @include mo { flex-wrap: wrap; max-width: 100%;}
+         .departHead{@include iPad{font-size: 12px;}}
+         .plusIcon{@include iPad{margin:0px 15px;font-size: 25px;} }
+         .headIcon{@include iPad{font-size: 25px;}}
+    }
+     .cardBox {
+       @include flexWrap;
+        width: 100%;
+        .detaisFirst {
+            width:100%;
+            max-width: 570px;
+            .updateBox {     
+                @include flex;
+                margin: 20px 0px 5px 0px;
+                @include xlmd {
+                  margin-bottom: 0px;
+                }
+                .updateText {
+                    width: 100%;
+                    max-width: 391px;
+                    @include xlmd {max-width: 286px; font-size: 12px;}
+                    @include md{max-width: 181px;font-size: 9px;}
+                    @include iPad{max-width: 80%;}
+                }
+                .requestText {
+                    width: 100%;
+                    max-width: 142px;
+                    margin: 5px 0px;
+                    @include xlmd{font-size: 13px;max-width: 126px;}
+                    @include xmd{font-size: 12px; max-width: 114px;}
+                    @include md{font-size: 9px;max-width: 84px;}
+                }
+            }
+        }
+
+        .trendingBox {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 97px;
+            margin-left: 20px;
+            @include iPad{margin-top: 0px; margin-left: 0px;}
+            .cardBox {
+                max-width: 554px;
+                padding: 24px 0px 20px 0px;
+            }
+            .cardthirdBox {
+                max-width: 554px;
+                padding:20px 0px;
+                @include lg{padding:12px 0px;}
+            }
+            .secondText {
+                @include md{margin-left: 19px;}
+                @include iPad{margin-left: 0px;}
+            }
+        }
+        .armyMain{
+            margin-left: 97px;
+            margin-top: 121px;
+            @include xlmd {margin-left: 74px;}
+            @include md{margin-left: 50px;}
+            @include iPad {margin-top: 0px;margin-left: 0px;}
+            .recomendText{
+                margin-bottom: 28px;
+                text-align: center;
+                @include iPad{text-align: left;margin-bottom:0px ;}
+            }
+        }
+    }
+}

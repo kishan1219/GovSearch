@@ -49,13 +49,18 @@ const Sidebar = () => {
     const [showMoreOfficeName, setShowMoreOfficeName] = useState(false)
     const [showMoreCounty, setShowMoreCounty] = useState(false)
     const toggle = () => {
-        setSidebarContentHide(true);
-        setSidebarHide(false)
+        // setSidebarContentHide(true);
+        // setSidebarHide(false)
+        if (setSidebarContentHide(!sidebarContentHide)) {
+            setSidebarHide(false);
+          } else if (setSidebarHide(!sidebarHide)) {
+            setSidebarContentHide(false);
+          }
     }
-    const toggleClose = () => {
-        setSidebarContentHide(false);
-        setSidebarHide(true)
-    }
+    // const toggleClose = () => {
+    //     setSidebarContentHide(false);
+    //     setSidebarHide(true)
+    // }
     const officeToggle = () => {
         sethideOfficeNameSecond(!hideOfficeNameSecond);
         setShowOfficeNameSecond(!showOfficeNameSecond);
@@ -158,7 +163,7 @@ const Sidebar = () => {
     const label = { slotProps: { input: { 'aria-label': 'Demo switch' } } };
     return (
         <div className={Styles.container}>
-            {sidebarHide &&
+            {sidebarHide && 
                 <div>
                     <ListGroup className={Styles.menu}>
                         <ListItem>
@@ -189,11 +194,11 @@ const Sidebar = () => {
                         <Icon className={Styles.ml30} type='star' color={"primary"} variant='icon_xlarge' />
                     </div>
                 </div>}
-            {sidebarContentHide &&
+            {sidebarContentHide && 
                 <div className={Styles.sidebarMain}>
                     <div className={Styles.advanceSearchText}>
                         <Text family='roboto' className={"op5 cursor"} color={"gray"} variant={"lgIconText"}>Advanced Search</Text>
-                        <Icon className={Styles.burgerIcon} onClick={toggleClose} type='close' color={"gray"} variant='icon_xlarge' />
+                        <Icon className={Styles.burgerIcon} onClick={toggle} type='close' color={"gray"} variant='icon_xlarge' />
                     </div>
                     <Text family='roboto' variant={"smText"} className={"op5 mt25 ml20 underline cursor textUnderlineHover"} color={"darkGray"}>Saved Searches</Text>
                     <div className='dFlex mT30 alignbaseline mr20'>

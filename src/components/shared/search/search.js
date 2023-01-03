@@ -30,6 +30,7 @@ export default function Search({
   } = useForm();
 
   const onSubmit = (data) => console.log(data);
+  
   return (
     <div className={Styles.mainSearch}>
       <div className={Styles.head}>
@@ -57,7 +58,7 @@ export default function Search({
             <MenuItem value="Offices">OFFICES</MenuItem>
             <MenuItem value="Vendors">VENDORS</MenuItem>
           </Select>
-          <div className={Styles.inSearch} onSubmit={handleSubmit(onSubmit)}>
+          <div className={Styles.inSearch}>
             <Input
               className={`${Styles.inputMain} ${inputclassName}`}
               placeholder={placeholder}
@@ -65,9 +66,19 @@ export default function Search({
               value={inputValue}
               name="search"
               reference={register("search", {
-                required: true,
+                required: "required",
+                minLength: {
+                  value: 2,
+                  message:
+                    "Please enter valid title/role (at least 2 characters)",
+                },
+                maxLength: {
+                  value: 30,
+                  message: "Please enter valid title/role (only 30 characters)",
+                },
                 pattern: {
                   value: /^[A-Za-z]+$/,
+                  message: "Please enter valid Title / Role (alphabet only)",
                 },
               })}
             />
@@ -89,21 +100,16 @@ export default function Search({
             Advanced
           </Button>
           <div className={Styles.btnSearch}>
-            <div className={Styles.error}>
-              {errors?.search?.type === "required" && (
-                <p>please enter content</p>
-              )}
-              {errors?.search?.type === "pattern" && (
-                <p>only allow character</p>
-              )}
+            <div className={Styles.errorMsg}>
+              {errors.search ? <div>{errors.search.message}</div> : null}
             </div>
             <Button
               btnClass={Styles.solidSearch}
               size={"xxllg"}
               variant={"solidPrimary"}
+              type={"submit"}
               btnHandler={() => {
                 handleSubmit(onSubmit);
-                searchHandler();
               }}
             >
               SEARCH

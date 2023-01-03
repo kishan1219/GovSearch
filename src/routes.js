@@ -28,8 +28,20 @@ import {
   VendorBrian,
   VendorCio,
   VendorDynetics,
-  LoginDemo,
 } from "./pages";
+import {
+  FederalPublicDetail,
+  FederalContactDetail,
+} from "./pages/after-login/home-federal";
+
+import {
+  StatePublicdetail,
+  StateContactdetail,
+} from "./pages/after-login/home-state";
+import {
+  VendorContactDetail,
+  VendorOfficeDetail,
+} from "./pages/after-login/home-vendor";
 
 export const routes = [
   {
@@ -178,9 +190,35 @@ export const routes = [
     component: VendorCio,
     exact: false,
   },
+
   {
-    path: "/login-demo",
-    component: LoginDemo,
+    path: "/state-contactdetail",
+    component: StateContactdetail,
+    exact: false,
+  },
+  {
+    path: "/state-publicdetail",
+    component: StatePublicdetail,
+    exact: false,
+  },
+  {
+    path: "/federal-publicdetail",
+    component: FederalPublicDetail,
+    exact: false,
+  },
+  {
+    path: "/federal-contactdetail",
+    component: FederalContactDetail,
+    exact: false,
+  },
+  {
+    path: "/vendor-officedetail",
+    component: VendorOfficeDetail,
+    exact: false,
+  },
+  {
+    path: "/vendor-contactdetail",
+    component: VendorContactDetail,
     exact: false,
   },
 ];

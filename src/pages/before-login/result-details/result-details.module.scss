@@ -55,7 +55,6 @@
     .cardBoxOne {
         max-width: 554px;
         padding: 24px 0px 20px 0px;
-        // @include xlmd{max-width: 389px;}
         @include iPad{max-width: 554px;}
      }
     .cardSecondBox{
@@ -64,13 +63,13 @@
     }
     .scrollBar {
          overflow: auto;
-         height: 212px;
-         @include xxlg{height: 289px;}
-         @include bxlg{height: 287px;}
-         @include lg{height:254px;}
-         @include xlmd {height: 232px;}
-         @include xxmd{height: 232px;}
-         @include md {height: 171px;}
+        
+         @include xxlg{height: 34vh;}
+         @include bxlg{height: 36vh;}
+         @include lg{height:40vh;}
+         @include xlmd {height:38vh;}
+         @include xxmd{height: 262px;}
+         @include md {height: 198px;}
          @include iPad{min-height:254px;}
          @include mo{height:100%;}
          @include xxsm{height:100%;}
@@ -127,6 +126,8 @@
             }
             .cardthirdBox {
                 max-width: 554px;
+                padding:20px 0px;
+                @include lg{padding:12px 0px;}
             }
             .secondText {
                 @include md{margin-left: 19px;}

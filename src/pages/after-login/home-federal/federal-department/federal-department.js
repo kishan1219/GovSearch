@@ -58,7 +58,7 @@ const FederaleDepartment = () => {
     setChecked(!checked);
   };
   const gotoResultDetail = () => {
-    navigate("/result-details");
+    navigate("/federal-publicdetail");
   };
   const CardItems = [
     {
