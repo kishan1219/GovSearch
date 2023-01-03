@@ -13,18 +13,41 @@ import {
   Card,
 } from "../../../components/shared/index";
 import OtpInput from "react-otp-input";
-// import { Card } from '@mui/material';
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
-// import MenuItem from '@mui/material/MenuItem';
-// import Select from '@mui/material/Select';
- 
 const Login = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(errors);
- 
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ mode: "onChange" });
+  const onSubmit = (data) => {
+    showDetails();
+    console.log(data);
+    console.log(errors);
+  };
+  const onConfirm = (data) => {
+    showMultiFactor();
+    console.log(data);
+    console.log(errors);
+  };
+  const [showErrors, setErrors] = useState({}); // for show error
+  const setError = (error) => {
+    setErrors({ ...showErrors, otpInput: error });
+  };
+
+  const handleOTPChange = (inputOTP) => {
+    setOTP(inputOTP);
+    if (inputOTP.length <= 5) {
+      // 0 to 5 length
+      setError({ message: "Please enter 6 digits OTP number" });
+    } else {
+      setError("");
+    }
+  };
+  console.table(showErrors);
+
   const [OTP, setOTP] = useState("");
   const [show, setShow] = useState(false);
   const [showHide, setShowHide] = useState(true);
@@ -94,8 +117,7 @@ const Login = () => {
         </div>
         {/* Login Card Start here */}
         {showHide && (
-        
-          <div className={Styles.mainCard} >
+          <div className={Styles.mainCard}>
             <div className={Styles.mainBox}>
               <Heading
                 className={Styles.mainHead}
@@ -113,12 +135,12 @@ const Login = () => {
                 Enter your email address to sign in.
               </Text>
               <div className={Styles.inputMain}>
-                <Input type="email" name="email"
+                <Input
+                  type="email"
+                  name="email"
                   className={Styles.inputEmail}
                   variant="border"
-
                   placeholder="Enter Your Email"
-
                   reference={register("email", {
                     required: true,
                     pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -133,23 +155,14 @@ const Login = () => {
                     <p>*please enter valid email</p>
                   )}
                 </div>
-
-
-
-
-
-
-
-
               </div>
               <div className={Styles.btnMain}>
                 <Button
                   size={"xxlg"}
                   btnClass={Styles.continueBtn}
                   variant={"solidPrimary"}
-                  btnHandler={() => { showDetails(); handleSubmit(onSubmit) }}
-                // btnHandler={handleSubmit(onSubmit) }
-
+                  // btnHandler={() => { showDetails(); handleSubmit(onSubmit) }}
+                  btnHandler={handleSubmit(onSubmit)}
                 >
                   Continue
                 </Button>
@@ -165,122 +178,124 @@ const Login = () => {
               </Text>
             </div>
           </div>
-          
         )}
 
         {/* Password Card  */}
 
         {show && (
-          <form  onSubmit={handleSubmit(onSubmit)}>
-          <div className={Styles.mainCard}>
-            <div className={Styles.mainBox}>
-              <Heading
-                className={Styles.mainHead}
-                color={"secondary"}
-                headingType={"h1"}
-              >
-                Password
-              </Heading>
-              <Text
-                className={Styles.mainText}
-                variant={"mlgText"}
-                color={""}
-                strong={"strong4"}
-              >
-                Enter your password to continue.
-              </Text>
-              <div className={Styles.inputMain}>
-                {/* <Input
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className={Styles.mainCard}>
+              <div className={Styles.mainBox}>
+                <Heading
+                  className={Styles.mainHead}
+                  color={"secondary"}
+                  headingType={"h1"}
+                >
+                  Password
+                </Heading>
+                <Text
+                  className={Styles.mainText}
+                  variant={"mlgText"}
+                  color={""}
+                  strong={"strong4"}
+                >
+                  Enter your password to continue.
+                </Text>
+                <div className={Styles.inputMain}>
+                  {/* <Input
                   className={Styles.inputEmail}
                   variant="border"
                   type="email"
                   placeholder="Enter Your Email"
                   name="email"
                 /> */}
-                <Input type="email" name="email"
-                  className={Styles.inputEmail}
-                  variant="border"
+                  <Input
+                    type="email"
+                    name="email"
+                    className={Styles.inputEmail}
+                    variant="border"
+                    placeholder="Enter Your Email"
+                    reference={register("email", {
+                      required: true,
+                      pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    })}
+                  />
+                  <div className={Styles.errorMsg}>
+                    {errors?.email?.type === "required" && (
+                      <p>*Please enter email address.</p>
+                    )}
 
-                  placeholder="Enter Your Email"
+                    {errors?.email?.type === "pattern" && (
+                      <p>*please enter valid email</p>
+                    )}
+                  </div>
 
-                  reference={register("email", {
-                    required: true,
-                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  })}
-                />
-                <div className={Styles.errorMsg}>
-                  {errors?.email?.type === "required" && (
-                    <p>*Please enter email address.</p>
-                  )}
-
-                  {errors?.email?.type === "pattern" && (
-                    <p>*please enter valid email</p>
-                  )}
+                  <div className={Styles.pswBox}>
+                    <Input
+                      type={"password"}
+                      className={Styles.inputEmail}
+                      variant="border"
+                      placeholder={"Enter Your Password"}
+                      name="name"
+                      reference={register("password", {
+                        required: "*required",
+                        minLength: {
+                          value: 8,
+                          message: "must be 8 chars",
+                        },
+                        validate: (value) => {
+                          return (
+                            [/[a-z]/, /[A-Z]/, /[0-9]/, /[^a-zA-Z0-9]/].every(
+                              (pattern) => pattern.test(value)
+                            ) ||
+                            "must include lower, upper, number, and special chars"
+                          );
+                        },
+                      })}
+                    />
+                    <div className={Styles.errorMsg}>
+                      {errors.password ? (
+                        <div>{errors.password.message}</div>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
+                <div className={Styles.forgotText}>
+                  <Text
+                    className={Styles.forgat}
+                    variant={"smText"}
+                    color={"black"}
+                    strong={"strong4"}
+                    handleClick={showForgatData}
+                  >
+                    forgot password?
+                  </Text>
                 </div>
 
-
-
-
-                <div className={Styles.pswBox}>
-                   <Input type={"password"} className={Styles.inputEmail}
-                   variant="border" placeholder={"Enter Your Password"}
-            name="name"
-            reference={register("password", {
-              required: "*required",
-              minLength: {
-                value: 8,
-                message: "must be 8 chars",
-              },
-              validate: (value) => {
-                return (
-                  [/[a-z]/, /[A-Z]/, /[0-9]/, /[^a-zA-Z0-9]/].every((pattern) =>
-                    pattern.test(value)
-                  ) || "must include lower, upper, number, and special chars"
-                );
-              },
-            })} />
-          <div className={Styles.errorMsg}>
-            {errors.password ? <div>{errors.password.message}</div> : null}
-          </div>
-                  
+                <div className={Styles.pswContinueBtn}>
+                  <Button
+                    size={"xxlg"}
+                    btnClass={Styles.continueBtn}
+                    variant={"solidPrimary"}
+                    // btnHandler={showMultiFactor}
+                    btnHandler={handleSubmit(onConfirm)}
+                  >
+                    Continue
+                  </Button>
                 </div>
-              </div>
-              <div className={Styles.forgotText}>
-                <Text
-                  className={Styles.forgat}
-                  variant={"smText"}
-                  color={"black"}
-                  strong={"strong4"}
-                  handleClick={showForgatData}
-                >
-                  forgot password?
-                </Text>
-              </div>
-
-              <div className={Styles.pswContinueBtn}>
-                <Button
-                  size={"xxlg"}
-                  btnClass={Styles.continueBtn}
-                  variant={"solidPrimary"}
-                  // btnHandler={showMultiFactor}
-                  btnHandler={handleSubmit(onSubmit)  }
-                >
-                  Continue
-                </Button>
-              </div>
-              <div onClick={showLogin}>
-                <Text
-                  className={Styles.secText}
-                  variant={"smText"}
-                  color={"black"}
-                  strong={"strong4"}
-                  onClick={showDetails}
-                >
-                  Can’t Login?
-                </Text>
+                <div onClick={showLogin}>
+                  <Text
+                    className={Styles.secText}
+                    variant={"smText"}
+                    color={"black"}
+                    strong={"strong4"}
+                    onClick={showDetails}
+                  >
+                    Can’t Login?
+                  </Text>
+                </div>
               </div>
             </div>
-          </div>
           </form>
         )}
 
@@ -313,8 +328,14 @@ const Login = () => {
                 containerStyle={Styles.numInput}
                 numInputs={6}
                 value={OTP}
-                onChange={setOTP}
+                onChange={(inputOTP) => handleOTPChange(inputOTP)}
+                name="otpInput"
               />
+              <div className={`${Styles.otpError} ${Styles.errorMsg}`}>
+                {showErrors.otpInput ? (
+                  <div>{showErrors.otpInput.message}</div>
+                ) : null}
+              </div>
             </div>
             <Text
               className={Styles.secText}
@@ -329,7 +350,8 @@ const Login = () => {
                 size={"xxlg"}
                 btnClass={Styles.continueBtn}
                 variant={"solidPrimary"}
-                btnHandler={showDetails}
+                // btnHandler={showDetails}
+                btnHandler={handleSubmit(onSubmit)}
               >
                 Enter
               </Button>
@@ -413,104 +435,103 @@ const Login = () => {
                   <Card class={Styles.publicCard}>
                     <div className={Styles.inputHolder}>
                       <div className={Styles.accountInfoBox}>
-                      <Input
+                        {/* <Input
                             type="fullname"
                             name="fullname"
                             placeholder="First  Name"
-                              variant="grey"/>
-                      {/* <Input
-                            type="fullname"
-                            name="fullname"
-                            placeholder="First  Name"
-                              variant="grey"
-                            reference={register("fullname", {
-                                required: true,
-                                minLength: 3,
-                                pattern: {
-                                    value: /^[A-Za-z]/
-
-                                },
-
-                            })}
+                              variant="grey"/> */}
+                        <Input
+                          className={Styles.Infoinput}
+                          type="fname"
+                          name="fname"
+                          placeholder="First  Name"
+                          variant="grey"
+                          reference={register("fname", {
+                            required: true,
+                            minLength: 3,
+                            pattern: {
+                              value: /^[A-Za-z]/,
+                            },
+                          })}
                         />
                         <div className={Styles.errorMsg}>
-                            {errors?.fullname?.type === "required" && (
-                                <p>*only Alphabet allow</p>
-                            )}
-                            {errors?.fullname?.type === "pattern" && (
-                                <p>not allow alphanumeric number</p>
-                            )}
-                            {errors?.fullname?.type === "minLength" && (
-                                <p>Minimum 3 digit number</p>
-                            )}
+                          {errors?.fname?.type === "required" && (
+                            <p>*only Alphabet allow</p>
+                          )}
+                          {errors?.fname?.type === "pattern" && (
+                            <p>not allow alphanumeric number</p>
+                          )}
+                          {errors?.fname?.type === "minLength" && (
+                            <p>Minimum 3 digit number</p>
+                          )}
+                        </div>
 
-
-                        </div> */}
-                     
+                        {/* <Input
+                          className={Styles.Infoinput}
+                          placeholder="Phone"
+                          variant="grey"
+                        /> */}
                         <Input
                           className={Styles.Infoinput}
                           placeholder="Phone"
                           variant="grey"
+                          type="text"
+                          name="phone1"
+                          reference={register("phone1", {
+                            required: true,
+                            pattern: {
+                              value: /^\d{10}$/,
+                            },
+                          })}
                         />
+                        <div className={Styles.errorMsg}>
+                          {errors?.phone1?.type === "required" && (
+                            <p>*This field is required</p>
+                          )}
+
+                          {errors?.phone1?.type === "pattern" && (
+                            <p>Please enter valid 10 digit number</p>
+                          )}
+                        </div>
+
                         {/* <Input
-                               
-                               className={Styles.Infoinput}
-                               placeholder="Phone"
-                               variant="grey"
-                                type="text"
-                                name="phone"
-                                reference={register("phone", {
-                                    required: true,
-                                    pattern: {
-                                        value: /^\d{10}$/
-
-                                    },
-                                })}
-                            />
-                             <div className={Styles.errorMsg}>
-                                {errors?.phone?.type === "required" && (
-                                    <p>*This field is required</p>
-                                )}
-
-                                {errors?.phone?.type === "pattern" && (
-                                    <p>Please enter valid 10 digit number</p>
-                                )}
-                            </div> */}
-                        
+                          className={Styles.Infoinput}
+                          placeholder="Title / Role"
+                          variant="grey"
+                        /> */}
                         <Input
                           className={Styles.Infoinput}
                           placeholder="Title / Role"
                           variant="grey"
-                        />
-                          {/* <Input 
-                           className={Styles.Infoinput}
-                           placeholder="Title / Role"
-                           variant="grey"
                           type="username"
-                            name="username"
-                            reference={register("username", {
-                                required: true,
-                                minLength: 3,
-                                pattern: /^\S/
-                            })}
+                          name="username"
+                          reference={register("username", {
+                            required: true,
+                            minLength: 3,
+                            pattern: /^\S/,
+                          })}
                         />
                         <div className={Styles.errorMsg}>
-                            {errors?.username?.type === "required" && (
-                                <p>*this field must be required</p>
-                            )}
+                          {errors?.username?.type === "required" && (
+                            <p>*this field must be required</p>
+                          )}
 
-                            {errors?.username?.type === "minLength" && (
-                                <p>Minimum 3 character username</p>
-                            )}
-                            {errors?.username?.type === "pattern" && (
-                                <p>space not allow</p>
-                            )}
-                        </div> */}
+                          {errors?.username?.type === "minLength" && (
+                            <p>Minimum 3 character username</p>
+                          )}
+                          {errors?.username?.type === "pattern" && (
+                            <p>space not allow</p>
+                          )}
+                        </div>
 
                         <div className={Styles.arrowInput}>
                           <Select
                             className={Styles.empInput}
                             IconComponent={() => null}
+                            name="select"
+                            reference={register("select", {
+                              required: "required",
+                            })}
                             sx={{
                               boxShadow: "none",
                               ".MuiOutlinedInput-notchedOutline": { border: 0 },
@@ -531,39 +552,46 @@ const Login = () => {
                             variant="icon_xlarge"
                           />
                         </div>
+                        <div className={Styles.errorMsg}>
+                          {errors.select ? (
+                            <div>{errors.select.message}</div>
+                          ) : null}
+                        </div>
                       </div>
                       <div className={Styles.SecondInput}>
                         <div className={Styles.accountInfoBox}>
-                        <Input  
+                          {/* <Input  
                          className={Styles.Infoinput}
                          placeholder="Last Name"
-                         variant="grey"/>
-                        {/* <Input  
-                         className={Styles.Infoinput}
-                         placeholder="Last Name"
-                         variant="grey"
-                          
-                           reference={register("name", {
-                            required: "*required",
-                            maxLength: {
+                         variant="grey"/> */}
+                          <Input
+                            className={Styles.Infoinput}
+                            placeholder="Last Name"
+                            variant="grey"
+                            reference={register("name", {
+                              required: "*required",
+                              maxLength: {
                                 value: 30,
                                 message: "must be 30 chars",
-                            },
-                            minLength: {
-                              value: 2,
-                              message: "must be 2 chars",
-                          },
-                            validate: (value) => {
+                              },
+                              minLength: {
+                                value: 2,
+                                message: "must be 2 chars",
+                              },
+                              validate: (value) => {
                                 return (
-                                    [/^[A-Za-z]+$/i].every((pattern) =>
-                                        pattern.test(value)
-                                    ) || "only chars are allowed"
+                                  [/^[A-Za-z]+$/i].every((pattern) =>
+                                    pattern.test(value)
+                                  ) || "only chars are allowed"
                                 );
-                            },
-                        })} /> 
-                        <div className={Styles.errorMsg}>
-                            {errors.name ? <div>{errors.name.message}</div> : null}
-                        </div> */}
+                              },
+                            })}
+                          />
+                          <div className={Styles.errorMsg}>
+                            {errors.name ? (
+                              <div>{errors.name.message}</div>
+                            ) : null}
+                          </div>
                           {/* <Input
                             className={Styles.Infoinput}
                             placeholder="Last Name"
@@ -573,81 +601,132 @@ const Login = () => {
                             className={Styles.Infoinput}
                             placeholder="Phone"
                             variant="grey"
+                            type="text"
+                            name="phone"
+                            reference={register("phone", {
+                              required: true,
+                              pattern: {
+                                value: /^\d{10}$/,
+                              },
+                            })}
                           />
-                         
-                          <Input
+                          <div className={Styles.errorMsg}>
+                            {errors?.phone?.type === "required" && (
+                              <p>*This field is required</p>
+                            )}
+
+                            {errors?.phone?.type === "pattern" && (
+                              <p>Please enter valid 10 digit number</p>
+                            )}
+                          </div>
+                          {/* <Input
+                            className={Styles.Infoinput}
+                            placeholder="Phone"
+                            variant="grey"
+                          /> */}
+
+                          {/* <Input
                             className={Styles.Infoinput}
                             placeholder="Company"
                             variant="grey"
-                          />
-                            {/* <Input 
+                          /> */}
+                          <Input
                             className={Styles.Infoinput}
                             placeholder="Company"
                             variant="grey"
                             type="company"
                             name="username"
                             reference={register("company", {
-                                required: true,
-                                minLength: 3,
-                                pattern: /^\S/
+                              required: true,
+                              minLength: 3,
+                              pattern: /^\S/,
                             })}
-                        />
-                        <div className={Styles.errorMsg}>
+                          />
+                          <div className={Styles.errorMsg}>
                             {errors?.company?.type === "required" && (
-                                <p>*this field must be required</p>
+                              <p>*this field must be required</p>
                             )}
 
                             {errors?.company?.type === "minLength" && (
-                                <p>Minimum 3 character username</p>
+                              <p>Minimum 3 character username</p>
                             )}
                             {errors?.company?.type === "pattern" && (
-                                <p>space not allow</p>
+                              <p>space not allow</p>
                             )}
-                        </div> */}
+                          </div>
+                          {/* <Input
+                            className={Styles.Infoinput}
+                            placeholder="Company URL"
+                            variant="grey"
+                          /> */}
                           <Input
                             className={Styles.Infoinput}
                             placeholder="Company URL"
                             variant="grey"
-                          />
-                           {/* <Input 
-                           className={Styles.Infoinput}
-                           placeholder="Company URL"
-                           variant="grey"
-                           type="companyUrl"
+                            type="companyUrl"
                             name="companyUrl"
                             reference={register("companyUrl", {
-                                required: true,
-                                minLength: 3,
-                                pattern: /^\S/
+                              required: true,
+                              minLength: 3,
+                              pattern:
+                                /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$/,
                             })}
-                        />
-                        <div className={Styles.errorMsg}>
+                          />
+                          <div className={Styles.errorMsg}>
                             {errors?.companyUrl?.type === "required" && (
-                                <p>*this field must be required</p>
+                              <p>*this field must be required</p>
                             )}
 
                             {errors?.companyUrl?.type === "minLength" && (
-                                <p>Minimum 3 character username</p>
+                              <p>Minimum 5 character(digit) Url</p>
                             )}
                             {errors?.companyUrl?.type === "pattern" && (
-                                <p>space not allow</p>
+                              <p>please fill valid url</p>
                             )}
-                        </div> */}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </Card>
                   <div className={Styles.checboxMain}>
-                    <CheckBox
+                    {/* <CheckBox
                       variant="gray"
                       className={`${Styles.check} ${"mb20"}`}
+                      
+                    /> */}
+                    {/* <CheckBox  variant="gray"
+                      className={`${Styles.check} ${"mb20"}`}
+                     name="checkbox" id="check" 
+                        reference={register("checkbox", { required: "*required" })}
+                    /> */}
+                    <CheckBox
+                      variant="gray"
+                      labelName={
+                        <div className={Styles.tncText}>
+                          <Text className={Styles.instructionText}>
+                            "I have read, understand, and agree to the entire
+                            Master License and Online Service Agreement "
+                          </Text>
+                        </div>
+                      }
+                      id="checkBox"
+                      checkBoxName={"checkbox"}
+                      reference={register("checkbox", {
+                        required: "required",
+                      })}
                     />
-                    <div className={Styles.tncText}>
+                    <div className={Styles.errorMsg}>
+                      {errors.checkbox ? (
+                        <div>{errors.checkbox.message}</div>
+                      ) : null}
+                    </div>
+
+                    {/* <div className={Styles.tncText}>
                       <Text className={Styles.instructionText}>
                         "I have read, understand, and agree to the entire Master
                         License and Online Service Agreement "
                       </Text>
-                    </div>
+                    </div> */}
                   </div>
                   <div className={Styles.buttonMain}>
                     <Button
@@ -655,7 +734,7 @@ const Login = () => {
                       size={"xlmd"}
                       variant={"solidPrimary"}
                       // btnHandler={canNotLogin}
-                      btnHandler={handleSubmit(onSubmit) }
+                      btnHandler={handleSubmit(onSubmit)}
                     >
                       Confirm
                     </Button>
