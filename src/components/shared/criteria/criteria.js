@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from './criteria.module.scss'
-import { Icon, Cardtab } from "../../components/shared";
+import { Icon, Cardtab } from "../../shared";
 const Criteria = ({ isCriteriaFirst, isCriteriaSecond,isCriteriaThird }) => {
     const [show, setShow] = useState(false);
     const [show01, setShow01] = useState(false);

@@ -13,10 +13,10 @@ import {
   Card,
   CardItems,
   ContactCard,
+  Criteria,
 } from "../../../../components/shared";
 import Styles from "./vendor-contactdetail.module.scss";
 import { Grid } from "@mui/material";
-import Criteria from "../../../criteria";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";

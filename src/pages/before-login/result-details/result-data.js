@@ -17,7 +17,7 @@ export const ContactCardData = [
       logo: "assets/images/baeImage.png",
       heading: "BAE Systems, Inc",
       addressFirst: "Pentagon Rm 3E700",
-      addressSecond: "101 Army Pentagon Washington, DC 20310-0101",
+      addressSecond: "101 Army Pentagon Washington",
       webAddress: "https://bae.com",
       value: "100,000",
       contactNumberFirst: "703-695-4311",

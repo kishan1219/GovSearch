@@ -65,10 +65,9 @@
          overflow: auto;
         
          @include xxlg{height: 34vh;}
-         @include bxlg{height: 36vh;}
-         @include lg{height:40vh;}
+         @include bxlg{height: 37vh;}
          @include xlmd {height:38vh;}
-         @include xxmd{height: 262px;}
+         @include xxmd{height: 236px;}
          @include md {height: 198px;}
          @include iPad{min-height:254px;}
          @include mo{height:100%;}

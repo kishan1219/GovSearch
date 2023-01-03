@@ -7,13 +7,14 @@ import {
   Card,
   CardItems,
   ContactCard,
+  Criteria,
 } from "../../../components/shared";
 import Styles from "./result-details.module.scss";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Slider from "@mui/material/Slider";
-import Criteria from "../../criteria/criteria";
+
 import { MapInteractionCSS } from "react-map-interaction";
 import { ContactCardData } from "./result-data";
 const ResultDetails = () => {

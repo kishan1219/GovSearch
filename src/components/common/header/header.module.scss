@@ -16,6 +16,9 @@
     @include lg {
         margin-left: 110px;
     }
+   @include xxmd{
+    margin-left: 84px;
+   }
 
     @include md {
         margin-left: 112px;
